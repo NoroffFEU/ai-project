@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <header></header>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open A.I | Daily Planner</title>
+    <!-- Change later  -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <!-- NAV content -->
+    </nav>
+
+    <header>
+      <h1>Daily Planner</h1>
+    </header>
+
+    <section id="daily-planning">
+      <h2>Daily Planning</h2>
+
+      <!-- Form  -->
+      <form id="task-form">
+        <input type="text" id="task-input" placeholder="Add a task..." />
+        <button type="submit">Add Task</button>
+      </form>
+      <ul id="task-list">
+        <!-- Task items will be added dynamically here -->
+      </ul>
+    </section>
+
+    <!-- Quotes  -->
+    <section id="motivational-quotes">
+      <h2>Motivational Quotes</h2>
+      <p id="quote" class="quote">
+        <!-- Dynamically added quotes  -->
+      </p>
+      <button id="new-quote-btn">New Quote</button>
+    </section>
+
+    <!-- Dynamically added tips/insights  -->
+    <section id="tips-insights">
+      <h2>Tips and Insights</h2>
+      <p>
+        <!-- Dynamically added insights  -->
+      </p>
+    </section>
+    <section id="progress-tracking">
+      <h2>Progress Tracking</h2>
+      <p>
+        <!-- Dynamically gennerate PDF-file  -->
+      </p>
+    </section>
+
+    <footer>
+      <!-- Footer content -->
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
 </html>
