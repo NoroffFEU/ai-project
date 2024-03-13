@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node script.js",
-    "format": "prettier -w script.js"
+    "format": "prettier -w src/**/*.js"
   },
   "keywords": [],
   "author": "",
