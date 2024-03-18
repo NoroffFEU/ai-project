@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open A.I | Daily Planner</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="dist/css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbarWrapper">
+      <div class="navbar">
+        <h2>Guest</h2>
+        <button>Login</button>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Today</a></li>
+          <li><a href="#">Your Week</a></li>
+          <li class="centered"><a href="#">About App</a></li>
+          <li class="centered"><a href="#">How to Use</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header>
+      <h1>Daily Planner</h1>
+    </header>
+
+    <section id="daily-planning">
+      <h2>Daily Planning</h2>
+
+      <!-- Form  -->
+      <form id="task-form">
+        <input type="text" id="task-input" placeholder="Add a task..." />
+        <button type="submit">Add Task</button>
+      </form>
+      <ul id="task-list">
+        <!-- Task items will be added dynamically here -->
+      </ul>
+    </section>
+
+    <!-- Quotes  -->
+    <section id="motivational-quotes">
+      <h2>Motivational Quotes</h2>
+      <p id="quote" class="quote">
+        <!-- Dynamically added quotes  -->
+      </p>
+      <button id="new-quote-btn">New Quote</button>
+    </section>
+
+    <!-- Dynamically added tips/insights  -->
+    <section id="tips-insights">
+      <h2>Tips and Insights</h2>
+      <p>
+        <!-- Dynamically added insights  -->
+      </p>
+    </section>
+    <section id="progress-tracking">
+      <h2>Progress Tracking</h2>
+      <p>
+        <!-- Dynamically gennerate PDF-file  -->
+      </p>
+    </section>
+
+    <footer>
+      <div class="footerWrapper">
+        <div><a href="/about.html">About</a></div>
+        <div><a href="/contact.html">Contact</a></div>
+      </div>
+      <div>
+        <a href="/index.html"
+          ><img class="logosmall" src="/images/#.png" alt="small logo"
+        /></a>
+      </div>
+      <div class="copyright">Copyright Open A.I | Daily Planner &copy;</div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+    <script src="./js/localStorage.js"></script>
+  </body>
+</html>
