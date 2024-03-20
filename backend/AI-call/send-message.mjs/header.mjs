@@ -1,5 +1,7 @@
 import dotenv from 'dotenv';
+
 dotenv.config();
+
 export function createHeaders() {
   return {
     'Content-Type': 'application/json',
