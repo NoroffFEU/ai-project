@@ -17,10 +17,12 @@ export function sidebar() {
     })
     
     dialog.addEventListener("click", (e) => {
-        dialog.setAttribute("closing", "")
-        dialog.addEventListener("animationend", () => {
-            dialog.removeAttribute("closing")
-            dialog.close()
-        }, {once: true})
+        if(e.target.nodeName == "DIALOG") {
+            dialog.setAttribute("closing", "")
+            dialog.addEventListener("animationend", () => {
+                dialog.removeAttribute("closing")
+                dialog.close()
+            }, {once: true})
+        }
     })
 }
