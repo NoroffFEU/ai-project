@@ -1,39 +1,14 @@
-/*
-To run the Express server, use the command in your terminal: node main-ai.mjs 
-Be sure to be in /backend/AI-call when running the command
-From there, you can make a POST request to the 'http://localhost:3001/make-api-call' 
-route to send a message to the external API, for example using Postman.
-Remember to add the necessary header options into Postman, as the external API requires it.
-
-/send-message.mjs/header.mjs
-
-{
-    'Content-Type': 'application/json',
-    'X-Noroff-API-Key': Your_API_Key_Here,
-  }
-
-If you want to test other replies, change the content: "Your message here" 
-in the createRequestBody function.
-
-/send-message.mjs/body.mjs
-
-messages: [
-      {
-        role: 'user',
-        content: 'Your message here',
-      },
-    ]
-*/
 import express from 'express';
 import { request } from 'undici';
 import { baseUrl } from './globals/globals.mjs';
-import { createHeaders } from './send-message.mjs/header.mjs';
-import { createRequestBody } from './send-message.mjs/body.mjs';
+import { createHeaders } from './ai-config/header.mjs';
+import { createRequestBody } from './ai-config/body.mjs';
 import { config } from 'dotenv';
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
+import cors from 'cors';
 
- /* 
+/* 
   The __dirname constant is used to get the directory name of the current module file.
   There was an issue where process.env.PORT was not being read from the .env file or returning "undefined".
   This was fixed by using the __dirname constant to get the directory name of the current module file.
@@ -52,13 +27,20 @@ const app = express();
 // Define the port on which the express server will listen
 const PORT = process.env.PORT || 3001;
 
+// Allows for access to the request body for reading the user message
+app.use(express.json());
+// Cors allows for for cross-origin resource sharing so that the front-end code can make requests to the backend from a different origin. Added this snice the VS code live server would not work with port 3001. Might be a better way of solving this.
+app.use(cors());
 
 // Define a route to handle POST requests to '/make-api-call' using express
 app.post('/make-api-call', async (req, res) => {
   try {
-    // Create headers and request body using the modules from /send-message.mjs/header.mjs and /send-message.mjs/body.mjs
+    // Extracts the user message from the incoming HTTPS request. req.body.message represents the incoming object,
+    const userMessage = req.body.message;
+    // the function createHeaders is called and the returned values is set to headers
     const headers = createHeaders();
-    const body = createRequestBody();
+    // The function createRequestBody is passed and the value is set to body. This function return the user messages used for the API call.
+    const body = createRequestBody(userMessage);
 
     // Make a request to the external API using undici
     const { statusCode, body: responseBody } = await request(
