@@ -1,8 +1,11 @@
 /*
-To run the Express server, use the command in your terminal: node main-ai.mjs
+To run the Express server, use the command in your terminal: node main-ai.mjs 
+Be sure to be in /backend/AI-call when running the command
 From there, you can make a POST request to the 'http://localhost:3001/make-api-call' 
 route to send a message to the external API, for example using Postman.
 Remember to add the necessary header options into Postman, as the external API requires it.
+
+/send-message.mjs/header.mjs
 
 {
     'Content-Type': 'application/json',
@@ -11,22 +14,44 @@ Remember to add the necessary header options into Postman, as the external API r
 
 If you want to test other replies, change the content: "Your message here" 
 in the createRequestBody function.
+
+/send-message.mjs/body.mjs
+
+messages: [
+      {
+        role: 'user',
+        content: 'Your message here',
+      },
+    ]
 */
 import express from 'express';
-import dotenv from 'dotenv';
 import { request } from 'undici';
 import { baseUrl } from './globals/globals.mjs';
 import { createHeaders } from './send-message.mjs/header.mjs';
 import { createRequestBody } from './send-message.mjs/body.mjs';
+import { config } from 'dotenv';
+import { fileURLToPath } from 'url';
+import { dirname, resolve } from 'path';
 
-// Load environment variables from a .env file into process.env
-dotenv.config();
+ /* 
+  The __dirname constant is used to get the directory name of the current module file.
+  There was an issue where process.env.PORT was not being read from the .env file or returning "undefined".
+  This was fixed by using the __dirname constant to get the directory name of the current module file.
+  And it now reads the .env file and returns the correct value for process.env.PORT.
+ */
+
+// Get the directory name of the current module file
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// Load environment variables from the .env file in the root directory
+config({ path: resolve(__dirname, '../../.env') });
 
 // Create an Express application instance
 const app = express();
 
 // Define the port on which the express server will listen
 const PORT = process.env.PORT || 3001;
+
 
 // Define a route to handle POST requests to '/make-api-call' using express
 app.post('/make-api-call', async (req, res) => {
