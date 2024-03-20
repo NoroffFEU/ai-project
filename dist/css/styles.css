@@ -10708,5 +10708,28 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 100%;
+  float: left;
+}
+
+.nav-pills li a:hover {
+  background-color: #0d6efd;
+}
+
+h1, .h1 {
+  font-weight: 700;
+}
+
+.list-group-item {
+  border-left: 0;
+  border-right: 0;
+}
 
 /*# sourceMappingURL=styles.css.map */
