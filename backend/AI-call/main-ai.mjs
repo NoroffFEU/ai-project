@@ -1,3 +1,17 @@
+/*
+To run the Express server, use the command: node main-ai.mjs
+From there, you can make a POST request to the 'http://localhost:3001/make-api-call' 
+route to send a message to the external API, for example using Postman.
+Remember to add the necessary header options into Postman, as the external API requires it.
+
+{
+    'Content-Type': 'application/json',
+    'X-Noroff-API-Key': Your_API_Key_Here,
+  }
+
+If you want to test other replies, change the content: "Your message here" 
+in the createRequestBody function.
+*/
 import express from 'express';
 import { request } from 'undici';
 import { baseUrl } from './globals/globals.mjs';
@@ -7,10 +21,10 @@ import { createRequestBody } from './send-message.mjs/body.mjs';
 // Create an Express application instance
 const app = express();
 
-// Define the port on which the server will listen
+// Define the port on which the express server will listen
 const PORT = process.env.PORT || 3001;
 
-// Define a route to handle POST requests to '/make-api-call'
+// Define a route to handle POST requests to '/make-api-call' using express
 app.post('/make-api-call', async (req, res) => {
   try {
     // Create headers and request body using the modules from /send-message.mjs/header.mjs and /send-message.mjs/body.mjs
