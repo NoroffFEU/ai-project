@@ -17,8 +17,10 @@ export function sidebar() {
     })
     
     dialog.addEventListener("click", (e) => {
-        if(e.target.nodeName == "DIALOG") {
+        dialog.setAttribute("closing", "")
+        dialog.addEventListener("animationend", () => {
+            dialog.removeAttribute("closing")
             dialog.close()
-        }
+        }, {once: true})
     })
 }
