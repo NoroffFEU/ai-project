@@ -1,0 +1,46 @@
+SETUP
+1. To run the Express server, use the command in your terminal: node main-ai.mjs 
+Be sure to be in /backend/AI-call when running the command
+From there, you can make a POST request to the 'http://localhost:3001/make-api-call' 
+route to send a message to the external API, for example using Postman.
+Remember to add the necessary header options into Postman, as the external API requires it.
+
+/send-message.mjs/header.mjs
+
+{
+    'Content-Type': 'application/json',
+    'X-Noroff-API-Key': Your_API_Key_Here,
+  }
+
+If you want to test other replies, change the content: "Your message here" 
+in the createRequestBody function.
+
+/send-message.mjs/body.mjs
+
+messages: [
+      {
+        role: 'user',
+        content: 'Your message here',
+      },
+    ]
+*/
+
+FLOW EXPLANATION 
+FED:
+1. User input message in the aitest.html and clicks the send button
+2. From the frontend side, sendMessage function is triggered in chat.js. The function:
+3. Retrieves the user message
+4. Sends the message using the express backeend link http://localhost:3001/make-api-call using POST method
+5. Listens for the respone from the backend.
+6. If the response is successfull the reponse, the respone message is appended in the DOM
+BED
+1. From the backend side, the request is received from the incoming POST request
+2. The message is extracted using the const userMessage = req.body.message;
+3. CreateRequestBody(userMessage) is called with the parameter of the extracted userMessage 
+4. The API request is then sent using undici, passung along both the header and the body with the userMessage variable
+5. The server waits for the response:
+6.1. If successfull, the response body is parsed and logged. The data is then sent back to the frontend
+6.2  If unsuccessfull, any error message is parsed and logged and sent to the frontend
+BED TO FED
+7. Back in the frontend/chat.js, the sendMessage function will process the response data
+8. If successfull it extracts the message content. 
