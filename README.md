@@ -10,21 +10,24 @@ The project encompasses the development of a web-based application that serves a
 
 Users can create and organize tasks or activities for the day (logged in users also get a weekly view) into bullet points or detailed lists.
  
+
 **Motivational Quotes:**
 
 The app can provide you with daily motivational quotes to inspire users and encourage task productivity and personal growth.
  
+
 **Tips and Insights:** 
 
 Provides users with valuable tips and insights on improving task management, leveraging new technologies, and adopting efficient strategies.
  
+
 **Progress Tracking:** 
 
 Features the ability to export tasklist as a pdf, enabling users to track completed tasks, milestones, and overall progress.  Also as a logged in user the app stores all the daily tasks for you, and you can view your weekly task calendar.
  
-**User Customization:** 
 
-Allows users to personalize their planning experience with coloured task categories.
+**User Customization:** 
+- Allows users to personalize their planning experience with coloured task categories.
 
 ## Development Environment Setup
 **Required Software**
@@ -32,8 +35,9 @@ Allows users to personalize their planning experience with coloured task categor
 - Git: Version control system for tracking changes and collaborating. Download from git-scm.com.
 - Visual Studio Code (VS Code): Recommended code editor for its extensive support for JavaScript development. Download from code.visualstudio.com.
 
-**Dependencies in use**
-ESlint, Bootstrap.
+**Dependencies in use:**
+- ESlint
+- Bootstrap.
 
 ## Setup Steps
 ### Clone the project repository to your local machine using Git.
