@@ -10,11 +10,11 @@ The project encompasses the development of a web-based application that serves a
 Users can create and organize tasks or activities for the day (logged in users also get a weekly view) into bullet points or detailed lists.
  
 
-**Motivational Quotes:**
+### Motivational Quotes
 The app can provide you with daily motivational quotes to inspire users and encourage task productivity and personal growth.
  
 
-**Tips and Insights:** 
+### Tips and Insights
 Provides users with valuable tips and insights on improving task management, leveraging new technologies, and adopting efficient strategies.
  
 
