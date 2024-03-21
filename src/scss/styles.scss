@@ -1,2 +1,28 @@
 @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    height: 100%;
+    // width: 200px;
+    float: left;
+}
+
+.nav-pills li a:hover {
+   background-color: $primary;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.list-group-item {
+    border-left: 0;
+    border-right: 0;
+}

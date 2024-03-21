@@ -1,72 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="icon" href="">
     <title>Open A.I | Daily Planner</title>
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="dist/css/styles.css" />
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/> -->
+    <link rel="stylesheet" href="/dist/css/styles.css">
+    <script defer src="/src/js/script.js"></script>
+    <script type="module" src="/src/js/localStorage.js"></script>
+    <script src="https://kit.fontawesome.com/6fb668811a.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav class="navbarWrapper">
-      <div class="navbar">
-        <h2>Guest</h2>
-        <button>Login</button>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Today</a></li>
-          <li><a href="#">Your Week</a></li>
-          <li class="centered"><a href="#">About App</a></li>
-          <li class="centered"><a href="#">How to Use</a></li>
-        </ul>
-      </div>
-    </nav>
 
     <header>
-      <h1>Daily Planner</h1>
+      <div class="container-fluid">
+        <div class="row flex-nowrap">
+          <!-- <div class="bg-dark col-auto col-md-3 col-lg-2 min-vh-100 d-flex flex-column justify-content-center"> -->
+          <div class="bg-dark col-auto min-vh-100">
+            <div class="bg-dark p-2">
+              <a class="d-flex text-decoration-none mt-1 flex-column justify-content-center text-white">
+                <span class="fs-4">Username</span>
+                <button type="button" class="btn btn-secondary my-4">Logout</button>
+              </a>
+              <ul class="nav nav-pills flex-column align-items-center mt-4">
+                <li class="nav-item py-2 py-sm-0">
+                  <a href="#" class="nav-link text-white">Today</a>
+                </li>
+                <li class="nav-item py-2 py-sm-0">
+                  <a href="#" class="nav-link text-white">Your Week</a>
+                </li>
+                <li class="nav-item py-2 py-sm-0">
+                  <a href="#" class="nav-link text-white">About App</a>
+                </li>
+                <li class="nav-item py-2 py-sm-0">
+                  <a href="#" class="nav-link text-white">How to use</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <section id="daily-planning">
-      <h2>Daily Planning</h2>
+    <main>
 
-      <!-- Form  -->
-      <form id="task-form">
-        <input type="text" id="task-input" placeholder="Add a task..." />
-        <button type="submit">Add Task</button>
-      </form>
-      <ul id="task-list">
-        <!-- Task items will be added dynamically here -->
-      </ul>
-    </section>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <img class="my-2" src="" alt="logo">
+            <h1 class="fs-2 text-decoration-underline my-5">Today's Tasks</h1>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div>
 
-    <!-- Quotes  -->
-    <section id="motivational-quotes">
-      <h2>Motivational Quotes</h2>
-      <p id="quote" class="quote">
-        <!-- Dynamically added quotes  -->
-      </p>
-      <button id="new-quote-btn">New Quote</button>
-    </section>
+      <div class="container text-center my-4">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-2">0/5</div>
+          <div class="col-md-2"></div>
+          <div class="col-md-2">
+            <button type="button" class="btn btn-secondary px-4">+ Add task</button>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div>
 
-    <!-- Dynamically added tips/insights  -->
-    <section id="tips-insights">
-      <h2>Tips and Insights</h2>
-      <p>
-        <!-- Dynamically added insights  -->
-      </p>
-    </section>
-    <section id="progress-tracking">
-      <h2>Progress Tracking</h2>
-      <p>
-        <!-- Dynamically gennerate PDF-file  -->
-      </p>
-    </section>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+
+            <ul class="list-group">
+              <li class="list-group-item border-top-0">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label px-2" for="defaultCheck1">Wash the dishes</label>
+                <button type="button" class="btn btn-primary px-4 float-end">Get assistance <i class="fa-solid fa-robot"></i></button>
+              </li>
+              <li class="list-group-item">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label px-2" for="defaultCheck1">Workout</label>
+                <button type="button" class="btn btn-primary px-4 float-end">Get assistance <i class="fa-solid fa-robot"></i></button>
+              </li>
+              <li class="list-group-item">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label px-2" for="defaultCheck1">Mow the grass</label>
+                <button type="button" class="btn btn-primary px-4 float-end">Get assistance <i class="fa-solid fa-robot"></i></button>
+              </li>
+              <li class="list-group-item">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label px-2" for="defaultCheck1">Make Auction site</label>
+                <button type="button" class="btn btn-primary px-4 float-end">Get assistance <i class="fa-solid fa-robot"></i></button>
+              </li>
+              <li class="list-group-item">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label px-2" for="defaultCheck1">Call Mom</label>
+                <button type="button" class="btn btn-primary px-4 float-end">Get assistance <i class="fa-solid fa-robot"></i></button>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div>
+
+      <div class="container text-center my-4">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-2"></div>
+          <div class="col-md-2"></div>
+          <div class="col-md-2">
+            <button type="button" class="btn btn-secondary px-4 text-decoration-underline">Export list <i class="fa-solid fa-download"></i></button>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div>
+      
+    </main>
+
+
 
     <footer>
-      <div class="footerWrapper">
+      <!-- <div class="footerWrapper">
         <div><a href="/about.html">About</a></div>
         <div><a href="/contact.html">Contact</a></div>
       </div>
@@ -75,10 +133,9 @@
           ><img class="logosmall" src="/images/#.png" alt="small logo"
         /></a>
       </div>
-      <div class="copyright">Copyright Open A.I | Daily Planner &copy;</div>
+      <div class="copyright">Copyright Open A.I | Daily Planner &copy;</div> -->
     </footer>
 
-    <script type="module" src="./js/main.js"></script>
-    <script src="./js/localStorage.js"></script>
+    
   </body>
 </html>
