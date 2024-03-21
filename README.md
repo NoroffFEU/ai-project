@@ -10,6 +10,7 @@ The project encompasses the development of a web-based application that serves a
 Users can create and organize tasks or activities for the day (logged in users also get a weekly view) into bullet points or detailed lists.
  
 **Motivational Quotes** 
+
 The app can provide you with daily motivational quotes to inspire users and encourage task productivity and personal growth.
  
 **Tips and Insights** Provides users with valuable tips and insights on improving task management, leveraging new technologies, and adopting efficient strategies.
@@ -24,7 +25,7 @@ The app can provide you with daily motivational quotes to inspire users and enco
 - Git: Version control system for tracking changes and collaborating. Download from git-scm.com.
 - Visual Studio Code (VS Code): Recommended code editor for its extensive support for JavaScript development. Download from code.visualstudio.com.
 
-**Dependencies**
+**Dependencies in use**
 ESlint, Bootstrap.
 
 ## Setup Steps
