@@ -7,27 +7,22 @@ The project encompasses the development of a web-based application that serves a
  
 ## Key Functionalities 
 **Task Management:** 
-
 Users can create and organize tasks or activities for the day (logged in users also get a weekly view) into bullet points or detailed lists.
  
 
 **Motivational Quotes:**
-
 The app can provide you with daily motivational quotes to inspire users and encourage task productivity and personal growth.
  
 
 **Tips and Insights:** 
-
 Provides users with valuable tips and insights on improving task management, leveraging new technologies, and adopting efficient strategies.
  
 
 **Progress Tracking:** 
-
 Features the ability to export tasklist as a pdf, enabling users to track completed tasks, milestones, and overall progress.  Also as a logged in user the app stores all the daily tasks for you, and you can view your weekly task calendar.
  
-
 **User Customization:** 
-- Allows users to personalize their planning experience with coloured task categories.
+Allows users to personalize their planning experience with coloured task categories.
 
 ## Development Environment Setup
 **Required Software**
