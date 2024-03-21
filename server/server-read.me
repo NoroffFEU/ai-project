@@ -1,0 +1,53 @@
+Install dependencies: 
+
+
+npm i
+
+
+
+Starting Backend server: 
+
+
+npm run start-server
+
+Starting backend dev server:
+
+npm run start-server-dev
+
+Dev mode (nodemon) monitors for any changes and 
+automatically restarts the server when changes are detected.
+
+
+
+
+
+
+
+//Endpoint: {/api/getresponse}
+Request:
+    Method: POST
+    Body: { message: string }
+
+Response:
+    messages: [{
+        role: string,
+        message: string
+    }]
+
+
+Create a .env file and add the following (remember to keep .env in your gitignore file)
+
+NOROFF_API_KEY=YOUR_KEY_HERE
+PORT=DESIRED_PORT_NUMBER
+CLIENT_URLS= Do "*" to allow every URL
+
+
+Making Requests:
+
+Once the server is up and running, you can make requests to it using tools like Postman, 
+curl, or by integrating it with your front-end application.
+
+Stopping the server:
+
+    ctrl + C
+
