@@ -8,10 +8,24 @@
  * @throws {Error} Throws an error if registration fails.
  */
 async function registerUser(name, email, password, avatar) {
+  // Prepare the payload
+  const payload = {
+    name,
+    email,
+    password,
+  };
+
+  // Only add avatar to payload if a valid URL is provided
+  if (avatar && avatar.url) {
+    payload.avatar = {
+      url: avatar.url,
+      alt: avatar.alt || '', // Default to an empty string if not provided
+    };
+  }
     try {
       const response = await fetch(`https://v2.api.noroff.dev/auth/register`, {
         method: 'POST',
-        body: JSON.stringify({ name, email, password, avatar }),
+        body: JSON.stringify(payload),
         headers: {
           'Content-Type': 'application/json'
         },
