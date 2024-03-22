@@ -1,8 +1,7 @@
 @import 'variables';
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
-body,
-html {
+body, html {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -28,70 +27,59 @@ h1 {
 }
 
 // footer
-.copyright {
-  display: flex;
-  justify-content: center;
-}
-
-.footerWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 footer a {
   color: #888;
 }
 
 // faq.html
 
-.faqHeader {
-  height: auto;
-  float: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-}
+// .faqHeader {
+//   height: auto;
+//   float: none;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-top: 2rem;
+// }
 
-.logo-section {
-  display: flex;
-  justify-content: center;
-}
+// .logo-section {
+//   display: flex;
+//   justify-content: center;
+// }
 
-.logosmall {
-  width: 250px;
-}
+// .logosmall {
+//   width: 250px;
+// }
 
-.gitHubLogo {
-  width: 50px;
-}
+// .gitHubLogo {
+//   width: 50px;
+// }
 
-#selection-section h1,
-h2,
-h3,
-p,
-ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-}
+// #selection-section h1,
+// h2,
+// h3,
+// p,
+// ul {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-top: 2rem;
+// }
 
-.navbar ul,
-#selection-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-}
+// .navbar ul,
+// #selection-list {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   list-style: none;
+// }
 
-#selection-list a {
-  color: #000;
-}
+// #selection-list a {
+//   color: #000;
+// }
 
-#contribution-answer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+// #contribution-answer {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }

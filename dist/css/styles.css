@@ -10708,8 +10708,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body,
-html {
+body, html {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -10733,72 +10732,8 @@ h1, .h1 {
   border-right: 0;
 }
 
-.copyright {
-  display: flex;
-  justify-content: center;
-}
-
-.footerWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 footer a {
   color: #888;
-}
-
-.faqHeader {
-  height: auto;
-  float: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.logo-section {
-  display: flex;
-  justify-content: center;
-}
-
-.logosmall {
-  width: 250px;
-}
-
-.gitHubLogo {
-  width: 50px;
-}
-
-#selection-section h1, #selection-section .h1,
-h2,
-.h2,
-h3,
-.h3,
-p,
-ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.navbar ul,
-#selection-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-}
-
-#selection-list a {
-  color: #000;
-}
-
-#contribution-answer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
