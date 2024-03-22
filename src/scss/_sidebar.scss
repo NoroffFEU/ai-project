@@ -1,0 +1,64 @@
+dialog {
+    position: absolute;
+    border: 0;
+}
+
+dialog[open] {
+    animation: 
+    slide-in 500ms forwards,
+    fade-in 500ms forwards;
+}
+
+dialog[closing] {
+    display: block;
+    pointer-events: none;
+    inset: 0;
+    animation: 
+    slide-out 500ms forwards,
+    fade-out 500ms forwards;
+}
+
+dialog::backdrop {
+    background-color: rgba($color: #000000, $alpha: .5);
+}
+
+dialog[open]::backdrop {
+    animation: fade-in 500ms forwards;
+}
+
+dialog[closing]::backdrop {
+    animation: fade-out 500ms forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fade-out {
+    100% {
+        opacity: 0;
+    }
+    0% {
+        opacity: 1;
+    }
+}
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes slide-out {
+    100% {
+        transform: translateX(-100%);
+    }
+    0% {
+        transform: translateX(0%);
+    }
+}
