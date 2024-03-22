@@ -24,6 +24,15 @@
                 <span class="fs-4">Username</span>
                 <button type="button" class="btn btn-secondary my-4">Logout</button>
               </a>
+              <div class="form-check form-switch mx-5">
+                <input
+                  class="form-check-input p-2"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckChecked"
+                  onclick="myFunction()"
+                >
+              </div>
               <ul class="nav nav-pills flex-column align-items-center mt-4">
                 <li class="nav-item py-2 py-sm-0">
                   <a href="#" class="nav-link text-white">Today</a>
@@ -121,7 +130,25 @@
       
     </main>
 
+    <script>
+  // Ensure that the initial state is set to light
+  document.body.dataset.bgColor = "light";
 
+  function myFunction() {
+    var element = document.body;
+    if (element.dataset.bgColor === "light") {
+      element.style.backgroundColor = "black";
+      element.style.color = "white";
+      element.dataset.bgColor = "dark";
+    } else {
+      element.style.backgroundColor = "white";
+      element.style.color = "black";
+      element.dataset.bgColor = "light";
+    }
+  }
+</script>
+
+    
 
     <footer>
       <!-- <div class="footerWrapper">
