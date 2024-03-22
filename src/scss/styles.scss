@@ -27,15 +27,27 @@ h1 {
   border-right: 0;
 }
 
+// footer
 .copyright {
   display: flex;
   justify-content: center;
 }
 
+.footerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 // faq.html
+
 .faqHeader {
   height: auto;
   float: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 
 .logo-section {
@@ -51,32 +63,19 @@ h1 {
   width: 50px;
 }
 
-h1,
+#selection-section h1,
 h2,
 h3,
 p,
 ul {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 2rem;
 }
 
-ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-p {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-a {
-  color: #888888;
-}
-
-.footerWrapper {
+.navbar ul,
+#selection-list {
   display: flex;
   flex-direction: column;
   align-items: center;
