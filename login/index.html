@@ -13,8 +13,22 @@
       src="https://kit.fontawesome.com/40355c2075.js"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="/src/js/index.js"></script>
   </head>
   <body>
+    <button id="openDialog" class="btn position-absolute ms-4"><i class="fa-solid fa-bars fs-4"></i></button>
+    <dialog id="sidebar" class="bg-dark position-absolute p-0 text-white ms-0 me-auto my-0 h-100">
+      <div class="p-3 h-100">
+        <ul class="me-2 fs-4">
+          <button id="closeDialog" class="btn btn-white mb-5"><i class="fa-solid fa-x"></i></button>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Today</a></li>
+          <li class="mb-5"><a href="#">Your week</a></li>
+          <li><a href="#">About app</a></li>
+          <li><a href="#">How to use</a></li>
+        </ul>
+     </div>
+    </dialog>
     <!-- Login Form -->
     <div class="col-xl-5 col-lg-6 col-md-7 col-sm-8 col-10 my-5 m-auto">
       <form class="text-center border border-dark rounded p-5 shadow">
