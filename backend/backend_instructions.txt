@@ -1,29 +1,43 @@
-SETUP
-1. To run the Express server, use the command in your terminal: node main-ai.mjs 
-Be sure to be in /backend/AI-call when running the command
-From there, you can make a POST request to the 'http://localhost:3001/make-api-call' 
-route to send a message to the external API, for example using Postman.
-Remember to add the necessary header options into Postman, as the external API requires it.
+Install dependencies: 
 
-/send-message.mjs/header.mjs
+npm i
 
-{
-    'Content-Type': 'application/json',
-    'X-Noroff-API-Key': Your_API_Key_Here,
-  }
+Starting Backend server: 
 
-If you want to test other replies, change the content: "Your message here" 
-in the createRequestBody function.
+npm run start-server
 
-/send-message.mjs/body.mjs
+Starting backend dev server:
 
-messages: [
-      {
-        role: 'user',
-        content: 'Your message here',
-      },
-    ]
-*/
+npm run start-server-dev
+
+Dev mode (nodemon) monitors for any changes and 
+automatically restarts the server when changes are detected.
+
+//Endpoint: {/api/getresponse}
+Request:
+    Method: POST
+    Body: { message: string }
+
+Response:
+    messages: [{
+        role: string,
+        message: string
+    }]
+
+Create a .env file and add the following (remember to keep .env in your gitignore file)
+
+NOROFF_API_KEY=YOUR_KEY_HERE
+PORT=DESIRED_PORT_NUMBER
+CLIENT_URLS= Do "*" to allow every URL
+
+Making Requests:
+
+Once the server is up and running, you can make requests to it using tools like Postman, 
+curl, or by integrating it with your front-end application.
+
+Stopping the server:
+
+    ctrl + C
 
 FLOW EXPLANATION 
 FED:
