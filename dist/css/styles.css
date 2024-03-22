@@ -10744,6 +10744,10 @@ h1, .h1 {
   align-items: center;
 }
 
+footer a {
+  color: #888;
+}
+
 .faqHeader {
   height: auto;
   float: none;
@@ -10784,6 +10788,11 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  list-style: none;
+}
+
+#selection-list a {
+  color: #000;
 }
 
 #contribution-answer {
