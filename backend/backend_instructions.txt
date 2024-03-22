@@ -28,7 +28,6 @@ Create a .env file and add the following (remember to keep .env in your gitignor
 
 NOROFF_API_KEY=YOUR_KEY_HERE
 PORT=DESIRED_PORT_NUMBER
-CLIENT_URLS= Do "*" to allow every URL
 
 Making Requests:
 
@@ -39,7 +38,7 @@ Stopping the server:
 
     ctrl + C
 
-FLOW EXPLANATION 
+BED FLOW EXPLANATION 
 FED:
 1. User input message in the aitest.html and clicks the send button
 2. From the frontend side, sendMessage function is triggered in chat.js. The function:
@@ -58,3 +57,45 @@ BED
 BED TO FED
 7. Back in the frontend/chat.js, the sendMessage function will process the response data
 8. If successfull it extracts the message content. 
+
+
+Example of Response Objects to use for client side:
+Response: {
+  id: ,
+  object: ,
+  created: ,
+  model: ,
+  choices: [
+    {
+      index: 0,
+      message: [],
+      logprobs: ,
+      finish_reason: 
+    }
+  ],
+  usage: { },
+  system_fingerprint: 'fp_4f0b692a78'
+}
+Formatted Response: {
+  "id": "",
+  "object": "",
+  "created": ,
+  "model": "",
+  "choices": [
+    {
+      "index": ,
+      "message": {
+        "role": "",
+        "content": "I am AIMOT🤖 Your friendly planning-bot, here to help you plan your tasks and activities! Before we create a food schedule for you, could you please provide me with more details? Such as your dietary preferences, schedule, and any specific goals you have in mind for your meals."
+      },
+      "logprobs": ,
+      "finish_reason": ""
+    }
+  ],
+  "usage": {
+    "prompt_tokens": ,
+    "completion_tokens": ,
+    "total_tokens": 
+  },
+  "system_fingerprint": ""
+}

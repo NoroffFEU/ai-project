@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-server": "cd backend/AI-call/server && node express.mjs",
+    "start-server-dev": "cd backend/AI-call/server && nodemon express.mjs",
     "build": "sass src/scss:dist/css",
     "watch": "sass --watch src/scss:dist/css & live-server",
     "format": "prettier -w src/js/*.js",
@@ -20,6 +21,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.18.3",
+    "nodemon": "^3.1.0",
     "undici": "^6.9.0"
   },
   "devDependencies": {
