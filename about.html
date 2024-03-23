@@ -11,23 +11,40 @@
     <link rel="stylesheet" href="dist/css/styles.css" />
   </head>
   <body>
-    <nav class="navbarWrapper">
-      <div class="navbar">
-        <h2>Guest</h2>
-        <button>Login</button>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Today</a></li>
-          <li><a href="#">Your Week</a></li>
-          <li class="centered"><a href="#">About App</a></li>
-          <li class="centered"><a href="#">How to Use</a></li>
-        </ul>
-      </div>
-    </nav>
-
     <header>
-      <h1>About App</h1>
+      <div class="container-fluid">
+        <div class="row flex-nowrap">
+          <!-- <div class="bg-dark col-auto col-md-3 col-lg-2 min-vh-100 d-flex flex-column justify-content-center"> -->
+          <div class="bg-dark col-auto min-vh-100">
+            <div class="bg-dark p-2">
+              <a class="d-flex text-decoration-none mt-1 flex-column justify-content-center text-white">
+                <span class="fs-4">Username</span>
+                <button type="button" class="btn btn-secondary my-4">Logout</button>
+              </a>
+              <div class="form-check form-switch mx-5">
+                <input class="form-check-input p-2" type="checkbox" role="switch" id="flexSwitchCheckChecked" onclick="myFunction()">
+              </div>
+              <ul class="nav nav-pills flex-column align-items-center mt-4">
+                <li class="nav-item py-2 py-sm-0">
+                  <a href="#" class="nav-link text-white">Today</a>
+                </li>
+                <li class="nav-item py-2 py-sm-0">
+                  <a href="#" class="nav-link text-white">Your Week</a>
+                </li>
+                <li class="nav-item py-2 py-sm-0">
+                  <a href="./about.html" class="nav-link text-white">About App</a>
+                </li>
+                <li class="nav-item py-2 py-sm-0">
+                  <a href="./faq.html" class="nav-link text-white">How to use</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
+
+    <h1>About App</h1>
 
     <section>
       <div class="container">
@@ -51,18 +68,16 @@
         </p>
       </div>
 
-      <header>
-        <h2>Contribute</h2>
-      </header>
+      <h2>Contribute</h2>
 
       <div class="container">
         <a href="">Github Repository link</a>
-        <p>Clone to your own system from this reporitory</p>
+        <p>Clone to your own system from this repository</p>
       </div>
     </section>
 
     <footer>
-      <div class="footerWrapper">
+      <div class="footerWrapper d-flex flex-column align-items-center">
         <div>
           <a href="/index.html"
             ><img
@@ -76,7 +91,7 @@
           <a href="./faq.html" style="text-decoration: none">How to use</a>
         </div>
       </div>
-      <div class="copyright">Copyright AIMOT &copy;</div>
+      <div class="copyright d-flex justify-content-center">Copyright AIMOT &copy;</div>
     </footer>
 
     <script type="module" src="./js/main.js"></script>
