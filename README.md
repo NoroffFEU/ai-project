@@ -34,6 +34,9 @@ Allows users to personalize their planning experience with coloured task categor
 - ESlint
 - Bootstrap.
 
+## Figma Design
+https://www.figma.com/design/aLPwzLS6nF7BHJPlf1aQyx/Design---AI-Team?node-id=8-292&t=t2BrBIfKq4O96GDI-0
+
 ## Setup Steps
 ### Clone the project repository to your local machine using Git.
 
