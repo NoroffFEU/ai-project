@@ -1,8 +1,9 @@
 @import 'variables';
 @import '../../node_modules/bootstrap/scss/bootstrap';
-@import "sidebar";
+@import 'sidebar';
 
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -30,6 +31,17 @@ h1 {
 // footer
 footer a {
   color: #888;
+}
+
+// About page logo
+.logo-circle {
+  width: 5rem;
+  height: 5rem;
+}
+
+// Remove text decoration
+.text-no-decoration {
+  text-decoration: none;
 }
 
 // faq.html

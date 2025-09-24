@@ -11,88 +11,181 @@
     <link rel="stylesheet" href="dist/css/styles.css" />
   </head>
   <body>
-    <header>
-      <div class="container-fluid">
-        <div class="row flex-nowrap">
-          <!-- <div class="bg-dark col-auto col-md-3 col-lg-2 min-vh-100 d-flex flex-column justify-content-center"> -->
-          <div class="bg-dark col-auto min-vh-100">
-            <div class="bg-dark p-2">
-              <a class="d-flex text-decoration-none mt-1 flex-column justify-content-center text-white">
-                <span class="fs-4">Username</span>
-                <button type="button" class="btn btn-secondary my-4">Logout</button>
-              </a>
-              <div class="form-check form-switch mx-5">
-                <input class="form-check-input p-2" type="checkbox" role="switch" id="flexSwitchCheckChecked" onclick="myFunction()">
-              </div>
-              <ul class="nav nav-pills flex-column align-items-center mt-4">
-                <li class="nav-item py-2 py-sm-0">
-                  <a href="#" class="nav-link text-white">Today</a>
-                </li>
-                <li class="nav-item py-2 py-sm-0">
-                  <a href="#" class="nav-link text-white">Your Week</a>
-                </li>
-                <li class="nav-item py-2 py-sm-0">
-                  <a href="./about.html" class="nav-link text-white">About App</a>
-                </li>
-                <li class="nav-item py-2 py-sm-0">
-                  <a href="./faq.html" class="nav-link text-white">How to use</a>
-                </li>
-              </ul>
+    <div class="container-fluid">
+      <div class="row flex-nowrap">
+        <!-- Sidebar/Header -->
+        <div
+          class="bg-dark col-auto col-md-3 col-lg-2 min-vh-100 d-none d-md-flex flex-column"
+        >
+          <div class="bg-dark p-2">
+            <a
+              class="d-flex text-decoration-none mt-1 flex-column justify-content-center text-white"
+            >
+              <span class="fs-4">Username</span>
+              <button type="button" class="btn btn-secondary my-4">
+                Logout
+              </button>
+            </a>
+            <div class="form-check form-switch mx-5">
+              <input
+                class="form-check-input p-2"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckChecked"
+                onclick="myFunction()"
+              />
             </div>
+            <ul class="nav nav-pills flex-column align-items-center mt-4">
+              <li class="nav-item py-2 py-sm-0">
+                <a href="#" class="nav-link text-white">Today</a>
+              </li>
+              <li class="nav-item py-2 py-sm-0">
+                <a href="#" class="nav-link text-white">Your Week</a>
+              </li>
+              <li class="nav-item py-2 py-sm-0">
+                <a href="./about.html" class="nav-link text-white">About App</a>
+              </li>
+              <li class="nav-item py-2 py-sm-0">
+                <a href="./faq.html" class="nav-link text-white">How to use</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-    </header>
 
-    <h1>About App</h1>
+        <!-- Main Content Area -->
+        <div class="col">
+          <!-- Mobile Navigation Bar -->
+          <nav class="navbar navbar-dark bg-dark d-md-none">
+            <div class="container-fluid">
+              <span class="navbar-brand mb-0 h1">Open A.I</span>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mobileNav"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="mobileNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Today</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Your Week</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="./about.html"
+                      >About App</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="./faq.html"
+                      >How to use</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
 
-    <section>
-      <div class="container">
-        <p>
-          Welcome to our innovative student project, where we bring you an
-          Al-assisted Daily Task List designed to enhance your productivity and
-          motivation levels. Our app aims to revolutionise the way you approach
-          your daily tasks by incorporating artificial intelligence to provide
-          personalised tips and motivational messages, empowering you to achieve
-          your goals efficiently and effectively. Our team of passionate
-          students embarked on this journey to create a tool that goes beyond
-          the conventional task management apps. With our Al bot at the helm,
-          you can expect tailored recommendations and encouraging messages
-          throughout your day, helping you stay focused, inspired, and on track.
-          What sets our project apart is its collaborative nature. As part of
-          our commitment to continuous improvement, we plan to hand over the
-          development of the app from one class to the next. This ensures that
-          the app evolves with fresh ideas, new features, and enhanced
-          functionality, driven by the creativity and dedication of future
-          students.
-        </p>
-      </div>
+          <main class="p-3 p-md-4">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+                  <!-- Logo Section -->
+                  <div class="text-center mb-4">
+                    <div
+                      class="d-inline-block bg-primary text-white rounded-circle p-3 mb-3 logo-circle"
+                    >
+                      <i
+                        class="fa-solid fa-robot fs-1"
+                        aria-label="AI Robot Logo"
+                      ></i>
+                    </div>
+                  </div>
 
-      <h2>Contribute</h2>
+                  <h1 class="text-center mb-4">About App</h1>
 
-      <div class="container">
-        <a href="">Github Repository link</a>
-        <p>Clone to your own system from this repository</p>
-      </div>
-    </section>
+                  <section>
+                    <!-- About App Description Box -->
+                    <div class="border border-1 border-dark rounded p-4 mb-4">
+                      <p class="lh-lg mb-3">
+                        Welcome to our innovative student project, where we
+                        bring you an AI-assisted Daily Task List designed to
+                        enhance your productivity and motivation levels. Our app
+                        aims to revolutionize the way you approach your daily
+                        tasks by incorporating artificial intelligence to
+                        provide personalized tips and motivational messages,
+                        empowering you to achieve your goals efficiently and
+                        effectively.
+                      </p>
+                      <p class="lh-lg mb-3">
+                        Our team of passionate students embarked on this journey
+                        to create a tool that goes beyond the conventional task
+                        management apps.
+                      </p>
+                      <p class="lh-lg mb-3">
+                        Uses must Login to access "Your Week" that displays all
+                        tasks for week and not just the current day, for easy
+                        access to view and add tasks.
+                      </p>
+                      <p class="lh-lg mb-0">
+                        What sets our project apart is its collaborative nature.
+                        As part of our commitment to continuous improvement, we
+                        plan to hand over the development of the app from one
+                        class to the next. This ensures that the app evolves
+                        with fresh ideas, new features, and enhanced
+                        functionality, driven by the creativity and dedication
+                        of future students.
+                      </p>
+                    </div>
 
-    <footer>
-      <div class="footerWrapper d-flex flex-column align-items-center">
-        <div>
-          <a href="/index.html"
-            ><img
-              class="logosmall"
-              src="../images/temporaryLogo.png"
-              alt="AIMOT logo"
-          /></a>
+                    <h2 class="text-center mb-3">Contribute</h2>
+
+                    <!-- GitHub Repository Box -->
+                    <div
+                      class="border border-1 border-dark rounded p-4 mb-4 text-center"
+                    >
+                      <div
+                        class="d-flex align-items-center justify-content-center mb-2"
+                      >
+                        <i
+                          class="fab fa-github me-2 fs-4"
+                          aria-label="GitHub Icon"
+                        ></i>
+                        <a
+                          href="https://github.com/NoroffFEU/ai-project"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="text-decoration-none"
+                          >Github Repository link</a
+                        >
+                      </div>
+                      <p class="mb-0 text-muted">
+                        Clone to your own system from this repository
+                      </p>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </main>
+
+          <footer class="mt-4">
+            <div class="footerWrapper d-flex flex-column align-items-center">
+              <div>
+                <a href="./about.html" class="text-no-decoration">About</a>
+                <a href="./faq.html" class="text-no-decoration">How to use</a>
+              </div>
+            </div>
+            <div class="copyright d-flex justify-content-center">
+              Copyright AIMOT &copy;
+            </div>
+          </footer>
         </div>
-        <div>
-          <a href="./about.html" style="text-decoration: none">About</a>
-          <a href="./faq.html" style="text-decoration: none">How to use</a>
-        </div>
       </div>
-      <div class="copyright d-flex justify-content-center">Copyright AIMOT &copy;</div>
-    </footer>
+    </div>
 
     <script type="module" src="./js/main.js"></script>
     <script src="./js/localStorage.js"></script>
