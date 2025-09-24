@@ -10708,9 +10708,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-
-body, html {
-
 dialog {
   position: absolute;
   border: 0;
@@ -10770,7 +10767,7 @@ dialog[closing]::backdrop {
   0% {
     transform: translateX(0%);
   }
-  
+}
 body,
 html {
   height: 100%;
@@ -10798,6 +10795,15 @@ h1, .h1 {
 
 footer a {
   color: #888;
+}
+
+.logo-circle {
+  width: 5rem;
+  height: 5rem;
+}
+
+.text-no-decoration {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
