@@ -8,8 +8,8 @@ $textDarkColor: #1f2421;
 $textWhiteColor: #d9e1e1;
 
 // Fonts
-$headingsFont: 'Manrope', Helvetica, Arial, sans-serif;
-$paragraphFont: 'Calibri', Arial, Helvetica, sans-serif;
+$headingsFont: "Manrope", Helvetica, Arial, sans-serif;
+$paragraphFont: "Calibri", Arial, Helvetica, sans-serif;
 
 // Font sizes (Desktop)
 $mainHeadingSizeDesktop: 3rem; // 48px
@@ -20,3 +20,13 @@ $paragraphSizeDesktop: 1.125rem; // 18px
 $mainHeadingSizeMobile: 2.25rem; // 36px
 $secondaryHeadingSizeMobile: 1.75rem; // 28px
 $paragraphSizeMobile: 1rem; // 16px
+
+// Default Bootstrap breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);

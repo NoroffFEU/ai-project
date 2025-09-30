@@ -79,6 +79,14 @@
 
 .authWrapper button {
   border-radius: 0.5rem;
+  background-color: #dd700b;
+  color: #1f2421;
+  font-weight: 600;
+  border: 0;
+}
+.authWrapper button:hover {
+  background-color: #7c7d75;
+  color: #d9e1e1;
 }
 
 .linkList {
@@ -95,16 +103,15 @@
   font-weight: 600;
   padding: 0.5rem 2rem;
 }
-
 .sidebar-link:hover {
-  background-color: #7c7d75;
-  color: #d9e1e1;
+  background-color: #dd700b;
+  color: #1f2421;
 }
 
 .sidebar-toggle button {
   border: 0;
   background-color: transparent;
-  color: var(#7c7d75);
+  color: #7c7d75;
 }
 
 .sidebar-icon {
@@ -114,62 +121,14 @@
   left: 11.875rem;
 }
 
-.primaryColor-bg {
-  background-color: #7c7d75;
+@media (min-width: 768px) {
+  .sidebarNav.collapsed {
+    margin-left: 0rem;
+  }
+  .sidebar-icon {
+    display: none;
+  }
 }
-
-.secondaryColor-bg {
-  backgdround-color: #adaca7 !important;
-}
-
-.tertiaryColor-bg {
-  background-color: #d9dadf !important;
-}
-
-.pageBackgroundColor-bg {
-  background-color: #fcf8d8 !important;
-}
-
-.buttonColor-bg {
-  background-color: #dd700b !important;
-}
-
-.textDarkColor-bg {
-  background-color: #1f2421 !important;
-}
-
-.textWhiteColor-bg {
-  background-color: #d9e1e1 !important;
-}
-
-.primaryColor-text {
-  color: #7c7d75 !important;
-}
-
-.secondaryColor-text {
-  color: #adaca7 !important;
-}
-
-.tertiaryColor-text {
-  color: #d9dadf !important;
-}
-
-.pageBackgroundColor-text {
-  color: #fcf8d8 !important;
-}
-
-.buttonColor-text {
-  color: #dd700b !important;
-}
-
-.textDarkColor-text {
-  color: #1f2421 !important;
-}
-
-.textWhiteColor-text {
-  color: #d9e1e1 !important;
-}
-
 /*!
  * Bootstrap  v5.2.0 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors

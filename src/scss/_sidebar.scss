@@ -1,10 +1,10 @@
-@import "./variables";
-@import "./custom";
+@use "variables";
+@use "custom";
 
 .sidebarNav {
   max-width: 11.5rem;
   min-width: 11.5rem;
-  background-color: $secondaryColor;
+  background-color: variables.$secondaryColor;
   position: relative;
   transition: all 0.3s ease-out;
 }
@@ -25,6 +25,14 @@
 
 .authWrapper button {
   border-radius: 0.5rem;
+  background-color: variables.$buttonColor;
+  color: variables.$textDarkColor;
+  font-weight: 600;
+  border: 0;
+  &:hover {
+    background-color: variables.$primaryColor;
+    color: variables.$textWhiteColor;
+  }
 }
 
 .linkList {
@@ -37,26 +45,36 @@
   width: 100%;
 
   border-radius: 0.5rem;
-  color: $textDarkColor;
+  color: variables.$textDarkColor;
   text-decoration: none;
   font-weight: 600;
   padding: 0.5rem 2rem;
-}
 
-.sidebar-link:hover {
-  background-color: $primaryColor;
-  color: $textWhiteColor;
+  &:hover {
+    background-color: variables.$buttonColor;
+    color: variables.$textDarkColor;
+  }
 }
 
 .sidebar-toggle button {
   border: 0;
   background-color: transparent;
-  color: var($primaryColor);
+  color: variables.$primaryColor;
 }
 
 .sidebar-icon {
   position: absolute;
-  color: $textDarkColor;
+  color: variables.$textDarkColor;
   top: 0.5rem;
   left: 11.875rem;
+}
+
+@media (min-width: 768px) {
+  .sidebarNav.collapsed {
+    margin-left: 0rem;
+  }
+
+  .sidebar-icon {
+    display: none;
+  }
 }

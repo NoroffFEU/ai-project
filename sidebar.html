@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./dist/css/styles.css" />
-    <script type="module" src="/src/js/sidebar.js"></script>
+    <script type="module" src="/src/js/sidebar.mjs"></script>
     <title>Sidebar | AI Project</title>
   </head>
   <body>
@@ -15,13 +15,13 @@
         aria-label="Sidebar nav menu"
         class="d-flex flex-column align-items-center vh-100 sidebar secondaryColor-bg">
         <nav class="w-100 d-flex flex-column align-items-center px-3">
-          <div id="authWrapper" class="authWrapper">
+          <div id="authWrapper" class="authWrapper w-100">
             <p>Username</p>
             <button type="button" class="btn btn-secondary w-100">Logout</button>
           </div>
           <ul
             id="linkList"
-            class="linkList nav nav-pills flex-column align-items-center text-center sidebar-nav p-0 gap-4 w-100">
+            class="linkList nav nav-pills flex-column align-items-center text-center sidebar-nav gap-2 w-100">
             <li class="sidebar-item w-100">
               <a href="#" class="sidebar-link w-100">Today</a>
             </li>
