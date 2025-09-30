@@ -1,28 +1,11 @@
+export const toggleSideBar = () => {
+  const sidebar = document.querySelector("#sidebarNav");
 
-export function sidebar() {
-    const dialog = document.querySelector("dialog")
-    const openDialog = document.querySelector("#openDialog")
-    const closeDialog = document.querySelector("#closeDialog")
-    
-    openDialog.addEventListener("click", () => {
-        dialog.showModal();
-    })
-    
-    closeDialog.addEventListener("click", () => {
-        dialog.setAttribute("closing", "")
-        dialog.addEventListener("animationend", () => {
-            dialog.removeAttribute("closing")
-            dialog.close()
-        }, {once: true})
-    })
-    
-    dialog.addEventListener("click", (e) => {
-        if(e.target.nodeName == "DIALOG") {
-            dialog.setAttribute("closing", "")
-            dialog.addEventListener("animationend", () => {
-                dialog.removeAttribute("closing")
-                dialog.close()
-            }, {once: true})
-        }
-    })
-}
+  document.addEventListener("click", (e) => {
+    if (e.target.closest("#sidebar-toggle-btn")) {
+      sidebar.classList.toggle("collapsed");
+    }
+  });
+};
+
+toggleSideBar();
