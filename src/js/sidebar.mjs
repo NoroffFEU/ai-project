@@ -2,7 +2,7 @@ export const toggleSideBar = () => {
   const sidebar = document.querySelector("#sidebarNav");
 
   const setInitialState = () => {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 992) {
       sidebar.classList.add("collapsed");
     } else {
       sidebar.classList.remove("collapsed");
@@ -18,7 +18,7 @@ export const toggleSideBar = () => {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 992) {
       sidebar.classList.remove("collapsed");
     } else {
       sidebar.classList.add("collapsed");

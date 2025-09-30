@@ -121,7 +121,7 @@
   left: 11.875rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .sidebarNav.collapsed {
     margin-left: 0rem;
   }
