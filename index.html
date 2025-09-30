@@ -10,13 +10,35 @@
     <link rel="stylesheet" href="/dist/css/styles.css" />
     <script defer src="/src/js/script.js"></script>
     <script type="module" src="/src/js/localStorage.js"></script>
-    <script src="https://kit.fontawesome.com/6fb668811a.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/6fb668811a.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header>
+    <button id="openDialog" class="btn position-absolute ms-4">
+      <i class="fa-solid fa-bars fs-4"></i>
+    </button>
+    <dialog
+      id="sidebar"
+      class="bg-dark position-absolute p-0 text-white ms-0 me-auto my-0 h-100"
+    >
+      <div class="p-3 h-100">
+        <ul class="me-2 fs-4">
+          <button id="closeDialog" class="btn btn-white mb-5">
+            <i class="fa-solid fa-x"></i>
+          </button>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Today</a></li>
+          <li class="mb-5"><a href="#">Your week</a></li>
+          <li><a href="#">About app</a></li>
+          <li><a href="#">How to use</a></li>
+        </ul>
+      </div>
+    </dialog>
+    <!-- <header>
       <div class="container-fluid">
         <div class="row flex-nowrap">
-          <!-- <div class="bg-dark col-auto col-md-3 col-lg-2 min-vh-100 d-flex flex-column justify-content-center"> -->
           <div class="bg-dark col-auto min-vh-100">
             <div class="bg-dark p-2">
               <a class="d-flex text-decoration-none mt-1 flex-column justify-content-center text-white">
@@ -44,7 +66,7 @@
           </div>
         </div>
       </div>
-    </header>
+    </header> -->
 
     <main>
       <div class="container text-center">
@@ -64,7 +86,9 @@
           <div class="col-md-2">0/5</div>
           <div class="col-md-2"></div>
           <div class="col-md-2">
-            <button type="button" class="btn btn-secondary px-4">+ Add task</button>
+            <button type="button" class="btn btn-secondary px-4">
+              + Add task
+            </button>
           </div>
           <div class="col-md-3"></div>
         </div>
@@ -76,29 +100,74 @@
           <div class="col-md-6">
             <ul class="list-group">
               <li class="list-group-item border-top-0">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label px-2" for="defaultCheck1">Wash the dishes</label>
-                <button type="button" class="btn btn-primary px-4 float-end">Get assistance <i class="fa-solid fa-robot"></i></button>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label px-2" for="defaultCheck1"
+                  >Wash the dishes</label
+                >
+                <button type="button" class="btn btn-primary px-4 float-end">
+                  Get assistance <i class="fa-solid fa-robot"></i>
+                </button>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label px-2" for="defaultCheck1">Workout</label>
-                <button type="button" class="btn btn-primary px-4 float-end">Get assistance <i class="fa-solid fa-robot"></i></button>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label px-2" for="defaultCheck1"
+                  >Workout</label
+                >
+                <button type="button" class="btn btn-primary px-4 float-end">
+                  Get assistance <i class="fa-solid fa-robot"></i>
+                </button>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label px-2" for="defaultCheck1">Mow the grass</label>
-                <button type="button" class="btn btn-primary px-4 float-end">Get assistance <i class="fa-solid fa-robot"></i></button>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label px-2" for="defaultCheck1"
+                  >Mow the grass</label
+                >
+                <button type="button" class="btn btn-primary px-4 float-end">
+                  Get assistance <i class="fa-solid fa-robot"></i>
+                </button>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label px-2" for="defaultCheck1">Make Auction site</label>
-                <button type="button" class="btn btn-primary px-4 float-end">Get assistance <i class="fa-solid fa-robot"></i></button>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label px-2" for="defaultCheck1"
+                  >Make Auction site</label
+                >
+                <button type="button" class="btn btn-primary px-4 float-end">
+                  Get assistance <i class="fa-solid fa-robot"></i>
+                </button>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label px-2" for="defaultCheck1">Call Mom</label>
-                <button type="button" class="btn btn-primary px-4 float-end">Get assistance <i class="fa-solid fa-robot"></i></button>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label px-2" for="defaultCheck1"
+                  >Call Mom</label
+                >
+                <button type="button" class="btn btn-primary px-4 float-end">
+                  Get assistance <i class="fa-solid fa-robot"></i>
+                </button>
               </li>
             </ul>
           </div>
@@ -112,7 +181,12 @@
           <div class="col-md-2"></div>
           <div class="col-md-2"></div>
           <div class="col-md-2">
-            <button type="button" class="btn btn-secondary px-4 text-decoration-underline">Export list<i class="fa-solid fa-download"></i></button>
+            <button
+              type="button"
+              class="btn btn-secondary px-4 text-decoration-underline"
+            >
+              Export list<i class="fa-solid fa-download"></i>
+            </button>
           </div>
           <div class="col-md-3"></div>
         </div>
@@ -122,14 +196,21 @@
     <footer>
       <div class="footerWrapper d-flex flex-column align-items-center">
         <div>
-          <a href="/index.html"><img class="logosmall" src="../images/temporaryLogo.png" alt="AIMOT logo"/></a>
+          <a href="/index.html"
+            ><img
+              class="logosmall"
+              src="../images/temporaryLogo.png"
+              alt="AIMOT logo"
+          /></a>
         </div>
         <div>
           <a href="./about.html" style="text-decoration: none">About</a>
           <a href="./faq.html" style="text-decoration: none">How to use</a>
         </div>
       </div>
-      <div class="copyright d-flex justify-content-center">Copyright AIMOT &copy;</div>
+      <div class="copyright d-flex justify-content-center">
+        Copyright AIMOT &copy;
+      </div>
     </footer>
   </body>
 </html>
