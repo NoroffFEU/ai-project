@@ -1,4 +1,4 @@
-import { mockLoginUser } from './mockLogin.mjs';
+import { mockLoginUser } from '../api/mockLogin.mjs';
 
 // Set to true to use mock data instead of real API
 const MOCK_MODE = true;
