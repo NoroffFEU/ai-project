@@ -2,6 +2,7 @@ export function createTaskBoardItem(task) {
   const liElement = document.createElement("li");
   liElement.className =
     "list-group-item d-flex justify-content-between align-items-center bg-black bg-opacity-10 mb-2 rounded border-0";
+  liElement.dataset.taskId = task.id;
 
   const taskInfoDiv = document.createElement("div");
   taskInfoDiv.className = "d-flex align-items-center";
