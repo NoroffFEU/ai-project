@@ -76,78 +76,20 @@
       <div class="container d-flex flex-column">
         <h1 class="fw-bold text-center">Task board</h1>
         <div class="d-flex justify-content-between align-items-center my-4">
-          <span class="flex-fill">0/5 <i class="fa-solid fa-check"></i></span>
-          <button type="button" class="btn btn-outline-dark px-4">
+          <p class="flex-fill">
+            <span id="completed-tasks">0</span> /
+            <span id="total-tasks">0</span>
+            <i class="fa-solid fa-check"></i>
+          </p>
+          <button
+            type="button"
+            id="addTaskButton"
+            class="btn btn-outline-dark px-4"
+          >
             <i class="fa-solid fa-plus"></i> Add task
           </button>
         </div>
-        <ul class="list-group">
-          <li
-            class="list-group-item d-flex justify-content-between align-items-center bg-black bg-opacity-10 mb-2 rounded border-0"
-          >
-            <div class="d-flex align-items-center">
-              <div>
-                <input type="checkbox" class="form-check-input me-2" />
-              </div>
-              <span>Wash the dishes</span>
-            </div>
-            <button type="button" class="btn">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </button>
-          </li>
-          <li
-            class="list-group-item d-flex justify-content-between align-items-center bg-black bg-opacity-10 mb-2 rounded border-0"
-          >
-            <div class="d-flex align-items-center">
-              <div>
-                <input type="checkbox" class="form-check-input me-2" />
-              </div>
-              <span>Workout</span>
-            </div>
-            <button type="button" class="btn">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </button>
-          </li>
-          <li
-            class="list-group-item d-flex justify-content-between align-items-center bg-black bg-opacity-10 mb-2 rounded border-0"
-          >
-            <div class="d-flex align-items-center">
-              <div>
-                <input type="checkbox" class="form-check-input me-2" />
-              </div>
-              <span>Mow the grass</span>
-            </div>
-            <button type="button" class="btn">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </button>
-          </li>
-          <li
-            class="list-group-item d-flex justify-content-between align-items-center bg-black bg-opacity-10 mb-2 rounded border-0"
-          >
-            <div class="d-flex align-items-center">
-              <div>
-                <input type="checkbox" class="form-check-input me-2" />
-              </div>
-              <span>Make auction site</span>
-            </div>
-            <button type="button" class="btn">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </button>
-          </li>
-          <li
-            class="list-group-item d-flex justify-content-between align-items-center bg-black bg-opacity-10 mb-2 rounded border-0"
-          >
-            <div class="d-flex align-items-center">
-              <div>
-                <input type="checkbox" class="form-check-input me-2" />
-              </div>
-              <span>Call mom</span>
-            </div>
-            <button type="button" class="btn">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </button>
-          </li>
-        </ul>
+        <ul id="task-board-container" class="list-group"></ul>
         <div class="d-flex justify-content-end my-4">
           <button type="button" class="btn btn-outline-dark px-4">
             <i class="fa-solid fa-download"></i> Export list
