@@ -1,0 +1,334 @@
+// CSS Variables following industry standards
+:root {
+  // Font sizes
+  --fontSize-mainHeadingSizeMobile: 2.25rem;
+  --fontSize-secondaryHeadingSizeMobile: 1.75rem;
+  --fontSize-paragraphSizeMobile: 1rem;
+  --fontSize-mainHeadingSizeDesktop: 3rem;
+  --fontSize-secondaryHeadingSizeDesktop: 2rem;
+  --fontSize-paragraphSizeDesktop: 1.125rem;
+}
+
+// About page styles using variables
+.main-heading {
+  // Typography (mobile first)
+  font-family: $headingsFont;
+  font-size: $mainHeadingSizeMobile;
+  font-weight: bold;
+
+  // Visual
+  background: $textDarkColor;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  // Desktop media query
+  @media (min-width: 48rem) {
+    font-size: $mainHeadingSizeDesktop;
+  }
+}
+
+.hero-card {
+  // Visual
+  background: $primaryColor;
+  color: $textDarkColor !important;
+
+  // Ensure all text inside uses dark color
+  *:not(.hero-title),
+  .lead,
+  p {
+    color: $textDarkColor !important;
+  }
+}
+
+.hero-card .hero-title,
+.hero-title {
+  // Typography (mobile first)
+  font-family: $headingsFont;
+  font-size: $secondaryHeadingSizeMobile;
+
+  // Visual
+  color: $textDarkColor !important;
+
+  @media (min-width: 48rem) {
+    font-size: $secondaryHeadingSizeDesktop;
+  }
+}
+
+.main-description-card {
+  // Visual
+  border-left: 0.3125rem solid $primaryColor !important;
+}
+
+.section-heading {
+  // Typography
+  font-family: $headingsFont;
+
+  // Visual
+  color: $primaryColor;
+}
+
+.ai-powered-box {
+  // Visual
+  background: $tertiaryColor;
+  color: $textDarkColor;
+  border-radius: 0.9375rem;
+}
+
+.feature-card-primary {
+  // Visual
+  border-top: 0.25rem solid $primaryColor !important;
+}
+
+.feature-title-primary {
+  // Typography
+  font-family: $headingsFont;
+
+  // Visual
+  color: $primaryColor;
+}
+
+.feature-icon-primary {
+  // Visual
+  color: $primaryColor;
+}
+
+.feature-card-secondary {
+  // Visual
+  border-top: 0.25rem solid $primaryColor !important;
+}
+
+.feature-title-secondary {
+  // Typography
+  font-family: $headingsFont;
+
+  // Visual
+  color: $primaryColor;
+}
+
+.feature-icon-secondary {
+  // Visual
+  color: $primaryColor;
+}
+
+.login-info-alert {
+  // Visual
+  background: white !important;
+  border: none;
+  border-radius: 0.9375rem;
+}
+
+.alert-icon {
+  // Visual
+  color: $textDarkColor;
+}
+
+.alert-title {
+  // Typography
+  font-family: $headingsFont;
+
+  // Visual
+  color: $textDarkColor;
+}
+
+.alert-text {
+  // Typography
+  font-family: $paragraphFont;
+
+  // Visual
+  color: darken($textDarkColor, 10%);
+}
+
+.community-heading {
+  // Typography (mobile first)
+  font-family: $headingsFont;
+  font-size: $secondaryHeadingSizeMobile;
+  font-weight: bold;
+
+  // Visual
+  background: $textDarkColor;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (min-width: 48rem) {
+    font-size: $secondaryHeadingSizeDesktop;
+  }
+}
+
+.github-card {
+  // Visual
+  background: linear-gradient(
+    135deg,
+    $textDarkColor 0%,
+    lighten($textDarkColor, 10%) 100%
+  );
+}
+
+.github-icon {
+  // Visual
+  color: $textWhiteColor;
+}
+
+.github-title {
+  // Typography
+  font-family: $headingsFont;
+
+  // Visual
+  color: $textWhiteColor;
+}
+
+.github-text {
+  // Typography
+  font-family: $paragraphFont;
+
+  // Visual
+  color: $tertiaryColor;
+}
+
+.github-btn {
+  // Typography
+  font-weight: 600;
+
+  // Visual
+  border-radius: 1.5625rem;
+}
+
+.github-feature-title {
+  // Typography
+  font-family: $headingsFont;
+
+  // Visual
+  color: $textWhiteColor;
+}
+
+.github-feature-text {
+  // Typography
+  font-family: $paragraphFont;
+
+  // Visual
+  color: $tertiaryColor;
+}
+
+// Logo styles
+.logo-container {
+  // Positioning
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Sizes
+  width: 6.5rem;
+  height: 6.5rem;
+
+  // Visual
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  overflow: hidden;
+
+  // Animation
+  animation: pulse 2s infinite;
+
+  // Desktop
+  @media (min-width: 48rem) {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+.logo-image {
+  // Sizes
+  width: 100%;
+  height: 100%;
+
+  // Visual
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+// About page animations and specific styles
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-0.625rem);
+  }
+  60% {
+    transform: translateY(-0.3125rem);
+  }
+}
+
+.logo-gradient {
+  // Visual
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  // Animation
+  animation: pulse 2s infinite;
+}
+
+.floating-element-top {
+  // Positioning
+  position: absolute;
+  top: -0.625rem;
+  right: -0.625rem;
+
+  // Typography
+  font-size: 1.8rem;
+
+  // Visual
+  color: #f093fb;
+
+  // Animation
+  animation: bounce 1s infinite;
+}
+
+.floating-element-bottom {
+  // Positioning
+  position: absolute;
+  bottom: -0.625rem;
+  left: -0.625rem;
+
+  // Typography
+  font-size: 1.8rem;
+
+  // Visual
+  color: #667eea;
+
+  // Animation
+  animation: bounce 1s infinite 0.5s;
+}
+
+.ai-badge {
+  // Typography
+  font-size: 0.9rem;
+
+  // Visual
+  background: $tertiaryColor;
+  color: $textDarkColor !important;
+}
+
+.feature-list-icon-accent {
+  // Visual
+  color: #d63384;
+}
+
+.feature-list-icon-highlight {
+  // Visual
+  color: #4a5bc7;
+}

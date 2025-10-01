@@ -12,17 +12,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="dist/css/styles.css" />
   </head>
   <body>
     <div class="container-fluid">
       <div class="row flex-nowrap">
         <!-- Sidebar/Header -->
-        <div class="bg-dark col-auto min-vh-100">
+        <header class="bg-dark col-auto min-vh-100">
           <div class="bg-dark p-2">
             <a
               class="d-flex text-decoration-none mt-1 flex-column justify-content-center text-white"
             >
-              <span class="fs-4">Username</span>
+              <h2 class="fs-4">Username</h2>
               <button type="button" class="btn btn-secondary my-4">
                 Logout
               </button>
@@ -51,14 +52,14 @@
               </li>
             </ul>
           </div>
-        </div>
+        </header>
 
         <!-- Main Content Area -->
         <div class="col">
           <!-- Mobile Navigation Bar -->
           <nav class="navbar navbar-dark bg-dark d-md-none">
             <div class="container-fluid">
-              <span class="navbar-brand mb-0 h1">Open A.I</span>
+              <h1 class="navbar-brand mb-0 h1">Open A.I</h1>
               <button
                 class="navbar-toggler"
                 type="button"
@@ -98,129 +99,29 @@
                   <div class="text-center mb-5">
                     <div class="position-relative d-inline-block mb-3">
                       <div
-                        class="d-inline-block text-white rounded-circle p-3 logo-circle shadow-lg"
-                        style="
-                          background: linear-gradient(
-                            135deg,
-                            #667eea 0%,
-                            #764ba2 100%
-                          );
-                          animation: pulse 2s infinite;
-                        "
+                        class="d-inline-block rounded-circle shadow-lg logo-container"
                       >
-                        <i
-                          class="fa-solid fa-robot fs-1"
-                          aria-label="AI Robot Logo"
-                        ></i>
-                      </div>
-                      <!-- Floating elements around logo -->
-                      <div
-                        class="position-absolute"
-                        style="
-                          top: -0.625rem;
-                          right: -0.625rem;
-                          color: #f093fb;
-                          font-size: 1.8rem;
-                          animation: bounce 1s infinite;
-                        "
-                      >
-                        ✨
-                      </div>
-                      <div
-                        class="position-absolute"
-                        style="
-                          bottom: -0.625rem;
-                          left: -0.625rem;
-                          color: #667eea;
-                          font-size: 1.8rem;
-                          animation: bounce 1s infinite 0.5s;
-                        "
-                      >
-                        🚀
+                        <img
+                          src="images/temporaryLogo.png"
+                          alt="AIMOT Logo"
+                          class="logo-image"
+                        />
                       </div>
                     </div>
                     <div class="mt-3">
-                      <span
-                        class="badge rounded-pill px-3 py-2"
-                        style="
-                          background: linear-gradient(
-                            135deg,
-                            #f093fb 0%,
-                            #f5576c 100%
-                          );
-                          font-size: 0.9rem;
-                        "
-                      >
+                      <span class="badge rounded-pill px-3 py-2 ai-badge">
                         AI-Powered Task Management
                       </span>
                     </div>
                   </div>
 
-                  <style>
-                    @keyframes pulse {
-                      0% {
-                        transform: scale(1);
-                      }
-                      50% {
-                        transform: scale(1.05);
-                      }
-                      100% {
-                        transform: scale(1);
-                      }
-                    }
+                  <h1 class="text-center mb-4 main-heading">About AIMOT</h1>
 
-                    @keyframes bounce {
-                      0%,
-                      20%,
-                      50%,
-                      80%,
-                      100% {
-                        transform: translateY(0);
-                      }
-                      40% {
-                        transform: translateY(-0.625rem);
-                      }
-                      60% {
-                        transform: translateY(-0.3125rem);
-                      }
-                    }
-                  </style>
-
-                  <h1
-                    class="text-center mb-4"
-                    style="
-                      background: linear-gradient(
-                        135deg,
-                        #667eea 0%,
-                        #764ba2 100%
-                      );
-                      -webkit-background-clip: text;
-                      -webkit-text-fill-color: transparent;
-                      background-clip: text;
-                      font-weight: bold;
-                    "
-                  >
-                    About AIMOT
-                  </h1>
-
-                  <section>
+                  <section aria-label="About AIMOT Content">
                     <!-- Hero Description -->
-                    <div
-                      class="card shadow-lg border-0 mb-5"
-                      style="
-                        background: linear-gradient(
-                          135deg,
-                          #f093fb 0%,
-                          #f5576c 100%
-                        );
-                        color: white;
-                      "
-                    >
+                    <article class="card shadow-lg border-0 mb-5 hero-card">
                       <div class="card-body p-4">
-                        <h2
-                          class="card-title text-center mb-3"
-                          style="color: white"
-                        >
+                        <h2 class="card-title text-center mb-3 hero-title">
                           🚀 Your AI-Powered Productivity Companion
                         </h2>
                         <p class="lead text-center mb-0">
@@ -229,17 +130,16 @@
                           every step of the way.
                         </p>
                       </div>
-                    </div>
+                    </article>
 
                     <!-- Main Description -->
-                    <div
-                      class="card shadow border-0 mb-4"
-                      style="border-left: 0.3125rem solid #667eea !important"
+                    <article
+                      class="card shadow border-0 mb-4 main-description-card"
                     >
                       <div class="card-body p-4">
                         <div class="row">
                           <div class="col-md-8">
-                            <h3 style="color: #4a5bc7" class="mb-3">
+                            <h3 class="mb-3 section-heading">
                               🎯 What Makes AIMOT Special?
                             </h3>
                             <p class="lh-lg mb-3">
@@ -251,41 +151,50 @@
                             </p>
                             <ul class="list-unstyled">
                               <li class="mb-2">
-                                <span style="color: #d63384">✨</span>
+                                <span
+                                  class="feature-list-icon-accent"
+                                  aria-hidden="true"
+                                  >✨</span
+                                >
                                 <strong>Personalized AI Tips:</strong> Smart
                                 suggestions tailored to your work patterns
                               </li>
                               <li class="mb-2">
-                                <span style="color: #d63384">💪</span>
+                                <span
+                                  class="feature-list-icon-accent"
+                                  aria-hidden="true"
+                                  >💪</span
+                                >
                                 <strong>Motivational Insights:</strong> Daily
                                 encouragement to keep you on track
                               </li>
                               <li class="mb-2">
-                                <span style="color: #4a5bc7">📊</span>
+                                <span
+                                  class="feature-list-icon-highlight"
+                                  aria-hidden="true"
+                                  >📊</span
+                                >
                                 <strong>Weekly Overview:</strong> Comprehensive
                                 task management across your entire week
                               </li>
                               <li class="mb-2">
-                                <span style="color: #4a5bc7">🔄</span>
+                                <span
+                                  class="feature-list-icon-highlight"
+                                  aria-hidden="true"
+                                  >🔄</span
+                                >
                                 <strong>Adaptive Learning:</strong> Gets smarter
                                 as you use it more
                               </li>
                             </ul>
                           </div>
                           <div class="col-md-4 text-center">
-                            <div
-                              class="p-3"
-                              style="
-                                background: linear-gradient(
-                                  135deg,
-                                  #667eea 0%,
-                                  #764ba2 100%
-                                );
-                                border-radius: 0.9375rem;
-                                color: white;
-                              "
-                            >
-                              <i class="fas fa-brain fs-1 mb-2"></i>
+                            <div class="p-3 ai-powered-box">
+                              <i
+                                class="fas fa-brain fs-1 mb-2"
+                                aria-label="AI Brain"
+                                alt="AI Brain"
+                              ></i>
                               <h4>AI-Powered</h4>
                               <p class="small mb-0">
                                 Smart algorithms working for you
@@ -294,20 +203,23 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </article>
 
                     <!-- Features Grid -->
                     <div class="row mb-4">
                       <div class="col-md-6 mb-3">
                         <div
-                          class="card h-100 shadow border-0"
-                          style="border-top: 0.25rem solid #f093fb !important"
+                          class="card h-100 shadow border-0 feature-card-primary"
                         >
                           <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #d63384">
-                              <i class="fas fa-calendar-week fs-2"></i>
+                            <div class="mb-3 feature-icon-primary">
+                              <i
+                                class="fas fa-calendar-week fs-2"
+                                aria-label="Weekly Calendar"
+                                alt="Weekly Calendar"
+                              ></i>
                             </div>
-                            <h3 class="card-title" style="color: #d63384">
+                            <h3 class="card-title feature-title-primary">
                               Weekly Planning
                             </h3>
                             <p class="card-text">
@@ -320,14 +232,17 @@
                       </div>
                       <div class="col-md-6 mb-3">
                         <div
-                          class="card h-100 shadow border-0"
-                          style="border-top: 0.25rem solid #667eea !important"
+                          class="card h-100 shadow border-0 feature-card-secondary"
                         >
                           <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #4a5bc7">
-                              <i class="fas fa-users fs-2"></i>
+                            <div class="mb-3 feature-icon-secondary">
+                              <i
+                                class="fas fa-users fs-2"
+                                aria-label="Collaborative Users"
+                                alt="Collaborative Users"
+                              ></i>
                             </div>
-                            <h3 class="card-title" style="color: #4a5bc7">
+                            <h3 class="card-title feature-title-secondary">
                               Collaborative Evolution
                             </h3>
                             <p class="card-text">
@@ -341,75 +256,46 @@
                     </div>
 
                     <!-- Login Info -->
-                    <div
-                      class="alert"
-                      style="
-                        background: linear-gradient(
-                          135deg,
-                          #ffecd2 0%,
-                          #fcb69f 100%
-                        );
-                        border: none;
-                        border-radius: 0.9375rem;
-                      "
-                    >
+                    <aside class="alert login-info-alert" role="complementary">
                       <div class="d-flex align-items-center">
-                        <div class="me-3" style="color: #8b2635">
-                          <i class="fas fa-info-circle fs-4"></i>
+                        <div class="me-3 alert-icon">
+                          <i
+                            class="fas fa-info-circle fs-4"
+                            aria-label="Information"
+                            alt="Information"
+                          ></i>
                         </div>
                         <div>
-                          <h4 class="alert-heading mb-1" style="color: #8b2635">
+                          <h4 class="alert-heading mb-1 alert-title">
                             Getting Started
                           </h4>
-                          <p class="mb-0" style="color: #5a1f29">
+                          <p class="mb-0 alert-text">
                             Login to unlock the full power of AIMOT! Access your
                             weekly overview, save your progress, and get
                             personalized AI recommendations.
                           </p>
                         </div>
                       </div>
-                    </div>
+                    </aside>
 
-                    <h2
-                      class="text-center mb-4"
-                      style="
-                        background: linear-gradient(
-                          135deg,
-                          #667eea 0%,
-                          #764ba2 100%
-                        );
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        background-clip: text;
-                        font-weight: bold;
-                      "
-                    >
+                    <h2 class="text-center mb-4 community-heading">
                       🤝 Join Our Community
                     </h2>
 
                     <!-- GitHub Repository Box -->
-                    <div
-                      class="card shadow-lg border-0 mb-4"
-                      style="
-                        background: linear-gradient(
-                          135deg,
-                          #24292e 0%,
-                          #40454a 100%
-                        );
-                      "
-                    >
+                    <article class="card shadow-lg border-0 mb-4 github-card">
                       <div class="card-body p-4 text-center text-white">
                         <div class="mb-3">
                           <i
-                            class="fab fa-github fs-1"
-                            style="color: #f0f6fc"
+                            class="fab fa-github fs-1 github-icon"
                             aria-label="GitHub Icon"
+                            alt="GitHub Icon"
                           ></i>
                         </div>
-                        <h3 class="card-title mb-3" style="color: #f0f6fc">
+                        <h3 class="card-title mb-3 github-title">
                           Open Source & Collaborative
                         </h3>
-                        <p class="card-text mb-4" style="color: #c9d1d9">
+                        <p class="card-text mb-4 github-text">
                           AIMOT is completely open source! Fork our repository,
                           contribute new features, fix bugs, or simply explore
                           how AI-powered task management works under the hood.
@@ -418,8 +304,7 @@
                           href="https://github.com/NoroffFEU/ai-project"
                           target="_blank"
                           rel="noopener noreferrer"
-                          class="btn btn-light btn-lg px-4"
-                          style="border-radius: 1.5625rem; font-weight: 600"
+                          class="btn btn-light btn-lg px-4 github-btn"
                         >
                           <i class="fab fa-github me-2"></i>
                           View on GitHub
@@ -428,11 +313,14 @@
                           <div class="col-md-4 mb-3">
                             <div class="text-center">
                               <i
-                                class="fas fa-code fs-3 mb-2"
-                                style="color: #79c0ff"
+                                class="fas fa-code fs-3 mb-2 github-feature-icon-blue"
+                                aria-label="Code Contribution"
+                                alt="Code Contribution"
                               ></i>
-                              <h4 style="color: #f0f6fc">Contribute Code</h4>
-                              <p class="small mb-0" style="color: #c9d1d9">
+                              <h4 class="github-feature-title">
+                                Contribute Code
+                              </h4>
+                              <p class="small mb-0 github-feature-text">
                                 Add features & improvements
                               </p>
                             </div>
@@ -440,11 +328,14 @@
                           <div class="col-md-4 mb-3">
                             <div class="text-center">
                               <i
-                                class="fas fa-bug fs-3 mb-2"
-                                style="color: #ff7b72"
+                                class="fas fa-bug fs-3 mb-2 github-feature-icon-red"
+                                aria-label="Bug Report"
+                                alt="Bug Report"
                               ></i>
-                              <h4 style="color: #f0f6fc">Report Issues</h4>
-                              <p class="small mb-0" style="color: #c9d1d9">
+                              <h4 class="github-feature-title">
+                                Report Issues
+                              </h4>
+                              <p class="small mb-0 github-feature-text">
                                 Help us fix bugs & problems
                               </p>
                             </div>
@@ -452,18 +343,19 @@
                           <div class="col-md-4 mb-3">
                             <div class="text-center">
                               <i
-                                class="fas fa-lightbulb fs-3 mb-2"
-                                style="color: #ffd700"
+                                class="fas fa-lightbulb fs-3 mb-2 github-feature-icon-yellow"
+                                aria-label="Ideas and Suggestions"
+                                alt="Ideas and Suggestions"
                               ></i>
-                              <h4 style="color: #f0f6fc">Share Ideas</h4>
-                              <p class="small mb-0" style="color: #c9d1d9">
+                              <h4 class="github-feature-title">Share Ideas</h4>
+                              <p class="small mb-0 github-feature-text">
                                 Suggest new features
                               </p>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </article>
                   </section>
                 </div>
               </div>
@@ -486,6 +378,5 @@
     </div>
 
     <script type="module" src="./js/main.js"></script>
-    <script src="./js/localStorage.js"></script>
   </body>
 </html>

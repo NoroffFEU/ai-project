@@ -1,46 +1,66 @@
 @import 'variables';
+@import 'custom';
 @import '../../node_modules/bootstrap/scss/bootstrap';
 @import 'sidebar';
 
 body,
 html {
+  // Sizes
   height: 100%;
   margin: 0;
   padding: 0;
+
+  // Visual
+  background-color: $pageBackgroundColor;
 }
 
 header {
+  // Positioning
+  float: left;
+
+  // Sizes
   height: 100%;
   // width: 200px;
-  float: left;
 }
 
 .nav-pills li a:hover {
+  // Visual
   background-color: $primary;
 }
 
 h1 {
+  // Typography
   font-weight: 700;
 }
 
 .list-group-item {
+  // Visual
   border-left: 0;
   border-right: 0;
 }
 
 // footer
 footer a {
+  // Visual
   color: #888;
 }
 
-// About page logo
+// About page logo - mobile first
 .logo-circle {
-  width: 5rem;
-  height: 5rem;
+  // Sizes (mobile first)
+  width: 4rem;
+  height: 4rem;
+
+  // Desktop
+  @media (min-width: 48rem) {
+    width: 5rem;
+    height: 5rem;
+  }
 }
 
 // Remove text decoration
 .text-no-decoration {
+  // Typography
   text-decoration: none;
 }
 
