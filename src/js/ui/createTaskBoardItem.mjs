@@ -42,6 +42,7 @@ export function createTaskBoardItem(task) {
   editOption.className = "dropdown-item";
   editOption.dataset.taskId = task.id;
   editOption.dataset.action = "edit";
+  editOption.role = "button";
 
   const editIcon = document.createElement("i");
   editIcon.className = "fa-solid fa-pen me-2";
@@ -56,6 +57,7 @@ export function createTaskBoardItem(task) {
   deleteOption.className = "dropdown-item";
   deleteOption.dataset.taskId = task.id;
   deleteOption.dataset.action = "delete";
+  deleteOption.role = "button";
 
   const deleteIcon = document.createElement("i");
   deleteIcon.className = "fa-solid fa-trash me-2";
