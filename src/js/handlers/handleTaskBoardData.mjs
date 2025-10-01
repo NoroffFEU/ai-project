@@ -33,7 +33,8 @@ export async function handleTaskBoardData() {
       }
       const demoData = await fetchDemoData.json();
       if (demoData.tasks.length > 0) {
-        const limitedTasks = demoData.tasks.slice(0, 4);
+        const taskLimit = window.innerWidth >= 768 ? 8 : 4;
+        const limitedTasks = demoData.tasks.slice(0, taskLimit);
 
         addToLocalStorage("tasks", JSON.stringify(limitedTasks));
 
