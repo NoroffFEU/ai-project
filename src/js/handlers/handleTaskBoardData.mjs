@@ -2,14 +2,14 @@ import { isAuthenticated } from "/src/js/auth/isAuthenticated.mjs";
 import { createTaskBoardItem } from "/src/js/ui/createTaskBoardItem.mjs";
 import { addToLocalStorage, getFromLocalStorage } from "../localStorage.js";
 import { dropdownButtonListener } from "../listeners/dropdownButtonListener.mjs";
+import { fetchTasks } from "../api/fetchTasks.mjs";
 
 export async function handleTaskBoardData() {
   const taskBoardContainer = document.querySelector("#task-board-container");
 
   if (isAuthenticated()) {
     try {
-      const fetchTaskData = await fetch(""); // Replace with actual API endpoint
-      const taskData = await fetchTaskData.json();
+      const taskData = await fetchTasks();
       if (taskData) {
         taskData.tasks.forEach((task) => {
           taskBoardContainer.appendChild(createTaskBoardItem(task));
