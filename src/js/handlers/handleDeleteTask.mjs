@@ -7,6 +7,13 @@ import {
   removeTaskFromLocalStorage,
 } from "../localStorage.js";
 
+/**
+ * Deletes a task using API (authenticated users) or localStorage (guests).
+ * Updates UI and task counters after deletion.
+ *
+ * @param {string|number} taskId - The task ID to delete
+ * @returns {Promise<void>}
+ */
 export async function handleDeleteTask(taskId) {
   let tasks = [];
 

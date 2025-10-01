@@ -1,6 +1,12 @@
 import { toggleDropdown } from "../utils/toggleDropdown.mjs";
 import { dropdownItemsListener } from "./dropdownItemsListener.mjs";
 
+/**
+ * Attaches click event listeners to dropdown buttons.
+ * Toggles dropdown menus and prevents event bubbling.
+ *
+ * @returns {void}
+ */
 export function dropdownButtonListener() {
   const dropdownButton = document.querySelectorAll(".dropdown-button");
 

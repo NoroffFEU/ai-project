@@ -4,6 +4,12 @@ import { addToLocalStorage, getFromLocalStorage } from "../localStorage.js";
 import { dropdownButtonListener } from "../listeners/dropdownButtonListener.mjs";
 import { fetchTasks } from "../api/fetchTasks.mjs";
 
+/**
+ * Loads and displays tasks on the task board using API (authenticated users) or demo data (guests).
+ * Updates task counters and handles error states.
+ *
+ * @returns {Promise<void>}
+ */
 export async function handleTaskBoardData() {
   const taskBoardContainer = document.querySelector("#task-board-container");
 

@@ -1,3 +1,9 @@
+/**
+ * Creates a task board item DOM element with checkbox, title, and dropdown menu.
+ *
+ * @param {Object} task - The task object containing id, title, and completed status
+ * @returns {HTMLElement} The constructed list item element
+ */
 export function createTaskBoardItem(task) {
   const liElement = document.createElement("li");
   liElement.className =

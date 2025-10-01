@@ -1,6 +1,13 @@
 import { handleDeleteTask } from "../handlers/handleDeleteTask.mjs";
 import { closeAllDropdowns } from "../utils/closeAllDropdowns.mjs";
 
+/**
+ * Attaches click event listeners to dropdown menu items.
+ * Handles edit and delete actions, then closes all dropdowns.
+ *
+ * @param {HTMLElement} dropdownMenu - The dropdown menu element
+ * @returns {void}
+ */
 export function dropdownItemsListener(dropdownMenu) {
   const dropdownItems = dropdownMenu.querySelectorAll(".dropdown-item");
 
