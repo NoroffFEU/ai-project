@@ -1,3 +1,5 @@
+import {addToLocalStorage} from "../utils/localStorage.mjs";
+
 /**
  * Mock version of loginUser for testing purposes
  * @param {string} email The user's email address.
@@ -31,8 +33,8 @@ export async function mockLoginUser(email, password) {
     };
     
     // Store in localStorage just like the real function
-    localStorage.setItem('token', JSON.stringify(mockResponse.accessToken));
-    localStorage.setItem('user', JSON.stringify(mockResponse.user));
+    addToLocalStorage('accessToken',mockResponse.accessToken);
+    addToLocalStorage('user',mockResponse.user);
     
     return mockResponse;
   } else {
