@@ -1,0 +1,411 @@
+{
+  "user": {
+    "isAuthenticated": false,
+    "username": "demo_user",
+    "email": "demo@example.com",
+    "hasSeenTutorial": false,
+    "preferences": {
+      "theme": "light",
+      "notifications": true,
+      "exportFormat": "PDF"
+    }
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Workout",
+      "description": "I want to workout as a novice, plan me a simple routine to start",
+      "color": "#4a6fa5",
+      "dueDate": "2025-10-02T11:03:00.000Z",
+      "formattedDate": "11:03 Wed",
+      "completed": false,
+      "priority": 3,
+      "priorityScore": "+4.6",
+      "category": "fitness",
+      "tags": ["health", "exercise", "beginner"],
+      "estimatedDuration": 45,
+      "aiAssistance": true,
+      "createdAt": "2025-10-01T08:00:00.000Z",
+      "updatedAt": "2025-10-01T08:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "Wash the dishes",
+      "description": "Clean kitchen dishes after dinner",
+      "color": "#e74c3c",
+      "dueDate": "2025-10-02T18:00:00.000Z",
+      "formattedDate": "18:00 Wed",
+      "completed": true,
+      "priority": 2,
+      "priorityScore": "+3.2",
+      "category": "household",
+      "tags": ["cleaning", "kitchen", "daily"],
+      "estimatedDuration": 20,
+      "aiAssistance": false,
+      "createdAt": "2025-10-02T09:00:00.000Z",
+      "updatedAt": "2025-10-02T17:45:00.000Z",
+      "completedAt": "2025-10-02T17:45:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "Monthly budget review",
+      "description": "Review and update monthly budget, track expenses",
+      "color": "#2ecc71",
+      "dueDate": "2025-10-02T14:30:00.000Z",
+      "formattedDate": "14:30 Wed",
+      "completed": false,
+      "priority": 4,
+      "priorityScore": "+5.1",
+      "category": "finance",
+      "tags": ["budget", "planning", "money"],
+      "estimatedDuration": 60,
+      "aiAssistance": true,
+      "createdAt": "2025-10-01T10:15:00.000Z",
+      "updatedAt": "2025-10-01T10:15:00.000Z"
+    },
+    {
+      "id": 4,
+      "title": "Call Mom",
+      "description": "Weekly check-in call with Mom",
+      "color": "#f39c12",
+      "dueDate": "2025-10-02T19:00:00.000Z",
+      "formattedDate": "19:00 Wed",
+      "completed": false,
+      "priority": 2,
+      "priorityScore": "+3.8",
+      "category": "personal",
+      "tags": ["family", "communication", "weekly"],
+      "estimatedDuration": 30,
+      "aiAssistance": false,
+      "createdAt": "2025-10-01T12:00:00.000Z",
+      "updatedAt": "2025-10-01T12:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "title": "Complete project presentation",
+      "description": "Finish slides and prepare for tomorrow's team meeting",
+      "color": "#9b59b6",
+      "dueDate": "2025-10-03T09:00:00.000Z",
+      "formattedDate": "09:00 Thu",
+      "completed": false,
+      "priority": 5,
+      "priorityScore": "+6.2",
+      "category": "work",
+      "tags": ["presentation", "deadline", "team"],
+      "estimatedDuration": 120,
+      "aiAssistance": true,
+      "createdAt": "2025-09-30T14:00:00.000Z",
+      "updatedAt": "2025-10-01T16:30:00.000Z"
+    },
+    {
+      "id": 6,
+      "title": "Grocery shopping",
+      "description": "Buy ingredients for the week's meal prep",
+      "color": "#1abc9c",
+      "dueDate": "2025-10-03T16:00:00.000Z",
+      "formattedDate": "16:00 Thu",
+      "completed": false,
+      "priority": 3,
+      "priorityScore": "+4.0",
+      "category": "household",
+      "tags": ["shopping", "food", "weekly"],
+      "estimatedDuration": 45,
+      "aiAssistance": true,
+      "createdAt": "2025-10-02T07:30:00.000Z",
+      "updatedAt": "2025-10-02T07:30:00.000Z"
+    },
+    {
+      "id": 7,
+      "title": "Read chapter 5",
+      "description": "Continue reading 'The 7 Habits of Highly Effective People'",
+      "color": "#34495e",
+      "dueDate": "2025-10-04T20:00:00.000Z",
+      "formattedDate": "20:00 Fri",
+      "completed": true,
+      "priority": 1,
+      "priorityScore": "+2.5",
+      "category": "education",
+      "tags": ["reading", "self-improvement", "book"],
+      "estimatedDuration": 40,
+      "aiAssistance": false,
+      "createdAt": "2025-10-01T19:00:00.000Z",
+      "updatedAt": "2025-10-02T20:15:00.000Z",
+      "completedAt": "2025-10-02T20:15:00.000Z"
+    },
+    {
+      "id": 8,
+      "title": "Doctor appointment",
+      "description": "Annual health checkup with Dr. Smith",
+      "color": "#e67e22",
+      "dueDate": "2025-10-04T10:30:00.000Z",
+      "formattedDate": "10:30 Fri",
+      "completed": false,
+      "priority": 4,
+      "priorityScore": "+4.8",
+      "category": "health",
+      "tags": ["healthcare", "appointment", "annual"],
+      "estimatedDuration": 60,
+      "aiAssistance": false,
+      "createdAt": "2025-09-28T11:00:00.000Z",
+      "updatedAt": "2025-09-28T11:00:00.000Z"
+    }
+  ],
+  "todayView": {
+    "date": "2025-10-02",
+    "dayName": "Wednesday",
+    "completion": "2/5",
+    "completedTasks": 2,
+    "totalTasks": 5,
+    "motivationalQuote": "The secret of getting ahead is getting started. - Mark Twain",
+    "taskIds": [1, 2, 3, 4, 6]
+  },
+  "weeklyView": {
+    "weekStart": "2025-09-29",
+    "weekEnd": "2025-10-05",
+    "days": [
+      {
+        "date": "2025-09-29",
+        "dayName": "Sunday",
+        "completion": "3/3",
+        "completedTasks": 3,
+        "totalTasks": 3,
+        "taskIds": [21, 22, 23]
+      },
+      {
+        "date": "2025-09-30",
+        "dayName": "Monday",
+        "completion": "4/6",
+        "completedTasks": 4,
+        "totalTasks": 6,
+        "taskIds": [24, 25, 26, 27, 28, 29]
+      },
+      {
+        "date": "2025-10-01",
+        "dayName": "Tuesday",
+        "completion": "5/7",
+        "completedTasks": 5,
+        "totalTasks": 7,
+        "taskIds": [30, 31, 32, 33, 34, 35, 36]
+      },
+      {
+        "date": "2025-10-02",
+        "dayName": "Wednesday",
+        "completion": "2/5",
+        "completedTasks": 2,
+        "totalTasks": 5,
+        "taskIds": [1, 2, 3, 4, 6]
+      },
+      {
+        "date": "2025-10-03",
+        "dayName": "Thursday",
+        "completion": "0/2",
+        "completedTasks": 0,
+        "totalTasks": 2,
+        "taskIds": [5, 6]
+      },
+      {
+        "date": "2025-10-04",
+        "dayName": "Friday",
+        "completion": "1/2",
+        "completedTasks": 1,
+        "totalTasks": 2,
+        "taskIds": [7, 8]
+      },
+      {
+        "date": "2025-10-05",
+        "dayName": "Saturday",
+        "completion": "0/1",
+        "completedTasks": 0,
+        "totalTasks": 1,
+        "taskIds": [37]
+      }
+    ],
+    "weeklyProgress": {
+      "totalCompleted": 15,
+      "totalTasks": 26,
+      "completionPercentage": 57.7
+    }
+  },
+  "taskBoard": {
+    "columns": [
+      {
+        "id": "todo",
+        "title": "To Do",
+        "taskIds": [1, 3, 4, 5, 6, 8],
+        "color": "#3498db"
+      },
+      {
+        "id": "in-progress",
+        "title": "In Progress",
+        "taskIds": [],
+        "color": "#f39c12"
+      },
+      {
+        "id": "completed",
+        "title": "Completed",
+        "taskIds": [2, 7],
+        "color": "#2ecc71"
+      }
+    ],
+    "priorityFilters": ["All", "High", "Medium", "Low"],
+    "categoryFilters": ["All", "fitness", "household", "work", "personal", "finance", "education", "health"]
+  },
+  "categories": [
+    {
+      "id": "fitness",
+      "name": "Fitness",
+      "color": "#4a6fa5",
+      "icon": "fas fa-dumbbell",
+      "description": "Health and exercise related tasks"
+    },
+    {
+      "id": "household",
+      "name": "Household",
+      "color": "#e74c3c",
+      "icon": "fas fa-home",
+      "description": "Cleaning, maintenance, and home-related tasks"
+    },
+    {
+      "id": "work",
+      "name": "Work",
+      "color": "#9b59b6",
+      "icon": "fas fa-briefcase",
+      "description": "Professional and career-related tasks"
+    },
+    {
+      "id": "personal",
+      "name": "Personal",
+      "color": "#f39c12",
+      "icon": "fas fa-user",
+      "description": "Personal development and relationships"
+    },
+    {
+      "id": "finance",
+      "name": "Finance",
+      "color": "#2ecc71",
+      "icon": "fas fa-dollar-sign",
+      "description": "Budget, expenses, and financial planning"
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "color": "#34495e",
+      "icon": "fas fa-book",
+      "description": "Learning and skill development"
+    },
+    {
+      "id": "health",
+      "name": "Health",
+      "color": "#e67e22",
+      "icon": "fas fa-heart",
+      "description": "Medical appointments and health-related tasks"
+    }
+  ],
+  "exportOptions": {
+    "formats": ["PDF", "CSV", "JSON", "Text"],
+    "lastExport": null,
+    "exportSettings": {
+      "includeCompleted": true,
+      "includeDescriptions": true,
+      "includeDates": true,
+      "includePriority": true,
+      "groupByCategory": false,
+      "sortBy": "dueDate"
+    }
+  },
+  "aiAssistance": {
+    "available": true,
+    "tips": [
+      {
+        "taskId": 1,
+        "category": "fitness",
+        "suggestions": [
+          "Start with 20-30 minutes of light cardio",
+          "Include basic bodyweight exercises: push-ups, squats, planks",
+          "Remember to warm up before and cool down after",
+          "Stay hydrated throughout your workout"
+        ]
+      },
+      {
+        "taskId": 3,
+        "category": "finance",
+        "suggestions": [
+          "Use the 50/30/20 rule: 50% needs, 30% wants, 20% savings",
+          "Track your expenses using a budgeting app",
+          "Review your subscriptions and cancel unused ones",
+          "Set up automatic transfers to your savings account"
+        ]
+      },
+      {
+        "taskId": 5,
+        "category": "work",
+        "suggestions": [
+          "Structure your presentation with clear intro, body, and conclusion",
+          "Use visual aids to support your key points",
+          "Practice your timing and prepare for questions",
+          "Have a backup plan for technical difficulties"
+        ]
+      },
+      {
+        "taskId": 6,
+        "category": "household",
+        "suggestions": [
+          "Make a shopping list organized by store sections",
+          "Check your pantry before shopping to avoid duplicates",
+          "Consider meal prep containers and batch cooking",
+          "Shop the perimeter first for fresh produce and proteins"
+        ]
+      }
+    ],
+    "motivationalQuotes": [
+      "The secret of getting ahead is getting started. - Mark Twain",
+      "Success is not final, failure is not fatal: it is the courage to continue that counts. - Winston Churchill",
+      "The only way to do great work is to love what you do. - Steve Jobs",
+      "Don't watch the clock; do what it does. Keep going. - Sam Levenson",
+      "You are never too old to set another goal or to dream a new dream. - C.S. Lewis"
+    ]
+  },
+  "settings": {
+    "notifications": {
+      "enabled": true,
+      "reminderTime": 30,
+      "dailySummary": true,
+      "weeklyReview": true
+    },
+    "display": {
+      "theme": "light",
+      "compactView": false,
+      "showCompletedTasks": true,
+      "defaultView": "today"
+    },
+    "taskDefaults": {
+      "estimatedDuration": 30,
+      "priority": 3,
+      "category": "personal",
+      "color": "#3498db"
+    }
+  },
+  "statistics": {
+    "totalTasksCreated": 47,
+    "totalTasksCompleted": 32,
+    "completionRate": 68.1,
+    "averageTasksPerDay": 3.2,
+    "mostProductiveDay": "Tuesday",
+    "favoriteCategory": "work",
+    "streakDays": 5,
+    "longestStreak": 12,
+    "timeStats": {
+      "totalTimeSpent": 1260,
+      "averageTimePerTask": 39.4,
+      "mostTimeConsumingCategory": "work"
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-10-02T08:00:00.000Z",
+    "dataSchema": "v1",
+    "generatedAt": "2025-10-02T08:00:00.000Z",
+    "timezone": "UTC",
+    "locale": "en-US"
+  }
+}
