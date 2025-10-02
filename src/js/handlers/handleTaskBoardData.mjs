@@ -26,7 +26,7 @@ export async function handleTaskBoardData() {
     }
   } else {
     try {
-      const fetchDemoData = await fetch("/src/js/demoData.json");
+      const fetchDemoData = await fetch("/src/data/mockData.json");
       if (!fetchDemoData.ok) {
         taskBoardContainer.innerText = "No tasks available.";
         return;
