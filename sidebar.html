@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./dist/css/styles.css" />
-    <script type="module" src="/src/js/sidebar.mjs"></script>
+    <script type="module" src="/src/js/index.js"></script>
     <title>Sidebar | AI Project</title>
   </head>
   <body>
@@ -17,7 +17,7 @@
         <nav class="w-100 d-flex flex-column align-items-center px-3">
           <div id="authWrapper" class="authWrapper w-100">
             <p>Username</p>
-            <button type="button" class="btn btn-secondary w-100">Logout</button>
+            <a type="button" class="btn btn-secondary w-100" id="logout-btn">Logout</a>
           </div>
           <ul
             id="linkList"
@@ -39,6 +39,7 @@
         <div class="sidebar-toggle">
           <button id="sidebar-toggle-btn" type="button">
             <svg
+              aria-label="sidebar-btn"
               width="28"
               height="28"
               viewBox="0 0 28 28"

@@ -1,3 +1,5 @@
-import { sidebar } from "./sidebar.js";
+import { logOut } from "./Logout.mjs";
+import { toggleSideBar } from "./sidebar.mjs";
 
-sidebar()
+toggleSideBar();
+logOut("/");

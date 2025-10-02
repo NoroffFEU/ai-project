@@ -120,6 +120,9 @@
   top: 0.5rem;
   left: 11.875rem;
 }
+.sidebar-icon:hover {
+  color: #7c7d75;
+}
 
 @media (min-width: 1200px) {
   .sidebarNav.collapsed {

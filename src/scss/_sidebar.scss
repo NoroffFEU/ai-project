@@ -67,6 +67,10 @@
   color: variables.$textDarkColor;
   top: 0.5rem;
   left: 11.875rem;
+
+  &:hover {
+    color: variables.$primaryColor;
+  }
 }
 
 @media (min-width: 1200px) {
