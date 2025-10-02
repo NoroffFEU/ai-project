@@ -2,7 +2,7 @@
  * Checks if the user is currently logged in.
  * Verifies logged in status by checking for the presence of an access token in localStorage.
  *
- * @returns {boolean} True if user has a valid access token, false otherwise
+ * @returns {boolean} True if user has a set access token, false otherwise
  *
  * @example
  * // Check if user is logged in
