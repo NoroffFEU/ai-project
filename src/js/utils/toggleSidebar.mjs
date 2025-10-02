@@ -10,9 +10,9 @@
  * - Clicking the toggle button toggles the collapsed state of the sidebar.
  * - Resizing the window adjusts the sidebar's state based on the new width.
  *
- * @function toggleSideBar
+ * @function toggleSidebar
  */
-export const toggleSideBar = () => {
+export const toggleSidebar = () => {
   const sidebar = document.querySelector("#sidebarNav");
 
   const setInitialState = () => {

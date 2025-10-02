@@ -1,5 +1,5 @@
-import { navigateTo } from "./navigateTo.mjs";
-import { removeValueFromLocalStorage } from "./removeValueFromLocalStorage.mjs";
+import { removeValueFromLocalStorage } from "../helpers/removeValueFromLocalStorage.mjs";
+import { navigateTo } from "../navigateTo.mjs";
 
 /**
  * Attaches a click event listener to the document to handle logout functionality.
@@ -12,7 +12,6 @@ export const logOut = (pathname) => {
   document.addEventListener("click", (e) => {
     if (e.target.closest("#logout-btn")) {
       removeValueFromLocalStorage("accessToken");
-      console.log(e.target);
       navigateTo(pathname);
     } else return;
   });
