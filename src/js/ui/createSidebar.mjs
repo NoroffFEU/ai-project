@@ -1,3 +1,5 @@
+import { isLoggedIn } from "../auth/isLoggedIn.mjs";
+
 export function createSidebar() {
   // aside
   const aside = document.createElement("aside");
@@ -24,7 +26,11 @@ export function createSidebar() {
   logoutBtn.setAttribute("aria-label", "Logout from your account");
   logoutBtn.textContent = "Logout";
 
-  authWrapper.append(username, logoutBtn);
+  // Only display if "Log out" btn and Username if logged in
+  const loggedIn = isLoggedIn();
+  if (loggedIn) {
+    authWrapper.append(username, logoutBtn);
+  }
 
   // link list
   const ul = document.createElement("ul");
