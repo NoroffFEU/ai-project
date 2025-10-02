@@ -1,17 +1,17 @@
 /**
- * Checks if the user is currently authenticated.
+ * Checks if the user is currently logged in.
  * Verifies authentication by checking for the presence of an access token in localStorage.
  *
  * @returns {boolean} True if user has a valid access token, false otherwise
  *
  * @example
  * // Check if user is logged in
- * if (isAuthenticated()) {
- *   console.log('User is authenticated');
+ * if (isLoggedIn()) {
+ *   console.log('User is logged in');
  * } else {
- *   console.log('User is not authenticated');
+ *   console.log('User is not logged in');
  * }
  */
-export function isAuthenticated() {
+export function isLoggedIn() {
   return !!localStorage.getItem("accessToken");
 }

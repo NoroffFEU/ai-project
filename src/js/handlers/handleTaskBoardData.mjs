@@ -1,11 +1,11 @@
-import { isAuthenticated } from "/src/js/auth/isAuthenticated.mjs";
+import { isLoggedIn } from "/src/js/auth/isLoggedIn.mjs";
 import { createTaskBoardItem } from "/src/js/ui/createTaskBoardItem.mjs";
 import { addToLocalStorage, getFromLocalStorage } from "../localStorage.js";
 import { dropdownButtonListener } from "../listeners/dropdownButtonListener.mjs";
 import { fetchTasks } from "../api/fetchTasks.mjs";
 
 /**
- * Loads and displays tasks on the task board using API (authenticated users) or demo data (guests).
+ * Loads and displays tasks on the task board using API (logged in users) or demo data (guests).
  * Updates task counters and handles error states.
  *
  * @returns {Promise<void>}
@@ -13,7 +13,7 @@ import { fetchTasks } from "../api/fetchTasks.mjs";
 export async function handleTaskBoardData() {
   const taskBoardContainer = document.querySelector("#task-board-container");
 
-  if (isAuthenticated()) {
+  if (isLoggedIn()) {
     try {
       const taskData = await fetchTasks();
       if (taskData) {

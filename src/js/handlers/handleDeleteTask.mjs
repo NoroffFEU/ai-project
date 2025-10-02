@@ -1,14 +1,14 @@
 import { deleteTask } from "../api/deleteTask.mjs";
 import { fetchTasks } from "../api/fetchTasks.mjs";
 import { displayError } from "../ui/shared/displayMessage.mjs";
-import { isAuthenticated } from "../auth/isAuthenticated.mjs";
+import { isLoggedIn } from "../auth/isLoggedIn.mjs";
 import {
   getFromLocalStorage,
   removeTaskFromLocalStorage,
 } from "../localStorage.js";
 
 /**
- * Deletes a task using API (authenticated users) or localStorage (guests).
+ * Deletes a task using API (logged in users) or localStorage (guests).
  * Updates UI and task counters after deletion.
  *
  * @param {string|number} taskId - The task ID to delete
@@ -17,7 +17,7 @@ import {
 export async function handleDeleteTask(taskId) {
   let tasks = [];
 
-  if (isAuthenticated()) {
+  if (isLoggedIn()) {
     try {
       await deleteTask(taskId);
       tasks = fetchTasks();
