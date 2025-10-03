@@ -10769,8 +10769,8 @@ dialog[closing]::backdrop {
   }
   0% {
     transform: translateX(0%);
-  }
-  
+  }}
+
 body,
 html {
   height: 100%;
@@ -10801,3 +10801,4 @@ footer a {
 }
 
 /*# sourceMappingURL=styles.css.map */
+}

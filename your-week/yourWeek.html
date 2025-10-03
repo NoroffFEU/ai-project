@@ -1,29 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <link rel="icon" href="" />
+    <title>Open A.I | Daily Planner</title>
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/> -->
     <link rel="stylesheet" href="/dist/css/styles.css" />
-    <script src="/src/js/weeklyView/weekNumber.js" defer></script>
-</head>
-<body>
-<nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-</body>
+     <link rel="stylesheet" href="/dist/css/weekView.css" />
+    <script type="module" src="/src/js/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6fb668811a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/src/js/weeklyView/main.js" defer type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid">
+        <div class="row flex-nowrap">
+          <!-- <div class="bg-dark col-auto col-md-3 col-lg-2 min-vh-100 d-flex flex-column justify-content-center"> -->
+          <div class="bg-dark col-auto min-vh-100">
+            <div class="bg-dark p-2">
+              <a
+                class="d-flex text-decoration-none mt-1 flex-column justify-content-center text-white"
+              >
+                <span class="fs-4">Username</span>
+                <button type="button" class="btn btn-secondary my-4">
+                  Logout
+                </button>
+              </a>
+              <div class="form-check form-switch mx-5">
+                <input
+                  class="form-check-input p-2"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckChecked"
+                  onclick="myFunction()"
+                />
+              </div>
+              <ul class="nav nav-pills flex-column align-items-center mt-4">
+                <li class="nav-item py-2 py-sm-0">
+                  <a href="#" class="nav-link text-white">Today</a>
+                </li>
+                <li class="nav-item py-2 py-sm-0">
+                  <a href="#" class="nav-link text-white">Your Week</a>
+                </li>
+                <li class="nav-item py-2 py-sm-0">
+                  <a href="./about.html" class="nav-link text-white"
+                    >About App</a
+                  >
+                </li>
+                <li class="nav-item py-2 py-sm-0">
+                  <a href="./faq.html" class="nav-link text-white"
+                    >How to use</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+
+
+      <div class="container d-flex flex-column align-items-center my-4">
+        <img class="my-2" src="" alt="logo" />
+        <p>Login to use all features of the app</p>
+        <p>
+          <a href="./login/" class="text-decoration-none">Login</a>
+          |
+          <a href="./register/" class="text-decoration-none">Register</a>
+        </p>
+      </div>
+
+      <div class="container d-flex flex-column">
+  <h1 class="fw-bold text-center">Task board</h1>
+  <div class="mx-auto mt-5">
+        <h2 class="h5 text-center mb-3">Select week number</h2>
+
+        <nav aria-label="Ukenavigasjon">
+          <ul class="pagination justify-content-center" id="weekPagination"></ul>
+        </nav>
+<h2 class="h5 text-center mb-5 mt-5">Your tasks</h2>
+        <div id="cards" class="mt-4">
+          <!-- Her rendrer du oppgavekort for valgt uke -->
+        </div>
+      </div>
+</div>
+
+        <div class="d-flex justify-content-between align-items-center my-4">
+
+          <button type="button" class="btn btn-outline-dark px-4">
+            <i class="fa-solid fa-plus"></i> Add task
+          </button>
+        </div>
+
+        <div class="d-flex justify-content-end my-4">
+          <button type="button" class="btn btn-outline-dark px-4">
+            <i class="fa-solid fa-download"></i> Export list
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footerWrapper d-flex flex-column align-items-center">
+        <!-- <div>
+          <a href="/index.html"
+            ><img
+              class="logosmall"
+              src="../images/temporaryLogo.png"
+              alt="AIMOT logo"
+          /></a>
+        </div> -->
+        <div>
+          <a href="./about.html" style="text-decoration: none">About</a>
+          <a href="./faq.html" style="text-decoration: none">How to use</a>
+        </div>
+      </div>
+      <div class="copyright d-flex justify-content-center">
+        Copyright AIMOT &copy;
+      </div>
+    </footer>
+  </body>
 </html>
