@@ -1,3 +1,5 @@
 import { sidebar } from "./sidebar.js";
+import { loginHandler } from "./handlers/loginHandler.mjs";
 
-sidebar()
+loginHandler();
+sidebar();
