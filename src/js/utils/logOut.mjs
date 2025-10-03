@@ -1,5 +1,5 @@
+import { navigateTo } from "../helpers/navigateTo.mjs";
 import { removeValueFromLocalStorage } from "../helpers/removeValueFromLocalStorage.mjs";
-import { navigateTo } from "../navigateTo.mjs";
 
 /**
  * Attaches a click event listener to the document to handle logout functionality.

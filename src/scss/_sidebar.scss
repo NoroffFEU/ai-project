@@ -17,18 +17,26 @@
 .authWrapper p {
   font-size: 1.5rem;
   font-weight: 600;
-  margin: 2.375rem 0 1rem 0;
+  margin: 4rem 0 1rem 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.authWrapper button {
+#login-btn {
+  background-color: variables.$buttonColor !important;
+  margin: 4rem 0 0 0;
+}
+
+#logout-btn,
+#register-btn,
+#login-btn {
   border-radius: 0.5rem;
-  background-color: variables.$buttonColor;
+  background-color: variables.$tertiaryColor;
   color: variables.$textDarkColor;
   font-weight: 600;
   border: 0;
+
   &:hover {
     background-color: variables.$primaryColor;
     color: variables.$textWhiteColor;
@@ -36,14 +44,13 @@
 }
 
 .linkList {
-  margin: 2rem 0 0 0;
+  margin: 4rem 0 0 0;
   width: 100%;
 }
 
 .sidebar-link {
   display: block;
   width: 100%;
-
   border-radius: 0.5rem;
   color: variables.$textDarkColor;
   text-decoration: none;
@@ -51,8 +58,8 @@
   padding: 0.5rem 2rem;
 
   &:hover {
-    background-color: variables.$buttonColor;
-    color: variables.$textDarkColor;
+    background-color: variables.$primaryColor;
+    color: variables.$textWhiteColor;
   }
 }
 

@@ -1,6 +1,14 @@
 import { isLoggedIn } from "../auth/isLoggedIn.mjs";
 
-export function createSidebar() {
+export function createSidebar(
+  homeLink,
+  todayLink,
+  weekLink,
+  aboutLink,
+  faqLink,
+  loginLink,
+  registerLink
+) {
   // aside
   const aside = document.createElement("aside");
   aside.id = "sideBar";
@@ -19,18 +27,28 @@ export function createSidebar() {
   const username = document.createElement("p");
   username.textContent = "Username";
 
-  const logoutBtn = document.createElement("a");
+  const logoutBtn = document.createElement("button");
   logoutBtn.type = "button";
   logoutBtn.id = "logout-btn";
   logoutBtn.className = "btn btn-secondary w-100";
   logoutBtn.setAttribute("aria-label", "Logout from your account");
   logoutBtn.textContent = "Logout";
 
-  // Only display if "Log out" btn and Username if logged in
-  const loggedIn = isLoggedIn();
-  if (loggedIn) {
-    authWrapper.append(username, logoutBtn);
-  }
+  const loginBtn = document.createElement("a");
+  loginBtn.type = "button";
+  loginBtn.id = "login-btn";
+  loginBtn.href = loginLink;
+  loginBtn.className = "btn btn-primary w-100";
+  loginBtn.setAttribute("aria-label", "Log into your account");
+  loginBtn.textContent = "Log in";
+
+  const registerBtn = document.createElement("a");
+  registerBtn.type = "button";
+  registerBtn.href = registerLink;
+  registerBtn.id = "register-btn";
+  registerBtn.className = "btn btn-secondary w-100";
+  registerBtn.setAttribute("aria-label", "Register your account");
+  registerBtn.textContent = "Register";
 
   // link list
   const ul = document.createElement("ul");
@@ -41,10 +59,11 @@ export function createSidebar() {
   ul.setAttribute("aria-label", "Sidebar navigation links");
 
   const links = [
-    { href: "#", text: "Today" },
-    { href: "#", text: "Your Week" },
-    { href: "./about.html", text: "About App" },
-    { href: "./faq.html", text: "How to use" },
+    { href: homeLink, text: "Home" },
+    { href: todayLink, text: "Today" },
+    { href: weekLink, text: "Your Week" },
+    { href: aboutLink, text: "About App" },
+    { href: faqLink, text: "How to use" },
   ];
 
   links.forEach((link) => {
@@ -60,6 +79,14 @@ export function createSidebar() {
     li.appendChild(a);
     ul.appendChild(li);
   });
+
+  // Displays logout and username if logged in, displays log in and register btn if not.
+  const loggedIn = isLoggedIn();
+  if (loggedIn) {
+    authWrapper.append(username, logoutBtn);
+  } else {
+    ul.append(loginBtn, registerBtn);
+  }
 
   nav.append(authWrapper, ul);
 

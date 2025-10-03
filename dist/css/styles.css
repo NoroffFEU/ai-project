@@ -71,26 +71,35 @@
 .authWrapper p {
   font-size: 1.5rem;
   font-weight: 600;
-  margin: 2.375rem 0 1rem 0;
+  margin: 4rem 0 1rem 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.authWrapper button {
+#login-btn {
+  background-color: #dd700b !important;
+  margin: 4rem 0 0 0;
+}
+
+#logout-btn,
+#register-btn,
+#login-btn {
   border-radius: 0.5rem;
-  background-color: #dd700b;
+  background-color: #d9dadf;
   color: #1f2421;
   font-weight: 600;
   border: 0;
 }
-.authWrapper button:hover {
+#logout-btn:hover,
+#register-btn:hover,
+#login-btn:hover {
   background-color: #7c7d75;
   color: #d9e1e1;
 }
 
 .linkList {
-  margin: 2rem 0 0 0;
+  margin: 4rem 0 0 0;
   width: 100%;
 }
 
@@ -104,8 +113,8 @@
   padding: 0.5rem 2rem;
 }
 .sidebar-link:hover {
-  background-color: #dd700b;
-  color: #1f2421;
+  background-color: #7c7d75;
+  color: #d9e1e1;
 }
 
 .sidebar-toggle button {
