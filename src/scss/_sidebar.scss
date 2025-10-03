@@ -2,16 +2,23 @@
 @use "custom";
 
 .sidebarNav {
+  position: absolute;
+  top: 0;
   max-width: 11.5rem;
   min-width: 11.5rem;
   background-color: variables.$secondaryColor;
-  position: relative;
   transition: all 0.3s ease-out;
+  z-index: 100;
 }
 
 .sidebarNav.collapsed {
   margin-left: -11.6rem;
   transition: all 0.3s ease-out;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
 
 .authWrapper p {

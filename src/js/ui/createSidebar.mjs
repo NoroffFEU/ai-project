@@ -13,7 +13,8 @@ export function createSidebar(
   const aside = document.createElement("aside");
   aside.id = "sideBar";
   aside.setAttribute("aria-label", "Sidebar nav menu");
-  aside.className = "d-flex flex-column align-items-center vh-100 sidebar secondaryColor-bg";
+  aside.className =
+    "d-flex flex-column align-items-center vh-100 sidebar secondaryColor-bg";
 
   // nav
   const nav = document.createElement("nav");

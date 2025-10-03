@@ -1,25 +1,28 @@
+
 /**
- * Toggles the visibility of the sidebar based on screen size and user interaction.
- *
- * This function initializes the sidebar's state based on the current window width.
- * It adds event listeners to handle sidebar toggle button clicks and window resize events.
- *
- * Behavior:
- * - On smaller screens (width < 992px), the sidebar is collapsed by default.
- * - On larger screens (width >= 992px), the sidebar is expanded by default.
- * - Clicking the toggle button toggles the collapsed state of the sidebar.
- * - Resizing the window adjusts the sidebar's state based on the new width.
- *
+ * Toggles the visibility of the sidebar and manages the body's scroll behavior.
+ * 
+ * - On smaller screens (width < 992px), the sidebar is initially collapsed.
+ * - On larger screens, the sidebar is expanded by default.
+ * - Clicking the toggle button toggles the sidebar's collapsed state.
+ * - When the sidebar is expanded, the body is set to prevent scrolling.
+ * - The sidebar's state is adjusted dynamically on window resize.
+ * 
  * @function toggleSidebar
+ * @listens document#click - Listens for clicks on the sidebar toggle button.
+ * @listens window#resize - Adjusts the sidebar's state based on the window size.
  */
 export const toggleSidebar = () => {
   const sidebar = document.querySelector("#sidebarNav");
+  const body = document.querySelector("body");
 
   const setInitialState = () => {
     if (window.innerWidth < 992) {
       sidebar.classList.add("collapsed");
+      body.classList.remove("no-scroll");
     } else {
       sidebar.classList.remove("collapsed");
+      body.classList.remove("no-scroll");
     }
   };
 
@@ -28,14 +31,14 @@ export const toggleSidebar = () => {
   document.addEventListener("click", (e) => {
     if (e.target.closest("#sidebar-toggle-btn")) {
       sidebar.classList.toggle("collapsed");
+
+      if (!sidebar.classList.contains("collapsed")) {
+        body.classList.add("no-scroll");
+      } else {
+        body.classList.remove("no-scroll");
+      }
     }
   });
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 992) {
-      sidebar.classList.remove("collapsed");
-    } else {
-      sidebar.classList.add("collapsed");
-    }
-  });
+  window.addEventListener("resize", setInitialState);
 };

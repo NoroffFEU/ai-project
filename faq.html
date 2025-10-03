@@ -4,67 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AIMOT | FAQs</title>
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./dist/css/styles.css" />
+    <script type="module" src="/src/js/index.js"></script>
   </head>
   <body>
-    <header>
-      <div class="container-fluid">
-        <div class="row flex-nowrap">
-          <!-- <div class="bg-dark col-auto col-md-3 col-lg-2 min-vh-100 d-flex flex-column justify-content-center"> -->
-          <div class="bg-dark col-auto min-vh-100">
-            <div class="bg-dark p-2">
-              <a
-                class="d-flex text-decoration-none mt-1 flex-column justify-content-center text-white"
-              >
-                <span class="fs-4">Username</span>
-                <button type="button" class="btn btn-secondary my-4">
-                  Logout
-                </button>
-              </a>
-              <div class="form-check form-switch mx-5">
-                <input
-                  class="form-check-input p-2"
-                  type="checkbox"
-                  role="switch"
-                  id="flexSwitchCheckChecked"
-                  onclick="myFunction()"
-                />
-              </div>
-              <ul class="nav nav-pills flex-column align-items-center mt-4">
-                <li class="nav-item py-2 py-sm-0">
-                  <a href="#" class="nav-link text-white">Today</a>
-                </li>
-                <li class="nav-item py-2 py-sm-0">
-                  <a href="#" class="nav-link text-white">Your Week</a>
-                </li>
-                <li class="nav-item py-2 py-sm-0">
-                  <a href="./about.html" class="nav-link text-white"
-                    >About App</a
-                  >
-                </li>
-                <li class="nav-item py-2 py-sm-0">
-                  <a href="./faq.html" class="nav-link text-white"
-                    >How to use</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
+    <!-- Sidebar -->
+    <header id="sidebarNav" class="sidebarNav"></header>
+    <!-- ------- -->
     <div class="logo-section">
-      <a href="/index.html"
-        ><img
-          class="logosmall"
-          src="../images/temporaryLogo.png"
-          alt="AIMOT logo"
-      /></a>
+      <a href="/index.html">
+        <img class="logosmall" src="../images/temporaryLogo.png" alt="AIMOT logo" />
+      </a>
     </div>
 
     <!-- <header class="faqHeader"> -->
@@ -77,14 +28,10 @@
         <li><a href="#interaction-answer">How do I interact with AIMOT?</a></li>
         <li><a href="#tasks-answer">How to add, view and edit tasks</a></li>
         <li>
-          <a href="#information-answer"
-            >Where do I find information about AIMOT?</a
-          >
+          <a href="#information-answer">Where do I find information about AIMOT?</a>
         </li>
         <li>
-          <a href="#contribution-answer"
-            >Where can I contribute to this A.I project?</a
-          >
+          <a href="#contribution-answer">Where can I contribute to this A.I project?</a>
         </li>
       </ul>
     </section>
@@ -95,54 +42,49 @@
       <div id="interaction-answer">
         <h3>Interacting with AIMOT</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
-          exercitationem nulla? Repellendus ex animi neque, est unde corporis,
-          ratione maiores esse dicta odit quas repellat quis omnis consequuntur
-          voluptatem deleniti dignissimos labore impedit hic expedita, iusto
-          soluta dolores. Modi mollitia laboriosam explicabo fuga pariatur, ex
-          provident optio voluptatum nihil beatae?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, exercitationem
+          nulla? Repellendus ex animi neque, est unde corporis, ratione maiores esse dicta
+          odit quas repellat quis omnis consequuntur voluptatem deleniti dignissimos
+          labore impedit hic expedita, iusto soluta dolores. Modi mollitia laboriosam
+          explicabo fuga pariatur, ex provident optio voluptatum nihil beatae?
         </p>
       </div>
 
       <div id="tasks-answer">
         <h3>How to add tasks</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-          consequuntur nihil officiis fuga accusantium quo numquam quam illo
-          sunt rem quasi ad aliquid voluptatem inventore porro cum illum sint
-          minima ipsam, omnis a enim molestias. Eligendi laboriosam, dolore ipsa
-          architecto distinctio vero iusto praesentium dolorum adipisci eum
-          earum inventore laborum?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequuntur nihil
+          officiis fuga accusantium quo numquam quam illo sunt rem quasi ad aliquid
+          voluptatem inventore porro cum illum sint minima ipsam, omnis a enim molestias.
+          Eligendi laboriosam, dolore ipsa architecto distinctio vero iusto praesentium
+          dolorum adipisci eum earum inventore laborum?
         </p>
         <h3>How to view tasks</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-          maxime veritatis quo non ducimus delectus assumenda itaque voluptas
-          minima, nesciunt nihil provident commodi doloribus, quae id in! Cumque
-          dicta beatae, voluptatum nesciunt harum quibusdam deleniti quasi ut
-          iusto aspernatur sint, atque labore mollitia reiciendis rerum, nihil
-          fugiat quod eius totam.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore maxime
+          veritatis quo non ducimus delectus assumenda itaque voluptas minima, nesciunt
+          nihil provident commodi doloribus, quae id in! Cumque dicta beatae, voluptatum
+          nesciunt harum quibusdam deleniti quasi ut iusto aspernatur sint, atque labore
+          mollitia reiciendis rerum, nihil fugiat quod eius totam.
         </p>
         <h3>How to edit tasks</h3>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
-          aperiam ipsum illo corporis minus amet, minima similique consectetur.
-          Esse quas voluptas ullam cumque quaerat maxime obcaecati ea quasi
-          facilis exercitationem omnis iure soluta, labore consequatur, quam
-          iste adipisci voluptatem explicabo. Delectus rem obcaecati facilis
-          omnis maiores quis ullam, quos est.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis aperiam
+          ipsum illo corporis minus amet, minima similique consectetur. Esse quas voluptas
+          ullam cumque quaerat maxime obcaecati ea quasi facilis exercitationem omnis iure
+          soluta, labore consequatur, quam iste adipisci voluptatem explicabo. Delectus
+          rem obcaecati facilis omnis maiores quis ullam, quos est.
         </p>
       </div>
 
       <div id="information-answer">
         <h3>Where to find information about AIMOT</h3>
         <p style="flex-direction: column">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-          mollitia cum accusamus eos. Suscipit fugit at numquam voluptatum!
-          Molestias itaque facere culpa exercitationem iste laudantium est, modi
-          magnam accusamus odit officiis consequatur neque nesciunt
-          consequuntur? Magni cum ut ipsa omnis hic, enim consectetur, sed
-          facere atque, impedit doloribus architecto consequuntur:
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto mollitia cum
+          accusamus eos. Suscipit fugit at numquam voluptatum! Molestias itaque facere
+          culpa exercitationem iste laudantium est, modi magnam accusamus odit officiis
+          consequatur neque nesciunt consequuntur? Magni cum ut ipsa omnis hic, enim
+          consectetur, sed facere atque, impedit doloribus architecto consequuntur:
           <span><a href="./about.html">About us</a></span>
         </p>
       </div>
@@ -151,17 +93,16 @@
     <section>
       <div id="contribution-answer">
         <h3>Contribute to AIMOT</h3>
-        <a href="https://github.com/NoroffFEU/ai-project"
-          ><img
+        <a href="https://github.com/NoroffFEU/ai-project">
+          <img
             class="gitHubLogo"
             src="../images/github-mark/github-mark.png"
-            alt="GitHub logo"
-        /></a>
+            alt="GitHub logo" />
+        </a>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum,
-          esse? Architecto totam incidunt saepe beatae a omnis, quod natus
-          quibusdam quasi et maxime quaerat quia culpa cupiditate non assumenda
-          sint.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, esse?
+          Architecto totam incidunt saepe beatae a omnis, quod natus quibusdam quasi et
+          maxime quaerat quia culpa cupiditate non assumenda sint.
         </p>
       </div>
     </section>
@@ -169,21 +110,16 @@
     <footer>
       <div class="footerWrapper d-flex flex-column align-items-center">
         <div>
-          <a href="/index.html"
-            ><img
-              class="logosmall"
-              src="../images/temporaryLogo.png"
-              alt="AIMOT logo"
-          /></a>
+          <a href="/index.html">
+            <img class="logosmall" src="../images/temporaryLogo.png" alt="AIMOT logo" />
+          </a>
         </div>
         <div>
           <a href="./about.html" style="text-decoration: none">About</a>
           <a href="./faq.html" style="text-decoration: none">How to use</a>
         </div>
       </div>
-      <div class="copyright d-flex justify-content-center">
-        Copyright AIMOT &copy;
-      </div>
+      <div class="copyright d-flex justify-content-center">Copyright AIMOT &copy;</div>
     </footer>
   </body>
 </html>

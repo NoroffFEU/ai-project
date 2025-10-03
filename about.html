@@ -4,67 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open A.I | Daily Planner</title>
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="dist/css/styles.css" />
+    <script type="module" src="/src/js/index.js"></script>
   </head>
   <body>
-    <header>
-      <div class="container-fluid">
-        <div class="row flex-nowrap">
-          <!-- <div class="bg-dark col-auto col-md-3 col-lg-2 min-vh-100 d-flex flex-column justify-content-center"> -->
-          <div class="bg-dark col-auto min-vh-100">
-            <div class="bg-dark p-2">
-              <a class="d-flex text-decoration-none mt-1 flex-column justify-content-center text-white">
-                <span class="fs-4">Username</span>
-                <button type="button" class="btn btn-secondary my-4">Logout</button>
-              </a>
-              <div class="form-check form-switch mx-5">
-                <input class="form-check-input p-2" type="checkbox" role="switch" id="flexSwitchCheckChecked" onclick="myFunction()">
-              </div>
-              <ul class="nav nav-pills flex-column align-items-center mt-4">
-                <li class="nav-item py-2 py-sm-0">
-                  <a href="#" class="nav-link text-white">Today</a>
-                </li>
-                <li class="nav-item py-2 py-sm-0">
-                  <a href="#" class="nav-link text-white">Your Week</a>
-                </li>
-                <li class="nav-item py-2 py-sm-0">
-                  <a href="./about.html" class="nav-link text-white">About App</a>
-                </li>
-                <li class="nav-item py-2 py-sm-0">
-                  <a href="./faq.html" class="nav-link text-white">How to use</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
+    <!-- Sidebar -->
+    <header id="sidebarNav" class="sidebarNav"></header>
+    <!-- ------- -->
     <h1>About App</h1>
-
     <section>
       <div class="container">
         <p>
-          Welcome to our innovative student project, where we bring you an
-          Al-assisted Daily Task List designed to enhance your productivity and
-          motivation levels. Our app aims to revolutionise the way you approach
-          your daily tasks by incorporating artificial intelligence to provide
-          personalised tips and motivational messages, empowering you to achieve
-          your goals efficiently and effectively. Our team of passionate
-          students embarked on this journey to create a tool that goes beyond
-          the conventional task management apps. With our Al bot at the helm,
-          you can expect tailored recommendations and encouraging messages
-          throughout your day, helping you stay focused, inspired, and on track.
-          What sets our project apart is its collaborative nature. As part of
-          our commitment to continuous improvement, we plan to hand over the
-          development of the app from one class to the next. This ensures that
-          the app evolves with fresh ideas, new features, and enhanced
-          functionality, driven by the creativity and dedication of future
-          students.
+          Welcome to our innovative student project, where we bring you an Al-assisted
+          Daily Task List designed to enhance your productivity and motivation levels. Our
+          app aims to revolutionise the way you approach your daily tasks by incorporating
+          artificial intelligence to provide personalised tips and motivational messages,
+          empowering you to achieve your goals efficiently and effectively. Our team of
+          passionate students embarked on this journey to create a tool that goes beyond
+          the conventional task management apps. With our Al bot at the helm, you can
+          expect tailored recommendations and encouraging messages throughout your day,
+          helping you stay focused, inspired, and on track. What sets our project apart is
+          its collaborative nature. As part of our commitment to continuous improvement,
+          we plan to hand over the development of the app from one class to the next. This
+          ensures that the app evolves with fresh ideas, new features, and enhanced
+          functionality, driven by the creativity and dedication of future students.
         </p>
       </div>
 
@@ -79,12 +43,9 @@
     <footer>
       <div class="footerWrapper d-flex flex-column align-items-center">
         <div>
-          <a href="/index.html"
-            ><img
-              class="logosmall"
-              src="../images/temporaryLogo.png"
-              alt="AIMOT logo"
-          /></a>
+          <a href="/index.html">
+            <img class="logosmall" src="../images/temporaryLogo.png" alt="AIMOT logo" />
+          </a>
         </div>
         <div>
           <a href="./about.html" style="text-decoration: none">About</a>
