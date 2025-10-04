@@ -31,3 +31,4 @@ export function removeTaskFromLocalStorage(taskId) {
     addToLocalStorage("tasks", JSON.stringify(tasks));
   }
 }
+
