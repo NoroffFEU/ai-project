@@ -8,9 +8,11 @@
     <title>Open A.I | Daily Planner</title>
     <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/> -->
     <link rel="stylesheet" href="/dist/css/styles.css" />
-    <script defer src="/src/js/script.js"></script>
-    <script type="module" src="/src/js/localStorage.js"></script>
-    <script src="https://kit.fontawesome.com/6fb668811a.js" crossorigin="anonymous"></script>
+    <script type="module" src="/src/js/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6fb668811a.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -19,12 +21,22 @@
           <!-- <div class="bg-dark col-auto col-md-3 col-lg-2 min-vh-100 d-flex flex-column justify-content-center"> -->
           <div class="bg-dark col-auto min-vh-100">
             <div class="bg-dark p-2">
-              <a class="d-flex text-decoration-none mt-1 flex-column justify-content-center text-white">
+              <a
+                class="d-flex text-decoration-none mt-1 flex-column justify-content-center text-white"
+              >
                 <span class="fs-4">Username</span>
-                <button type="button" class="btn btn-secondary my-4">Logout</button>
+                <button type="button" class="btn btn-secondary my-4">
+                  Logout
+                </button>
               </a>
               <div class="form-check form-switch mx-5">
-                <input class="form-check-input p-2" type="checkbox" role="switch" id="flexSwitchCheckChecked" onclick="myFunction()">
+                <input
+                  class="form-check-input p-2"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckChecked"
+                  onclick="myFunction()"
+                />
               </div>
               <ul class="nav nav-pills flex-column align-items-center mt-4">
                 <li class="nav-item py-2 py-sm-0">
@@ -34,10 +46,14 @@
                   <a href="#" class="nav-link text-white">Your Week</a>
                 </li>
                 <li class="nav-item py-2 py-sm-0">
-                  <a href="./about.html" class="nav-link text-white">About App</a>
+                  <a href="./about.html" class="nav-link text-white"
+                    >About App</a
+                  >
                 </li>
                 <li class="nav-item py-2 py-sm-0">
-                  <a href="./faq.html" class="nav-link text-white">How to use</a>
+                  <a href="./faq.html" class="nav-link text-white"
+                    >How to use</a
+                  >
                 </li>
               </ul>
             </div>
@@ -47,74 +63,37 @@
     </header>
 
     <main>
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6">
-            <img class="my-2" src="" alt="logo" />
-            <h1 class="fs-2 text-decoration-underline my-5">Today's Tasks</h1>
-          </div>
-          <div class="col-md-3"></div>
-        </div>
+      <div class="container d-flex flex-column align-items-center my-4">
+        <img class="my-2" src="" alt="logo" />
+        <p>Login to use all features of the app</p>
+        <p>
+          <a href="./login/" class="text-decoration-none">Login</a>
+          |
+          <a href="./register/" class="text-decoration-none">Register</a>
+        </p>
       </div>
 
-      <div class="container text-center my-4">
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-2">0/5</div>
-          <div class="col-md-2"></div>
-          <div class="col-md-2">
-            <button type="button" class="btn btn-secondary px-4">+ Add task</button>
-          </div>
-          <div class="col-md-3"></div>
+      <div class="container d-flex flex-column">
+        <h1 class="fw-bold text-center">Task board</h1>
+        <div class="d-flex justify-content-between align-items-center my-4">
+          <p class="flex-fill">
+            <span id="completed-tasks">0</span> /
+            <span id="total-tasks">0</span>
+            <i class="fa-solid fa-check"></i>
+          </p>
+          <button
+            type="button"
+            id="addTaskButton"
+            class="btn btn-outline-dark px-4"
+          >
+            <i class="fa-solid fa-plus"></i> Add task
+          </button>
         </div>
-      </div>
-
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6">
-            <ul class="list-group">
-              <li class="list-group-item border-top-0">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label px-2" for="defaultCheck1">Wash the dishes</label>
-                <button type="button" class="btn btn-primary px-4 float-end">Get assistance <i class="fa-solid fa-robot"></i></button>
-              </li>
-              <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label px-2" for="defaultCheck1">Workout</label>
-                <button type="button" class="btn btn-primary px-4 float-end">Get assistance <i class="fa-solid fa-robot"></i></button>
-              </li>
-              <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label px-2" for="defaultCheck1">Mow the grass</label>
-                <button type="button" class="btn btn-primary px-4 float-end">Get assistance <i class="fa-solid fa-robot"></i></button>
-              </li>
-              <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label px-2" for="defaultCheck1">Make Auction site</label>
-                <button type="button" class="btn btn-primary px-4 float-end">Get assistance <i class="fa-solid fa-robot"></i></button>
-              </li>
-              <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label px-2" for="defaultCheck1">Call Mom</label>
-                <button type="button" class="btn btn-primary px-4 float-end">Get assistance <i class="fa-solid fa-robot"></i></button>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3"></div>
-        </div>
-      </div>
-
-      <div class="container text-center my-4">
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-2"></div>
-          <div class="col-md-2"></div>
-          <div class="col-md-2">
-            <button type="button" class="btn btn-secondary px-4 text-decoration-underline">Export list<i class="fa-solid fa-download"></i></button>
-          </div>
-          <div class="col-md-3"></div>
+        <ul id="task-board-container" class="list-group"></ul>
+        <div class="d-flex justify-content-end my-4">
+          <button type="button" class="btn btn-outline-dark px-4">
+            <i class="fa-solid fa-download"></i> Export list
+          </button>
         </div>
       </div>
     </main>
@@ -122,14 +101,21 @@
     <footer>
       <div class="footerWrapper d-flex flex-column align-items-center">
         <div>
-          <a href="/index.html"><img class="logosmall" src="../images/temporaryLogo.png" alt="AIMOT logo"/></a>
+          <a href="/index.html"
+            ><img
+              class="logosmall"
+              src="../images/temporaryLogo.png"
+              alt="AIMOT logo"
+          /></a>
         </div>
         <div>
           <a href="./about.html" style="text-decoration: none">About</a>
           <a href="./faq.html" style="text-decoration: none">How to use</a>
         </div>
       </div>
-      <div class="copyright d-flex justify-content-center">Copyright AIMOT &copy;</div>
+      <div class="copyright d-flex justify-content-center">
+        Copyright AIMOT &copy;
+      </div>
     </footer>
   </body>
 </html>
