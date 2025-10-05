@@ -7,6 +7,14 @@
   --fontSize-mainHeadingSizeDesktop: 3rem;
   --fontSize-secondaryHeadingSizeDesktop: 2rem;
   --fontSize-paragraphSizeDesktop: 1.125rem;
+
+  // AI-themed subtle colors
+  --ai-neural-blue: #4a90e2;
+  --ai-circuit-purple: #7b68ee;
+  --ai-data-cyan: #20b2aa;
+  --ai-glow-green: #32cd32;
+  --ai-matrix-dark: #0a1929;
+  --ai-soft-glow: rgba(74, 144, 226, 0.1);
 }
 
 // About page styles using variables
@@ -16,11 +24,16 @@
   font-size: $mainHeadingSizeMobile;
   font-weight: bold;
 
-  // Visual
-  background: $textDarkColor;
+  // Visual with subtle AI glow
+  background: linear-gradient(
+    135deg,
+    $textDarkColor 0%,
+    var(--ai-neural-blue) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px var(--ai-soft-glow);
 
   // Desktop media query
   @media (min-width: 48rem) {
@@ -32,6 +45,7 @@
   // Visual
   background: $primaryColor;
   color: $textDarkColor !important;
+  box-shadow: 0 4px 20px var(--ai-soft-glow);
 
   // Ensure all text inside uses dark color
   *:not(.hero-title),
@@ -69,58 +83,89 @@
 }
 
 .ai-powered-box {
-  // Visual
-  background: $tertiaryColor;
+  // Visual with AI-themed styling
+  background: linear-gradient(
+    135deg,
+    $tertiaryColor 0%,
+    var(--ai-data-cyan) 100%
+  );
   color: $textDarkColor;
   border-radius: 0.9375rem;
+  border: 1px solid var(--ai-soft-glow);
+  box-shadow: 0 2px 15px var(--ai-soft-glow);
+
+  // Subtle animation for AI feel
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 25px rgba(74, 144, 226, 0.2);
+  }
 }
 
 .feature-card-primary {
-  // Visual
-  border-top: 0.25rem solid $primaryColor !important;
+  // Visual with AI accent
+  border-top: 0.25rem solid var(--ai-neural-blue) !important;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 25px var(--ai-soft-glow);
+    transform: translateY(-2px);
+  }
 }
 
 .feature-title-primary {
   // Typography
   font-family: $headingsFont;
 
-  // Visual
-  color: $primaryColor;
+  // Visual with AI theme
+  color: var(--ai-neural-blue);
 }
 
 .feature-icon-primary {
-  // Visual
-  color: $primaryColor;
+  // Visual with AI theme
+  color: var(--ai-neural-blue);
 }
 
 .feature-card-secondary {
-  // Visual
-  border-top: 0.25rem solid $primaryColor !important;
+  // Visual with AI accent
+  border-top: 0.25rem solid var(--ai-circuit-purple) !important;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 25px rgba(123, 104, 238, 0.15);
+    transform: translateY(-2px);
+  }
 }
 
 .feature-title-secondary {
   // Typography
   font-family: $headingsFont;
 
-  // Visual
-  color: $primaryColor;
+  // Visual with AI theme
+  color: var(--ai-circuit-purple);
 }
 
 .feature-icon-secondary {
-  // Visual
-  color: $primaryColor;
+  // Visual with AI theme
+  color: var(--ai-circuit-purple);
 }
 
 .login-info-alert {
-  // Visual
-  background: white !important;
-  border: none;
+  // Visual with subtle AI accent
+  background: linear-gradient(
+    135deg,
+    white 0%,
+    rgba(74, 144, 226, 0.05) 100%
+  ) !important;
+  border: 1px solid var(--ai-soft-glow);
   border-radius: 0.9375rem;
+  box-shadow: 0 2px 10px var(--ai-soft-glow);
 }
 
 .alert-icon {
-  // Visual
-  color: $textDarkColor;
+  // Visual with AI accent
+  color: var(--ai-neural-blue);
 }
 
 .alert-title {
@@ -318,17 +363,42 @@
   // Typography
   font-size: 0.9rem;
 
-  // Visual
-  background: $tertiaryColor;
+  // Visual with AI theme
+  background: linear-gradient(
+    135deg,
+    $tertiaryColor 0%,
+    var(--ai-glow-green) 100%
+  );
   color: $textDarkColor !important;
+  border: 1px solid var(--ai-soft-glow);
+  box-shadow: 0 2px 8px var(--ai-soft-glow);
 }
 
 .feature-list-icon-accent {
-  // Visual
-  color: #d63384;
+  // Typography
+  font-size: 1.5rem;
+
+  // Visual with AI theme
+  color: var(--ai-neural-blue);
 }
 
 .feature-list-icon-highlight {
-  // Visual
-  color: #4a5bc7;
+  // Typography
+  font-size: 1.5rem;
+
+  // Visual with AI theme
+  color: var(--ai-circuit-purple);
+}
+
+// GitHub feature icons with AI theme
+.github-feature-icon-blue {
+  color: var(--ai-neural-blue);
+}
+
+.github-feature-icon-red {
+  color: #ff6b6b;
+}
+
+.github-feature-icon-yellow {
+  color: var(--ai-glow-green);
 }
