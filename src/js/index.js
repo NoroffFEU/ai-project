@@ -1,3 +1,3 @@
-import { sidebar } from "./sidebar.js";
+import { sidebar } from './sidebar.js';
 
-sidebar()
+sidebar();

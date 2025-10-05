@@ -7,24 +7,22 @@
  * @throws {Error} Throws an error if login is unsuccessful.
  */
 async function loginUser(email, password) {
-    const response = await fetch(`https://v2.api.noroff.dev/auth/login`, {
-      method: 'POST',
-      body: JSON.stringify({ email, password }),
-      headers: {
-        'Content-Type': 'application/json'
-      },
-    });
-  
-    if (response.ok) {
-      const json = await response.json();
-      const { accessToken, ...user } = json.data;
-      localStorage.setItem('token', JSON.stringify(accessToken));
-      localStorage.setItem('user', JSON.stringify(user));
-      return { accessToken, user }; // Return the login data
-    } else {
-      const errorData = await response.json();
-      throw new Error(errorData.message || response.statusText);
-    }
+  const response = await fetch(`https://v2.api.noroff.dev/auth/login`, {
+    method: 'POST',
+    body: JSON.stringify({ email, password }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  if (response.ok) {
+    const json = await response.json();
+    const { accessToken, ...user } = json.data;
+    localStorage.setItem('token', JSON.stringify(accessToken));
+    localStorage.setItem('user', JSON.stringify(user));
+    return { accessToken, user }; // Return the login data
+  } else {
+    const errorData = await response.json();
+    throw new Error(errorData.message || response.statusText);
   }
-  
-  
+}

@@ -1,8 +1,14 @@
+// Import variables FIRST (before Bootstrap)
 @import 'variables';
-@import '../../node_modules/bootstrap/scss/bootstrap';
-@import "sidebar";
 
-body, html {
+// Import Bootstrap AFTER variables so it uses your custom colors
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// Import other files
+@import 'sidebar';
+
+body,
+html {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -10,12 +16,48 @@ body, html {
 
 header {
   height: 100%;
+
   // width: 200px;
   float: left;
-}
 
+  // Custom header colors
+  .bg-dark {
+    background-color: $primary !important; // Change header background color
+  }
+
+  // Header text colors
+  .text-white {
+    color: white !important; // Keep text white, or change to another color
+  }
+
+  // Username text color
+  .fs-4 {
+    color: white !important; // Changed to white
+  }
+
+  // More specific targeting for span text
+  span {
+    color: white !important;
+  }
+}
 .nav-pills li a:hover {
   background-color: $primary;
+}
+
+// Header navigation styles
+.nav-pills {
+  .nav-link {
+    color: $light !important; // Navigation link color
+
+    &:hover {
+      background-color: $accent !important; // Hover background
+      color: white !important; // Hover text color
+    }
+
+    &.active {
+      background-color: $secondary !important; // Active link background
+    }
+  }
 }
 
 h1 {
@@ -30,6 +72,27 @@ h1 {
 // footer
 footer a {
   color: #888;
+}
+
+// Test your custom colors
+.test-colors {
+  background-color: $primary;
+  color: $dark;
+  border: 2px solid $accent;
+}
+
+// Header button styling
+header {
+  .btn-secondary {
+    background-color: $accent !important;
+    border-color: $accent !important;
+    color: white !important;
+
+    &:hover {
+      background-color: darken($accent, 10%) !important;
+      border-color: darken($accent, 10%) !important;
+    }
+  }
 }
 
 // faq.html
