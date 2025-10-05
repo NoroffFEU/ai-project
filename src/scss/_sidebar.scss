@@ -1,42 +1,33 @@
 dialog {
-  // Positioning
   position: absolute;
-
-  // Visual
   border: 0;
 }
 
 dialog[open] {
-  // Animation
   animation:
     slide-in 500ms forwards,
     fade-in 500ms forwards;
 }
 
 dialog[closing] {
-  // Positioning
   display: block;
   pointer-events: none;
   inset: 0;
 
-  // Animation
   animation:
     slide-out 500ms forwards,
     fade-out 500ms forwards;
 }
 
 dialog::backdrop {
-  // Visual
   background-color: rgba($color: #000000, $alpha: 0.5);
 }
 
 dialog[open]::backdrop {
-  // Animation
   animation: fade-in 500ms forwards;
 }
 
 dialog[closing]::backdrop {
-  // Animation
   animation: fade-out 500ms forwards;
 }
 
