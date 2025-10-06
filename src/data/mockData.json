@@ -1,0 +1,93 @@
+{
+  "user": {
+    "isAuthenticated": false,
+    "username": "demo_user",
+    "hasSeenTutorial": false
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Workout",
+      "description": "I want to workout as a novice, plan me a simple routine to start",
+      "color": "#4a6fa5",
+      "dueDate": "2025-10-02T11:03:00",
+      "formattedDate": "11:03 Thu",
+      "completed": false,
+      "priority": 3,
+      "priorityScore": "+4.6",
+      "category": "fitness"
+    },
+    {
+      "id": 2,
+      "title": "Wash the dishes",
+      "description": "Clean kitchen dishes after dinner",
+      "color": "#e74c3c",
+      "dueDate": "2025-10-02T18:00:00",
+      "formattedDate": "18:00 Thu",
+      "completed": true,
+      "priority": 2,
+      "priorityScore": "+3.2",
+      "category": "household"
+    },
+    {
+      "id": 3,
+      "title": "Complete project presentation",
+      "description": "Finish slides and prepare for tomorrow's team meeting",
+      "color": "#9b59b6",
+      "dueDate": "2025-10-03T09:00:00",
+      "formattedDate": "09:00 Fri",
+      "completed": false,
+      "priority": 5,
+      "priorityScore": "+6.2",
+      "category": "work"
+    },
+    {
+      "id": 4,
+      "title": "Call Mom",
+      "description": "Weekly check-in call with Mom",
+      "color": "#f39c12",
+      "dueDate": "2025-10-05T19:00:00",
+      "formattedDate": "19:00 Sun",
+      "completed": false,
+      "priority": 2,
+      "priorityScore": "+3.8",
+      "category": "personal"
+    }
+  ],
+  "todayView": {
+    "date": "2025-10-05",
+    "dayName": "Saturday",
+    "completion": "1/4",
+    "tasks": [1, 2, 3, 4]
+  },
+  "weeklyView": {
+    "days": [
+      {
+        "date": "2025-10-01",
+        "dayName": "Monday",
+        "completion": "2/5",
+        "tasks": [1, 2, 3, 4]
+      }
+    ]
+  },
+  "taskBoard": {
+    "columns": [
+      {
+        "id": "todo",
+        "title": "To Do",
+        "tasks": [1, 3, 4],
+        "priorityScores": ["+4.6", "+6.2", "+3.8"]
+      },
+      {
+        "id": "completed", 
+        "title": "Completed",
+        "tasks": [2],
+        "priorityScores": ["+3.2"]
+      }
+    ]
+  },
+  "exportOptions": {
+    "formats": ["PDF", "CSV", "Text"],
+    "lastExport": null
+  }
+}
