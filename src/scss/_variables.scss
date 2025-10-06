@@ -15,26 +15,3 @@ $mainHeadingSizeMobile: 2.25rem;
 $secondaryHeadingSizeMobile: 1.75rem;
 $paragraphSizeMobile: 1rem;
 
-// Fonts
-$headingsFont: "Manrope", Helvetica, Arial, sans-serif;
-$paragraphFont: "Calibri", Arial, Helvetica, sans-serif;
-
-// Font sizes (Desktop)
-$mainHeadingSizeDesktop: 3rem; // 48px
-$secondaryHeadingSizeDesktop: 2rem; // 32px
-$paragraphSizeDesktop: 1.125rem; // 18px
-
-// Font sizes (Mobile)
-$mainHeadingSizeMobile: 2.25rem; // 36px
-$secondaryHeadingSizeMobile: 1.75rem; // 28px
-$paragraphSizeMobile: 1rem; // 16px
-
-// Default Bootstrap breakpoints
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
-);

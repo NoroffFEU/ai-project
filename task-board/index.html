@@ -1,185 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task Board</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/dist/css/styles.css" />
-    <script
-      src="https://kit.fontawesome.com/40355c2075.js"
-      crossorigin="anonymous"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"></script>
-    <script type="module" src="/src/js/index.js"></script>
-  </head>
-  <body>
-    <!-- Sidebar -->
-    <header id="sidebarNav" class="sidebarNav"></header>
-    <!-- ------- -->
-    <!-- To do list -->
-    <div class="container mt-5">
-      <h1 class="text-center mb-4">Task Board</h1>
-      <div class="col-md-8 d-flex justify-content-between m-auto">
-        <h5 id="fractionalCounter">0/0</h5>
-        <button
-          id="addTaskBtn"
-          class="btn border-dark btn-block"
-          data-bs-toggle="modal"
-          data-bs-target="#addTaskModal">
-          + Add task
-        </button>
-      </div>
-
-      <!-- MOCKUP LIST -->
-      <ul class="list-group mb-0">
-        <li
-          class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-          <div class="d-flex align-items-center">
-            <input
-              class="form-check-input me-2"
-              type="checkbox"
-              value=""
-              aria-label="..." />
-            Do dishes
-          </div>
-          <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-            <i class="fas fa-times text-primary"></i>
-          </a>
-        </li>
-        <li
-          class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-          <div class="d-flex align-items-center">
-            <input
-              class="form-check-input me-2"
-              type="checkbox"
-              value=""
-              aria-label="..."
-              checked />
-            <s>Wash the car</s>
-          </div>
-          <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-            <i class="fas fa-times text-primary"></i>
-          </a>
-        </li>
-        <li
-          class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-          <div class="d-flex align-items-center">
-            <input
-              class="form-check-input me-2"
-              type="checkbox"
-              value=""
-              aria-label="..." />
-            Shopping
-          </div>
-          <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-            <i class="fas fa-times text-primary"></i>
-          </a>
-        </li>
-        <li
-          class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-          <div class="d-flex align-items-center">
-            <input
-              class="form-check-input me-2"
-              type="checkbox"
-              value=""
-              aria-label="..." />
-            Pay bills
-          </div>
-          <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-            <i class="fas fa-times text-primary"></i>
-          </a>
-        </li>
-        <li
-          class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-0">
-          <div class="d-flex align-items-center">
-            <input
-              class="form-check-input me-2"
-              type="checkbox"
-              value=""
-              aria-label="..."
-              checked />
-            Doctor appointment
-          </div>
-          <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-            <i class="fas fa-times text-primary"></i>
-          </a>
-        </li>
-        <li
-          class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-          <div class="d-flex align-items-center">
-            <input
-              class="form-check-input me-2"
-              type="checkbox"
-              value=""
-              aria-label="..." />
-            Monthly budget
-          </div>
-          <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-            <i class="fas fa-times text-primary"></i>
-          </a>
-        </li>
-      </ul>
-      <!-- MOCKUP LIST -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Board</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/dist/css/styles.css" />
+  <script src="https://kit.fontawesome.com/40355c2075.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="/src/js/taskBoard.js" defer></script>
+</head>
+<body>
+  <!-- To do list -->
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Task Board</h1>
+    <div class="col-md-8 d-flex justify-content-between m-auto">
+     <h5 id="fractionalCounter">0/0</h5>
+      <button id="addTaskBtn" class="btn border-dark btn-block" data-bs-toggle="modal" data-bs-target="#addTaskModal">
+        + Add task
+      </button>
     </div>
-    <!-- To do list -->
-    <!-- Add task modal -->
-    <div
-      class="modal fade"
-      id="addTaskModal"
-      tabindex="-1"
-      aria-labelledby="addTaskModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title text-center w-100" id="addTaskModalLabel">
-              Create task
-            </h5>
-          </div>
-          <div class="modal-body">
-            <form id="addTaskForm">
-              <div class="mb-3">
-                <label for="task-title" class="form-label">Task Title</label>
-                <input
-                  type="text"
-                  class="form-control bg-light"
-                  name="task-title"
-                  id="task-title"
-                  required
-                  placeholder="Task Title" />
-              </div>
-              <div class="mb-3">
-                <label for="task-description" class="form-label">Description</label>
-                <textarea
-                  class="form-control bg-light"
-                  name="task-description"
-                  id="task-description"
-                  placeholder="Describe your task"
-                  rows="5"></textarea>
-              </div>
-              <div class="d-flex justify-content-end gap-2">
-                <button
-                  class="btn border-dark btn-block my-4"
-                  type="button"
-                  data-bs-dismiss="modal"
-                  aria-label="Close">
-                  Cancel
-                </button>
-                <button
-                  class="btn border-dark btn-block my-4"
-                  type="submit"
-                  id="submit-btn">
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
+
+    <!-- MOCKUP LIST -->
+    <ul class="list-group mb-0">
+      <li
+        class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+        <div class="d-flex align-items-center">
+          <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+          Do dishes
+        </div>
+        <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+          <i class="fas fa-times text-primary"></i>
+        </a>
+      </li>
+      <li
+        class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+        <div class="d-flex align-items-center">
+          <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked />
+          <s>Wash the car</s>
+        </div>
+        <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+          <i class="fas fa-times text-primary"></i>
+        </a>
+      </li>
+      <li
+        class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+        <div class="d-flex align-items-center">
+          <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+          Shopping
+        </div>
+        <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+          <i class="fas fa-times text-primary"></i>
+        </a>
+      </li>
+      <li
+        class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+        <div class="d-flex align-items-center">
+          <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+          Pay bills
+        </div>
+        <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+          <i class="fas fa-times text-primary"></i>
+        </a>
+      </li>
+      <li
+        class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-0">
+        <div class="d-flex align-items-center">
+          <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked />
+          Doctor appointment
+        </div>
+        <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+          <i class="fas fa-times text-primary"></i>
+        </a>
+      </li>
+      <li
+        class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+        <div class="d-flex align-items-center">
+          <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+          Monthly budget
+        </div>
+        <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+          <i class="fas fa-times text-primary"></i>
+        </a>
+      </li>
+    </ul>
+    <!-- MOCKUP LIST -->
+  </div>
+  <!-- To do list -->
+  <!-- Add task modal -->
+  <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center w-100" id="addTaskModalLabel">Create task</h5>
+        </div>
+        <div class="modal-body">
+          <form id="addTaskForm">
+            <div class="mb-3">
+              <label for="task-title" class="form-label">Task Title</label>
+              <input type="text" class="form-control bg-light" name="task-title" id="task-title" required placeholder="Task Title" />
+            </div>
+            <div class="mb-3">
+              <label for="task-description" class="form-label">Description</label>
+              <textarea class="form-control bg-light" name="task-description" id="task-description" placeholder="Describe your task" rows="5"></textarea>
+            </div>
+            <div class="d-flex justify-content-end gap-2">
+              <button class="btn border-dark btn-block my-4" type="button" data-bs-dismiss="modal"
+              aria-label="Close">Cancel</button>
+              <button class="btn border-dark btn-block my-4" type="submit" id="submit-btn">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-    <!-- Add task modal -->
-  </body>
+  </div>
+  <!-- Add task modal -->
+</body>
 </html>
