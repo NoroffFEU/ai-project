@@ -2,212 +2,313 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>How to Use - AIMOT Daily Planning App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="src/css/styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/styles.css" />
   </head>
   <body>
-    
-     <!-- Sidebar -->
+    <!-- Sidebar navigation placeholder for future use -->
     <header id="sidebarNav" class="sidebarNav"></header>
-    <!-- ------- -->
-  
 
+    <!-- Replaced two-column layout with bento grid layout -->
+    <div class="page-container">
+      <!-- Page Header -->
+      <header class="section__header">
+        <img src="images/temporaryLogo.png" alt="AIMOT logo" class="mb-3" />
+        <h1>How to Use AIMOT</h1>
+        <p class="lead">
+          Your complete guide to mastering daily task management with AIMOT
+        </p>
+      </header>
 
-      <!-- Main Content -->
-      <main class="main-content">
-        <div class="content-wrapper">
-          
-          <!-- Page Header -->
-          <header class="section__header">
-            <img src="images/temporaryLogo.png" alt="AIMOT logo" style="max-width: 10rem; height: auto;">
-            <h1>How to Use AIMOT</h1>
-            <p class="lead">Your complete guide to mastering daily task management with AIMOT</p>
-          </header>
-
-          <!-- Introduction -->
-          <section class="section">
-            <div class="card card--light">
-              <h2>Welcome to AIMOT!</h2>
-              <p>AIMOT is your personal daily planning assistant designed to help you stay organized and motivated. This guide will walk you through everything you need to know to get started.</p>
-              <p>Use the links below to navigate to specific topics, or scroll down to read through the complete guide.</p>
-            </div>
-          </section>
-
-          <!-- Quick Navigation -->
-          <nav class="section" aria-label="Page sections">
-            <a href="#adding-tasks" class="link">Adding Tasks</a>
-            <a href="#viewing-tasks" class="link">Viewing Tasks</a>
-            <a href="#editing-tasks" class="link">Editing Tasks</a>
-            <a href="#ai-assistant" class="link">AI Assistant</a>
+      <!-- Quick links in container spanning 2 bento columns -->
+      <div class="bento-container">
+        <!-- Quick Navigation -->
+        <div class="bento-item bento-item--quicklinks">
+          <h2>Quick Navigation</h2>
+          <p class="mb-3">
+            Jump to any section to learn more about AIMOT's features
+          </p>
+          <nav class="quicklinks-grid">
+            <!-- Updated quick links to use badge styling like section cards -->
+            <a href="#adding-tasks" class="quicklink-card">
+              <span class="number-badge">1</span>
+              <span class="quicklink-text">Adding Tasks</span>
+            </a>
+            <a href="#viewing-tasks" class="quicklink-card">
+              <span class="number-badge">2</span>
+              <span class="quicklink-text">Viewing Tasks</span>
+            </a>
+            <a href="#editing-tasks" class="quicklink-card">
+              <span class="number-badge">3</span>
+              <span class="quicklink-text">Editing Tasks</span>
+            </a>
+            <a href="#ai-assistant" class="quicklink-card">
+              <span class="number-badge">4</span>
+              <span class="quicklink-text">AI Assistant</span>
+            </a>
           </nav>
-
-          <!-- Section 1: Adding Tasks -->
-          <section class="section" id="adding-tasks">
-            <article class="card card--primary">
-              <header class="card__header">
-                <h2>
-                  <span class="badge">1</span>
-                  Adding Tasks
-                </h2>
-              </header>
-              <div class="card__body">
-                <p class="lead">Create and organize your daily tasks in just a few simple steps.</p>
-                
-                <h3>Step-by-Step Instructions:</h3>
-                <ol class="list">
-                  <li class="list__item">
-                    <strong>Locate the Task Input Field</strong>
-                    <p>Find the "Add New Task" input field in your daily planner.</p>
-                  </li>
-                  <li class="list__item">
-                    <strong>Enter Your Task</strong>
-                    <p>Type a clear, concise description of what you need to accomplish.</p>
-                  </li>
-                  <li class="list__item">
-                    <strong>Click "Add Task" or Press Enter</strong>
-                    <p>Your task will instantly appear in your daily task list.</p>
-                  </li>
-                </ol>
-
-                <div class="alert alert--info">
-                  <strong>Pro Tip:</strong> Break large tasks into smaller, actionable steps for better progress tracking!
-                </div>
-
-                <div class="placeholder">
-                  <em>[Screenshot: Adding a task]</em>
-                </div>
-              </div>
-            </article>
-          </section>
-
-          <!-- Section 2: Viewing Tasks -->
-          <section class="section" id="viewing-tasks">
-            <article class="card card--primary">
-              <header class="card__header">
-                <h2>
-                  <span class="badge">2</span>
-                  Viewing Tasks
-                </h2>
-              </header>
-              <div class="card__body">
-                <p class="lead">Access and review your tasks.</p>
-                
-                <h3>Viewing Options:</h3>
-                <div class="grid grid--2-col">
-                  <div class="card card--light">
-                    <h4>Daily View</h4>
-                    <p>See all tasks scheduled for today. This is your default view when you open AIMOT.</p>
-                    <ul>
-                      <li>View incomplete tasks</li>
-                      <li>See completed tasks</li>
-                    </ul>
-                  </div>
-                  <div class="card card--light">
-                    <h4>Weekly View</h4>
-                    <p>Navigate to "Your Week" to see a calendar view of all your tasks for the week.</p>
-                    <ul>
-                      <li>Overview of the entire week</li>
-                      <li>Track progress across days</li>
-                      <li>Plan ahead effectively</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="placeholder">
-                  <em>[Screenshot: Task list view]</em>
-                </div>
-              </div>
-            </article>
-          </section>
-
-          <!-- Section 3: Editing Tasks -->
-          <section class="section" id="editing-tasks">
-            <article class="card card--secondary">
-              <header class="card__header">
-                <h2>
-                  <span class="badge">3</span>
-                  Editing Tasks
-                </h2>
-              </header>
-              <div class="card__body">
-                <p class="lead">Modify, update, or remove tasks as your day evolves.</p>
-                
-                <h3>Edit Task Details</h3>
-                <ol>
-                  <li>Click on the task you want to edit</li>
-                  <li>The task text becomes editable</li>
-                  <li>Make your changes</li>
-                  <li>Save your task</li>
-                </ol>
-
-                <div class="placeholder">
-                  <em>[Screenshot: Editing task]</em>
-                </div>
-              </div>
-            </article>
-          </section>
-
-          <!-- Section 4: AI Assistant -->
-          <section class="section" id="ai-assistant">
-            <article class="card card--primary">
-              <header class="card__header">
-                <h2>
-                  <span class="badge">4</span>
-                  AI Assistant
-                </h2>
-              </header>
-              <div class="card__body">
-                <p class="lead">Get personalized motivation, tips, and insights powered by AI.</p>
-
-                <h3>What AIMOT Can Do:</h3>
-                <div class="grid grid--3-col">
-                  <div class="card">
-                    <h4>Daily Motivation</h4>
-                    <p>Receive inspiring quotes and encouragement to start your day right.</p>
-                  </div>
-                  <div class="card">
-                    <h4>Productivity Tips</h4>
-                    <p>Get practical advice on time management and task prioritization.</p>
-                  </div>
-                  <div class="card">
-                    <h4>Progress Insights</h4>
-                    <p>Understand your productivity patterns and celebrate achievements.</p>
-                  </div>
-                </div>
-
-                <div class="alert alert--info">
-                  <strong>Example Questions to Ask AIMOT:</strong>
-                  <ul>
-                    <li>"How can I prioritize my tasks today?"</li>
-                    <li>"Give me a motivational quote"</li>
-                    <li>"What's the best way to manage my time?"</li>
-                  </ul>
-                </div>
-
-                <div class="placeholder">
-                  <em>[Screenshot: AI assistant]</em>
-                </div>
-              </div>
-            </article>
-          </section>
-
         </div>
-      </main>
-      
+
+        <!-- Section 1: Adding Tasks -->
+        <article class="bento-item bento-item--large" id="adding-tasks">
+          <div class="bento-header">
+            <span class="badge bg-light text-dark">1</span>
+            <h2>Adding Tasks</h2>
+          </div>
+          <p class="lead">
+            Create and organize your daily tasks in just a few simple steps.
+          </p>
+
+          <!-- Added centered placeholder image -->
+          <div class="placeholder">
+            <img src="" alt="Adding tasks interface" />
+          </div>
+
+          <!-- Bootstrap accordion for expandable details -->
+          <div class="accordion accordion-flush" id="addingTasksAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#addingDetails"
+                >
+                  View Step-by-Step Instructions
+                </button>
+              </h3>
+              <div
+                id="addingDetails"
+                class="accordion-collapse collapse"
+                data-bs-parent="#addingTasksAccordion"
+              >
+                <div class="accordion-body">
+                  <ol class="ps-3">
+                    <li class="mb-2">
+                      <strong>Locate the Task Input Field:</strong> Find the
+                      "Add New Task" input field in your daily planner.
+                    </li>
+                    <li class="mb-2">
+                      <strong>Enter Your Task:</strong> Type a clear, concise
+                      description of what you need to accomplish.
+                    </li>
+                    <li class="mb-2">
+                      <strong>Click "Add Task":</strong> Your task will
+                      instantly appear in your daily task list.
+                    </li>
+                  </ol>
+                  <div class="alert--info mt-3">
+                    <strong>Pro Tip:</strong> Break large tasks into smaller,
+                    actionable steps for better progress tracking!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Section 2: Viewing Tasks -->
+        <article class="bento-item bento-item--small" id="viewing-tasks">
+          <div class="bento-header">
+            <span class="badge bg-light text-dark">2</span>
+            <h2>Viewing Tasks</h2>
+          </div>
+          <p>Access and review your tasks in daily or weekly view.</p>
+
+          <!-- Added centered placeholder image -->
+          <div class="placeholder">
+            <img src="" alt="Viewing tasks interface" />
+          </div>
+
+          <!-- Bootstrap accordion for expandable details -->
+          <div class="accordion accordion-flush" id="viewingTasksAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#viewingDetails"
+                >
+                  View Options
+                </button>
+              </h3>
+              <div
+                id="viewingDetails"
+                class="accordion-collapse collapse"
+                data-bs-parent="#viewingTasksAccordion"
+              >
+                <div class="accordion-body">
+                  <h4>Daily View</h4>
+                  <p class="small">
+                    See all tasks scheduled for today with incomplete and
+                    completed tasks.
+                  </p>
+                  <h4 class="mt-3">Weekly View</h4>
+                  <p class="small mb-0">
+                    Navigate to "Your Week" to see a calendar view of all your
+                    tasks.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Section 3: Editing Tasks -->
+        <article class="bento-item bento-item--small" id="editing-tasks">
+          <div class="bento-header">
+            <span class="badge bg-light text-dark">3</span>
+            <h2>Editing Tasks</h2>
+          </div>
+          <p>Modify, update, or remove tasks as your day evolves.</p>
+
+          <!-- Added centered placeholder image -->
+          <div class="placeholder">
+            <img src="" alt="Editing tasks interface" />
+          </div>
+          <!-- Bootstrap accordion for expandable details -->
+          <div class="accordion accordion-flush" id="editingTasksAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#editingDetails"
+                >
+                  How to Edit
+                </button>
+              </h3>
+              <div
+                id="editingDetails"
+                class="accordion-collapse collapse"
+                data-bs-parent="#editingTasksAccordion"
+              >
+                <div class="accordion-body">
+                  <ol class="ps-3 small mb-0">
+                    <li>Click on the task you want to edit</li>
+                    <li>The task text becomes editable</li>
+                    <li>Make your changes</li>
+                    <li>Save your task</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Section 4: AI Assistant (large - spans 3 columns) -->
+        <article class="bento-item bento-item--large" id="ai-assistant">
+          <div class="bento-header">
+            <span class="badge bg-light text-dark">4</span>
+            <h2>AI Assistant</h2>
+          </div>
+          <p class="lead">
+            Get personalized motivation, tips, and insights powered by AI.
+          </p>
+
+          <!-- Added centered placeholder image -->
+          <div class="placeholder">
+            <img src="" alt="AI assistant interface" />
+          </div>
+          <!-- Bootstrap accordion for expandable details -->
+          <div class="accordion accordion-flush" id="aiAssistantAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#aiDetails"
+                >
+                  What AIMOT Can Do
+                </button>
+              </h3>
+              <div
+                id="aiDetails"
+                class="accordion-collapse collapse"
+                data-bs-parent="#aiAssistantAccordion"
+              >
+                <div class="accordion-body">
+                  <div class="row g-3">
+                    <div class="col-md-4">
+                      <h4 class="h6">Daily Motivation</h4>
+                      <p class="small mb-0">
+                        Receive inspiring quotes and encouragement to start your
+                        day right.
+                      </p>
+                    </div>
+                    <div class="col-md-4">
+                      <h4 class="h6">Productivity Tips</h4>
+                      <p class="small mb-0">
+                        Get practical advice on time management and task
+                        prioritization.
+                      </p>
+                    </div>
+                    <div class="col-md-4">
+                      <h4 class="h6">Progress Insights</h4>
+                      <p class="small mb-0">
+                        Understand your productivity patterns and celebrate
+                        achievements.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tips card spans 2 columns at bottom -->
+        <div class="bento-item bento-item--tips bento-item--highlight">
+          <h2>Quick Tips</h2>
+          <ul class="tips-list">
+            <li>Break tasks into smaller steps</li>
+            <li>Use the AI assistant for motivation</li>
+            <li>Review your weekly progress</li>
+            <li>Set realistic daily goals</li>
+          </ul>
+        </div>
+
+        <!-- Updated content to be about new features coming soon -->
+        <div class="bento-item bento-item--full bento-item--info">
+          <h2>More Features Coming Soon</h2>
+          <p>
+            We're currently adding new features to enhance your AIMOT
+            experience. You'll be able to find more information about these
+            updates at a later stage.
+          </p>
+          <p class="mb-0">
+            <strong>Need help?</strong> Please contact us and we'll be happy to
+            assist you!
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
+
     <footer class="footer">
       <div class="footer__grid">
         <div class="footer__column">
-          <img src="images/temporaryLogo.png" alt="AIMOT logo" style="max-width: 7.5rem; height: auto; margin-bottom: var(--space-md);">
+          <img src="images/temporaryLogo.png" alt="AIMOT logo" />
           <h3 class="footer__heading">About AIMOT</h3>
-          <p class="footer__text">Your AI-powered daily planning assistant designed to help you stay organized, motivated, and productive.</p>
+          <p class="footer__text">
+            Your AI-powered daily planning assistant designed to help you stay
+            organized, motivated, and productive.
+          </p>
         </div>
 
         <div class="footer__column">
@@ -230,8 +331,12 @@
 
         <div class="footer__column">
           <h3 class="footer__heading">Project Credits</h3>
-          <p class="footer__text"><strong>Developed by:</strong><br>Noroff octpt team</p>
-          <p class="footer__text"><strong>Year:</strong> 2025<br><strong>Version:</strong> 1.0</p>
+          <p class="footer__text">
+            <strong>Developed by:</strong><br />Noroff octpt team
+          </p>
+          <p class="footer__text">
+            <strong>Year:</strong> 2025<br /><strong>Version:</strong> 1.0
+          </p>
         </div>
       </div>
 
@@ -239,7 +344,7 @@
         <p>&copy; 2025 AIMOT. All rights reserved.</p>
       </div>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="src/js/index.js"></script>
   </body>
