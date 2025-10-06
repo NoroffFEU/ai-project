@@ -1,4 +1,118 @@
-@use "variables";
-@use "sidebar";
-@use "custom";
-@use "../../node_modules/bootstrap/scss/bootstrap";
+@import 'variables';
+@import 'custom';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import 'sidebar';
+
+body,
+html {
+  // Sizes
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  // Visual
+  background-color: $pageBackgroundColor;
+}
+
+header {
+  // Positioning
+  float: left;
+
+  // Sizes
+  height: 100%;
+  // width: 200px;
+}
+
+.nav-pills li a:hover {
+  // Visual
+  background-color: $primary;
+}
+
+h1 {
+  // Typography
+  font-weight: 700;
+}
+
+.list-group-item {
+  // Visual
+  border-left: 0;
+  border-right: 0;
+}
+
+// footer
+footer a {
+  // Visual
+  color: #000000;
+}
+
+// About page logo - mobile first
+.logo-circle {
+  // Sizes (mobile first)
+  width: 4rem;
+  height: 4rem;
+
+  // Desktop
+  @media (min-width: 48rem) {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+// Remove text decoration
+.text-no-decoration {
+  // Typography
+  text-decoration: none;
+}
+
+// faq.html
+
+// .faqHeader {
+//   height: auto;
+//   float: none;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-top: 2rem;
+// }
+
+// .logo-section {
+//   display: flex;
+//   justify-content: center;
+// }
+
+// .logosmall {
+//   width: 250px;
+// }
+
+// .gitHubLogo {
+//   width: 50px;
+// }
+
+// #selection-section h1,
+// h2,
+// h3,
+// p,
+// ul {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-top: 2rem;
+// }
+
+// .navbar ul,
+// #selection-list {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   list-style: none;
+// }
+
+// #selection-list a {
+//   color: #000;
+// }
+
+// #contribution-answer {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
