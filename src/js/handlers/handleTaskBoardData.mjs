@@ -1,8 +1,8 @@
-import { isLoggedIn } from "/src/js/auth/isLoggedIn.mjs";
-import { createTaskBoardItem } from "/src/js/ui/createTaskBoardItem.mjs";
-import { addToLocalStorage, getFromLocalStorage } from "../localStorage.js";
-import { dropdownButtonListener } from "../listeners/dropdownButtonListener.mjs";
+import { isLoggedIn } from "../auth/isLoggedIn.mjs";
+import { createTaskBoardItem } from "../ui/createTaskBoardItem.mjs";
+import { addToLocalStorage, getFromLocalStorage } from "../utils/localStorage.mjs";
 import { fetchTasks } from "../api/fetchTasks.mjs";
+import { dropdownButtonListener } from "../listeners/dropdownButtonListener.mjs";
 
 /**
  * Loads and displays tasks on the task board using API (logged in users) or demo data (guests).
@@ -45,8 +45,7 @@ export async function handleTaskBoardData() {
         });
 
         const completedTasks = tasks.filter((task) => task.completed);
-        document.querySelector("#completed-tasks").innerText =
-          completedTasks.length;
+        document.querySelector("#completed-tasks").innerText = completedTasks.length;
         document.querySelector("#total-tasks").innerText = tasks.length;
       } else {
         taskBoardContainer.innerText = "No tasks available.";

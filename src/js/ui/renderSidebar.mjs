@@ -3,7 +3,7 @@ import { createSidebar } from "./createSidebar.mjs";
 export const renderSidebar = () => {
   const headerNav = document.querySelector("#sidebarNav");
   if (!headerNav) {
-    console.warn("#sidebarNav not found");
+    console.log("#sidebarNav not found");
     return;
   }
 

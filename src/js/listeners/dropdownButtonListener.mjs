@@ -17,7 +17,7 @@ export function dropdownButtonListener() {
       const taskId = button.dataset.taskId;
 
       const dropdownMenu = document.querySelector(
-        `.dropdown-menu[data-task-id="${taskId}"]`,
+        `.dropdown-menu[data-task-id="${taskId}"]`
       );
 
       if (dropdownMenu) {

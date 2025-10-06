@@ -1,7 +1,7 @@
-@import 'variables';
-@import 'custom';
-@import '../../node_modules/bootstrap/scss/bootstrap';
-@import 'sidebar';
+@import "variables";
+@import "custom";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "sidebar";
 
 body,
 html {
@@ -12,20 +12,6 @@ html {
 
   // Visual
   background-color: $pageBackgroundColor;
-}
-
-header {
-  // Positioning
-  float: left;
-
-  // Sizes
-  height: 100%;
-  // width: 200px;
-}
-
-.nav-pills li a:hover {
-  // Visual
-  background-color: $primary;
 }
 
 h1 {

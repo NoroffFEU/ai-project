@@ -1,4 +1,4 @@
-import { getFromLocalStorage } from "../localStorage.js";
+import { getFromLocalStorage } from "../utils/localStorage.mjs";
 
 /**
  * Fetches all tasks from the API.

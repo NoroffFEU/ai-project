@@ -10,8 +10,7 @@ import { closeAllDropdowns } from "./closeAllDropdowns.mjs";
  */
 export function toggleDropdown(dropdownMenu, button) {
   const isCurrentlyVisible =
-    dropdownMenu.classList.contains("show") &&
-    !dropdownMenu.classList.contains("d-none");
+    dropdownMenu.classList.contains("show") && !dropdownMenu.classList.contains("d-none");
 
   if (isCurrentlyVisible) {
     dropdownMenu.classList.remove("show");
