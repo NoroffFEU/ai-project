@@ -4,458 +4,303 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>How to Use - AIMOT Daily Planning App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="src/scss/styles.scss"/>
+    <link rel="stylesheet" href="src/css/styles.css"/>
   </head>
   <body>
     
-     <!-- Hamburger button (mobile only)  -->
+    <!-- Mobile Menu Toggle -->
     <button 
-      class="btn btn-light d-md-none fixed start-0 m-3 p-2" 
+      class="mobile-menu-toggle" 
       type="button" 
       data-bs-toggle="offcanvas" 
       data-bs-target="#sidebarMenu" 
       aria-controls="sidebarMenu"
-      aria-label="Toggle navigation"
-      style="z-index: 1050;">
+      aria-label="Toggle navigation">
       <svg width="24" height="24" fill="currentColor">
         <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/>
       </svg>
     </button>
 
-    <div class="container-fluid">
-      <div class="row">
-        
-         <!-- Sidebar Navigation  -->
-        <nav 
-          class="col-md-3 col-lg-2 bg-dark min-vh-100 p-3 d-none d-md-block " 
-          aria-label="Main navigation">
-          
-           <!-- Desktop sidebar content  -->
-          <div class="d-flex flex-column align-items-center text-white sticky-top">
-            <ul class="nav nav-pills flex-column w-100">
-              <li class="nav-item py-2">
-                <a href="#" class="nav-link text-white">Home</a>
-              </li>
-              <li class="nav-item py-2">
-                <a href="#" class="nav-link text-white">Your Week</a>
-              </li>
-              <li class="nav-item py-2">
-                <a href="./about.html" class="nav-link text-white">About App</a>
-              </li>
-              <li class="nav-item py-2">
-                <a href="./faq.html" class="nav-link text-white active" aria-current="page">How to use</a>
-              </li>
-            </ul>
-            <button type="button" class="btn btn-light my-3">Login</button>
-          </div>
-        </nav>
-
-         <!-- Mobile Offcanvas Sidebar  -->
-        <div 
-          class="offcanvas offcanvas-start bg-dark d-md-none" 
-          tabindex="-1" 
-          id="sidebarMenu" 
-          aria-labelledby="sidebarMenuLabel">
-          
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title text-white" id="sidebarMenuLabel">Menu</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          
-          <div class="offcanvas-body p-3">
-            <div class="d-flex flex-column align-items-center text-white">
-              <span class="fs-4 mb-2">Username</span>
-              
-              <div class="form-check form-switch mb-4">
-                <input class="form-check-input p-2" type="checkbox" role="switch" id="flexSwitchCheckCheckedMobile">
-              </div>
-              
-              <ul class="nav nav-pills flex-column w-100">
-                <li class="nav-item py-2">
-                  <a href="#" class="nav-link text-white">Home</a>
-                </li>
-                <li class="nav-item py-2">
-                  <a href="#" class="nav-link text-white">Your Week</a>
-                </li>
-                <li class="nav-item py-2">
-                  <a href="./about.html" class="nav-link text-white">About App</a>
-                </li>
-                <li class="nav-item py-2">
-                  <a href="./faq.html" class="nav-link text-white active" aria-current="page">How to use</a>
-                </li>
-              </ul>              
-              <button type="button" class="btn btn-light my-3">Login</button>
-            </div>
-          </div>
-        </div>
-    <!-- Main Content Area  -->
-    <main class="col-md-9 ms-sm-auto col-lg-10 p-md-5" id="main-content">
-    <div style="max-width: 800px; margin: 0 auto;">
-      <!-- Page Info  -->
-      <div class="pt-4 pb-3 mb-4 text-center">
-          <img src="images/temporaryLogo.png" class="w-25 " alt="AIMOT logo">
-        <h1 class="h1">How to Use AIMOT</h1>
-        <p class="lead">
-          Your complete guide to mastering daily task management with AIMOT
-        </p>
+    <!-- Mobile Offcanvas -->
+    <div 
+      class="offcanvas offcanvas-start bg-dark d-md-none" 
+      tabindex="-1" 
+      id="sidebarMenu" 
+      aria-labelledby="sidebarMenuLabel">
+      
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
+      
+      <div class="offcanvas-body p-3">
+        <ul class="nav">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Your Week</a>
+          </li>
+          <li class="nav__item">
+            <a href="./about.html" class="nav__link">About App</a>
+          </li>
+          <li class="nav__item">
+            <a href="./faq.html" class="nav__link nav__link--active" aria-current="page">How to use</a>
+          </li>
+        </ul>
+        <button type="button" class="btn">Login</button>
+      </div>
+    </div>
 
-      <!-- Introduction Section  -->
+    <div class="app-container">
+      
+      <!-- Desktop Sidebar -->
+      <aside class="sidebar" aria-label="Main navigation">
+        <ul class="nav">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Your Week</a>
+          </li>
+          <li class="nav__item">
+            <a href="./about.html" class="nav__link">About App</a>
+          </li>
+          <li class="nav__item">
+            <a href="./faq.html" class="nav__link nav__link--active" aria-current="page">How to use</a>
+          </li>
+        </ul>
+        <button type="button" class="btn">Login</button>
+      </aside>
 
-      <section class="mb-5 text-center" aria-labelledby="intro-heading">
-        <div class="card border-0 bg-light">
-          <div class="card-body p-4">
-            <h2 id="intro-heading" class="h4 mb-3">Welcome to AIMOT!</h2>
-            <p class="mb-4">
-              AIMOT is your personal daily planning assistant designed to help
-              you stay organized and motivated. This guide will walk you through
-              everything you need to know to get started.
-            </p>
-            <p class="mb-2">
-              Use the links below to navigate to specific topics, or scroll down
-              to read through the complete guide.
-            </p>
-          </div>
-        </div>
-      </section>
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="content-wrapper">
+          
+          <!-- Page Header -->
+          <header class="section__header">
+            <img src="images/temporaryLogo.png" alt="AIMOT logo" style="max-width: 10rem; height: auto;">
+            <h1>How to Use AIMOT</h1>
+            <p class="lead">Your complete guide to mastering daily task management with AIMOT</p>
+          </header>
 
-      <!-- Quick Navigation Links  -->
-      <nav
-        class="mb-5 pb-3 pt-3 border-bottom  border-top text-center"
-        aria-label="Page sections"
-      >
-        <div class="d-flex flex-column gap-3">
-          <a href="#adding-tasks" class="text-link">Adding Tasks</a>
-          <a href="#viewing-tasks" class="text-link">Viewing Tasks</a>
-          <a href="#editing-tasks" class="text-link">Editing Tasks</a>
-          <a href="#ai-assistant" class="text-link">AI Assistant</a>
-        </div>
-      </nav>
-
-      <!-- Section 1: Adding Tasks  -->
-      <section
-        class="mb-5 scroll-margin-top"
-        id="adding-tasks"
-        aria-labelledby="adding-tasks-heading"
-      >
-        <div class="card border-dark">
-          <div class="card-header bg-secondary text-white">
-            <h2 id="adding-tasks-heading" class="h3 mb-0">
-              <span class="badge bg-white text-secondary me-2">1</span>
-              Adding Tasks
-            </h2>
-          </div>
-          <div class="card-body p-4">
-            <p class="lead">
-              Create and organize your daily tasks in just a few simple steps.
-            </p>
-
-            <h3 class="h5 mt-4 mb-3">Step-by-Step Instructions:</h3>
-            <ol class="list-group list-group-numbered list-group-flush">
-              <li class="list-group-item border-0 px-0">
-                <strong>Locate the Task Input Field</strong>
-                <p class="mb-0 text-muted">
-                  Find the "Add New Task" input field in your daily
-                  planner.
-                </p>
-              </li>
-              <li class="list-group-item border-0 px-0">
-                <strong>Enter Your Task</strong>
-                <p class="mb-0 text-muted">
-                  Type a clear, concise description of what you need to
-                  accomplish.
-                </p>
-              </li>
-              <li class="list-group-item border-0 px-0">
-                <strong>Click "Add Task" or Press Enter</strong>
-                <p class="mb-0 text-muted">
-                  Your task will instantly appear in your daily task list.
-                </p>
-              </li>
-            </ol>
-
-            <div class="alert alert-info mt-4" role="alert">
-              <strong>Pro Tip:</strong> Break large tasks into smaller,
-              actionable steps for better progress tracking!
+          <!-- Introduction -->
+          <section class="section">
+            <div class="card card--light">
+              <h2>Welcome to AIMOT!</h2>
+              <p>AIMOT is your personal daily planning assistant designed to help you stay organized and motivated. This guide will walk you through everything you need to know to get started.</p>
+              <p>Use the links below to navigate to specific topics, or scroll down to read through the complete guide.</p>
             </div>
+          </section>
 
-            <!-- Placeholder for screenshot -->
-            <div
-              class="mt-4 p-5 bg-secondary bg-opacity-10 border rounded text-center"
-            >
-              <p class="text-muted mb-0">
-                <em
-                  >[Screenshot: Adding a task]</em
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+          <!-- Quick Navigation -->
+          <nav class="section" aria-label="Page sections">
+            <a href="#adding-tasks" class="link">Adding Tasks</a>
+            <a href="#viewing-tasks" class="link">Viewing Tasks</a>
+            <a href="#editing-tasks" class="link">Editing Tasks</a>
+            <a href="#ai-assistant" class="link">AI Assistant</a>
+          </nav>
 
-      <!-- Section 2: Viewing Tasks -->
-      <section
-        class="mb-5 scroll-margin-top"
-        id="viewing-tasks"
-        aria-labelledby="viewing-tasks-heading"
-      >
-        <div class="card border-dark">
-          <div class="card-header bg-secondary text-white">
-            <h2 id="viewing-tasks-heading" class="h3 mb-0">
-              <span class="badge bg-white text-secondary me-2">2</span>
-              Viewing Tasks
-            </h2>
-          </div>
-          <div class="card-body p-4">
-            <p class="lead">
-              Access and review your tasks.
-            </p>
+          <!-- Section 1: Adding Tasks -->
+          <section class="section" id="adding-tasks">
+            <article class="card card--primary">
+              <header class="card__header">
+                <h2>
+                  <span class="badge">1</span>
+                  Adding Tasks
+                </h2>
+              </header>
+              <div class="card__body">
+                <p class="lead">Create and organize your daily tasks in just a few simple steps.</p>
+                
+                <h3>Step-by-Step Instructions:</h3>
+                <ol class="list">
+                  <li class="list__item">
+                    <strong>Locate the Task Input Field</strong>
+                    <p>Find the "Add New Task" input field in your daily planner.</p>
+                  </li>
+                  <li class="list__item">
+                    <strong>Enter Your Task</strong>
+                    <p>Type a clear, concise description of what you need to accomplish.</p>
+                  </li>
+                  <li class="list__item">
+                    <strong>Click "Add Task" or Press Enter</strong>
+                    <p>Your task will instantly appear in your daily task list.</p>
+                  </li>
+                </ol>
 
-            <h3 class="h5 mt-4 mb-3">Viewing Options:</h3>
+                <div class="alert alert--info">
+                  <strong>Pro Tip:</strong> Break large tasks into smaller, actionable steps for better progress tracking!
+                </div>
 
-            <div class="row g-3">
-              <div class="col-md-6">
-                <div class="card h-100 border-0 bg-light">
-                  <div class="card-body">
-                    <h4 class="h6 card-title">Daily View</h4>
-                    <p class="card-text small">
-                      See all tasks scheduled for today. This is your default
-                      view when you open AIMOT.
-                    </p>
-                    <ul class="small mb-0">
+                <div class="placeholder">
+                  <em>[Screenshot: Adding a task]</em>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- Section 2: Viewing Tasks -->
+          <section class="section" id="viewing-tasks">
+            <article class="card card--primary">
+              <header class="card__header">
+                <h2>
+                  <span class="badge">2</span>
+                  Viewing Tasks
+                </h2>
+              </header>
+              <div class="card__body">
+                <p class="lead">Access and review your tasks.</p>
+                
+                <h3>Viewing Options:</h3>
+                <div class="grid grid--2-col">
+                  <div class="card card--light">
+                    <h4>Daily View</h4>
+                    <p>See all tasks scheduled for today. This is your default view when you open AIMOT.</p>
+                    <ul>
                       <li>View incomplete tasks</li>
                       <li>See completed tasks</li>
                     </ul>
                   </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card h-100 border-0 bg-light">
-                  <div class="card-body">
-                    <h4 class="h6 card-title">Weekly View</h4>
-                    <p class="card-text small">
-                      Navigate to "Your Week" to see a calendar view of all your
-                      tasks for the week.
-                    </p>
-                    <ul class="small mb-0">
+                  <div class="card card--light">
+                    <h4>Weekly View</h4>
+                    <p>Navigate to "Your Week" to see a calendar view of all your tasks for the week.</p>
+                    <ul>
                       <li>Overview of the entire week</li>
                       <li>Track progress across days</li>
                       <li>Plan ahead effectively</li>
                     </ul>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            <h3 class="h5 mt-4 mb-3">Task Display Features:</h3>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <strong>Checkboxes:</strong> Mark tasks as complete
-              </li>
-              <li class="mb-2">
-                <strong>Color Categories:</strong> Organization by task
-                type
-              </li>
-              <li class="mb-2">
-                <strong>Task Details:</strong> Full description visible
-              </li>
+                <div class="placeholder">
+                  <em>[Screenshot: Task list view]</em>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- Section 3: Editing Tasks -->
+          <section class="section" id="editing-tasks">
+            <article class="card card--secondary">
+              <header class="card__header">
+                <h2>
+                  <span class="badge">3</span>
+                  Editing Tasks
+                </h2>
+              </header>
+              <div class="card__body">
+                <p class="lead">Modify, update, or remove tasks as your day evolves.</p>
+                
+                <h3>Edit Task Details</h3>
+                <ol>
+                  <li>Click on the task you want to edit</li>
+                  <li>The task text becomes editable</li>
+                  <li>Make your changes</li>
+                  <li>Save your task</li>
+                </ol>
+
+                <div class="placeholder">
+                  <em>[Screenshot: Editing task]</em>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- Section 4: AI Assistant -->
+          <section class="section" id="ai-assistant">
+            <article class="card card--primary">
+              <header class="card__header">
+                <h2>
+                  <span class="badge">4</span>
+                  AI Assistant
+                </h2>
+              </header>
+              <div class="card__body">
+                <p class="lead">Get personalized motivation, tips, and insights powered by AI.</p>
+
+                <h3>What AIMOT Can Do:</h3>
+                <div class="grid grid--3-col">
+                  <div class="card">
+                    <h4>Daily Motivation</h4>
+                    <p>Receive inspiring quotes and encouragement to start your day right.</p>
+                  </div>
+                  <div class="card">
+                    <h4>Productivity Tips</h4>
+                    <p>Get practical advice on time management and task prioritization.</p>
+                  </div>
+                  <div class="card">
+                    <h4>Progress Insights</h4>
+                    <p>Understand your productivity patterns and celebrate achievements.</p>
+                  </div>
+                </div>
+
+                <div class="alert alert--info">
+                  <strong>Example Questions to Ask AIMOT:</strong>
+                  <ul>
+                    <li>"How can I prioritize my tasks today?"</li>
+                    <li>"Give me a motivational quote"</li>
+                    <li>"What's the best way to manage my time?"</li>
+                  </ul>
+                </div>
+
+                <div class="placeholder">
+                  <em>[Screenshot: AI assistant]</em>
+                </div>
+              </div>
+            </article>
+          </section>
+
+        </div>
+      </main>
       
-            </ul>
-
-            <!-- Placeholder for screenshot -->
-            <div
-              class="mt-4 p-5 bg-secondary bg-opacity-10 border rounded text-center"
-            >
-              <p class="text-muted mb-0">
-                <em>[Screenshot: Task list view]</em>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    
-   <!-- Section 3: Editing Tasks -->
-<section class="mb-5 scroll-margin-top" id="editing-tasks" aria-labelledby="editing-tasks-heading">
-    <div class="card border-secondary">
-        <div class="card-header bg-secondary text-white">
-            <h2 id="editing-tasks-heading" class="h3 mb-0">
-                <span class="badge bg-white text-secondary me-2">3</span>
-                Editing Tasks
-            </h2>
-        </div>
-        <div class="card-body p-4">
-            <p class="lead">Modify, update, or remove tasks as your day evolves.</p>
-            
-            <h3 class="h5 mt-4 mb-3">Edit Task Details</h3>
-            <ol class="mb-4">
-                <li>Click on the task you want to edit</li>
-                <li>The task text becomes editable</li>
-                <li>Make your changes</li>
-                <li>Save your task</li>
-            </ol>
-
-            <h3 class="h5 mt-4 mb-3">Mark as Complete</h3>
-            <p>Simply click the checkbox next to any task to mark it as complete. Completed tasks will:</p>
-            <ul class="mb-4">
-                <li>Show as completed</li>
-                <li>Be saved in your history (for logged-in users)</li>
-            </ul>
-
-            <h3 class="h5 mt-4 mb-3">Delete a Task</h3>
-            <ol class="mb-2">
-                <li>Find the task you want to remove</li>
-                <li>Click the delete icons</li>
-                <li>Confirm deletion if prompted</li>
-            </ol>
-
-            <!-- Placeholder for screenshot -->
-            <div class="mt-4 p-5 bg-secondary bg-opacity-10 border rounded text-center">
-                <p class="text-muted mb-0"><em>[Screenshot: Editing task]</em></p>
-            </div>
-        </div>
     </div>
-</section>
 
-      <!-- Section 4: AI Assistant -->
-      <section
-        class="mb-5 scroll-margin-top"
-        id="ai-assistant"
-        aria-labelledby="ai-assistant-heading"
-      >
-        <div class="card border-dark">
-          <div class="card-header bg-secondary text-white">
-            <h2 id="ai-assistant-heading" class="h3 mb-0">
-              <span class="badge bg-white text-secondary me-2">4</span>
-              AI Assistant
-            </h2>
-          </div>
-          <div class="card-body p-4">
-            <p class="lead">
-              Get personalized motivation, tips, and insights powered by AI.
-            </p>
-
-            <h3 class="h5 mt-4 mb-3">What AIMOT Can Do:</h3>
-
-            <div class="row g-3 mb-5">
-              <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm">
-                  <div class="card-body text-center">
-                  
-                    <h4 class="h6 card-title">Daily Motivation</h4>
-                    <p class="card-text small">
-                      Receive inspiring quotes and encouragement to start your
-                      day right.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm">
-                  <div class="card-body text-center">
-                   
-                    <h4 class="h6 card-title">Productivity Tips</h4>
-                    <p class="card-text small">
-                      Get practical advice on time management and task
-                      prioritization.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm">
-                  <div class="card-body text-center">
-                    
-                    <h4 class="h6 card-title">Progress Insights</h4>
-                    <p class="card-text small">
-                      Understand your productivity patterns and celebrate
-                      achievements.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <h3 class="h5 mt-4 mb-3">How to Interact with AIMOT:</h3>
-            <ol class="list-group list-group-numbered list-group-flush">
-              <li class="list-group-item border-0 px-0">
-                <strong>Access the AI Assistant</strong>
-                <p class="mb-0 text-muted">
-                  Look for the AIMOT chat icon in the bottom right corner of
-                  your screen.
-                </p>
-              </li>
-              <li class="list-group-item border-0 px-0">
-                <strong>Ask Questions or Request Motivation</strong>
-                <p class="mb-0 text-muted">
-                  Type your question, task or simply say "Motivate me!" to get
-                  started.
-                </p>
-              </li>
-              <li class="list-group-item border-0 px-0">
-                <strong>Receive Personalized Responses</strong>
-                <p class="mb-0 text-muted">
-                  AIMOT analyzes your prompt and gives advice.
-                </p>
-              </li>
-              <li class="list-group-item border-0 px-0">
-                <strong>Apply Suggestions</strong>
-                <p class="mb-0 text-muted">
-                  Use the insights to improve your planning and productivity.
-                </p>
-              </li>
-            </ol>
-
-            <div class="alert alert-info  mt-4" role="alert">
-              <strong>Example Questions to Ask AIMOT:</strong>
-              <ul class="mb-0 mt-2">
-                <li>"How can I prioritize my tasks today?"</li>
-                <li>"Give me a motivational quote"</li>
-                <li>"What's the best way to manage my time?"</li>
-                <li>"Help me break down this large project"</li>
-              </ul>
-            </div>
-
-            <!-- Placeholder for screenshot -->
-            <div
-              class="mt-4 p-5 bg-secondary bg-opacity-10 border rounded text-center"
-            >
-              <p class="text-muted mb-0">
-                <em
-                  >[Screenshot: AI assistant]</em
-                >
-              </p>
-            </div>
-          </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__grid">
+        <div class="footer__column">
+          <img src="images/temporaryLogo.png" alt="AIMOT logo" style="max-width: 7.5rem; height: auto; margin-bottom: var(--space-md);">
+          <h3 class="footer__heading">About AIMOT</h3>
+          <p class="footer__text">Your AI-powered daily planning assistant designed to help you stay organized, motivated, and productive.</p>
         </div>
-      </section>
 
-      <!-- Call to Action card here? -->
-       </div>
-    </main>
-    <!-- Footer here -->
-      <footer>
-      <div class="footerWrapper d-flex flex-column align-items-center">
-        <div class="text-center">
-          <a href="/index.html"
-            ><img
-              class="logosmall w-25"
-              src="../images/temporaryLogo.png"
-              alt="AIMOT logo"
-          /></a>
+        <div class="footer__column">
+          <h3 class="footer__heading">Quick Links</h3>
+          <ul class="footer__links">
+            <li class="footer__link"><a href="/index.html">Home</a></li>
+            <li class="footer__link"><a href="./about.html">About</a></li>
+            <li class="footer__link"><a href="./faq.html">How to Use</a></li>
+          </ul>
         </div>
-        <div>
-          <a href="./about.html" style="text-decoration: none">About</a>
-          <a href="./faq.html" style="text-decoration: none">How to use</a>
+
+        <div class="footer__column">
+          <h3 class="footer__heading">Features</h3>
+          <ul class="footer__links">
+            <li class="footer__link"><a href="#">Daily Planning</a></li>
+            <li class="footer__link"><a href="#">AI Assistant</a></li>
+            <li class="footer__link"><a href="#">Task Management</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h3 class="footer__heading">Project Credits</h3>
+          <p class="footer__text"><strong>Developed by:</strong><br>Noroff octpt team</p>
+          <p class="footer__text"><strong>Year:</strong> 2025<br><strong>Version:</strong> 1.0</p>
         </div>
       </div>
-      <div class="copyright d-flex justify-content-center">Copyright AIMOT &copy;</div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2025 AIMOT. All rights reserved.</p>
+      </div>
     </footer>
-         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-         <script type="module" src="src/js/index.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="src/js/index.js"></script>
   </body>
- 
 </html>
 <!-- <!doctype html>
 <html lang="en">

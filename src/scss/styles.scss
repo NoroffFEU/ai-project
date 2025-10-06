@@ -1,36 +1,550 @@
 @import 'variables';
-@import '../../node_modules/bootstrap/scss/bootstrap';
-@import "sidebar";
 
-body, html {
-  height: 100%;
+// Reset & Base
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   margin: 0;
   padding: 0;
+  font-family: $paragraph-font;
+  font-size: $paragraph-size-mobile;
+  line-height: 1.6;
+  background-color: $page-background-color;
+  color: $text-dark-color;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $paragraph-size-desktop;
+  }
 }
 
-header {
-  height: 100%;
-  // width: 200px;
-  float: left;
-}
-
-.nav-pills li a:hover {
-  background-color: $primary;
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 $spacing-md 0;
+  font-family: $headings-font;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $text-dark-color;
 }
 
 h1 {
-  font-weight: 700;
+  font-size: $main-heading-size-mobile;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $main-heading-size-desktop;
+  }
 }
 
-.list-group-item {
-  border-left: 0;
-  border-right: 0;
+h2 {
+  font-size: $secondary-heading-size-mobile;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $secondary-heading-size-desktop;
+  }
 }
 
-// footer
-footer a {
-  color: #888;
+h3 {
+  font-size: 1.5rem;
 }
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 0 0 $spacing-sm 0;
+  font-size: $paragraph-size-mobile;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $paragraph-size-desktop;
+  }
+}
+
+.lead {
+  font-size: $paragraph-size-mobile;
+  font-weight: 300;
+  color: $primary-color;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $paragraph-size-desktop;
+  }
+}
+
+// Layout
+.app-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.sidebar {
+  display: none;
+  position: sticky;
+  top: 0;
+  width: 16.666667%;
+  min-height: 100vh;
+  padding: $spacing-md;
+  background-color: $primary-color;
+
+  @media (min-width: $breakpoint-md) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    width: 12.5%;
+  }
+}
+
+.main-content {
+  width: 25rem; 
+  margin: 0 auto;
+  padding: $spacing-md;
+  background-color: white;
+  border-radius: $border-radius;
+  box-shadow: 0 0.125rem 0.5rem rgba(31, 36, 33, 0.1);
+
+  @media (min-width: $breakpoint-md) {
+    width: 83.333333%;
+    padding: $spacing-xl;
+    margin: $spacing-md;
+    margin-left: 0;
+    margin: $spacing-md auto;  //
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    width: 50rem;
+    margin: $spacing-md auto;  //
+  }
+}
+
+.content-wrapper {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+// Mobile Menu
+.mobile-menu-toggle {
+  position: fixed;
+  top: $spacing-md;
+  left: $spacing-md;
+  z-index: 1050;
+  padding: $spacing-xs;
+  border: $border-width solid $primary-color;
+  border-radius: $border-radius;
+  background-color: white;
+  box-shadow: 0 0.125rem 0.5rem rgba(31, 36, 33, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $tertiary-color;
+  }
+
+  svg {
+    display: block;
+    color: $primary-color;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    display: none;
+  }
+}
+
+// ========================================
+// Navigation
+// ========================================
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav__item {
+  margin-bottom: $spacing-xs;
+}
+
+.nav__link {
+  display: block;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius;
+  font-family: $headings-font;
+  font-weight: 500;
+  text-decoration: none;
+  color: $text-white-color;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgba($button-color, 0.2);
+  }
+
+  &--active {
+    background-color: $button-color;
+    font-weight: 600;
+  }
+}
+
+// ========================================
+// Button
+// ========================================
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: $border-radius;
+  font-family: $headings-font;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: $button-color;
+  color: $text-white-color;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $button-color-hover;
+    color: $text-white-color;
+  }
+}
+
+// ========================================
+// Cards
+// ========================================
+.card {
+  padding: $spacing-md;
+  margin-bottom: $spacing-lg;
+  border: $border-width solid $tertiary-color;
+  border-radius: $border-radius;
+  background-color: white;
+  box-shadow: 0 0.125rem 0.5rem rgba(31, 36, 33, 0.1);
+
+  @media (min-width: $breakpoint-md) {
+    padding: $spacing-lg;
+  }
+}
+
+.card--primary {
+  border-color: $primary-color;
+}
+
+.card--secondary {
+  border-color: $secondary-color;
+}
+
+.card--light {
+  background-color: $secondary-color;
+  text-align: center;
+}
+
+.card__header {
+  padding: $spacing-md;
+  margin: calc(#{$spacing-md} * -1) calc(#{$spacing-md} * -1) $spacing-md;
+  border-radius: $border-radius $border-radius 0 0;
+  font-family: $headings-font;
+  background-color: $secondary-color;
+  color: $text-dark-color;
+
+  h2 {
+    margin: 0;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    padding: $spacing-lg;
+    margin: calc(#{$spacing-lg} * -1) calc(#{$spacing-lg} * -1) $spacing-lg;
+  }
+}
+
+// ========================================
+// Badge
+// ========================================
+.badge {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  margin-right: $spacing-xs;
+  border: 0.0625rem solid $tertiary-color;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: white;
+  color: $text-dark-color;
+}
+
+// ========================================
+// Alert
+// ========================================
+.alert--info {
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+  border-left: 0.25rem solid $button-color;
+  border-radius: $border-radius;
+  background-color: $page-background-color;
+  color: $text-dark-color;
+}
+
+// ========================================
+// Links
+// ========================================
+a.link {
+  display: block;
+  text-align: center;
+  margin-bottom: $spacing-sm;
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: $button-color;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $button-color-hover !important;
+    text-decoration: none;
+  }
+}
+
+// ========================================
+// Lists
+// ========================================
+.list {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.list__item {
+  padding: $spacing-sm 0;
+  border-bottom: 0.0625rem solid $tertiary-color;
+
+  strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-family: $headings-font;
+  }
+
+  p {
+    margin: 0;
+    font-size: $paragraph-size-mobile;
+    color: $primary-color;
+  }
+}
+
+// ========================================
+// Grid
+// ========================================
+.grid {
+  display: grid;
+  gap: $spacing-md;
+  margin-bottom: $spacing-lg;
+}
+
+.grid--2-col {
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid--3-col {
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// ========================================
+// Section
+// ========================================
+.section {
+  margin-bottom: $spacing-lg;
+  pointer-events: auto;
+
+  @media (min-width: $breakpoint-md) {
+    margin-bottom: $spacing-xl;
+  }
+}
+
+.section__header {
+  padding-bottom: $spacing-md;
+  margin-bottom: $spacing-md;
+  border-bottom: $border-width solid $tertiary-color;
+  text-align: center;
+
+  img {
+    max-width: 9.375rem;
+    height: auto;
+    margin-bottom: $spacing-md;
+  }
+}
+
+// ========================================
+// Placeholder
+// ========================================
+.placeholder {
+  padding: $spacing-lg;
+  margin-top: $spacing-md;
+  border: $border-width dashed $secondary-color;
+  border-radius: $border-radius;
+  text-align: center;
+  background-color: $tertiary-color;
+  color: $secondary-color;
+
+  @media (min-width: $breakpoint-md) {
+    padding: $spacing-xl;
+  }
+}
+
+// ========================================
+// Footer
+// ========================================
+.footer {
+  padding: $spacing-lg $spacing-md;
+  margin-top: $spacing-xl;
+  background-color: $primary-color;
+  color: $text-white-color;
+}
+
+.footer__grid {
+  display: grid;
+  gap: $spacing-lg;
+  max-width: 75rem;
+  margin: 0 auto $spacing-lg;
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer__column {
+  text-align: center;
+
+  img {
+    max-width: 7.5rem;
+    height: auto;
+    margin-bottom: $spacing-md;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    text-align: left;
+  }
+}
+
+.footer__heading {
+  position: relative;
+  padding-bottom: $spacing-sm;
+  margin-bottom: $spacing-md;
+  font-family: $headings-font;
+  font-size: 1.125rem;
+  font-weight: 600;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.5rem;
+    height: 0.125rem;
+    background-color: $button-color;
+    content: '';
+
+    @media (min-width: $breakpoint-md) {
+      left: 0;
+      transform: none;
+    }
+  }
+}
+
+.footer__text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba($text-white-color, 0.9);
+}
+
+.footer__links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer__link {
+  margin-bottom: 0.75rem;
+
+  a {
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: rgba($text-white-color, 0.85);
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $button-color;
+    }
+  }
+}
+
+.footer__bottom {
+  padding-top: $spacing-md;
+  border-top: 0.0625rem solid rgba($text-white-color, 0.2);
+  text-align: center;
+  font-size: 0.875rem;
+  color: rgba($text-white-color, 0.7);
+
+  p {
+    margin: 0;
+  }
+}
+
+// ========================================
+// Bootstrap Overrides
+// ========================================
+.offcanvas.bg-dark {
+  background-color: $primary-color !important;
+}
+
+.offcanvas-title {
+  color: $text-white-color;
+  font-family: $headings-font;
+}
+// @import 'variables';
+// @import '../../node_modules/bootstrap/scss/bootstrap';
+// @import "sidebar";
+
+// body, html {
+//   height: 100%;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// header {
+//   height: 100%;
+//   // width: 200px;
+//   float: left;
+// }
+
+// .nav-pills li a:hover {
+//   background-color: $primary;
+// }
+
+// h1 {
+//   font-weight: 700;
+// }
+
+// .list-group-item {
+//   border-left: 0;
+//   border-right: 0;
+// }
+
+// // footer
+// footer a {
+//   color: #888;
+// }
 
 // faq.html
 
