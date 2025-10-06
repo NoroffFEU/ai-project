@@ -163,9 +163,8 @@ p {
   }
 }
 
-// ========================================
+
 // Navigation
-// ========================================
 .nav {
   display: flex;
   flex-direction: column;
@@ -198,9 +197,8 @@ p {
   }
 }
 
-// ========================================
+
 // Button
-// ========================================
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -220,9 +218,8 @@ p {
   }
 }
 
-// ========================================
+
 // Cards
-// ========================================
 .card {
   padding: $spacing-md;
   margin-bottom: $spacing-lg;
@@ -267,9 +264,8 @@ p {
   }
 }
 
-// ========================================
+
 // Badge
-// ========================================
 .badge {
   display: inline-block;
   padding: 0.375rem 0.75rem;
@@ -282,9 +278,7 @@ p {
   color: $text-dark-color;
 }
 
-// ========================================
 // Alert
-// ========================================
 .alert--info {
   padding: $spacing-md;
   margin-bottom: $spacing-md;
@@ -294,9 +288,7 @@ p {
   color: $text-dark-color;
 }
 
-// ========================================
 // Links
-// ========================================
 a.link {
   display: block;
   text-align: center;
@@ -313,9 +305,7 @@ a.link {
   }
 }
 
-// ========================================
 // Lists
-// ========================================
 .list {
   padding-left: 0;
   margin: 0;
@@ -339,9 +329,8 @@ a.link {
   }
 }
 
-// ========================================
+
 // Grid
-// ========================================
 .grid {
   display: grid;
   gap: $spacing-md;
@@ -360,9 +349,7 @@ a.link {
   }
 }
 
-// ========================================
 // Section
-// ========================================
 .section {
   margin-bottom: $spacing-lg;
   pointer-events: auto;
@@ -385,9 +372,7 @@ a.link {
   }
 }
 
-// ========================================
 // Placeholder
-// ========================================
 .placeholder {
   padding: $spacing-lg;
   margin-top: $spacing-md;
@@ -402,9 +387,7 @@ a.link {
   }
 }
 
-// ========================================
 // Footer
-// ========================================
 .footer {
   padding: $spacing-lg $spacing-md;
   margin-top: $spacing-xl;
@@ -501,9 +484,8 @@ a.link {
   }
 }
 
-// ========================================
+
 // Bootstrap Overrides
-// ========================================
 .offcanvas.bg-dark {
   background-color: $primary-color !important;
 }
@@ -512,89 +494,3 @@ a.link {
   color: $text-white-color;
   font-family: $headings-font;
 }
-// @import 'variables';
-// @import '../../node_modules/bootstrap/scss/bootstrap';
-// @import "sidebar";
-
-// body, html {
-//   height: 100%;
-//   margin: 0;
-//   padding: 0;
-// }
-
-// header {
-//   height: 100%;
-//   // width: 200px;
-//   float: left;
-// }
-
-// .nav-pills li a:hover {
-//   background-color: $primary;
-// }
-
-// h1 {
-//   font-weight: 700;
-// }
-
-// .list-group-item {
-//   border-left: 0;
-//   border-right: 0;
-// }
-
-// // footer
-// footer a {
-//   color: #888;
-// }
-
-// faq.html
-
-// .faqHeader {
-//   height: auto;
-//   float: none;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin-top: 2rem;
-// }
-
-// .logo-section {
-//   display: flex;
-//   justify-content: center;
-// }
-
-// .logosmall {
-//   width: 250px;
-// }
-
-// .gitHubLogo {
-//   width: 50px;
-// }
-
-// #selection-section h1,
-// h2,
-// h3,
-// p,
-// ul {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin-top: 2rem;
-// }
-
-// .navbar ul,
-// #selection-list {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   list-style: none;
-// }
-
-// #selection-list a {
-//   color: #000;
-// }
-
-// #contribution-answer {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
