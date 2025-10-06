@@ -12,69 +12,11 @@
   </head>
   <body>
     
-    <!-- Mobile Menu Toggle -->
-    <button 
-      class="mobile-menu-toggle" 
-      type="button" 
-      data-bs-toggle="offcanvas" 
-      data-bs-target="#sidebarMenu" 
-      aria-controls="sidebarMenu"
-      aria-label="Toggle navigation">
-      <svg width="24" height="24" fill="currentColor">
-        <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/>
-      </svg>
-    </button>
+     <!-- Sidebar -->
+    <header id="sidebarNav" class="sidebarNav"></header>
+    <!-- ------- -->
+  
 
-    <!-- Mobile Offcanvas -->
-    <div 
-      class="offcanvas offcanvas-start bg-dark d-md-none" 
-      tabindex="-1" 
-      id="sidebarMenu" 
-      aria-labelledby="sidebarMenuLabel">
-      
-      <div class="offcanvas-header">
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      
-      <div class="offcanvas-body p-3">
-        <ul class="nav">
-          <li class="nav__item">
-            <a href="#" class="nav__link">Home</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Your Week</a>
-          </li>
-          <li class="nav__item">
-            <a href="./about.html" class="nav__link">About App</a>
-          </li>
-          <li class="nav__item">
-            <a href="./faq.html" class="nav__link nav__link--active" aria-current="page">How to use</a>
-          </li>
-        </ul>
-        <button type="button" class="btn">Login</button>
-      </div>
-    </div>
-
-    <div class="app-container">
-      
-      <!-- Desktop Sidebar -->
-      <aside class="sidebar" aria-label="Main navigation">
-        <ul class="nav">
-          <li class="nav__item">
-            <a href="#" class="nav__link">Home</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Your Week</a>
-          </li>
-          <li class="nav__item">
-            <a href="./about.html" class="nav__link">About App</a>
-          </li>
-          <li class="nav__item">
-            <a href="./faq.html" class="nav__link nav__link--active" aria-current="page">How to use</a>
-          </li>
-        </ul>
-        <button type="button" class="btn">Login</button>
-      </aside>
 
       <!-- Main Content -->
       <main class="main-content">

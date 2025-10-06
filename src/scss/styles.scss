@@ -74,7 +74,7 @@ p {
 .lead {
   font-size: $paragraph-size-mobile;
   font-weight: 300;
-  color: $primary-color;
+  color: $text-dark-color;
 
   @media (min-width: $breakpoint-md) {
     font-size: $paragraph-size-desktop;
@@ -82,51 +82,23 @@ p {
 }
 
 // Layout
-.app-container {
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
-}
 
-.sidebar {
-  display: none;
-  position: sticky;
-  top: 0;
-  width: 16.666667%;
-  min-height: 100vh;
-  padding: $spacing-md;
-  background-color: $primary-color;
-
-  @media (min-width: $breakpoint-md) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  @media (min-width: $breakpoint-lg) {
-    width: 12.5%;
-  }
-}
 
 .main-content {
-  width: 25rem; 
+  width: 100%;
+  max-width: 25rem;
   margin: 0 auto;
   padding: $spacing-md;
   background-color: white;
   border-radius: $border-radius;
   box-shadow: 0 0.125rem 0.5rem rgba(31, 36, 33, 0.1);
-
+  
   @media (min-width: $breakpoint-md) {
-    width: 83.333333%;
     padding: $spacing-xl;
-    margin: $spacing-md;
-    margin-left: 0;
-    margin: $spacing-md auto;  //
   }
-
+  
   @media (min-width: $breakpoint-lg) {
-    width: 50rem;
-    margin: $spacing-md auto;  //
+    max-width: 50rem;
   }
 }
 
@@ -134,90 +106,6 @@ p {
   max-width: 50rem;
   margin: 0 auto;
 }
-
-// Mobile Menu
-.mobile-menu-toggle {
-  position: fixed;
-  top: $spacing-md;
-  left: $spacing-md;
-  z-index: 1050;
-  padding: $spacing-xs;
-  border: $border-width solid $primary-color;
-  border-radius: $border-radius;
-  background-color: white;
-  box-shadow: 0 0.125rem 0.5rem rgba(31, 36, 33, 0.1);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: $tertiary-color;
-  }
-
-  svg {
-    display: block;
-    color: $primary-color;
-  }
-
-  @media (min-width: $breakpoint-md) {
-    display: none;
-  }
-}
-
-
-// Navigation
-.nav {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.nav__item {
-  margin-bottom: $spacing-xs;
-}
-
-.nav__link {
-  display: block;
-  padding: $spacing-sm $spacing-md;
-  border-radius: $border-radius;
-  font-family: $headings-font;
-  font-weight: 500;
-  text-decoration: none;
-  color: $text-white-color;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: rgba($button-color, 0.2);
-  }
-
-  &--active {
-    background-color: $button-color;
-    font-weight: 600;
-  }
-}
-
-
-// Button
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: $border-radius;
-  font-family: $headings-font;
-  font-weight: 600;
-  text-decoration: none;
-  background-color: $button-color;
-  color: $text-white-color;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: $button-color-hover;
-    color: $text-white-color;
-  }
-}
-
 
 // Cards
 .card {
@@ -325,7 +213,7 @@ a.link {
   p {
     margin: 0;
     font-size: $paragraph-size-mobile;
-    color: $primary-color;
+    color: $text-dark-color;
   }
 }
 
@@ -448,7 +336,7 @@ a.link {
 .footer__text {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: rgba($text-white-color, 0.9);
+  color: $text-white-color;
 }
 
 .footer__links {
@@ -485,12 +373,3 @@ a.link {
 }
 
 
-// Bootstrap Overrides
-.offcanvas.bg-dark {
-  background-color: $primary-color !important;
-}
-
-.offcanvas-title {
-  color: $text-white-color;
-  font-family: $headings-font;
-}
