@@ -1,4 +1,4 @@
-
+// Color Variables
 $primaryColor: #7C7D75;
 $secondaryColor: #ADACA7;
 $tertiaryColor: #D9DADF;
@@ -14,4 +14,36 @@ $paragraphSizeDesktop: 1.125rem;
 $mainHeadingSizeMobile: 2.25rem;
 $secondaryHeadingSizeMobile: 1.75rem;
 $paragraphSizeMobile: 1rem;
+
+// Typography Variables
+$headings-font: 'Manrope', Helvetica, Arial, sans-serif;
+$paragraph-font: 'Calibri', Arial, Helvetica, sans-serif;
+
+// Desktop Typography
+$main-heading-size-desktop: 3rem; // 48px
+$secondary-heading-size-desktop: 2rem; // 32px
+$paragraph-size-desktop: 1.125rem; // 18px
+
+// Mobile Typography
+$main-heading-size-mobile: 2.25rem; // 36px
+$secondary-heading-size-mobile: 1.75rem; // 28px
+$paragraph-size-mobile: 1rem; // 16px
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+
+// Layout
+$border-width: 0.125rem;
+$border-radius: 0.5rem;
+
+// Breakpoints
+
+$breakpoint-sm: 36rem; //576px
+$breakpoint-md: 48rem; //769px
+$breakpoint-lg: 62rem; //992px
+$breakpoint-xl: 75rem; //1200px
 
