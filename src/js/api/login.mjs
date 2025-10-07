@@ -1,3 +1,8 @@
+import { mockLoginUser } from '../api/mockLogin.mjs';
+
+// Set to true to use mock data instead of real API
+const MOCK_MODE = true;
+
 /**
  * Attempts to log in a user with the provided email and password.
  * On success, stores the access token and user details in local storage.
@@ -6,8 +11,12 @@
  * @returns {Promise<{accessToken: string, user: Object}>} An object containing the access token and user details.
  * @throws {Error} Throws an error if login is unsuccessful.
  */
-async function loginUser(email, password) {
-    const response = await fetch(`https://v2.api.noroff.dev/auth/login`, {
+export async function loginUser(email, password) {
+  if (MOCK_MODE) {
+    return mockLoginUser(email, password);
+  }
+  
+  const response = await fetch(`https://v2.api.noroff.dev/auth/login`, {
       method: 'POST',
       body: JSON.stringify({ email, password }),
       headers: {
@@ -26,5 +35,6 @@ async function loginUser(email, password) {
       throw new Error(errorData.message || response.statusText);
     }
   }
+
   
   

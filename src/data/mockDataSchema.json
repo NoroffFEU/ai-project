@@ -1,0 +1,287 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AIMOT Task Management Mock Data",
+  "description": "Schema for the AIMOT task management application mock data structure",
+  "type": "object",
+  "required": ["user", "tasks", "todayView", "weeklyView", "taskBoard", "categories", "exportOptions", "aiAssistance", "settings", "statistics", "metadata"],
+  "properties": {
+    "user": {
+      "type": "object",
+      "required": ["isAuthenticated", "username", "hasSeenTutorial"],
+      "properties": {
+        "isAuthenticated": { "type": "boolean" },
+        "username": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "hasSeenTutorial": { "type": "boolean" },
+        "preferences": {
+          "type": "object",
+          "properties": {
+            "theme": { "type": "string", "enum": ["light", "dark"] },
+            "notifications": { "type": "boolean" },
+            "exportFormat": { "type": "string", "enum": ["PDF", "CSV", "JSON", "Text"] }
+          }
+        }
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "color", "dueDate", "formattedDate", "completed", "priority", "priorityScore", "category"],
+        "properties": {
+          "id": { "type": "integer", "minimum": 1 },
+          "title": { "type": "string", "minLength": 1 },
+          "description": { "type": "string" },
+          "color": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+          "dueDate": { "type": "string", "format": "date-time" },
+          "formattedDate": { "type": "string" },
+          "completed": { "type": "boolean" },
+          "priority": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "priorityScore": { "type": "string", "pattern": "^[+-]\\d+\\.\\d+$" },
+          "category": { "type": "string" },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "estimatedDuration": { "type": "integer", "minimum": 1 },
+          "aiAssistance": { "type": "boolean" },
+          "createdAt": { "type": "string", "format": "date-time" },
+          "updatedAt": { "type": "string", "format": "date-time" },
+          "completedAt": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "todayView": {
+      "type": "object",
+      "required": ["date", "dayName", "completion", "tasks"],
+      "properties": {
+        "date": { "type": "string", "format": "date" },
+        "dayName": { "type": "string" },
+        "completion": { "type": "string", "pattern": "^\\d+/\\d+$" },
+        "tasks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "title", "color", "dueDate", "formattedDate", "completed", "priority", "priorityScore", "category"],
+            "properties": {
+              "id": { "type": "integer", "minimum": 1 },
+              "title": { "type": "string", "minLength": 1 },
+              "description": { "type": "string" },
+              "color": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+              "dueDate": { "type": "string", "format": "date-time" },
+              "formattedDate": { "type": "string" },
+              "completed": { "type": "boolean" },
+              "priority": { "type": "integer", "minimum": 1, "maximum": 5 },
+              "priorityScore": { "type": "string", "pattern": "^[+-]\\d+\\.\\d+$" },
+              "category": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "weeklyView": {
+      "type": "object",
+      "required": ["weekStart", "weekEnd", "days", "weeklyProgress"],
+      "properties": {
+        "weekStart": { "type": "string", "format": "date" },
+        "weekEnd": { "type": "string", "format": "date" },
+        "days": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["date", "dayName", "completion", "tasks"],
+            "properties": {
+              "date": { "type": "string", "format": "date" },
+              "dayName": { "type": "string" },
+              "completion": { "type": "string", "pattern": "^\\d+/\\d+$" },
+              "tasks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["id", "title", "color", "dueDate", "formattedDate", "completed", "priority", "priorityScore", "category"],
+                  "properties": {
+                    "id": { "type": "integer", "minimum": 1 },
+                    "title": { "type": "string", "minLength": 1 },
+                    "description": { "type": "string" },
+                    "color": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+                    "dueDate": { "type": "string", "format": "date-time" },
+                    "formattedDate": { "type": "string" },
+                    "completed": { "type": "boolean" },
+                    "priority": { "type": "integer", "minimum": 1, "maximum": 5 },
+                    "priorityScore": { "type": "string", "pattern": "^[+-]\\d+\\.\\d+$" },
+                    "category": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "weeklyProgress": {
+          "type": "object",
+          "required": ["totalCompleted", "totalTasks", "completionPercentage"],
+          "properties": {
+            "totalCompleted": { "type": "integer", "minimum": 0 },
+            "totalTasks": { "type": "integer", "minimum": 0 },
+            "completionPercentage": { "type": "number", "minimum": 0, "maximum": 100 }
+          }
+        }
+      }
+    },
+    "taskBoard": {
+      "type": "object",
+      "required": ["columns", "priorityFilters", "categoryFilters"],
+      "properties": {
+        "columns": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "title", "tasks", "color"],
+            "properties": {
+              "id": { "type": "string" },
+              "title": { "type": "string" },
+              "tasks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["id", "title", "color", "dueDate", "formattedDate", "completed", "priority", "priorityScore", "category"],
+                  "properties": {
+                    "id": { "type": "integer", "minimum": 1 },
+                    "title": { "type": "string", "minLength": 1 },
+                    "description": { "type": "string" },
+                    "color": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+                    "dueDate": { "type": "string", "format": "date-time" },
+                    "formattedDate": { "type": "string" },
+                    "completed": { "type": "boolean" },
+                    "priority": { "type": "integer", "minimum": 1, "maximum": 5 },
+                    "priorityScore": { "type": "string", "pattern": "^[+-]\\d+\\.\\d+$" },
+                    "category": { "type": "string" }
+                  }
+                }
+              },
+              "color": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" }
+            }
+          }
+        },
+        "priorityFilters": { "type": "array", "items": { "type": "string" } },
+        "categoryFilters": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "color", "icon", "description"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "color": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+          "icon": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "exportOptions": {
+      "type": "object",
+      "required": ["formats", "exportSettings"],
+      "properties": {
+        "formats": { "type": "array", "items": { "type": "string" } },
+        "lastExport": { "type": ["string", "null"], "format": "date-time" },
+        "exportSettings": {
+          "type": "object",
+          "properties": {
+            "includeCompleted": { "type": "boolean" },
+            "includeDescriptions": { "type": "boolean" },
+            "includeDates": { "type": "boolean" },
+            "includePriority": { "type": "boolean" },
+            "groupByCategory": { "type": "boolean" },
+            "sortBy": { "type": "string", "enum": ["dueDate", "priority", "category", "title"] }
+          }
+        }
+      }
+    },
+    "aiAssistance": {
+      "type": "object",
+      "required": ["available", "tips", "motivationalQuotes"],
+      "properties": {
+        "available": { "type": "boolean" },
+        "tips": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["taskId", "category", "suggestions"],
+            "properties": {
+              "taskId": { "type": "integer" },
+              "category": { "type": "string" },
+              "suggestions": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        },
+        "motivationalQuotes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "settings": {
+      "type": "object",
+      "required": ["notifications", "display", "taskDefaults"],
+      "properties": {
+        "notifications": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "reminderTime": { "type": "integer", "minimum": 1 },
+            "dailySummary": { "type": "boolean" },
+            "weeklyReview": { "type": "boolean" }
+          }
+        },
+        "display": {
+          "type": "object",
+          "properties": {
+            "theme": { "type": "string", "enum": ["light", "dark"] },
+            "compactView": { "type": "boolean" },
+            "showCompletedTasks": { "type": "boolean" },
+            "defaultView": { "type": "string", "enum": ["today", "week", "board"] }
+          }
+        },
+        "taskDefaults": {
+          "type": "object",
+          "properties": {
+            "estimatedDuration": { "type": "integer", "minimum": 1 },
+            "priority": { "type": "integer", "minimum": 1, "maximum": 5 },
+            "category": { "type": "string" },
+            "color": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" }
+          }
+        }
+      }
+    },
+    "statistics": {
+      "type": "object",
+      "required": ["totalTasksCreated", "totalTasksCompleted", "completionRate"],
+      "properties": {
+        "totalTasksCreated": { "type": "integer", "minimum": 0 },
+        "totalTasksCompleted": { "type": "integer", "minimum": 0 },
+        "completionRate": { "type": "number", "minimum": 0, "maximum": 100 },
+        "averageTasksPerDay": { "type": "number", "minimum": 0 },
+        "mostProductiveDay": { "type": "string" },
+        "favoriteCategory": { "type": "string" },
+        "streakDays": { "type": "integer", "minimum": 0 },
+        "longestStreak": { "type": "integer", "minimum": 0 },
+        "timeStats": {
+          "type": "object",
+          "properties": {
+            "totalTimeSpent": { "type": "integer", "minimum": 0 },
+            "averageTimePerTask": { "type": "number", "minimum": 0 },
+            "mostTimeConsumingCategory": { "type": "string" }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["version", "lastUpdated", "dataSchema", "generatedAt"],
+      "properties": {
+        "version": { "type": "string" },
+        "lastUpdated": { "type": "string", "format": "date-time" },
+        "dataSchema": { "type": "string" },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "timezone": { "type": "string" },
+        "locale": { "type": "string" }
+      }
+    }
+  }
+}
