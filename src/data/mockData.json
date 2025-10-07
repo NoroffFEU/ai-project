@@ -79,7 +79,7 @@
         "priorityScores": ["+4.6", "+6.2", "+3.8"]
       },
       {
-        "id": "completed", 
+        "id": "completed",
         "title": "Completed",
         "tasks": [2],
         "priorityScores": ["+3.2"]
