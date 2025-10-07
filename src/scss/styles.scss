@@ -246,7 +246,7 @@ p {
   border-radius: $border-radius;
   background-color: $white-color;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 
   &:hover {
     border-color: $button-color;
@@ -255,7 +255,11 @@ p {
     box-shadow: 0 0.125rem 0.75rem rgba(31, 36, 33, 0.15);
   }
 
-
+&:focus {
+    outline: 0.1875rem solid $button-color;
+    outline-offset: 0.125rem;
+    border-color: $button-color;
+  }
 
     @media (min-width: $breakpoint-md) {
       font-size: $paragraph-size-desktop;
@@ -313,11 +317,19 @@ a.link {
   color: $button-color;
   transition: color 0.3s ease;
 
-  &:hover {
+&:hover {
     color: $button-color-hover;
     text-decoration: none;
   }
+  
+  &:focus {
+    color: $button-color-hover;
+    text-decoration: none;
+    outline: 0.1875rem solid $button-color;
+    outline-offset: 0.125rem;
+  }
 }
+
 
 // Grid
 .grid {
@@ -510,6 +522,12 @@ a.link {
     &:hover {
       color: $button-color;
     }
+    
+    &:focus {
+      color: $button-color;
+      outline: 0.1875rem solid $button-color;
+      outline-offset: 0.125rem;
+    }
   }
   @media (min-width: $breakpoint-md) {
     font-size: $paragraph-size-desktop;
@@ -541,8 +559,14 @@ a.link {
   }
 
   &:focus {
-    border-color: $tertiary-color;
-    box-shadow: none;
+    background-color: ($tertiary-color);
+    border-color: $button-color;
+    box-shadow: 0 0 0 0.1875rem rgba($button-color, 0.25);
+    outline: none;
+  }
+  
+  &::after {
+    filter: brightness(0);
   }
 }
 

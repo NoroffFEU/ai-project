@@ -248,13 +248,18 @@ p {
   border-radius: 0.5rem;
   background-color: rgba(248, 248, 248, 0.9960784314);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 .quicklink-card:hover {
   border-color: #DD700B;
   background-color: #FCF8D8;
   transform: translateY(-2px);
   box-shadow: 0 0.125rem 0.75rem rgba(31, 36, 33, 0.15);
+}
+.quicklink-card:focus {
+  outline: 0.1875rem solid #DD700B;
+  outline-offset: 0.125rem;
+  border-color: #DD700B;
 }
 @media (min-width: 48rem) {
   .quicklink-card {
@@ -314,6 +319,12 @@ a.link {
 a.link:hover {
   color: #763c05;
   text-decoration: none;
+}
+a.link:focus {
+  color: #763c05;
+  text-decoration: none;
+  outline: 0.1875rem solid #DD700B;
+  outline-offset: 0.125rem;
 }
 
 .grid {
@@ -505,6 +516,11 @@ a.link:hover {
 .footer__link a:hover {
   color: #DD700B;
 }
+.footer__link a:focus {
+  color: #DD700B;
+  outline: 0.1875rem solid #DD700B;
+  outline-offset: 0.125rem;
+}
 @media (min-width: 48rem) {
   .footer__link {
     font-size: 1.125rem;
@@ -534,8 +550,13 @@ a.link:hover {
   box-shadow: none;
 }
 .accordion-button:focus {
-  border-color: #D9DADF;
-  box-shadow: none;
+  background-color: #D9DADF;
+  border-color: #DD700B;
+  box-shadow: 0 0 0 0.1875rem rgba(221, 112, 11, 0.25);
+  outline: none;
+}
+.accordion-button::after {
+  filter: brightness(0);
 }
 
 /*# sourceMappingURL=styles.css.map */
