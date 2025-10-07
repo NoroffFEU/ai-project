@@ -1,11 +1,11 @@
 import { deleteTask } from "../api/deleteTask.mjs";
 import { fetchTasks } from "../api/fetchTasks.mjs";
-import { displayError } from "../ui/shared/displayMessage.mjs";
 import { isLoggedIn } from "../auth/isLoggedIn.mjs";
+import { displayError } from "../ui/shared/displayMessage.mjs";
 import {
   getFromLocalStorage,
   removeTaskFromLocalStorage,
-} from "../localStorage.js";
+} from "../utils/localStorage.mjs";
 
 /**
  * Deletes a task using API (logged in users) or localStorage (guests).
@@ -34,14 +34,13 @@ export async function handleDeleteTask(taskId) {
   }
 
   const taskElement = document.querySelector(
-    `.list-group-item[data-task-id="${taskId}"]`,
+    `.list-group-item[data-task-id="${taskId}"]`
   );
   if (taskElement) {
     taskElement.remove();
 
     const completedTasks = tasks.filter((task) => task.completed);
-    document.querySelector("#completed-tasks").innerText =
-      completedTasks.length;
+    document.querySelector("#completed-tasks").innerText = completedTasks.length;
     document.querySelector("#total-tasks").innerText = tasks.length;
   }
 }

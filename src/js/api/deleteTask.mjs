@@ -1,4 +1,4 @@
-import { getFromLocalStorage } from "../localStorage.js";
+import { getFromLocalStorage } from "../utils/localStorage.mjs";
 
 /**
  * Deletes an existing task via API.

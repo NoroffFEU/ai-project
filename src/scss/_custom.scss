@@ -1,3 +1,64 @@
+@import "./variables";
+
+// === Custom Color Utilities ===
+// Background colors
+.primaryColor-bg {
+  background-color: $primaryColor;
+}
+
+.secondaryColor-bg {
+  background-color: $secondaryColor;
+}
+
+.tertiaryColor-bg {
+  background-color: $tertiaryColor;
+}
+
+.pageBackgroundColor-bg {
+  background-color: $pageBackgroundColor;
+}
+
+.buttonColor-bg {
+  background-color: $buttonColor;
+}
+
+.textDarkColor-bg {
+  background-color: $textDarkColor;
+}
+
+.textWhiteColor-bg {
+  background-color: $textWhiteColor;
+}
+
+// Text colors
+.primaryColor-text {
+  color: $primaryColor;
+}
+
+.secondaryColor-text {
+  color: $secondaryColor;
+}
+
+.tertiaryColor-text {
+  color: $tertiaryColor;
+}
+
+.pageBackgroundColor-text {
+  color: $pageBackgroundColor;
+}
+
+.buttonColor-text {
+  color: $buttonColor;
+}
+
+.textDarkColor-text {
+  color: $textDarkColor;
+}
+
+.textWhiteColor-text {
+  color: $textWhiteColor;
+}
+
 // CSS Variables following industry standards
 :root {
   // Font sizes
@@ -44,14 +105,14 @@
 .hero-card {
   // Visual
   background: $primaryColor;
-  color: $textDarkColor !important;
+  color: $textDarkColor;
   box-shadow: 0 4px 20px var(--ai-soft-glow);
 
   // Ensure all text inside uses dark color
   *:not(.hero-title),
   .lead,
   p {
-    color: $textDarkColor !important;
+    color: $textDarkColor;
   }
 }
 
@@ -62,7 +123,7 @@
   font-size: $secondaryHeadingSizeMobile;
 
   // Visual
-  color: $textDarkColor !important;
+  color: $textDarkColor;
 
   @media (min-width: 48rem) {
     font-size: $secondaryHeadingSizeDesktop;
@@ -71,7 +132,7 @@
 
 .main-description-card {
   // Visual
-  border-left: 0.3125rem solid $primaryColor !important;
+  border-left: 0.3125rem solid $primaryColor;
 }
 
 .section-heading {
@@ -105,7 +166,7 @@
 
 .feature-card-primary {
   // Visual with AI accent
-  border-top: 0.25rem solid var(--ai-neural-blue) !important;
+  border-top: 0.25rem solid var(--ai-neural-blue);
   transition: all 0.3s ease;
 
   &:hover {
@@ -129,7 +190,7 @@
 
 .feature-card-secondary {
   // Visual with AI accent
-  border-top: 0.25rem solid var(--ai-circuit-purple) !important;
+  border-top: 0.25rem solid var(--ai-circuit-purple);
   transition: all 0.3s ease;
 
   &:hover {
@@ -153,11 +214,7 @@
 
 .login-info-alert {
   // Visual with subtle AI accent
-  background: linear-gradient(
-    135deg,
-    white 0%,
-    rgba(74, 144, 226, 0.05) 100%
-  ) !important;
+  background: linear-gradient(135deg, white 0%, rgba(74, 144, 226, 0.05) 100%);
   border: 1px solid var(--ai-soft-glow);
   border-radius: 0.9375rem;
   box-shadow: 0 2px 10px var(--ai-soft-glow);
@@ -369,7 +426,7 @@
     $tertiaryColor 0%,
     var(--ai-glow-green) 100%
   );
-  color: $textDarkColor !important;
+  color: $textDarkColor;
   border: 1px solid var(--ai-soft-glow);
   box-shadow: 0 2px 8px var(--ai-soft-glow);
 }
