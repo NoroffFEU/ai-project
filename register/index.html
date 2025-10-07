@@ -1,20 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="/dist/css/styles.css" />
-    <script type="module" src="/src/js/index.js"></script>
     <script
       src="https://kit.fontawesome.com/40355c2075.js"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <!-- Sidebar -->
-    <header id="sidebarNav" class="sidebarNav"></header>
-    <!-- ------- -->
     <!-- Register form -->
     <div class="col-xl-5 col-lg-6 col-md-7 col-sm-8 col-10 my-5 m-auto">
       <form class="text-center border border-dark rounded p-5 shadow">
@@ -30,7 +30,8 @@
           placeholder="Username"
           pattern="[A-Za-z0-9_]+"
           title="Name must not contain punctuation symbols apart from underscore (_)"
-          required />
+          required
+        />
 
         <!-- Email -->
         <label for="reg-email" class="form-label d-flex mt-2">Email</label>
@@ -42,10 +43,13 @@
           placeholder="Email"
           pattern="^[\w\-.]+@(stud.)?noroff.no$"
           title="The email value must be a valid stud.noroff.no email address."
-          required />
+          required
+        />
 
         <!-- Password -->
-        <label for="reg-password" class="form-label d-flex mt-2">Password</label>
+        <label for="reg-password" class="form-label d-flex mt-2"
+          >Password</label
+        >
         <input
           name="reg-password"
           type="password"
@@ -53,10 +57,13 @@
           class="form-control bg-light"
           placeholder="Password"
           minlength="8"
-          required />
+          required
+        />
 
         <!-- Confirm Password -->
-        <label for="conf-password" class="form-label d-flex mt-2">Confirm Password</label>
+        <label for="conf-password" class="form-label d-flex mt-2"
+          >Confirm Password</label
+        >
         <input
           name="conf-password"
           type="password"
@@ -64,15 +71,17 @@
           class="form-control bg-light"
           placeholder="Confirm Password"
           minlength="8"
-          required />
+          required
+        />
 
         <!-- Sign up button -->
-        <button class="btn border-dark my-4 btn-block px-5" type="submit">Sign up</button>
+        <button class="btn border-dark my-4 btn-block px-5" type="submit">
+          Sign up
+        </button>
 
         <!-- Sign in -->
         <p>
-          Already have an account?
-          <br />
+          Already have an account? <br />
           <a class="text-dark" href="/login/">Please log in!</a>
         </p>
       </form>

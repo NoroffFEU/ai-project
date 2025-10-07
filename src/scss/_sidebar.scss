@@ -1,98 +1,65 @@
-@use "variables";
-@use "custom";
-
-.sidebarNav {
+dialog {
   position: absolute;
-  top: 0;
-  max-width: 11.5rem;
-  min-width: 11.5rem;
-  background-color: variables.$secondaryColor;
-  transition: all 0.3s ease-out;
-  z-index: 100;
-}
-
-.sidebarNav.collapsed {
-  margin-left: -11.6rem;
-  transition: all 0.3s ease-out;
-}
-
-.no-scroll {
-  overflow: hidden;
-  height: 100vh;
-}
-
-.authWrapper p {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 4rem 0 1rem 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-#login-btn {
-  background-color: variables.$buttonColor !important;
-  margin: 4rem 0 0 0;
-}
-
-#logout-btn,
-#register-btn,
-#login-btn {
-  border-radius: 0.5rem;
-  background-color: variables.$tertiaryColor;
-  color: variables.$textDarkColor;
-  font-weight: 600;
   border: 0;
-
-  &:hover {
-    background-color: variables.$primaryColor !important;
-    color: variables.$textWhiteColor;
-  }
 }
 
-.linkList {
-  margin: 4rem 0 0 0;
-  width: 100%;
+dialog[open] {
+  animation:
+    slide-in 500ms forwards,
+    fade-in 500ms forwards;
 }
 
-.sidebar-link {
+dialog[closing] {
   display: block;
-  width: 100%;
-  border-radius: 0.5rem;
-  color: variables.$textDarkColor;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.5rem 2rem;
+  pointer-events: none;
+  inset: 0;
 
-  &:hover {
-    background-color: variables.$primaryColor;
-    color: variables.$textWhiteColor;
-  }
+  animation:
+    slide-out 500ms forwards,
+    fade-out 500ms forwards;
 }
 
-.sidebar-toggle button {
-  border: 0;
-  background-color: transparent;
-  color: variables.$primaryColor;
+dialog::backdrop {
+  background-color: rgba($color: #000000, $alpha: 0.5);
 }
 
-.sidebar-icon {
-  position: absolute;
-  color: variables.$textDarkColor;
-  top: 0.5rem;
-  left: 11.875rem;
-
-  &:hover {
-    color: variables.$primaryColor;
-  }
+dialog[open]::backdrop {
+  animation: fade-in 500ms forwards;
 }
 
-@media (min-width: 1200px) {
-  .sidebarNav.collapsed {
-    margin-left: 0rem;
-  }
+dialog[closing]::backdrop {
+  animation: fade-out 500ms forwards;
+}
 
-  .sidebar-icon {
-    display: none;
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
+}
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slide-out {
+  100% {
+    transform: translateX(-100%);
+  }
+  0% {
+    transform: translateX(0%);
   }
 }

@@ -7,56 +7,56 @@
 }
 
 .secondaryColor-bg {
-  backgdround-color: $secondaryColor !important;
+  background-color: $secondaryColor;
 }
 
 .tertiaryColor-bg {
-  background-color: $tertiaryColor !important;
+  background-color: $tertiaryColor;
 }
 
 .pageBackgroundColor-bg {
-  background-color: $pageBackgroundColor !important;
+  background-color: $pageBackgroundColor;
 }
 
 .buttonColor-bg {
-  background-color: $buttonColor !important;
+  background-color: $buttonColor;
 }
 
 .textDarkColor-bg {
-  background-color: $textDarkColor !important;
+  background-color: $textDarkColor;
 }
 
 .textWhiteColor-bg {
-  background-color: $textWhiteColor !important;
+  background-color: $textWhiteColor;
 }
 
 // Text colors
 .primaryColor-text {
-  color: $primaryColor !important;
+  color: $primaryColor;
 }
 
 .secondaryColor-text {
-  color: $secondaryColor !important;
+  color: $secondaryColor;
 }
 
 .tertiaryColor-text {
-  color: $tertiaryColor !important;
+  color: $tertiaryColor;
 }
 
 .pageBackgroundColor-text {
-  color: $pageBackgroundColor !important;
+  color: $pageBackgroundColor;
 }
 
 .buttonColor-text {
-  color: $buttonColor !important;
+  color: $buttonColor;
 }
 
 .textDarkColor-text {
-  color: $textDarkColor !important;
+  color: $textDarkColor;
 }
 
 .textWhiteColor-text {
-  color: $textWhiteColor !important;
+  color: $textWhiteColor;
 }
 
 // CSS Variables following industry standards
@@ -86,7 +86,11 @@
   font-weight: bold;
 
   // Visual with subtle AI glow
-  background: linear-gradient(135deg, $textDarkColor 0%, var(--ai-neural-blue) 100%);
+  background: linear-gradient(
+    135deg,
+    $textDarkColor 0%,
+    var(--ai-neural-blue) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -101,14 +105,14 @@
 .hero-card {
   // Visual
   background: $primaryColor;
-  color: $textDarkColor !important;
+  color: $textDarkColor;
   box-shadow: 0 4px 20px var(--ai-soft-glow);
 
   // Ensure all text inside uses dark color
   *:not(.hero-title),
   .lead,
   p {
-    color: $textDarkColor !important;
+    color: $textDarkColor;
   }
 }
 
@@ -119,7 +123,7 @@
   font-size: $secondaryHeadingSizeMobile;
 
   // Visual
-  color: $textDarkColor !important;
+  color: $textDarkColor;
 
   @media (min-width: 48rem) {
     font-size: $secondaryHeadingSizeDesktop;
@@ -128,7 +132,7 @@
 
 .main-description-card {
   // Visual
-  border-left: 0.3125rem solid $primaryColor !important;
+  border-left: 0.3125rem solid $primaryColor;
 }
 
 .section-heading {
@@ -141,7 +145,11 @@
 
 .ai-powered-box {
   // Visual with AI-themed styling
-  background: linear-gradient(135deg, $tertiaryColor 0%, var(--ai-data-cyan) 100%);
+  background: linear-gradient(
+    135deg,
+    $tertiaryColor 0%,
+    var(--ai-data-cyan) 100%
+  );
   color: $textDarkColor;
   border-radius: 0.9375rem;
   border: 1px solid var(--ai-soft-glow);
@@ -158,7 +166,7 @@
 
 .feature-card-primary {
   // Visual with AI accent
-  border-top: 0.25rem solid var(--ai-neural-blue) !important;
+  border-top: 0.25rem solid var(--ai-neural-blue);
   transition: all 0.3s ease;
 
   &:hover {
@@ -182,7 +190,7 @@
 
 .feature-card-secondary {
   // Visual with AI accent
-  border-top: 0.25rem solid var(--ai-circuit-purple) !important;
+  border-top: 0.25rem solid var(--ai-circuit-purple);
   transition: all 0.3s ease;
 
   &:hover {
@@ -206,7 +214,7 @@
 
 .login-info-alert {
   // Visual with subtle AI accent
-  background: linear-gradient(135deg, white 0%, rgba(74, 144, 226, 0.05) 100%) !important;
+  background: linear-gradient(135deg, white 0%, rgba(74, 144, 226, 0.05) 100%);
   border: 1px solid var(--ai-soft-glow);
   border-radius: 0.9375rem;
   box-shadow: 0 2px 10px var(--ai-soft-glow);
@@ -413,8 +421,12 @@
   font-size: 0.9rem;
 
   // Visual with AI theme
-  background: linear-gradient(135deg, $tertiaryColor 0%, var(--ai-glow-green) 100%);
-  color: $textDarkColor !important;
+  background: linear-gradient(
+    135deg,
+    $tertiaryColor 0%,
+    var(--ai-glow-green) 100%
+  );
+  color: $textDarkColor;
   border: 1px solid var(--ai-soft-glow);
   box-shadow: 0 2px 8px var(--ai-soft-glow);
 }
