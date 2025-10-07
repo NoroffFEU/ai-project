@@ -1,0 +1,404 @@
+// CSS Variables following industry standards
+:root {
+  // Font sizes
+  --fontSize-mainHeadingSizeMobile: 2.25rem;
+  --fontSize-secondaryHeadingSizeMobile: 1.75rem;
+  --fontSize-paragraphSizeMobile: 1rem;
+  --fontSize-mainHeadingSizeDesktop: 3rem;
+  --fontSize-secondaryHeadingSizeDesktop: 2rem;
+  --fontSize-paragraphSizeDesktop: 1.125rem;
+
+  // AI-themed subtle colors
+  --ai-neural-blue: #4a90e2;
+  --ai-circuit-purple: #7b68ee;
+  --ai-data-cyan: #20b2aa;
+  --ai-glow-green: #32cd32;
+  --ai-matrix-dark: #0a1929;
+  --ai-soft-glow: rgba(74, 144, 226, 0.1);
+}
+
+// About page styles using variables
+.main-heading {
+  // Typography (mobile first)
+  font-family: $headingsFont;
+  font-size: $mainHeadingSizeMobile;
+  font-weight: bold;
+
+  // Visual with subtle AI glow
+  background: linear-gradient(
+    135deg,
+    $textDarkColor 0%,
+    var(--ai-neural-blue) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px var(--ai-soft-glow);
+
+  // Desktop media query
+  @media (min-width: 48rem) {
+    font-size: $mainHeadingSizeDesktop;
+  }
+}
+
+.hero-card {
+  // Visual
+  background: $primaryColor;
+  color: $textDarkColor !important;
+  box-shadow: 0 4px 20px var(--ai-soft-glow);
+
+  // Ensure all text inside uses dark color
+  *:not(.hero-title),
+  .lead,
+  p {
+    color: $textDarkColor !important;
+  }
+}
+
+.hero-card .hero-title,
+.hero-title {
+  // Typography (mobile first)
+  font-family: $headingsFont;
+  font-size: $secondaryHeadingSizeMobile;
+
+  // Visual
+  color: $textDarkColor !important;
+
+  @media (min-width: 48rem) {
+    font-size: $secondaryHeadingSizeDesktop;
+  }
+}
+
+.main-description-card {
+  // Visual
+  border-left: 0.3125rem solid $primaryColor !important;
+}
+
+.section-heading {
+  // Typography
+  font-family: $headingsFont;
+
+  // Visual
+  color: $primaryColor;
+}
+
+.ai-powered-box {
+  // Visual with AI-themed styling
+  background: linear-gradient(
+    135deg,
+    $tertiaryColor 0%,
+    var(--ai-data-cyan) 100%
+  );
+  color: $textDarkColor;
+  border-radius: 0.9375rem;
+  border: 1px solid var(--ai-soft-glow);
+  box-shadow: 0 2px 15px var(--ai-soft-glow);
+
+  // Subtle animation for AI feel
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 25px rgba(74, 144, 226, 0.2);
+  }
+}
+
+.feature-card-primary {
+  // Visual with AI accent
+  border-top: 0.25rem solid var(--ai-neural-blue) !important;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 25px var(--ai-soft-glow);
+    transform: translateY(-2px);
+  }
+}
+
+.feature-title-primary {
+  // Typography
+  font-family: $headingsFont;
+
+  // Visual with AI theme
+  color: var(--ai-neural-blue);
+}
+
+.feature-icon-primary {
+  // Visual with AI theme
+  color: var(--ai-neural-blue);
+}
+
+.feature-card-secondary {
+  // Visual with AI accent
+  border-top: 0.25rem solid var(--ai-circuit-purple) !important;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 25px rgba(123, 104, 238, 0.15);
+    transform: translateY(-2px);
+  }
+}
+
+.feature-title-secondary {
+  // Typography
+  font-family: $headingsFont;
+
+  // Visual with AI theme
+  color: var(--ai-circuit-purple);
+}
+
+.feature-icon-secondary {
+  // Visual with AI theme
+  color: var(--ai-circuit-purple);
+}
+
+.login-info-alert {
+  // Visual with subtle AI accent
+  background: linear-gradient(
+    135deg,
+    white 0%,
+    rgba(74, 144, 226, 0.05) 100%
+  ) !important;
+  border: 1px solid var(--ai-soft-glow);
+  border-radius: 0.9375rem;
+  box-shadow: 0 2px 10px var(--ai-soft-glow);
+}
+
+.alert-icon {
+  // Visual with AI accent
+  color: var(--ai-neural-blue);
+}
+
+.alert-title {
+  // Typography
+  font-family: $headingsFont;
+
+  // Visual
+  color: $textDarkColor;
+}
+
+.alert-text {
+  // Typography
+  font-family: $paragraphFont;
+
+  // Visual
+  color: darken($textDarkColor, 10%);
+}
+
+.community-heading {
+  // Typography (mobile first)
+  font-family: $headingsFont;
+  font-size: $secondaryHeadingSizeMobile;
+  font-weight: bold;
+
+  // Visual
+  background: $textDarkColor;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (min-width: 48rem) {
+    font-size: $secondaryHeadingSizeDesktop;
+  }
+}
+
+.github-card {
+  // Visual
+  background: linear-gradient(
+    135deg,
+    $textDarkColor 0%,
+    lighten($textDarkColor, 10%) 100%
+  );
+}
+
+.github-icon {
+  // Visual
+  color: $textWhiteColor;
+}
+
+.github-title {
+  // Typography
+  font-family: $headingsFont;
+
+  // Visual
+  color: $textWhiteColor;
+}
+
+.github-text {
+  // Typography
+  font-family: $paragraphFont;
+
+  // Visual
+  color: $tertiaryColor;
+}
+
+.github-btn {
+  // Typography
+  font-weight: 600;
+
+  // Visual
+  border-radius: 1.5625rem;
+}
+
+.github-feature-title {
+  // Typography
+  font-family: $headingsFont;
+
+  // Visual
+  color: $textWhiteColor;
+}
+
+.github-feature-text {
+  // Typography
+  font-family: $paragraphFont;
+
+  // Visual
+  color: $tertiaryColor;
+}
+
+// Logo styles
+.logo-container {
+  // Positioning
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Sizes
+  width: 6.5rem;
+  height: 6.5rem;
+
+  // Visual
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  overflow: hidden;
+
+  // Animation
+  animation: pulse 2s infinite;
+
+  // Desktop
+  @media (min-width: 48rem) {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+.logo-image {
+  // Sizes
+  width: 100%;
+  height: 100%;
+
+  // Visual
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+// About page animations and specific styles
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-0.625rem);
+  }
+  60% {
+    transform: translateY(-0.3125rem);
+  }
+}
+
+.logo-gradient {
+  // Visual
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  // Animation
+  animation: pulse 2s infinite;
+}
+
+.floating-element-top {
+  // Positioning
+  position: absolute;
+  top: -0.625rem;
+  right: -0.625rem;
+
+  // Typography
+  font-size: 1.8rem;
+
+  // Visual
+  color: #f093fb;
+
+  // Animation
+  animation: bounce 1s infinite;
+}
+
+.floating-element-bottom {
+  // Positioning
+  position: absolute;
+  bottom: -0.625rem;
+  left: -0.625rem;
+
+  // Typography
+  font-size: 1.8rem;
+
+  // Visual
+  color: #667eea;
+
+  // Animation
+  animation: bounce 1s infinite 0.5s;
+}
+
+.ai-badge {
+  // Typography
+  font-size: 0.9rem;
+
+  // Visual with AI theme
+  background: linear-gradient(
+    135deg,
+    $tertiaryColor 0%,
+    var(--ai-glow-green) 100%
+  );
+  color: $textDarkColor !important;
+  border: 1px solid var(--ai-soft-glow);
+  box-shadow: 0 2px 8px var(--ai-soft-glow);
+}
+
+.feature-list-icon-accent {
+  // Typography
+  font-size: 1.5rem;
+
+  // Visual with AI theme
+  color: var(--ai-neural-blue);
+}
+
+.feature-list-icon-highlight {
+  // Typography
+  font-size: 1.5rem;
+
+  // Visual with AI theme
+  color: var(--ai-circuit-purple);
+}
+
+// GitHub feature icons with AI theme
+.github-feature-icon-blue {
+  color: var(--ai-neural-blue);
+}
+
+.github-feature-icon-red {
+  color: #ff6b6b;
+}
+
+.github-feature-icon-yellow {
+  color: var(--ai-glow-green);
+}

@@ -1,5 +1,7 @@
 @import 'variables';
-
+@import 'custom';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import 'sidebar';
 // Reset & Base
 *,
 *::before,
@@ -12,6 +14,7 @@ html {
 }
 
 body {
+    height: 100%;
   margin: 0;
   padding: 0;
   font-family: $paragraph-font;
@@ -19,6 +22,8 @@ body {
   line-height: 1.6;
   background-color: $page-background-color;
   color: $text-dark-color;
+    
+
 
   @media (min-width: $breakpoint-md) {
     font-size: $paragraph-size-desktop;
@@ -38,8 +43,35 @@ h6 {
   line-height: 1.2;
   color: $text-dark-color;
 }
+header {
+  float: left;
+  height: 100%;
+}
+
+// About page logo - mobile first
+.logo-circle {
+  // Sizes (mobile first)
+  width: 4rem;
+  height: 4rem;
+
+  // Desktop
+  @media (min-width: 48rem) {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.nav-pills li a:hover {
+  background-color: $primary;
+}
+
+.list-group-item {
+  border-left: 0;
+  border-right: 0;
+}
 
 h1 {
+    font-weight: 700;
   font-size: $main-heading-size-mobile;
 
   @media (min-width: $breakpoint-md) {
@@ -452,6 +484,15 @@ a.link {
   color: $text-white-color;
 }
 
+
+footer a {
+  color: #000000;
+}
+
+.text-no-decoration {
+  text-decoration: none;
+}
+
 .footer__grid {
   display: grid;
   gap: $spacing-lg;
@@ -566,3 +607,4 @@ a.link {
     filter: brightness(0);
   }
 }
+

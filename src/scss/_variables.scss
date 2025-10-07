@@ -1,14 +1,19 @@
 // Color Variables
-$primary-color: #7c7d75;
-$secondary-color: #adaca7;
-$tertiary-color: #d9dadf;
-$page-background-color: #fcf8d8;
-$button-color: #dd700b;
-$button-color-hover: #763c05;
-$text-dark-color: #1f2421;
-$text-white-color: #d9e1e1;
-$footer-background-color: #332e05;
-$white-color: #f8f8f8fe;
+$primaryColor: #7C7D75;
+$secondaryColor: #ADACA7;
+$tertiaryColor: #D9DADF;
+$pageBackgroundColor: #FCF8D8;
+$buttonColor: #DD700B;
+$textDarkColor: #1F2421;
+$textWhiteColor: #D9E1E1;
+$headingsFont: Manrope, Helvetica, Arial;
+$paragraphFont: Calibri, Arial, Helvetica;
+$mainHeadingSizeDesktop: 3rem;
+$secondaryHeadingSizeDesktop: 2rem;
+$paragraphSizeDesktop: 1.125rem;
+$mainHeadingSizeMobile: 2.25rem;
+$secondaryHeadingSizeMobile: 1.75rem;
+$paragraphSizeMobile: 1rem;
 
 // Typography Variables
 $headings-font: 'Manrope', Helvetica, Arial, sans-serif;
@@ -41,3 +46,4 @@ $breakpoint-sm: 36rem; //576px
 $breakpoint-md: 48rem; //769px
 $breakpoint-lg: 62rem; //992px
 $breakpoint-xl: 75rem; //1200px
+
