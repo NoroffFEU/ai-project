@@ -1,28 +1,28 @@
 // Color Variables
-$primary-color: #7C7D75;
-$secondary-color: #ADACA7;
-$tertiary-color: #D9DADF;
-$page-background-color: #FCF8D8;
-$button-color: #DD700B;
+$primary-color: #7c7d75;
+$secondary-color: #adaca7;
+$tertiary-color: #d9dadf;
+$page-background-color: #fcf8d8;
+$button-color: #dd700b;
 $button-color-hover: #763c05;
-$text-dark-color: #1F2421;
-$text-white-color: #D9E1E1;
-$footer-background-color: #332E05;
-$white-color:#f8f8f8fe;
+$text-dark-color: #1f2421;
+$text-white-color: #d9e1e1;
+$footer-background-color: #332e05;
+$white-color: #f8f8f8fe;
 
 // Typography Variables
 $headings-font: 'Manrope', Helvetica, Arial, sans-serif;
 $paragraph-font: 'Calibri', Arial, Helvetica, sans-serif;
 
 // Desktop Typography
-$main-heading-size-desktop: 3rem;      // 48px
-$secondary-heading-size-desktop: 2rem;  // 32px
-$paragraph-size-desktop: 1.125rem;      // 18px
+$main-heading-size-desktop: 3rem; // 48px
+$secondary-heading-size-desktop: 2rem; // 32px
+$paragraph-size-desktop: 1.125rem; // 18px
 
 // Mobile Typography
-$main-heading-size-mobile: 2.25rem;     // 36px
+$main-heading-size-mobile: 2.25rem; // 36px
 $secondary-heading-size-mobile: 1.75rem; // 28px
-$paragraph-size-mobile: 1rem;           // 16px
+$paragraph-size-mobile: 1rem; // 16px
 
 // Spacing
 $spacing-xs: 0.5rem;
@@ -41,4 +41,3 @@ $breakpoint-sm: 36rem; //576px
 $breakpoint-md: 48rem; //769px
 $breakpoint-lg: 62rem; //992px
 $breakpoint-xl: 75rem; //1200px
-

@@ -14,8 +14,8 @@ body {
   font-family: "Calibri", Arial, Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #FCF8D8;
-  color: #1F2421;
+  background-color: #fcf8d8;
+  color: #1f2421;
 }
 @media (min-width: 48rem) {
   body {
@@ -33,7 +33,7 @@ h6 {
   font-family: "Manrope", Helvetica, Arial, sans-serif;
   font-weight: 600;
   line-height: 1.2;
-  color: #1F2421;
+  color: #1f2421;
 }
 
 h1 {
@@ -85,7 +85,7 @@ p {
 .lead {
   font-size: 1rem;
   font-weight: 300;
-  color: #1F2421;
+  color: #1f2421;
 }
 @media (min-width: 48rem) {
   .lead {
@@ -98,7 +98,7 @@ p {
   max-width: 90rem;
   margin: 0 auto;
   padding: 1.5rem;
-  background-color: #FCF8D8;
+  background-color: #fcf8d8;
 }
 @media (min-width: 48rem) {
   .page-container {
@@ -121,7 +121,7 @@ p {
 
 .bento-item {
   padding: 2rem;
-  border: 0.125rem solid #D9DADF;
+  border: 0.125rem solid #d9dadf;
   border-radius: 0.5rem;
   background-color: rgba(248, 248, 248, 0.9960784314);
   box-shadow: 0 0.125rem 0.75rem rgba(31, 36, 33, 0.15);
@@ -140,7 +140,7 @@ p {
 }
 
 .bento-item--quicklinks {
-  background-color: #D9DADF;
+  background-color: #d9dadf;
 }
 @media (min-width: 62rem) {
   .bento-item--quicklinks {
@@ -155,7 +155,7 @@ p {
 }
 
 .bento-item--small {
-  border-color: #D9DADF;
+  border-color: #d9dadf;
 }
 @media (min-width: 62rem) {
   .bento-item--small {
@@ -200,12 +200,12 @@ p {
 }
 
 .bento-item--highlight {
-  border-color: #DD700B;
-  background-color: #FCF8D8;
+  border-color: #dd700b;
+  background-color: #fcf8d8;
 }
 
 .bento-item--info {
-  background-color: #ADACA7;
+  background-color: #adaca7;
 }
 
 .bento-header {
@@ -244,22 +244,22 @@ p {
   align-items: center;
   gap: 0.5rem;
   padding: 2rem;
-  border: 0.125rem solid #D9DADF;
+  border: 0.125rem solid #d9dadf;
   border-radius: 0.5rem;
   background-color: rgba(248, 248, 248, 0.9960784314);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 .quicklink-card:hover {
-  border-color: #DD700B;
-  background-color: #FCF8D8;
+  border-color: #dd700b;
+  background-color: #fcf8d8;
   transform: translateY(-2px);
   box-shadow: 0 0.125rem 0.75rem rgba(31, 36, 33, 0.15);
 }
 .quicklink-card:focus {
-  outline: 0.1875rem solid #DD700B;
+  outline: 0.1875rem solid #dd700b;
   outline-offset: 0.125rem;
-  border-color: #DD700B;
+  border-color: #dd700b;
 }
 @media (min-width: 48rem) {
   .quicklink-card {
@@ -271,7 +271,7 @@ p {
   font-family: "Calibri", Arial, Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: #1F2421;
+  color: #1f2421;
   text-align: center;
 }
 @media (min-width: 48rem) {
@@ -284,12 +284,12 @@ p {
   display: inline-block;
   padding: 0.375rem 0.75rem;
   margin-right: 0.5rem;
-  border: 0.025rem solid #D9DADF;
+  border: 0.025rem solid #d9dadf;
   border-radius: 0.375rem;
   font-size: 1rem;
   font-weight: 600;
   background-color: rgba(248, 248, 248, 0.9960784314);
-  color: #1F2421;
+  color: #1f2421;
 }
 @media (min-width: 48rem) {
   .number-badge {
@@ -300,10 +300,10 @@ p {
 .alert--info {
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  border-left: 0.25rem solid #DD700B;
+  border-left: 0.25rem solid #dd700b;
   border-radius: 0.5rem;
-  background-color: #FCF8D8;
-  color: #1F2421;
+  background-color: #fcf8d8;
+  color: #1f2421;
 }
 
 a.link {
@@ -313,7 +313,7 @@ a.link {
   font-weight: 500;
   font-size: 1rem;
   text-decoration: none;
-  color: #DD700B;
+  color: #dd700b;
   transition: color 0.3s ease;
 }
 a.link:hover {
@@ -323,7 +323,7 @@ a.link:hover {
 a.link:focus {
   color: #763c05;
   text-decoration: none;
-  outline: 0.1875rem solid #DD700B;
+  outline: 0.1875rem solid #dd700b;
   outline-offset: 0.125rem;
 }
 
@@ -357,7 +357,7 @@ a.link:focus {
 .section__header {
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
-  border-bottom: 0.125rem solid #D9DADF;
+  border-bottom: 0.125rem solid #d9dadf;
   text-align: center;
 }
 .section__header img {
@@ -366,7 +366,7 @@ a.link:focus {
   margin-bottom: 1.5rem;
 }
 .section__header .lead {
-  color: #1F2421;
+  color: #1f2421;
   font-size: 1rem;
 }
 @media (min-width: 48rem) {
@@ -378,7 +378,7 @@ a.link:focus {
 .section__text {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #ADACA7;
+  color: #adaca7;
 }
 @media (min-width: 48rem) {
   .section__text {
@@ -402,7 +402,7 @@ a.link:focus {
   transition: color 0.3s ease;
 }
 .section__link a:hover {
-  color: #DD700B;
+  color: #dd700b;
 }
 
 .section__bottom {
@@ -422,10 +422,10 @@ a.link:focus {
   align-items: center;
   padding: 2rem;
   margin-top: 1.5rem;
-  border: 0.125rem dashed #ADACA7;
+  border: 0.125rem dashed #adaca7;
   border-radius: 0.5rem;
-  background-color: #D9DADF;
-  color: #ADACA7;
+  background-color: #d9dadf;
+  color: #adaca7;
 }
 @media (min-width: 48rem) {
   .placeholder {
@@ -441,8 +441,8 @@ a.link:focus {
 .footer {
   padding: 2rem 1.5rem;
   margin-top: 3rem;
-  background-color: #332E05;
-  color: #D9E1E1;
+  background-color: #332e05;
+  color: #d9e1e1;
 }
 
 .footer__grid {
@@ -478,7 +478,7 @@ a.link:focus {
   font-family: "Manrope", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: #D9E1E1;
+  color: #d9e1e1;
 }
 @media (min-width: 48rem) {
   .footer__heading {
@@ -490,7 +490,7 @@ a.link:focus {
 .footer__text {
   font-size: 1rem;
   line-height: 1.6;
-  color: #D9E1E1;
+  color: #d9e1e1;
 }
 @media (min-width: 48rem) {
   .footer__text {
@@ -510,15 +510,15 @@ a.link:focus {
 .footer__link a {
   font-size: 1rem;
   text-decoration: none;
-  color: #D9E1E1;
+  color: #d9e1e1;
   transition: color 0.3s ease;
 }
 .footer__link a:hover {
-  color: #DD700B;
+  color: #dd700b;
 }
 .footer__link a:focus {
-  color: #DD700B;
-  outline: 0.1875rem solid #DD700B;
+  color: #dd700b;
+  outline: 0.1875rem solid #dd700b;
   outline-offset: 0.125rem;
 }
 @media (min-width: 48rem) {
@@ -532,7 +532,7 @@ a.link:focus {
   border-top: 0.0625rem solid rgba(217, 225, 225, 0.2);
   text-align: center;
   font-size: 1rem;
-  color: #D9E1E1;
+  color: #d9e1e1;
 }
 @media (min-width: 48rem) {
   .footer__bottom {
@@ -542,16 +542,16 @@ a.link:focus {
 
 .accordion-button {
   background-color: rgba(248, 248, 248, 0.9960784314);
-  color: #1F2421;
+  color: #1f2421;
 }
 .accordion-button:not(.collapsed) {
-  background-color: #FCF8D8;
-  color: #1F2421;
+  background-color: #fcf8d8;
+  color: #1f2421;
   box-shadow: none;
 }
 .accordion-button:focus {
-  background-color: #D9DADF;
-  border-color: #DD700B;
+  background-color: #d9dadf;
+  border-color: #dd700b;
   box-shadow: 0 0 0 0.1875rem rgba(221, 112, 11, 0.25);
   outline: none;
 }
