@@ -1,5 +1,15 @@
+import isLoggedIn from './utils/auth/isLoggedIn.js';
+import { showStatus } from './utils/showStatusMessage.js';
 import { getISOWeek, isoWeeksInYear } from './utils/getISOWeek.js';
 import { initWeekPagination } from './components/weekPagination.js';
+
+if (isLoggedIn()) {
+  console.log('User is logged in');
+  showStatus('Welcome back!', 'success');
+} else {
+  console.log('User is not logged in');
+  showStatus('You are not logged in. Displaying dummy data', 'warning');
+}
 
 let tasks = [];
 const uid = () => Math.random().toString(36).slice(2, 10);
@@ -8,6 +18,7 @@ function readTasksFromDOM() {
     document.getElementById('taskList') ||
     document.querySelector('ul.list-group');
   if (!list) return [];
+
   const items = Array.from(list.querySelectorAll('li'));
   return items.map((li) => {
     const raw = li.getAttribute('data-created-at') || new Date().toISOString();
@@ -41,8 +52,10 @@ function renderTaskListForWeek(week, year) {
     list.innerHTML = `
       <li class="list-group-item border-0 text-center text-muted">
         No tasks for this week: ${week}, ${year}.
+
       </li>
     `;
+
     return;
   }
   list.innerHTML = filtered.map(taskToLI).join('');
