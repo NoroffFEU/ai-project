@@ -1,11 +1,18 @@
 // Color Variables
-$primaryColor: #7C7D75;
-$secondaryColor: #ADACA7;
-$tertiaryColor: #D9DADF;
-$pageBackgroundColor: #FCF8D8;
-$buttonColor: #DD700B;
-$textDarkColor: #1F2421;
-$textWhiteColor: #D9E1E1;
+$primaryColor: #677381;
+$primary-color: #677381; // Kebab-case alias for primaryColor
+$secondaryColor: #adaca7;
+$secondary-color: #adaca7; // Kebab-case alias for secondaryColor
+$tertiaryColor: #d9dadf;
+$tertiary-color: #d9dadf; // Kebab-case alias for tertiaryColor
+$pageBackgroundColor: #fcf8d8;
+$page-background-color: #fcf8d8; // Kebab-case alias for pageBackgroundColor
+$buttonColor: #dd700b;
+$button-color: #dd700b; // Kebab-case alias for buttonColor
+$textDarkColor: #1f2421;
+$text-dark-color: #1f2421; // Kebab-case alias for textDarkColor
+$textWhiteColor: #d9e1e1;
+$text-white-color: #d9e1e1; // Kebab-case alias for textWhiteColor
 $headingsFont: Manrope, Helvetica, Arial;
 $paragraphFont: Calibri, Arial, Helvetica;
 $mainHeadingSizeDesktop: 3rem;
@@ -16,8 +23,8 @@ $secondaryHeadingSizeMobile: 1.75rem;
 $paragraphSizeMobile: 1rem;
 
 // Typography Variables
-$headings-font: 'Manrope', Helvetica, Arial, sans-serif;
-$paragraph-font: 'Calibri', Arial, Helvetica, sans-serif;
+$headings-font: "Manrope", Helvetica, Arial, sans-serif;
+$paragraph-font: "Calibri", Arial, Helvetica, sans-serif;
 
 // Desktop Typography
 $main-heading-size-desktop: 3rem; // 48px
@@ -46,4 +53,3 @@ $breakpoint-sm: 36rem; //576px
 $breakpoint-md: 48rem; //769px
 $breakpoint-lg: 62rem; //992px
 $breakpoint-xl: 75rem; //1200px
-
