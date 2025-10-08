@@ -43,11 +43,9 @@ export const toggleSidebar = () => {
       return;
     }
 
-    console.log("Toggle button found, attaching listener");
 
     toggleBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      console.log("Toggle button clicked");
       sidebar.classList.toggle("collapsed");
 
       if (!sidebar.classList.contains("collapsed")) {
