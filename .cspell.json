@@ -1,0 +1,15 @@
+{
+  "version": "0.2",
+  "words": [
+    "jspdf",
+    "html2canvas",
+    "prettier",
+    "eslint",
+    "http-server",
+    "npm-run-all",
+    "scss",
+    "sass",
+    "braces",
+    "file-saver"
+  ]
+}
