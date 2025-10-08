@@ -9,8 +9,10 @@ $textDarkColor: #1f2421;
 $textWhiteColor: #d9e1e1;
 $whiteColor: #ffffff;
 $footerBackgroundColor: #1f2421;
-$headingsFont: Manrope, Helvetica, Arial;
-$paragraphFont: Calibri, Arial, Helvetica;
+$textDarkColor: #1f2421;
+$textWhiteColor: #d9e1e1;
+$headingsFont: Roboto, Helvetica, Arial;
+$paragraphFont: Roboto, Arial, Helvetica;
 $mainHeadingSizeDesktop: 3rem;
 $secondaryHeadingSizeDesktop: 2rem;
 $paragraphSizeDesktop: 1.125rem;
@@ -29,8 +31,8 @@ $text-white-color: $textWhiteColor;
 $footer-background-color: $footerBackgroundColor;
 
 // Typography Variables
-$headings-font: "Manrope", Helvetica, Arial, sans-serif;
-$paragraph-font: "Calibri", Arial, Helvetica, sans-serif;
+$headings-font: "Roboto", Helvetica, Arial, sans-serif;
+$paragraph-font: "Roboto", Arial, Helvetica, sans-serif;
 
 // Desktop Typography
 $main-heading-size-desktop: 3rem; // 48px
