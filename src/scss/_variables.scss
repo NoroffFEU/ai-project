@@ -1,13 +1,13 @@
 // Color Variables
-$primaryColor: #7C7D75;
-$secondaryColor: #ADACA7;
-$tertiaryColor: #D9DADF;
-$pageBackgroundColor: #FCF8D8;
-$buttonColor: #DD700B;
-$textDarkColor: #1F2421;
-$textWhiteColor: #D9E1E1;
-$headingsFont: Manrope, Helvetica, Arial;
-$paragraphFont: Calibri, Arial, Helvetica;
+$primaryColor: #7c7d75;
+$secondaryColor: #adaca7;
+$tertiaryColor: #d9dadf;
+$pageBackgroundColor: #fcf8d8;
+$buttonColor: #dd700b;
+$textDarkColor: #1f2421;
+$textWhiteColor: #d9e1e1;
+$headingsFont: Roboto, Helvetica, Arial;
+$paragraphFont: Roboto, Arial, Helvetica;
 $mainHeadingSizeDesktop: 3rem;
 $secondaryHeadingSizeDesktop: 2rem;
 $paragraphSizeDesktop: 1.125rem;
@@ -16,8 +16,8 @@ $secondaryHeadingSizeMobile: 1.75rem;
 $paragraphSizeMobile: 1rem;
 
 // Typography Variables
-$headings-font: 'Manrope', Helvetica, Arial, sans-serif;
-$paragraph-font: 'Calibri', Arial, Helvetica, sans-serif;
+$headings-font: "Roboto", Helvetica, Arial, sans-serif;
+$paragraph-font: "Roboto", Arial, Helvetica, sans-serif;
 
 // Desktop Typography
 $main-heading-size-desktop: 3rem; // 48px
@@ -46,4 +46,3 @@ $breakpoint-sm: 36rem; //576px
 $breakpoint-md: 48rem; //769px
 $breakpoint-lg: 62rem; //992px
 $breakpoint-xl: 75rem; //1200px
-
