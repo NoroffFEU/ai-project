@@ -1,20 +1,13 @@
 // Color Variables
-$primaryColor: #677381;
-$primary-color: #677381; // Kebab-case alias for primaryColor
+$primaryColor: #7c7d75;
 $secondaryColor: #adaca7;
-$secondary-color: #adaca7; // Kebab-case alias for secondaryColor
 $tertiaryColor: #d9dadf;
-$tertiary-color: #d9dadf; // Kebab-case alias for tertiaryColor
 $pageBackgroundColor: #fcf8d8;
-$page-background-color: #fcf8d8; // Kebab-case alias for pageBackgroundColor
 $buttonColor: #dd700b;
-$button-color: #dd700b; // Kebab-case alias for buttonColor
 $textDarkColor: #1f2421;
-$text-dark-color: #1f2421; // Kebab-case alias for textDarkColor
 $textWhiteColor: #d9e1e1;
-$text-white-color: #d9e1e1; // Kebab-case alias for textWhiteColor
-$headingsFont: Manrope, Helvetica, Arial;
-$paragraphFont: Calibri, Arial, Helvetica;
+$headingsFont: Roboto, Helvetica, Arial;
+$paragraphFont: Roboto, Arial, Helvetica;
 $mainHeadingSizeDesktop: 3rem;
 $secondaryHeadingSizeDesktop: 2rem;
 $paragraphSizeDesktop: 1.125rem;
@@ -23,8 +16,8 @@ $secondaryHeadingSizeMobile: 1.75rem;
 $paragraphSizeMobile: 1rem;
 
 // Typography Variables
-$headings-font: "Manrope", Helvetica, Arial, sans-serif;
-$paragraph-font: "Calibri", Arial, Helvetica, sans-serif;
+$headings-font: "Roboto", Helvetica, Arial, sans-serif;
+$paragraph-font: "Roboto", Arial, Helvetica, sans-serif;
 
 // Desktop Typography
 $main-heading-size-desktop: 3rem; // 48px
