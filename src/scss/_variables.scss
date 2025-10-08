@@ -4,6 +4,11 @@ $secondaryColor: #adaca7;
 $tertiaryColor: #d9dadf;
 $pageBackgroundColor: #fcf8d8;
 $buttonColor: #dd700b;
+$buttonColorHover: darken(#dd700b, 10%);
+$textDarkColor: #1f2421;
+$textWhiteColor: #d9e1e1;
+$whiteColor: #ffffff;
+$footerBackgroundColor: #1f2421;
 $textDarkColor: #1f2421;
 $textWhiteColor: #d9e1e1;
 $headingsFont: Roboto, Helvetica, Arial;
@@ -14,6 +19,16 @@ $paragraphSizeDesktop: 1.125rem;
 $mainHeadingSizeMobile: 2.25rem;
 $secondaryHeadingSizeMobile: 1.75rem;
 $paragraphSizeMobile: 1rem;
+
+// Kebab-case aliases for consistency with existing usage
+$tertiary-color: $tertiaryColor;
+$button-color: $buttonColor;
+$button-color-hover: $buttonColorHover;
+$white-color: $whiteColor;
+$secondary-color: $secondaryColor;
+$text-dark-color: $textDarkColor;
+$text-white-color: $textWhiteColor;
+$footer-background-color: $footerBackgroundColor;
 
 // Typography Variables
 $headings-font: "Roboto", Helvetica, Arial, sans-serif;
