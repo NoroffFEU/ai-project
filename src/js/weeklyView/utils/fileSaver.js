@@ -8,31 +8,62 @@ function fileSaver(extension) {
 
 async function exportAsPng(e) {
   e?.preventDefault();
-  const container = document.getElementById("cardsContainer");
-  const canvas = await html2canvas(container, {
-    backgroundColor: "#ffffff",
-    scale: Math.max(window.devicePixelRatio || 1, 2),
-  });
-  const link = document.createElement("a");
-  link.href = canvas.toDataURL("image/png");
-  link.download = fileSaver("png");
-  link.click();
+  try {
+    const container = document.getElementById("cardsContainer");
+    if (!container) {
+      console.error("Container element not found");
+      alert("Export failed: Container not found");
+      return;
+    }
+
+    const canvas = await html2canvas(container, {
+      backgroundColor: "#ffffff",
+      scale: Math.max(window.devicePixelRatio || 1, 2),
+    });
+
+    const link = document.createElement("a");
+    link.href = canvas.toDataURL("image/png");
+    link.download = fileSaver("png");
+    link.click();
+  } catch (error) {
+    console.error("Error exporting PNG:", error);
+    alert("Failed to export PNG: " + error.message);
+  }
 }
 
 async function exportAsPdf(e) {
   e?.preventDefault();
-  const container = document.getElementById("cardsContainer");
-  const canvas = await html2canvas(container, {
-    backgroundColor: "#ffffff",
-    scale: Math.max(window.devicePixelRatio || 1, 2),
-  });
-  const imgData = canvas.toDataURL("image/png");
-  const { jsPDF } = window.jspdf;
-  const pdf = new jsPDF({ orientation: "p", unit: "mm", format: "a4" });
-  const width = pdf.internal.pageSize.getWidth();
-  const height = (canvas.height * width) / canvas.width;
-  pdf.addImage(imgData, "PNG", 0, 0, width, height);
-  pdf.save(fileSaver("pdf"));
+  try {
+    const container = document.getElementById("cardsContainer");
+    if (!container) {
+      console.error("Container element not found");
+      alert("Export failed: Container not found");
+      return;
+    }
+
+    const canvas = await html2canvas(container, {
+      backgroundColor: "#ffffff",
+      scale: Math.max(window.devicePixelRatio || 1, 2),
+    });
+
+    const imgData = canvas.toDataURL("image/png");
+
+    if (!window.jspdf) {
+      console.error("jsPDF library not loaded");
+      alert("PDF library failed to load. Please refresh the page.");
+      return;
+    }
+
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({ orientation: "p", unit: "mm", format: "a4" });
+    const width = pdf.internal.pageSize.getWidth();
+    const height = (canvas.height * width) / canvas.width;
+    pdf.addImage(imgData, "PNG", 0, 0, width, height);
+    pdf.save(fileSaver("pdf"));
+  } catch (error) {
+    console.error("Error exporting PDF:", error);
+    alert("Failed to export PDF: " + error.message);
+  }
 }
 
 function exportAsCsv(e) {
