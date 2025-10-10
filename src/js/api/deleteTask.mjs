@@ -10,7 +10,7 @@ import { getFromLocalStorage } from "../utils/localStorage.mjs";
  * @throws {Error} Throws error if deletion fails or API returns non-ok response
  *
  * @example
- * // Delete a task by ID
+ * Delete a task by ID
  * await deleteTask("task-123");
  * await deleteTask(123);
  */
