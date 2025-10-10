@@ -18,7 +18,7 @@
 
     <main>
       <div class="container d-flex flex-column align-items-center my-4">
-        <img class="my-2" src="images/temporaryLogo.png" alt="logo" />
+        <img class="my-2" src="" alt="logo" />
         <p>Login to use all features of the app</p>
         <p>
           <a href="./login/" class="text-decoration-none">Login</a>
@@ -31,115 +31,22 @@
         <h1 class="fw-bold text-center">Task board</h1>
         <div class="d-flex justify-content-between align-items-center my-4">
           <p class="flex-fill">
-            <span id="completed-tasks">0</span>
-            /
+            <span id="completed-tasks">0</span> /
             <span id="total-tasks">0</span>
             <i class="fa-solid fa-check"></i>
           </p>
-          <button type="button" id="addTaskButton" class="btn btn-outline-dark px-4">
-            <i class="fa-solid fa-plus"></i>
-            Add task
+          <button
+            type="button"
+            id="addTaskButton"
+            class="btn btn-outline-dark px-4"
+          >
+            <i class="fa-solid fa-plus"></i> Add task
           </button>
         </div>
-      </div>
-
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6">
-            <ul class="list-group">
-              <li class="list-group-item border-top-0">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="defaultCheck1" />
-                <label class="form-check-label px-2" for="defaultCheck1">
-                  Wash the dishes
-                </label>
-                <button type="button" class="btn btn-primary px-4 float-end">
-                  Get assistance
-                  <i class="fa-solid fa-robot"></i>
-                </button>
-              </li>
-              <li class="list-group-item">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="defaultCheck1" />
-                <label class="form-check-label px-2" for="defaultCheck1">Workout</label>
-                <button type="button" class="btn btn-primary px-4 float-end">
-                  Get assistance
-                  <i class="fa-solid fa-robot"></i>
-                </button>
-              </li>
-              <li class="list-group-item">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="defaultCheck1" />
-                <label class="form-check-label px-2" for="defaultCheck1">
-                  Mow the grass
-                </label>
-                <button type="button" class="btn btn-primary px-4 float-end">
-                  Get assistance
-                  <i class="fa-solid fa-robot"></i>
-                </button>
-              </li>
-              <li class="list-group-item">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="defaultCheck1" />
-                <label class="form-check-label px-2" for="defaultCheck1">
-                  Make Auction site
-                </label>
-                <button type="button" class="btn btn-primary px-4 float-end">
-                  Get assistance
-                  <i class="fa-solid fa-robot"></i>
-                </button>
-              </li>
-              <li class="list-group-item">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="defaultCheck1" />
-                <label class="form-check-label px-2" for="defaultCheck1">Call Mom</label>
-                <button type="button" class="btn btn-primary px-4 float-end">
-                  Get assistance
-                  <i class="fa-solid fa-robot"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3"></div>
-        </div>
-      </div>
-
-      <div class="container text-center my-4">
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-2"></div>
-          <div class="col-md-2"></div>
-          <div class="col-md-2">
-            <button
-              type="button"
-              class="btn btn-secondary px-4 text-decoration-underline">
-              Export list
-              <i class="fa-solid fa-download"></i>
-            </button>
-          </div>
-        </div>
-        <div class="col-md-3"></div>
         <ul id="task-board-container" class="list-group"></ul>
         <div class="d-flex justify-content-end my-4">
           <button type="button" class="btn btn-outline-dark px-4">
-            <i class="fa-solid fa-download"></i>
-            Export list
+            <i class="fa-solid fa-download"></i> Export list
           </button>
         </div>
       </div>
