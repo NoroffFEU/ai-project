@@ -1,8 +1,9 @@
 import { isLoggedIn } from "../auth/isLoggedIn.mjs";
 import { createTaskBoardItem } from "../ui/createTaskBoardItem.mjs";
-import { addToLocalStorage, getFromLocalStorage } from "../utils/localStorage.mjs";
+import { addToLocalStorage } from "../utils/localStorage.mjs";
 import { fetchTasks } from "../api/fetchTasks.mjs";
 import { dropdownButtonListener } from "../listeners/dropdownButtonListener.mjs";
+import { taskCheckboxListener } from "../listeners/taskCheckboxListener.mjs";
 
 /**
  * Loads and displays tasks on the task board using API (logged in users) or demo data (guests).
@@ -12,6 +13,8 @@ import { dropdownButtonListener } from "../listeners/dropdownButtonListener.mjs"
  */
 export async function handleTaskBoardData() {
   const taskBoardContainer = document.querySelector("#task-board-container");
+
+  taskBoardContainer.innerHTML = "";
 
   if (isLoggedIn()) {
     try {
@@ -32,20 +35,27 @@ export async function handleTaskBoardData() {
         return;
       }
       const demoData = await fetchDemoData.json();
+      let tasks;
+
       if (demoData.tasks.length > 0) {
         const taskLimit = window.innerWidth >= 768 ? 8 : 4;
         const limitedTasks = demoData.tasks.slice(0, taskLimit);
 
         addToLocalStorage("tasks", JSON.stringify(limitedTasks));
+        tasks = limitedTasks;
+      } else {
+        taskBoardContainer.innerText = "No tasks available.";
+        return;
+      }
 
-        const storedTasks = getFromLocalStorage("tasks");
-        const tasks = JSON.parse(storedTasks);
+      if (tasks && tasks.length > 0) {
         tasks.forEach((task) => {
           taskBoardContainer.appendChild(createTaskBoardItem(task));
         });
 
         const completedTasks = tasks.filter((task) => task.completed);
-        document.querySelector("#completed-tasks").innerText = completedTasks.length;
+        document.querySelector("#completed-tasks").innerText =
+          completedTasks.length;
         document.querySelector("#total-tasks").innerText = tasks.length;
       } else {
         taskBoardContainer.innerText = "No tasks available.";
@@ -55,4 +65,5 @@ export async function handleTaskBoardData() {
     }
   }
   dropdownButtonListener();
+  taskCheckboxListener();
 }
