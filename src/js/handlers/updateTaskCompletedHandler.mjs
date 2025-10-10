@@ -33,14 +33,15 @@ export async function updateTaskCompletedHandler(taskId, completed) {
           const taskElement = document.querySelector(
             "[data-task-id='" + taskId + "']",
           );
+          const taskElementSpan = taskElement.querySelector("span");
           if (completed) {
-            taskElement.classList.add(
+            taskElementSpan.classList.add(
               "text-decoration-line-through",
               "fst-italic",
               "text-muted",
             );
           } else {
-            taskElement.classList.remove(
+            taskElementSpan.classList.remove(
               "text-decoration-line-through",
               "fst-italic",
               "text-muted",

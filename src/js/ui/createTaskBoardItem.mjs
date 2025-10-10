@@ -8,13 +8,6 @@ export function createTaskBoardItem(task) {
   const liElement = document.createElement("li");
   liElement.className =
     "list-group-item d-flex justify-content-between align-items-center bg-black bg-opacity-10 mb-2 rounded border-0";
-  if (task.completed) {
-    liElement.classList.add(
-      "text-decoration-line-through",
-      "fst-italic",
-      "text-muted",
-    );
-  }
   liElement.dataset.taskId = task.id;
 
   const taskInfoDiv = document.createElement("div");
@@ -31,6 +24,13 @@ export function createTaskBoardItem(task) {
 
   const taskTitle = document.createElement("span");
   taskTitle.textContent = task.title;
+  if (task.completed) {
+    taskTitle.classList.add(
+      "text-decoration-line-through",
+      "fst-italic",
+      "text-muted",
+    );
+  }
 
   taskInfoDiv.appendChild(checkboxContainer);
   taskInfoDiv.appendChild(taskTitle);
