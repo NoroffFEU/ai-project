@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <link rel="icon" href="" />
+    <title>Open A.I | Daily Planner</title>
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/> -->
+    <link rel="stylesheet" href="./dist/css/styles.css" />
+    <!-- <link rel="stylesheet" href="/dist/css/weekView.css" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../src/js/weeklyView/utils/fileSaver.js" defer></script>
+
+    <!-- <script type="module" src="/src/js/index.js"></script> -->
+    <script
+      src="https://kit.fontawesome.com/6fb668811a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Load only sidebar functionality for weekly view -->
+    <script type="module">
+      import { renderSidebar } from "/src/js/ui/renderSidebar.mjs";
+      import { toggleSidebar } from "/src/js/utils/toggleSidebar.mjs";
+
+      document.addEventListener("DOMContentLoaded", () => {
+        renderSidebar();
+        setTimeout(() => {
+          toggleSidebar();
+        }, 100);
+      });
+    </script>
+    <script src="/src/js/weeklyView/main.js" defer type="module"></script>
+  </head>
+  <body>
+    <header id="sidebarNav" class="sidebarNav"></header>
+
+    <main>
+      <div class="container d-flex flex-column align-items-center my-4">
+        <img class="my-2" src="" alt="logo" />
+        <p>Login to use all features of the app</p>
+        <p>
+          <a href="./login/" class="text-decoration-none">Login</a>
+          |
+          <a href="./register/" class="text-decoration-none">Register</a>
+        </p>
+      </div>
+
+      <div class="container d-flex flex-column pb-5">
+        <h1 class="fw-bold text-center">Task board</h1>
+        <div class="d-flex justify-content-between align-items-center my-4">
+          <button type="button" class="btn btn-outline-dark px-4">
+            <i class="fa-solid fa-plus"></i> Add task
+          </button>
+        </div>
+        <div id="cardsContainer" class="mx-auto mt-5 w-100">
+          <h2 class="h5 text-center mb-3">Select week number</h2>
+
+          <nav aria-label="Ukenavigasjon">
+            <ul
+              class="pagination justify-content-center"
+              id="weekPagination"
+            ></ul>
+          </nav>
+          <h2 class="h5 text-center mb-5 mt-5">Your tasks</h2>
+          <ul id="taskList" class="list-group mb-0">
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2"
+              data-created-at="2025-10-03"
+              data-due-date="2025-10-04"
+            >
+              <div class="d-flex align-items-center">
+                <input
+                  class="form-check-input me-2"
+                  type="checkbox"
+                  aria-label="..."
+                />
+                <span class="task-title">Do dishes</span>
+              </div>
+              <button
+                class="btn btn-link p-0 remove-task"
+                title="Remove item"
+                aria-label="Remove"
+              >
+                <i class="fas fa-times text-primary"></i>
+              </button>
+            </li>
+            <li
+              class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2"
+              data-created-at="2025-10-03"
+            >
+              <div class="d-flex align-items-center">
+                <input
+                  class="form-check-input me-2"
+                  type="checkbox"
+                  value=""
+                  aria-label="..."
+                  checked
+                />
+                <span class="task-title">Wash the car</span>
+              </div>
+              <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+                <i class="fas fa-times text-primary"></i>
+              </a>
+            </li>
+            <li
+              class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2"
+              data-created-at="2025-10-14"
+            >
+              <div class="d-flex align-items-center">
+                <input
+                  class="form-check-input me-2"
+                  type="checkbox"
+                  value=""
+                  aria-label="..."
+                />
+                <span class="task-title">Shopping</span>
+              </div>
+              <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+                <i class="fas fa-times text-primary"></i>
+              </a>
+            </li>
+            <li
+              class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2"
+              data-created-at="2025-10-03"
+            >
+              <div class="d-flex align-items-center">
+                <input
+                  class="form-check-input me-2"
+                  type="checkbox"
+                  value=""
+                  aria-label="..."
+                />
+                <span class="task-title">Pay bills</span>
+              </div>
+              <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+                <i class="fas fa-times text-primary"></i>
+              </a>
+            </li>
+            <li
+              class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-0"
+              data-created-at="2025-10-05"
+            >
+              <div class="d-flex align-items-center">
+                <input
+                  class="form-check-input me-2"
+                  type="checkbox"
+                  value=""
+                  aria-label="..."
+                  checked
+                />
+                <span class="task-title">Doctors appointment</span>
+              </div>
+              <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+                <i class="fas fa-times text-primary"></i>
+              </a>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2"
+              data-created-at="2025-10-15"
+            >
+              <div class="d-flex align-items-center">
+                <input
+                  class="form-check-input me-2"
+                  type="checkbox"
+                  value=""
+                  aria-label="..."
+                />
+                <span class="task-title">Montly budget</span>
+              </div>
+              <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+                <i class="fas fa-times text-primary"></i>
+              </a>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center rounded-0 mb-2"
+              data-created-at="2025-10-06"
+            >
+              <div class="d-flex align-items-center">
+                <input class="form-check-input me-2" type="checkbox" />
+                <span class="task-title">Study</span>
+              </div>
+              <button class="btn btn-link p-0 remove-task" aria-label="Remove">
+                <i class="fas fa-times text-primary"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown mx-auto mt-5">
+          <button
+            class="btn btn-outline-dark px-4 dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-download"></i> Export list as
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" id="exportPng">.PNG</a></li>
+            <li><a class="dropdown-item" href="#" id="exportPdf">.PDF</a></li>
+            <li><a class="dropdown-item" href="#" id="exportCsv">.CSV</a></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footerWrapper d-flex flex-column align-items-center pb-5">
+        <!-- <div>
+          <a href="/index.html"
+            ><img
+              class="logosmall"
+              src="../images/temporaryLogo.png"
+              alt="AIMOT logo"
+          /></a>
+        </div> -->
+        <div>
+          <a href="./about.html" style="text-decoration: none">About</a>
+          <a href="./faq.html" style="text-decoration: none">How to use</a>
+        </div>
+      </div>
+      <div class="copyright d-flex justify-content-center pb-2">
+        Copyright AIMOT &copy;
+      </div>
+    </footer>
+  </body>
+</html>
