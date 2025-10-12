@@ -17,12 +17,20 @@ export function createTaskBoardItem(task) {
 
   const checkboxInput = document.createElement("input");
   checkboxInput.type = "checkbox";
-  checkboxInput.className = "form-check-input me-2";
+  checkboxInput.className = "task-checkbox form-check-input me-2";
   checkboxInput.checked = task.completed;
+  checkboxInput.dataset.taskId = task.id;
   checkboxContainer.appendChild(checkboxInput);
 
   const taskTitle = document.createElement("span");
   taskTitle.textContent = task.title;
+  if (task.completed) {
+    taskTitle.classList.add(
+      "text-decoration-line-through",
+      "fst-italic",
+      "text-muted",
+    );
+  }
 
   taskInfoDiv.appendChild(checkboxContainer);
   taskInfoDiv.appendChild(taskTitle);

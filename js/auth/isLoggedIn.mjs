@@ -5,7 +5,7 @@
  * @returns {boolean} True if user has a set access token, false otherwise
  *
  * @example
- * // Check if user is logged in
+ * Check if user is logged in
  * if (isLoggedIn()) {
  *   console.log('User is logged in');
  * } else {

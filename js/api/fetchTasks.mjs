@@ -8,7 +8,7 @@ import { getFromLocalStorage } from "../utils/localStorage.mjs";
  * @throws {Error} Throws error if fetching tasks fails or API returns non-ok response
  *
  * @example
- * // Fetch all tasks
+ * Fetch all tasks
  * const tasksData = await fetchTasks();
  * console.log(tasksData);
  */
