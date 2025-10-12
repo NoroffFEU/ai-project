@@ -1,7 +1,7 @@
-import isLoggedIn from "./../utils/auth/isLoggedIn";
-import { getISOWeek, isoWeeksInYear } from "./utils/getISOWeek";
-import { showStatus } from "./utils/showStatusMessage";
-import { initWeekPagination } from "./../components/weekPagination";
+import { initWeekPagination } from "./components/weekPagination.js";
+import { isLoggedIn } from "./utils/auth/isLoggedIn.js";
+import { getISOWeek, isoWeeksInYear } from "./utils/getISOWeek.js";
+import { showStatus } from "./utils/showStatusMessage.js";
 
 if (isLoggedIn()) {
   console.log("User is logged in");
