@@ -23,7 +23,7 @@ export const renderSidebar = () => {
       createSidebar(
         "./index.html",
         "./task-board",
-        "./your-week/yourWeek.html",
+        "./weekly.html",
         "./about.html",
         "./faq.html",
         "./login",
@@ -37,13 +37,13 @@ export const renderSidebar = () => {
     path.includes("/task-board/") ||
     path.includes("/register/") ||
     path.includes("/login/") ||
-    path.includes("/your-week/")
+    path.includes("/weekly/")
   ) {
     headerNav.append(
       createSidebar(
         "../index.html",
         "../task-board",
-        "../your-week/yourWeek.html",
+        "../weekly.html",
         "../about.html",
         "../faq.html",
         "../login",
