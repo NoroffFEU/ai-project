@@ -7,21 +7,23 @@
     <link rel="icon" href="" />
     <title>Open A.I | Daily Planner</title>
     <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/> -->
-    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <link rel="stylesheet" href="./dist/css/styles.css" />
     <!-- <link rel="stylesheet" href="/dist/css/weekView.css" /> -->
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="../src/js/weeklyView/utils/fileSaver.js" defer></script>
+    <script src="./js/weeklyView/utils/fileSaver.js" defer></script>
 
-    <!-- <script type="module" src="/src/js/index.js"></script> -->
+    <script type="module" src="./js/index.js"></script>
     <script
       src="https://kit.fontawesome.com/6fb668811a.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/ui/renderSidebar.mjs" defer type="module"></script>
+    <script src="./js/utils/toggleSidebar.mjs" defer type="module"></script>
     <!-- Load only sidebar functionality for weekly view -->
-    <script type="module">
+    <!-- <script type="module">
       import { renderSidebar } from "/src/js/ui/renderSidebar.mjs";
       import { toggleSidebar } from "/src/js/utils/toggleSidebar.mjs";
 
@@ -31,8 +33,8 @@
           toggleSidebar();
         }, 100);
       });
-    </script>
-    <script src="/src/js/weeklyView/main.js" defer type="module"></script>
+    </script> -->
+    <script src="./js/weeklyView/main.js" defer type="module"></script>
   </head>
   <body>
     <header id="sidebarNav" class="sidebarNav"></header>
@@ -42,9 +44,9 @@
         <img class="my-2" src="" alt="logo" />
         <p>Login to use all features of the app</p>
         <p>
-          <a href="./login/" class="text-decoration-none">Login</a>
+          <a href="./login.html" class="text-decoration-none">Login</a>
           |
-          <a href="./register/" class="text-decoration-none">Register</a>
+          <a href="./register.html" class="text-decoration-none">Register</a>
         </p>
       </div>
 
