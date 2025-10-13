@@ -20,44 +20,20 @@ $mainHeadingSizeMobile: 2.25rem;
 $secondaryHeadingSizeMobile: 1.75rem;
 $paragraphSizeMobile: 1rem;
 
-// Kebab-case aliases for consistency with existing usage
-$tertiary-color: $tertiaryColor;
-$button-color: $buttonColor;
-$button-color-hover: $buttonColorHover;
-$white-color: $whiteColor;
-$secondary-color: $secondaryColor;
-$text-dark-color: $textDarkColor;
-$text-white-color: $textWhiteColor;
-$footer-background-color: $footerBackgroundColor;
-
-// Typography Variables
-$headings-font: "Roboto", Helvetica, Arial, sans-serif;
-$paragraph-font: "Roboto", Arial, Helvetica, sans-serif;
-
-// Desktop Typography
-$main-heading-size-desktop: 3rem; // 48px
-$secondary-heading-size-desktop: 2rem; // 32px
-$paragraph-size-desktop: 1.125rem; // 18px
-
-// Mobile Typography
-$main-heading-size-mobile: 2.25rem; // 36px
-$secondary-heading-size-mobile: 1.75rem; // 28px
-$paragraph-size-mobile: 1rem; // 16px
-
 // Spacing
-$spacing-xs: 0.5rem;
-$spacing-sm: 1rem;
-$spacing-md: 1.5rem;
-$spacing-lg: 2rem;
-$spacing-xl: 3rem;
+$spacingXs: 0.5rem;
+$spacingSm: 1rem;
+$spacingMd: 1.5rem;
+$spacingLg: 2rem;
+$spacingXl: 3rem;
 
 // Layout
-$border-width: 0.125rem;
-$border-radius: 0.5rem;
+$borderWidth: 0.125rem;
+$borderRadius: 0.5rem;
 
 // Breakpoints
 
-$breakpoint-sm: 36rem; //576px
-$breakpoint-md: 48rem; //769px
-$breakpoint-lg: 62rem; //992px
-$breakpoint-xl: 75rem; //1200px
+$breakpointSm: 36rem; //576px
+$breakpointMd: 48rem; //769px
+$breakpointLg: 62rem; //992px
+$breakpointXl: 75rem; //1200px
