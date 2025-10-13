@@ -12,7 +12,7 @@
 }
 
 .pageBackgroundColor-bg {
-  background-color: #fcf8d8;
+  background-color: #ffffff;
 }
 
 .buttonColor-bg {
@@ -40,7 +40,7 @@
 }
 
 .pageBackgroundColor-text {
-  color: #fcf8d8;
+  color: #ffffff;
 }
 
 .buttonColor-text {
@@ -12209,7 +12209,7 @@ textarea.form-control-lg {
 }
 
 .pageBackgroundColor-bg {
-  background-color: #fcf8d8;
+  background-color: #ffffff;
 }
 
 .buttonColor-bg {
@@ -12237,7 +12237,7 @@ textarea.form-control-lg {
 }
 
 .pageBackgroundColor-text {
-  color: #fcf8d8;
+  color: #ffffff;
 }
 
 .buttonColor-text {
@@ -12665,7 +12665,7 @@ body {
   font-family: Roboto, Arial, Helvetica;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fcf8d8;
+  background-color: #ffffff;
   color: #1f2421;
 }
 @media (min-width: 48rem) {
@@ -12780,7 +12780,7 @@ p {
   max-width: 90rem;
   margin: 0 auto;
   padding: 1.5rem;
-  background-color: #fcf8d8;
+  background-color: #ffffff;
 }
 @media (min-width: 48rem) {
   .page-container {
@@ -12883,7 +12883,7 @@ p {
 
 .bento-item--highlight {
   border-color: #dd700b;
-  background-color: #fcf8d8;
+  background-color: #ffffff;
 }
 
 .bento-item--info {
@@ -12934,7 +12934,7 @@ p {
 }
 .quicklink-card:hover {
   border-color: #dd700b;
-  background-color: #fcf8d8;
+  background-color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 0.125rem 0.75rem rgba(31, 36, 33, 0.15);
 }
@@ -12984,7 +12984,7 @@ p {
   margin-bottom: 1.5rem;
   border-left: 0.25rem solid #dd700b;
   border-radius: 0.5rem;
-  background-color: #fcf8d8;
+  background-color: #ffffff;
   color: #1f2421;
 }
 
@@ -13235,7 +13235,7 @@ footer a {
   color: #1f2421;
 }
 .accordion-button:not(.collapsed) {
-  background-color: #fcf8d8;
+  background-color: #ffffff;
   color: #1f2421;
   box-shadow: none;
 }
