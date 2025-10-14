@@ -38,6 +38,15 @@ export function displayError(message, container = document.body) {
   const targetContainer = typeof container === 'string' ? document.getElementById(container) : container;
   targetContainer.appendChild(alert);
   
+const btnClose = alert.querySelector('.btn-close');
+  if (btnClose) {
+    btnClose.addEventListener('click', () => {
+      alert.remove();
+    });
+  }
+
+
+  
   // Auto remove after 5 seconds
   setTimeout(() => {
     if (alert.parentNode) {
