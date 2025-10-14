@@ -89,7 +89,6 @@
   background: linear-gradient(
     135deg,
     $textDarkColor 0%,
-    var(--ai-neural-blue) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -104,7 +103,7 @@
 
 .hero-card {
   // Visual
-  background: $primaryColor;
+  background: rgb(219, 216, 216);
   color: $textDarkColor;
   box-shadow: 0 4px 20px var(--ai-soft-glow);
 
@@ -145,11 +144,7 @@
 
 .ai-powered-box {
   // Visual with AI-themed styling
-  background: linear-gradient(
-    135deg,
-    $tertiaryColor 0%,
-    var(--ai-data-cyan) 100%
-  );
+  background: rgb(219, 216, 216);
   color: $textDarkColor;
   border-radius: 0.9375rem;
   border: 1px solid var(--ai-soft-glow);
@@ -214,7 +209,7 @@
 
 .login-info-alert {
   // Visual with subtle AI accent
-  background: linear-gradient(135deg, white 0%, rgba(74, 144, 226, 0.05) 100%);
+  background: rgb(219, 216, 216);
   border: 1px solid var(--ai-soft-glow);
   border-radius: 0.9375rem;
   box-shadow: 0 2px 10px var(--ai-soft-glow);
@@ -421,11 +416,7 @@
   font-size: 0.9rem;
 
   // Visual with AI theme
-  background: linear-gradient(
-    135deg,
-    $tertiaryColor 0%,
-    var(--ai-glow-green) 100%
-  );
+  background: rgb(219, 216, 216);
   color: $textDarkColor;
   border: 1px solid var(--ai-soft-glow);
   box-shadow: 0 2px 8px var(--ai-soft-glow);
