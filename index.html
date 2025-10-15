@@ -6,24 +6,28 @@
     <meta name="description" content="" />
     <link rel="icon" href="" />
     <title>Open A.I | Daily Planner</title>
-    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/> -->
-    <link rel="stylesheet" href="/dist/css/styles.css" />
-    <script type="module" src="/src/js/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./dist/css/styles.css" />
+    <script type="module" src="./js/index.js"></script>
     <script
       src="https://kit.fontawesome.com/6fb668811a.js"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header id="sidebarNav" class="sidebarNav"></header>
 
     <main>
       <div class="container d-flex flex-column align-items-center my-4">
-        <img class="my-2" src="images/temporaryLogo.png" alt="logo" />
+        <img class="my-2" src="./assets/images/temporaryLogo.png" alt="logo" />
         <p>Login to use all features of the app</p>
         <p>
-          <a href="./login/" class="text-decoration-none">Login</a>
+          <a href="./login.html" class="text-decoration-none">Login</a>
           |
-          <a href="./register/" class="text-decoration-none">Register</a>
+          <a href="./register.html" class="text-decoration-none">Register</a>
         </p>
       </div>
 
@@ -31,12 +35,15 @@
         <h1 class="fw-bold text-center">Task board</h1>
         <div class="d-flex justify-content-between align-items-center my-4">
           <p class="flex-fill">
-            <span id="completed-tasks">0</span>
-            /
+            <span id="completed-tasks">0</span> /
             <span id="total-tasks">0</span>
             <i class="fa-solid fa-check"></i>
           </p>
-          <button type="button" id="addTaskButton" class="btn btn-outline-dark px-4">
+          <button
+            type="button"
+            id="addTaskButton"
+            class="btn btn-outline-dark px-4"
+          >
             <i class="fa-solid fa-plus"></i>
             Add task
           </button>
@@ -53,7 +60,8 @@
                   class="form-check-input"
                   type="checkbox"
                   value=""
-                  id="defaultCheck1" />
+                  id="defaultCheck1"
+                />
                 <label class="form-check-label px-2" for="defaultCheck1">
                   Wash the dishes
                 </label>
@@ -67,8 +75,11 @@
                   class="form-check-input"
                   type="checkbox"
                   value=""
-                  id="defaultCheck1" />
-                <label class="form-check-label px-2" for="defaultCheck1">Workout</label>
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label px-2" for="defaultCheck1"
+                  >Workout</label
+                >
                 <button type="button" class="btn btn-primary px-4 float-end">
                   Get assistance
                   <i class="fa-solid fa-robot"></i>
@@ -79,7 +90,8 @@
                   class="form-check-input"
                   type="checkbox"
                   value=""
-                  id="defaultCheck1" />
+                  id="defaultCheck1"
+                />
                 <label class="form-check-label px-2" for="defaultCheck1">
                   Mow the grass
                 </label>
@@ -93,7 +105,8 @@
                   class="form-check-input"
                   type="checkbox"
                   value=""
-                  id="defaultCheck1" />
+                  id="defaultCheck1"
+                />
                 <label class="form-check-label px-2" for="defaultCheck1">
                   Make Auction site
                 </label>
@@ -107,8 +120,11 @@
                   class="form-check-input"
                   type="checkbox"
                   value=""
-                  id="defaultCheck1" />
-                <label class="form-check-label px-2" for="defaultCheck1">Call Mom</label>
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label px-2" for="defaultCheck1"
+                  >Call Mom</label
+                >
                 <button type="button" class="btn btn-primary px-4 float-end">
                   Get assistance
                   <i class="fa-solid fa-robot"></i>
@@ -128,7 +144,8 @@
           <div class="col-md-2">
             <button
               type="button"
-              class="btn btn-secondary px-4 text-decoration-underline">
+              class="btn btn-secondary px-4 text-decoration-underline"
+            >
               Export list
               <i class="fa-solid fa-download"></i>
             </button>
@@ -138,8 +155,7 @@
         <ul id="task-board-container" class="list-group"></ul>
         <div class="d-flex justify-content-end my-4">
           <button type="button" class="btn btn-outline-dark px-4">
-            <i class="fa-solid fa-download"></i>
-            Export list
+            <i class="fa-solid fa-download"></i> Export list
           </button>
         </div>
       </div>
@@ -148,8 +164,12 @@
     <footer>
       <div class="footerWrapper d-flex flex-column align-items-center">
         <div>
-          <a href="/index.html">
-            <img class="logosmall" src="../images/temporaryLogo.png" alt="AIMOT logo" />
+          <a href="./index.html">
+            <img
+              class="logosmall"
+              src="./assets/images/temporaryLogo.png"
+              alt="AIMOT logo"
+            />
           </a>
         </div>
         <div>
@@ -157,7 +177,9 @@
           <a href="./faq.html" style="text-decoration: none">How to use</a>
         </div>
       </div>
-      <div class="copyright d-flex justify-content-center">Copyright AIMOT &copy;</div>
+      <div class="copyright d-flex justify-content-center">
+        Copyright AIMOT &copy;
+      </div>
     </footer>
   </body>
 </html>

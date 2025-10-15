@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass src/scss:dist/css",
-    "watch": "sass --watch src/scss:dist/css & live-server",
-    "format": "prettier -w src/js/*.js",
-    "lint": "eslint src/js/*.js",
-    "lint-fix": "eslint src/js/*.js --cache --fix"
+    "build": "sass ./scss:dist/css",
+    "watch": "sass --watch ./scss:dist/css & live-server",
+    "format": "prettier -w ./js/*.js",
+    "lint": "eslint ./js/*.js",
+    "lint-fix": "eslint ./js/*.js --cache --fix"
   },
   "keywords": [],
   "author": "",

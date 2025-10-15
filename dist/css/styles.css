@@ -12541,8 +12541,8 @@ textarea.form-control-lg {
   position: fixed;
   top: 0;
   left: 0;
-  max-width: 11.5rem;
-  min-width: 11.5rem;
+  max-width: 15rem;
+  min-width: 15rem;
   height: 100vh;
   background-color: #adaca7;
   transition: all 0.3s ease-out;
@@ -12550,12 +12550,12 @@ textarea.form-control-lg {
 }
 
 .sidebarNav.collapsed {
-  margin-left: -11.6rem;
+  margin-left: -15.1rem;
   transition: all 0.3s ease-out;
 }
 
 body.sidebar-open {
-  padding-left: 11.5rem;
+  padding-left: 15rem;
   transition: padding-left 0.3s ease-out;
 }
 
@@ -12569,13 +12569,18 @@ body.sidebar-open {
   height: 100vh;
 }
 
-.authWrapper p {
-  font-size: 1.5rem;
+.authWrapper a {
+  text-decoration: none;
+  color: #1f2421;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin: 4rem 0 1rem 0;
+  margin: 4rem 0 0.5rem 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.authWrapper a:hover {
+  color: #7c7d75;
 }
 
 #login-btn {
@@ -12595,12 +12600,12 @@ body.sidebar-open {
 #logout-btn:hover,
 #register-btn:hover,
 #login-btn:hover {
-  background-color: #7c7d75;
+  background-color: #7c7d75 !important;
   color: #d9e1e1;
 }
 
 .linkList {
-  margin: 4rem 0 0 0;
+  margin: 3rem 0 0 0;
   width: 100%;
 }
 
@@ -12608,13 +12613,14 @@ body.sidebar-open {
   display: block;
   width: 100%;
   border-radius: 0.5rem;
+  font-size: 1rem;
   color: #1f2421;
   text-decoration: none;
   font-weight: 600;
   padding: 0.5rem 2rem;
 }
 .sidebar-link:hover {
-  background-color: #7c7d75;
+  background-color: #7c7d75 !important;
   color: #d9e1e1;
 }
 
@@ -12628,7 +12634,7 @@ body.sidebar-open {
   position: absolute;
   color: #1f2421;
   top: 0.5rem;
-  left: 11.875rem;
+  left: 15.5rem;
 }
 .sidebar-icon:hover {
   color: #7c7d75;
