@@ -2,7 +2,7 @@
 function createLink(text, href) {
   const link = document.createElement("a");
   link.href = href;
-  link.className = "footer__link";
+  link.textContent = text;
   return link;
 }
 
@@ -17,11 +17,11 @@ function createColumn(heading, links) {
   column.appendChild(headingEl);
 
   const list = document.createElement("ul");
-  list.className = "footer__list";
+  list.className = "footer__links";
 
   links.forEach(({ text, href }) => {
     const listItem = document.createElement("li");
-    listItem.className = "footer__list-item";
+    listItem.className = "footer__link";
     listItem.appendChild(createLink(text, href));
     list.appendChild(listItem);
   });
@@ -36,7 +36,7 @@ function createLogoSection() {
   column.className = "footer__column footer__column--logo";
 
   const logo = document.createElement("img");
-  logo.src = "/assets/images/logo/LogoWhite.svg";
+  logo.src = "assets/logo/LogoWhite.svg";
   logo.alt = "AIMOT Logo";
   logo.className = "footer__logo";
   column.appendChild(logo);
@@ -125,8 +125,8 @@ function createCopyright() {
 // MAIN FUNCTION
 // putting together complete footer
 export function createFooter() {
-  const footer = document.createElement("footer");
-  footer.className = "footer";
+
+  const fragment = document.createDocumentFragment();
 
   const grid = document.createElement("div");
   grid.className = "footer__grid";
@@ -136,8 +136,26 @@ export function createFooter() {
   grid.appendChild(createFeaturesColumn());
   grid.appendChild(createCreditsColumn());
 
-  footer.appendChild(grid);
-  footer.appendChild(createCopyright());
 
-  return footer;
+  fragment.appendChild(grid);
+  fragment.appendChild(createCopyright());
+
+  return fragment;
 }
+// export function createFooter() {
+//   const footer = document.createElement("footer");
+//   footer.className = "footer";
+
+//   const grid = document.createElement("div");
+//   grid.className = "footer__grid";
+
+//   grid.appendChild(createLogoSection());
+//   grid.appendChild(createQuickLinksColumn());
+//   grid.appendChild(createFeaturesColumn());
+//   grid.appendChild(createCreditsColumn());
+
+//   footer.appendChild(grid);
+//   footer.appendChild(createCopyright());
+
+//   return footer;
+// }
