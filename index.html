@@ -22,7 +22,7 @@
 
     <main>
       <div class="container d-flex flex-column align-items-center my-4">
-        <img class="my-2" src="./assets/images/temporaryLogo.png" alt="logo" />
+        <img id="app-logo" class="my-2" src="/assets/logo/LogoBlack.svg" alt="logo" />
         <p>Login to use all features of the app</p>
         <p>
           <a href="./login.html" class="text-decoration-none">Login</a>
@@ -165,11 +165,7 @@
       <div class="footerWrapper d-flex flex-column align-items-center">
         <div>
           <a href="./index.html">
-            <img
-              class="logosmall"
-              src="./assets/images/temporaryLogo.png"
-              alt="AIMOT logo"
-            />
+          <img id="app-logo-footer" class="logosmall" src="/assets/logo/LogoBlack.svg" alt="AIMOT logo" />
           </a>
         </div>
         <div>
@@ -181,5 +177,7 @@
         Copyright AIMOT &copy;
       </div>
     </footer>
+
+    <script type="module" src="./src/js/ui/shared/initBranding.js"></script>
   </body>
 </html>
