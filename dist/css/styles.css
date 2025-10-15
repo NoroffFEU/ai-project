@@ -241,48 +241,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 6.5rem;
-  height: 6.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  overflow: hidden;
-  animation: pulse 2s infinite;
+  width: auto;
+  height: auto;
+  max-width: 12rem;
+  background: transparent;
+  overflow: visible;
 }
 @media (min-width: 48rem) {
   .logo-container {
-    width: 8rem;
-    height: 8rem;
+    max-width: 15rem;
   }
 }
 
 .logo-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+  height: auto;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-0.625rem);
-  }
-  60% {
-    transform: translateY(-0.3125rem);
-  }
-}
 .logo-gradient {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   animation: pulse 2s infinite;
@@ -12442,48 +12417,23 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 6.5rem;
-  height: 6.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  overflow: hidden;
-  animation: pulse 2s infinite;
+  width: auto;
+  height: auto;
+  max-width: 12rem;
+  background: transparent;
+  overflow: visible;
 }
 
 @media (min-width: 48rem) {
   .logo-container {
-    width: 8rem;
-    height: 8rem;
+    max-width: 15rem;
   }
 }
 .logo-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+  height: auto;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-0.625rem);
-  }
-  60% {
-    transform: translateY(-0.3125rem);
-  }
-}
 .logo-gradient {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   animation: pulse 2s infinite;
