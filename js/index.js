@@ -2,6 +2,7 @@ import { handleTaskBoardData } from "./handlers/handleTaskBoardData.mjs";
 import { loginHandler } from "./handlers/loginHandler.mjs";
 import { toggleSidebar } from "./utils/toggleSidebar.mjs";
 import { renderSidebar } from "./ui/renderSidebar.mjs";
+import { registerHandler } from "./handlers/registerHandler.mjs";
 
 // Wait for DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -23,6 +24,10 @@ const router = () => {
 
     case "/login.html":
       loginHandler();
+      break;
+
+    case "/register.html":
+      registerHandler();
       break;
 
     case "/singletask.html":
