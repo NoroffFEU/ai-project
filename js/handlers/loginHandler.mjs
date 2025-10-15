@@ -45,6 +45,7 @@ export function loginHandler() {
 async function submitForm(event) {
   event.preventDefault();
   const data = gatherFormData(event);
+  const form = event.target;
   const loginButton = document.getElementById("login-button");
   const alertContainer = document.getElementById("alert-container");
   const staySignedIn = document.getElementById("login-checkbox").checked;
@@ -53,8 +54,7 @@ async function submitForm(event) {
     loginButton.disabled = true;
     loginButton.textContent = "Logging in...";
     const { data: userData } = await loginUser(data);
-    console.log("Login successful:", { userData });
-
+    form.reset();
     // Choose storage based on "Stay signed in" checkbox
     const storage = staySignedIn ? localStorage : sessionStorage;
     storage.setItem("accessToken", userData.accessToken);
@@ -69,6 +69,8 @@ async function submitForm(event) {
   } catch (error) {
     console.error(error);
     displayError(`Login failed: ${error.message}`, alertContainer);
+    form.reset();
+    loginButton.textContent = "Login";
   } finally {
     loginButton.disabled = false;
     loginButton.textContent = "Login";
