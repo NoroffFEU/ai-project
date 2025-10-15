@@ -3,6 +3,7 @@
 // @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "sidebar";
+@import "/scss/footer"
 // Reset & Base
 *,
 *::before,
@@ -475,113 +476,6 @@ a.link {
   }
 }
 
-// Footer
-.footer {
-  padding: $spacing-lg $spacing-md;
-  margin-top: $spacing-xl;
-  background-color: $footer-background-color;
-  color: $text-white-color;
-}
-
-footer a {
-  color: #000000;
-}
-
-.text-no-decoration {
-  text-decoration: none;
-}
-
-.footer__grid {
-  display: grid;
-  gap: $spacing-lg;
-  max-width: 90rem;
-  margin: 0 auto $spacing-lg;
-
-  @media (min-width: $breakpoint-md) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.footer__column {
-  text-align: center;
-
-  img {
-    max-width: 7.5rem;
-    height: auto;
-    margin-bottom: $spacing-md;
-  }
-
-  @media (min-width: $breakpoint-md) {
-    text-align: left;
-  }
-}
-
-.footer__heading {
-  position: relative;
-  padding-bottom: $spacing-sm;
-  margin-bottom: $spacing-md;
-  font-family: $headings-font;
-  font-size: $paragraph-size-mobile;
-  font-weight: 600;
-  color: $text-white-color;
-
-  @media (min-width: $breakpoint-md) {
-    font-size: 1.25rem;
-    font-size: $paragraph-size-desktop;
-  }
-}
-
-.footer__text {
-  font-size: $paragraph-size-mobile;
-  line-height: 1.6;
-  color: $text-white-color;
-
-  @media (min-width: $breakpoint-md) {
-    font-size: $paragraph-size-desktop;
-  }
-}
-
-.footer__links {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.footer__link {
-  margin-bottom: 0.75rem;
-
-  a {
-    font-size: $paragraph-size-mobile;
-    text-decoration: none;
-    color: $text-white-color;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: $button-color;
-    }
-
-    &:focus {
-      color: $button-color;
-      outline: 0.1875rem solid $button-color;
-      outline-offset: 0.125rem;
-    }
-  }
-  @media (min-width: $breakpoint-md) {
-    font-size: $paragraph-size-desktop;
-  }
-}
-
-.footer__bottom {
-  padding-top: $spacing-md;
-  border-top: 0.0625rem solid rgba($text-white-color, 0.2);
-  text-align: center;
-  font-size: $paragraph-size-mobile;
-  color: $text-white-color;
-
-  @media (min-width: $breakpoint-md) {
-    font-size: $paragraph-size-desktop;
-  }
-}
 
 // Accordion
 .accordion-button {
