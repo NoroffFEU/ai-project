@@ -2,10 +2,12 @@ import { handleTaskBoardData } from "./handlers/handleTaskBoardData.mjs";
 import { loginHandler } from "./handlers/loginHandler.mjs";
 import { toggleSidebar } from "./utils/toggleSidebar.mjs";
 import { renderSidebar } from "./ui/renderSidebar.mjs";
+import { renderFooter } from "./ui/renderFooter.mjs";
 
 // Wait for DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
   renderSidebar();
+  renderFooter();
   // Initialize toggle after sidebar is rendered
   setTimeout(() => {
     toggleSidebar();
