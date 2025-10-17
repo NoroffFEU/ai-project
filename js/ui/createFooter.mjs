@@ -84,10 +84,10 @@ function createCreditsColumn() {
   column.appendChild(heading);
 
   const creditsList = document.createElement("ul");
-  creditsList.className = "footer__list footer__list--credits";
+  creditsList.className = "footer__links";
 
   const credits = [
-    { label: "Developed by:", value: "Noroff octpt team" },
+    { label: "Project by Noroff students", value:"",},
     { label: "Year:", value: "2025" },
     { label: "Version:", value: "1.0" },
   ];
@@ -142,20 +142,3 @@ export function createFooter() {
 
   return fragment;
 }
-// export function createFooter() {
-//   const footer = document.createElement("footer");
-//   footer.className = "footer";
-
-//   const grid = document.createElement("div");
-//   grid.className = "footer__grid";
-
-//   grid.appendChild(createLogoSection());
-//   grid.appendChild(createQuickLinksColumn());
-//   grid.appendChild(createFeaturesColumn());
-//   grid.appendChild(createCreditsColumn());
-
-//   footer.appendChild(grid);
-//   footer.appendChild(createCopyright());
-
-//   return footer;
-// }

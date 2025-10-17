@@ -3,11 +3,9 @@
 // @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "sidebar";
-@import "/scss/footer"
-// Reset & Base
-*,
-*::before,
-*::after {
+@import "/scss/footer" // Reset & Base
+  *,
+  *: : before, *: : after {
   box-sizing: border-box;
 }
 
@@ -475,7 +473,6 @@ a.link {
     display: block;
   }
 }
-
 
 // Accordion
 .accordion-button {

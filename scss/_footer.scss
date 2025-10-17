@@ -49,6 +49,7 @@ footer a {
   font-size: $paragraph-size-mobile;
   font-weight: 600;
   color: $text-white-color;
+  
 
   @media (min-width: $breakpoint-md) {
     font-size: 1.25rem;
@@ -69,11 +70,12 @@ footer a {
 .footer__links {
   padding: 0;
   margin: 0;
-  list-style: none;
+ list-style: none
 }
 
 .footer__link {
   margin-bottom: 0.75rem;
+  list-style: none;
 
   a {
     font-size: $paragraph-size-mobile;
@@ -93,6 +95,23 @@ footer a {
   }
   @media (min-width: $breakpoint-md) {
     font-size: $paragraph-size-desktop;
+  }
+}
+
+.footer__copyright {
+  margin-top: $spacing-lg;
+  padding-top: $spacing-md;
+  border-top: 1px solid rgba($text-white-color, 0.2);
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: $paragraph-size-mobile;
+    color: $text-white-color;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $paragraph-size-desktop;
+    }
   }
 }
 
