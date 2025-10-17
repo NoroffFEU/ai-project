@@ -1,19 +1,10 @@
-@use "_variables"; 
+@use "_variables";
 
-// Footer
 .footer {
   padding: $spacing-lg $spacing-md;
   margin-top: $spacing-xl;
   background-color: $footer-background-color;
   color: $text-white-color;
-}
-
-footer a {
-  color: #000000;
-}
-
-.text-no-decoration {
-  text-decoration: none;
 }
 
 .footer__grid {
@@ -49,10 +40,8 @@ footer a {
   font-size: $paragraph-size-mobile;
   font-weight: 600;
   color: $text-white-color;
-  
 
   @media (min-width: $breakpoint-md) {
-    font-size: 1.25rem;
     font-size: $paragraph-size-desktop;
   }
 }
@@ -70,18 +59,22 @@ footer a {
 .footer__links {
   padding: 0;
   margin: 0;
- list-style: none
+  list-style: none;
 }
 
 .footer__link {
-  margin-bottom: 0.75rem;
+  margin-bottom: $spacing-sm;
   list-style: none;
 
   a {
-    font-size: $paragraph-size-mobile;
     text-decoration: none;
     color: $text-white-color;
     transition: color 0.3s ease;
+    font-size: $paragraph-size-mobile;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $paragraph-size-desktop;
+    }
 
     &:hover {
       color: $button-color;
@@ -92,9 +85,6 @@ footer a {
       outline: 0.1875rem solid $button-color;
       outline-offset: 0.125rem;
     }
-  }
-  @media (min-width: $breakpoint-md) {
-    font-size: $paragraph-size-desktop;
   }
 }
 
@@ -112,17 +102,5 @@ footer a {
     @media (min-width: $breakpoint-md) {
       font-size: $paragraph-size-desktop;
     }
-  }
-}
-
-.footer__bottom {
-  padding-top: $spacing-md;
-  border-top: 0.0625rem solid rgba($text-white-color, 0.2);
-  text-align: center;
-  font-size: $paragraph-size-mobile;
-  color: $text-white-color;
-
-  @media (min-width: $breakpoint-md) {
-    font-size: $paragraph-size-desktop;
   }
 }

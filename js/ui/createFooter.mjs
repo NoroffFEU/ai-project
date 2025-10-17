@@ -1,3 +1,9 @@
+const COMPANY_NAME = "AIMOT";
+const LOGO_PATH = "assets/logo/LogoWhite.svg";
+const COMPANY_DESCRIPTION = "Your AI-powered daily planning assistant designed to help you stay organized, motivated, and productive.";
+const PROJECT_CREDIT = "Project by Noroff students";
+
+
 // create a link element
 function createLink(text, href) {
   const link = document.createElement("a");
@@ -32,24 +38,23 @@ function createColumn(heading, links) {
 
 // create logo section in first column
 function createLogoSection() {
-  const column = document.createElement("div");
-  column.className = "footer__column footer__column--logo";
+  const column = document.createElement('div');
+  column.className = 'footer__column footer__column--logo';
 
-  const logo = document.createElement("img");
-  logo.src = "assets/logo/LogoWhite.svg";
-  logo.alt = "AIMOT Logo";
-  logo.className = "footer__logo";
+  const logo = document.createElement('img');
+  logo.src = LOGO_PATH;
+  logo.alt = `${COMPANY_NAME} Logo`;
+  logo.className = 'footer__logo';
   column.appendChild(logo);
 
-  const heading = document.createElement("h3");
-  heading.className = "footer__heading";
-  heading.textContent = "About AIMOT";
+  const heading = document.createElement('h3');
+  heading.className = 'footer__heading';
+  heading.textContent = `About ${COMPANY_NAME}`;
   column.appendChild(heading);
 
-  const description = document.createElement("p");
-  description.className = "footer__description";
-  description.textContent =
-    "Your AI-powered daily planning assistant designed to help you stay organized, motivated, and productive.";
+  const description = document.createElement('p');
+  description.className = 'footer__description';
+  description.textContent = COMPANY_DESCRIPTION;
   column.appendChild(description);
 
   return column;
@@ -75,36 +80,21 @@ function createFeaturesColumn() {
 
 // create credits column
 function createCreditsColumn() {
-  const column = document.createElement("div");
-  column.className = "footer__column";
+  const column = document.createElement('div');
+  column.className = 'footer__column';
 
-  const heading = document.createElement("h3");
-  heading.className = "footer__heading";
-  heading.textContent = "Project Credits";
+  const heading = document.createElement('h3');
+  heading.className = 'footer__heading';
+  heading.textContent = 'Project Credits';
   column.appendChild(heading);
 
-  const creditsList = document.createElement("ul");
-  creditsList.className = "footer__links";
+  const creditsList = document.createElement('ul');
+  creditsList.className = 'footer__links';
 
-  const credits = [
-    { label: "Project by Noroff students", value:"",},
-    { label: "Year:", value: "2025" },
-    { label: "Version:", value: "1.0" },
-  ];
-
-  credits.forEach(({ label, value }) => {
-    const listItem = document.createElement("li");
-    listItem.className = "footer__list-item";
-
-    const labelEl = document.createElement("strong");
-    labelEl.textContent = label;
-    listItem.appendChild(labelEl);
-
-    const valueText = document.createTextNode(` ${value}`);
-    listItem.appendChild(valueText);
-
-    creditsList.appendChild(listItem);
-  });
+  const listItem = document.createElement('li');
+  listItem.className = 'footer__link';
+  listItem.textContent = PROJECT_CREDIT;
+  creditsList.appendChild(listItem);
 
   column.appendChild(creditsList);
   return column;
@@ -112,18 +102,16 @@ function createCreditsColumn() {
 
 // create copyright section
 function createCopyright() {
-  const copyright = document.createElement("div");
-  copyright.className = "footer__copyright";
+  const copyright = document.createElement('div');
+  copyright.className = 'footer__copyright';
 
-  const copyrightText = document.createElement("p");
-  copyrightText.textContent = `© ${new Date().getFullYear()} AIMOT. All rights reserved.`;
+  const copyrightText = document.createElement('p');
+  copyrightText.textContent = `© ${new Date().getFullYear()} ${COMPANY_NAME}. All rights reserved.`;
   copyright.appendChild(copyrightText);
 
   return copyright;
 }
 
-// MAIN FUNCTION
-// putting together complete footer
 export function createFooter() {
 
   const fragment = document.createDocumentFragment();
