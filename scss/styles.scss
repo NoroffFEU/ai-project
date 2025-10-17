@@ -19,14 +19,14 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: $paragraph-font;
-  font-size: $paragraph-size-mobile;
+  font-family: $paragraphFont;
+  font-size: $paragraphSizeMobile;
   line-height: 1.6;
   background-color: $pageBackgroundColor;
   color: $textDarkColor;
 
-  @media (min-width: $breakpoint-md) {
-    font-size: $paragraph-size-desktop;
+  @media (min-width: $breakpointMd) {
+    font-size: $paragraphSizeDesktop;
   }
 }
 
@@ -37,8 +37,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 $spacing-md 0;
-  font-family: $headings-font;
+  margin: 0 0 $spacingMd 0;
+  font-family: $headingsFont;
   font-weight: 600;
   line-height: 1.2;
   color: $textDarkColor;
@@ -72,25 +72,25 @@ header {
 
 h1 {
   font-weight: 700;
-  font-size: $main-heading-size-mobile;
+  font-size: $mainHeadingSizeMobile;
 
-  @media (min-width: $breakpoint-md) {
-    font-size: $main-heading-size-desktop;
+  @media (min-width: $breakpointMd) {
+    font-size: $mainHeadingSizeDesktop;
   }
 }
 
 h2 {
-  font-size: $secondary-heading-size-mobile;
+  font-size: $secondaryHeadingSizeMobile;
 
-  @media (min-width: $breakpoint-md) {
-    font-size: $secondary-heading-size-desktop;
+  @media (min-width: $breakpointMd) {
+    font-size: $secondaryHeadingSizeDesktop;
   }
 }
 
 h3 {
   font-size: 1.375rem;
 
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $breakpointMd) {
     font-size: 1.5rem;
   }
 }
@@ -98,27 +98,27 @@ h3 {
 h4 {
   font-size: 1.125rem;
 
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $breakpointMd) {
     font-size: 1.25rem;
   }
 }
 
 p {
-  font-size: $paragraph-size-mobile;
-  font-family: $paragraph-font;
+  font-size: $paragraphSizeMobile;
+  font-family: $paragraphFont;
 
-  @media (min-width: $breakpoint-md) {
-    font-size: $paragraph-size-desktop;
+  @media (min-width: $breakpointMd) {
+    font-size: $paragraphSizeDesktop;
   }
 }
 
 .lead {
-  font-size: $paragraph-size-mobile;
+  font-size: $paragraphSizeMobile;
   font-weight: 300;
   color: $textDarkColor;
 
-  @media (min-width: $breakpoint-md) {
-    font-size: $paragraph-size-desktop;
+  @media (min-width: $breakpointMd) {
+    font-size: $paragraphSizeDesktop;
   }
 }
 
@@ -127,67 +127,67 @@ p {
   width: 100%;
   max-width: 90rem;
   margin: 0 auto;
-  padding: $spacing-md;
+  padding: $spacingMd;
   background-color: $pageBackgroundColor;
 
-  @media (min-width: $breakpoint-md) {
-    padding: $spacing-xl;
+  @media (min-width: $breakpointMd) {
+    padding: $spacingXl;
   }
 }
 
 .bento-container {
   display: grid;
-  gap: $spacing-md;
-  margin-top: $spacing-lg;
+  gap: $spacingMd;
+  margin-top: $spacingLg;
 
   // Mobile: single column
   grid-template-columns: 1fr;
 
-  @media (min-width: $breakpoint-lg) {
+  @media (min-width: $breakpointLg) {
     grid-template-columns: repeat(2, 1fr);
-    gap: $spacing-lg;
+    gap: $spacingLg;
   }
 }
 
 .bento-item {
-  padding: $spacing-lg;
-  border: $border-width solid $tertiary-color;
-  border-radius: $border-radius;
-  background-color: $white-color;
+  padding: $spacingLg;
+  border: $borderWidth solid $tertiaryColor;
+  border-radius: $borderRadius;
+  background-color: $whiteColor;
   box-shadow: 0 0.125rem 0.75rem rgba(31, 36, 33, 0.15);
 
   h2 {
     font-size: 1.375rem;
-    margin-bottom: $spacing-sm;
+    margin-bottom: $spacingSm;
 
-    @media (min-width: $breakpoint-md) {
+    @media (min-width: $breakpointMd) {
       font-size: 1.5rem;
     }
   }
 
   p {
-    margin-bottom: $spacing-md;
+    margin-bottom: $spacingMd;
   }
 }
 
 .bento-item--quicklinks {
-  background-color: $tertiary-color;
+  background-color: $tertiaryColor;
 
-  @media (min-width: $breakpoint-lg) {
+  @media (min-width: $breakpointLg) {
     grid-column: span 2;
   }
 }
 
 .bento-item--large {
-  @media (min-width: $breakpoint-lg) {
+  @media (min-width: $breakpointLg) {
     grid-column: span 1;
   }
 }
 
 .bento-item--small {
-  border-color: $tertiary-color;
+  border-color: $tertiaryColor;
 
-  @media (min-width: $breakpoint-lg) {
+  @media (min-width: $breakpointLg) {
     grid-column: span 1;
   }
 }
@@ -196,10 +196,10 @@ p {
   text-align: center;
 
   h2 {
-    margin-bottom: $spacing-md;
+    margin-bottom: $spacingMd;
   }
 
-  @media (min-width: $breakpoint-lg) {
+  @media (min-width: $breakpointLg) {
     grid-column: span 2;
   }
 }
@@ -210,11 +210,11 @@ p {
   margin: 0;
 
   li {
-    margin-bottom: $spacing-sm;
-    font-size: $paragraph-size-mobile;
+    margin-bottom: $spacingSm;
+    font-size: $paragraphSizeMobile;
 
-    @media (min-width: $breakpoint-md) {
-      font-size: $paragraph-size-desktop;
+    @media (min-width: $breakpointMd) {
+      font-size: $paragraphSizeDesktop;
     }
 
     &:last-child {
@@ -224,32 +224,32 @@ p {
 }
 
 .bento-item--full {
-  @media (min-width: $breakpoint-lg) {
+  @media (min-width: $breakpointLg) {
     grid-column: span 2;
   }
 }
 
 .bento-item--highlight {
-  border-color: $button-color;
+  border-color: $buttonColor;
   background-color: $pageBackgroundColor;
 }
 
 .bento-item--info {
-  background-color: $secondary-color;
+  background-color: $secondaryColor;
 }
 
 .bento-header {
   display: flex;
   align-items: center;
-  gap: $spacing-sm;
-  margin-bottom: $spacing-md;
+  gap: $spacingSm;
+  margin-bottom: $spacingMd;
 
   .number-badge {
-    font-size: $paragraph-size-mobile;
+    font-size: $paragraphSizeMobile;
     padding: 0.5rem 0.75rem;
 
-    @media (min-width: $breakpoint-md) {
-      font-size: $paragraph-size-desktop;
+    @media (min-width: $breakpointMd) {
+      font-size: $paragraphSizeDesktop;
     }
   }
 
@@ -261,9 +261,9 @@ p {
 .quicklinks-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: $spacing-sm;
+  gap: $spacingSm;
 
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $breakpointMd) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -272,41 +272,41 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: $spacing-xs;
-  padding: $spacing-lg;
-  border: $border-width solid $tertiary-color;
-  border-radius: $border-radius;
-  background-color: $white-color;
+  gap: $spacingXs;
+  padding: $spacingLg;
+  border: $borderWidth solid $tertiaryColor;
+  border-radius: $borderRadius;
+  background-color: $whiteColor;
   text-decoration: none;
   transition: all 0.3s ease;
 
   &:hover {
-    border-color: $button-color;
+    border-color: $buttonColor;
     background-color: $pageBackgroundColor;
     transform: translateY(-2px);
     box-shadow: 0 0.125rem 0.75rem rgba(31, 36, 33, 0.15);
   }
 
   &:focus {
-    outline: 0.1875rem solid $button-color;
+    outline: 0.1875rem solid $buttonColor;
     outline-offset: 0.125rem;
-    border-color: $button-color;
+    border-color: $buttonColor;
   }
 
-  @media (min-width: $breakpoint-md) {
-    font-size: $paragraph-size-desktop;
+  @media (min-width: $breakpointMd) {
+    font-size: $paragraphSizeDesktop;
   }
 }
 
 .quicklink-text {
-  font-family: $paragraph-font;
-  font-size: $paragraph-size-mobile;
+  font-family: $paragraphFont;
+  font-size: $paragraphSizeMobile;
   font-weight: 500;
-  color: $text-dark-color;
+  color: $textDarkColor;
   text-align: center;
 
-  @media (min-width: $breakpoint-md) {
-    font-size: $paragraph-size-desktop;
+  @media (min-width: $breakpointMd) {
+    font-size: $paragraphSizeDesktop;
   }
 }
 
@@ -314,49 +314,49 @@ p {
 .number-badge {
   display: inline-block;
   padding: 0.375rem 0.75rem;
-  margin-right: $spacing-xs;
-  border: 0.025rem solid $tertiary-color;
+  margin-right: $spacingXs;
+  border: 0.025rem solid $tertiaryColor;
   border-radius: 0.375rem;
-  font-size: $paragraph-size-mobile;
+  font-size: $paragraphSizeMobile;
   font-weight: 600;
-  background-color: $white-color;
-  color: $text-dark-color;
+  background-color: $whiteColor;
+  color: $textDarkColor;
 
-  @media (min-width: $breakpoint-md) {
-    font-size: $paragraph-size-desktop;
+  @media (min-width: $breakpointMd) {
+    font-size: $paragraphSizeDesktop;
   }
 }
 
 // Alert
 .alert--info {
-  padding: $spacing-md;
-  margin-bottom: $spacing-md;
-  border-left: 0.25rem solid $button-color;
-  border-radius: $border-radius;
+  padding: $spacingMd;
+  margin-bottom: $spacingMd;
+  border-left: 0.25rem solid $buttonColor;
+  border-radius: $borderRadius;
   background-color: $pageBackgroundColor;
-  color: $text-dark-color;
+  color: $textDarkColor;
 }
 
 // Links
 a.link {
   display: block;
   text-align: center;
-  margin-bottom: $spacing-sm;
+  margin-bottom: $spacingSm;
   font-weight: 500;
-  font-size: $paragraph-size-mobile;
+  font-size: $paragraphSizeMobile;
   text-decoration: none;
-  color: $button-color;
+  color: $buttonColor;
   transition: color 0.3s ease;
 
   &:hover {
-    color: $button-color-hover;
+    color: $buttonColorHover;
     text-decoration: none;
   }
 
   &:focus {
-    color: $button-color-hover;
+    color: $buttonColorHover;
     text-decoration: none;
-    outline: 0.1875rem solid $button-color;
+    outline: 0.1875rem solid $buttonColor;
     outline-offset: 0.125rem;
   }
 }
@@ -364,48 +364,48 @@ a.link {
 // Grid
 .grid {
   display: grid;
-  gap: $spacing-md;
-  margin-bottom: $spacing-lg;
+  gap: $spacingMd;
+  margin-bottom: $spacingLg;
 }
 
 .grid--2-col {
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $breakpointMd) {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 .grid--3-col {
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $breakpointMd) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 // Section
 .section {
-  margin-bottom: $spacing-lg;
+  margin-bottom: $spacingLg;
 
-  @media (min-width: $breakpoint-md) {
-    margin-bottom: $spacing-xl;
+  @media (min-width: $breakpointMd) {
+    margin-bottom: $spacingXl;
   }
 }
 
 .section__header {
-  padding-bottom: $spacing-md;
-  margin-bottom: $spacing-md;
-  border-bottom: $border-width solid $tertiary-color;
+  padding-bottom: $spacingMd;
+  margin-bottom: $spacingMd;
+  border-bottom: $borderWidth solid $tertiaryColor;
   text-align: center;
 
   img {
     max-width: 9.375rem;
     height: auto;
-    margin-bottom: $spacing-md;
+    margin-bottom: $spacingMd;
   }
 
   .lead {
-    color: $text-dark-color;
-    font-size: $paragraph-size-mobile;
-    @media (min-width: $breakpoint-md) {
-      font-size: $paragraph-size-desktop;
+    color: $textDarkColor;
+    font-size: $paragraphSizeMobile;
+    @media (min-width: $breakpointMd) {
+      font-size: $paragraphSizeDesktop;
     }
   }
 }
@@ -413,9 +413,9 @@ a.link {
 .section__text {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: $secondary-color;
+  color: $secondaryColor;
 
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $breakpointMd) {
     font-size: 0.95rem;
   }
 }
@@ -432,21 +432,21 @@ a.link {
   a {
     font-size: 0.875rem;
     text-decoration: none;
-    color: rgba($text-white-color, 0.85);
+    color: rgba($textWhiteColor, 0.85);
     transition: color 0.3s ease;
 
     &:hover {
-      color: $button-color;
+      color: $buttonColor;
     }
   }
 }
 
 .section__bottom {
-  padding-top: $spacing-md;
-  border-top: 0.0625rem solid rgba($text-white-color, 0.2);
+  padding-top: $spacingMd;
+  border-top: 0.0625rem solid rgba($textWhiteColor, 0.2);
   text-align: center;
   font-size: 0.8125rem;
-  color: rgba($text-white-color, 0.7);
+  color: rgba($textWhiteColor, 0.7);
 
   p {
     margin: 0;
@@ -458,15 +458,15 @@ a.link {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: $spacing-lg;
-  margin-top: $spacing-md;
-  border: $border-width dashed $secondary-color;
-  border-radius: $border-radius;
-  background-color: $tertiary-color;
-  color: $secondary-color;
+  padding: $spacingLg;
+  margin-top: $spacingMd;
+  border: $borderWidth dashed $secondaryColor;
+  border-radius: $borderRadius;
+  background-color: $tertiaryColor;
+  color: $secondaryColor;
 
-  @media (min-width: $breakpoint-md) {
-    padding: $spacing-xl;
+  @media (min-width: $breakpointMd) {
+    padding: $spacingXl;
   }
 
   img {
@@ -476,21 +476,129 @@ a.link {
   }
 }
 
+// Footer
+.footer {
+  padding: $spacingLg $spacingMd;
+  margin-top: $spacingXl;
+  background-color: $footerBackgroundColor;
+  color: $textWhiteColor;
+}
+
+footer a {
+  color: #000000;
+}
+
+.text-no-decoration {
+  text-decoration: none;
+}
+
+.footer__grid {
+  display: grid;
+  gap: $spacingLg;
+  max-width: 90rem;
+  margin: 0 auto $spacingLg;
+
+  @media (min-width: $breakpointMd) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer__column {
+  text-align: center;
+
+  img {
+    max-width: 7.5rem;
+    height: auto;
+    margin-bottom: $spacingMd;
+  }
+
+  @media (min-width: $breakpointMd) {
+    text-align: left;
+  }
+}
+
+.footer__heading {
+  position: relative;
+  padding-bottom: $spacingSm;
+  margin-bottom: $spacingMd;
+  font-family: $headingsFont;
+  font-size: $paragraphSizeMobile;
+  font-weight: 600;
+  color: $textWhiteColor;
+
+  @media (min-width: $breakpointMd) {
+    font-size: 1.25rem;
+    font-size: $paragraphSizeDesktop;
+  }
+}
+
+.footer__text {
+  font-size: $paragraphSizeMobile;
+  line-height: 1.6;
+  color: $textWhiteColor;
+
+  @media (min-width: $breakpointMd) {
+    font-size: $paragraphSizeDesktop;
+  }
+}
+
+.footer__links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer__link {
+  margin-bottom: 0.75rem;
+
+  a {
+    font-size: $paragraphSizeMobile;
+    text-decoration: none;
+    color: $textWhiteColor;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $buttonColor;
+    }
+
+    &:focus {
+      color: $buttonColor;
+      outline: 0.1875rem solid $buttonColor;
+      outline-offset: 0.125rem;
+    }
+  }
+  @media (min-width: $breakpointMd) {
+    font-size: $paragraphSizeDesktop;
+  }
+}
+
+.footer__bottom {
+  padding-top: $spacingMd;
+  border-top: 0.0625rem solid rgba($textWhiteColor, 0.2);
+  text-align: center;
+  font-size: $paragraphSizeMobile;
+  color: $textWhiteColor;
+
+  @media (min-width: $breakpointMd) {
+    font-size: $paragraphSizeDesktop;
+  }
+}
+
 // Accordion
 .accordion-button {
-  background-color: $white-color;
-  color: $text-dark-color;
+  background-color: $whiteColor;
+  color: $textDarkColor;
 
   &:not(.collapsed) {
     background-color: $pageBackgroundColor;
-    color: $text-dark-color;
+    color: $textDarkColor;
     box-shadow: none;
   }
 
   &:focus {
-    background-color: ($tertiary-color);
-    border-color: $button-color;
-    box-shadow: 0 0 0 0.1875rem rgba($button-color, 0.25);
+    background-color: ($tertiaryColor);
+    border-color: $buttonColor;
+    box-shadow: 0 0 0 0.1875rem rgba($buttonColor, 0.25);
     outline: none;
   }
 
