@@ -46,6 +46,14 @@
   }
 }
 
+.footer__subheading {
+  font-family: $secondary-heading-size-mobile;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: $text-white-color;
+  margin-top: $spacing-sm;
+}
+
 .footer__text {
   font-size: $paragraph-size-mobile;
   line-height: 1.6;

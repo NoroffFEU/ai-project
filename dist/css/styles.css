@@ -12696,6 +12696,14 @@ body.sidebar-open {
   }
 }
 
+.footer__subheading {
+  font-family: 1.75rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #d9e1e1;
+  margin-top: 1rem;
+}
+
 .footer__text {
   font-size: 1rem;
   line-height: 1.6;
