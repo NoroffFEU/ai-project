@@ -1,6 +1,6 @@
 /**
  * Checks if the user is currently logged in.
- * Verifies logged in status by checking for the presence of an access token in localStorage.
+ * Verifies logged in status by checking for the presence of an access token in localStorage or sessionStorage.
  *
  * @returns {boolean} True if user has a set access token, false otherwise
  *
@@ -13,5 +13,5 @@
  * }
  */
 export function isLoggedIn() {
-  return !!localStorage.getItem("accessToken");
+  return !!(localStorage.getItem("accessToken") || sessionStorage.getItem("accessToken"));
 }

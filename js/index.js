@@ -2,10 +2,13 @@ import { handleTaskBoardData } from "./handlers/handleTaskBoardData.mjs";
 import { loginHandler } from "./handlers/loginHandler.mjs";
 import { toggleSidebar } from "./utils/toggleSidebar.mjs";
 import { renderSidebar } from "./ui/renderSidebar.mjs";
+import { registerHandler } from "./handlers/registerHandler.mjs";
+import { renderFooter } from "./ui/renderFooter.mjs";
 
 // Wait for DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
   renderSidebar();
+  renderFooter();
   // Initialize toggle after sidebar is rendered
   setTimeout(() => {
     toggleSidebar();
@@ -23,6 +26,10 @@ const router = () => {
 
     case "/login.html":
       loginHandler();
+      break;
+
+    case "/register.html":
+      registerHandler();
       break;
 
     case "/singletask.html":
