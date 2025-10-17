@@ -6,10 +6,23 @@ export function getFromLocalStorage(key) {
   return localStorage.getItem(key);
 }
 
+/**
+ * Gets a value from either localStorage or sessionStorage
+ * @param {string} key - The key to retrieve
+ * @returns {string|null} The value from storage, or null if not found
+ */
+export function getFromStorage(key) {
+  return localStorage.getItem(key) || sessionStorage.getItem(key);
+}
+
 export function removeFromLocalStorage() {
+  // Clear from both localStorage and sessionStorage
   localStorage.removeItem("accessToken");
   localStorage.removeItem("userEmail");
   localStorage.removeItem("userName");
+  sessionStorage.removeItem("accessToken");
+  sessionStorage.removeItem("userEmail");
+  sessionStorage.removeItem("userName");
 }
 
 /**

@@ -20,13 +20,13 @@
 
     <!-- Register form -->
     <div class="col-xl-5 col-lg-6 col-md-7 col-sm-8 col-10 my-5 m-auto">
-      <form class="text-center border border-dark rounded p-5 shadow">
+      <form id="register-form" class="text-center border border-dark rounded p-5 shadow">
         <p class="h4 mb-4">Sign up</p>
 
         <!-- Username -->
         <label for="reg-name" class="form-label d-flex">Username</label>
         <input
-          name="reg-name"
+          name="name"
           type="text"
           id="reg-name"
           class="form-control bg-light"
@@ -39,7 +39,7 @@
         <!-- Email -->
         <label for="reg-email" class="form-label d-flex mt-2">Email</label>
         <input
-          name="reg-email"
+          name="email"
           type="email"
           id="reg-email"
           class="form-control bg-light"
@@ -54,7 +54,7 @@
           >Password</label
         >
         <input
-          name="reg-password"
+          name="password"
           type="password"
           id="reg-password"
           class="form-control bg-light"
@@ -68,7 +68,7 @@
           >Confirm Password</label
         >
         <input
-          name="conf-password"
+          name="password"
           type="password"
           id="conf-password"
           class="form-control bg-light"
@@ -76,6 +76,7 @@
           minlength="8"
           required
         />
+        <div id="alert-container" class="my-3"></div>
 
         <!-- Sign up button -->
         <button class="btn border-dark my-4 btn-block px-5" type="submit">
