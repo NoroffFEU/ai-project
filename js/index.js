@@ -2,6 +2,7 @@ import { handleTaskBoardData } from "./handlers/handleTaskBoardData.mjs";
 import { loginHandler } from "./handlers/loginHandler.mjs";
 import { toggleSidebar } from "./utils/toggleSidebar.mjs";
 import { renderSidebar } from "./ui/renderSidebar.mjs";
+import { weeklyTaskHandler } from "./weeklyView/handler/weeklyTaskHandler.js";
 
 // Wait for DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -29,6 +30,8 @@ const router = () => {
       break;
 
     case "/weekly.html":
+      weeklyTaskHandler();
+
       break;
 
     case "/about.html":

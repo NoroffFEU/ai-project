@@ -1,6 +1,9 @@
 /*global html2canvas */
-// See cdnjs in yourWeek.html header
-
+// See cdnjs in weekly.html header
+const button = document.getElementById("exportBtn");
+button.addEventListener("click", () => {
+  console.log("Export button clicked");
+});
 function fileSaver(extension) {
   const now = new Date().toISOString().replace(/[:.]/g, "-");
   return `cards-${now}.${extension}`;
@@ -70,7 +73,7 @@ function exportAsCsv(e) {
   e?.preventDefault();
 
   const items = Array.from(
-    document.querySelectorAll("#taskList > li[data-id]"),
+    document.querySelectorAll("#cardsContainer > .card"),
   );
 
   if (items.length === 0) {
@@ -80,13 +83,23 @@ function exportAsCsv(e) {
 
   const rows = [["Title", "Completed", "CreatedAt"]];
 
-  for (const li of items) {
-    const title = (li.querySelector(".task-title")?.textContent || "").trim();
-    const completed = li.querySelector('input[type="checkbox"]')?.checked
+  for (const card of items) {
+    const title = (card.querySelector(".card-title")?.textContent || "").trim();
+    const description = (
+      card.querySelector(".card-text")?.textContent || ""
+    ).trim();
+    /*  const completed = card.querySelector('input[type="checkbox"]')?.checked
       ? "true"
-      : "false";
-    const createdAt = li.getAttribute("data-created-at") || "";
-    rows.push([title, completed, createdAt]);
+      : "false"; */
+    const createdEl = [...card.querySelectorAll(".card-text small")].find(
+      (el) => /created\s*at/i.test(el.textContent),
+    );
+
+    const createdAt = createdEl
+      ? createdEl.textContent.replace(/^\s*Created\s*At:\s*/i, "").trim()
+      : "";
+
+    rows.push([title, description, createdAt]);
   }
 
   const csv = rows
