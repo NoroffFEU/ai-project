@@ -13,13 +13,13 @@ export function renderTaskByWeek(week, year, allTasks = []) {
       </div>`;
     return;
   }
-  /*  const taskDetails = document.getElementById("singleTaskDetails"); */
 
   filtered.forEach((t) => {
+    const url = `singletask.html?id=${encodeURIComponent(t.id)}&week=${week ?? week}&year=${year ?? year}`;
     const card = document.createElement("div");
     card.className = `card mb-3 bg-${mapColor(t.color)}`;
     card.innerHTML = `
-    <a href="singleTask.html?id=${t.id}" class="text-decoration-none">
+    <a href="${url}" class="text-decoration-none">
       <div class="card-body">
         <h5 class="card-title text-white">${t.title}</h5>
         <p class="card-text text-white">${t.description ?? ""}</p>

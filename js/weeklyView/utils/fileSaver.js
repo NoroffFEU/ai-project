@@ -12,7 +12,10 @@ function fileSaver(extension) {
 async function exportAsPng(e) {
   e?.preventDefault();
   try {
-    const container = document.getElementById("cardsContainer");
+    const container =
+      document.getElementById("cardsContainer") ||
+      document.getElementById("singleTaskContainer");
+
     if (!container) {
       console.error("Container element not found");
       alert("Export failed: Container not found");

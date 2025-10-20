@@ -22,19 +22,6 @@
     ></script>
     <script src="./js/ui/renderSidebar.mjs" defer type="module"></script>
     <script src="./js/utils/toggleSidebar.mjs" defer type="module"></script>
-    <!-- Load only sidebar functionality for weekly view -->
-    <!-- <script type="module">
-      import { renderSidebar } from "/src/js/ui/renderSidebar.mjs";
-      import { toggleSidebar } from "/src/js/utils/toggleSidebar.mjs";
-
-      document.addEventListener("DOMContentLoaded", () => {
-        renderSidebar();
-        setTimeout(() => {
-          toggleSidebar();
-        }, 100);
-      });
-    </script> -->
-    <script src="./js/weeklyView/main.js" defer type="module"></script>
   </head>
   <body>
     <header id="sidebarNav" class="sidebarNav"></header>
@@ -52,12 +39,11 @@
 
       <div class="container d-flex flex-column pb-5">
         <h1 class="fw-bold text-center">Task details</h1>
-        <div id="singleTaskContainer" class="mt-5">
-          <!-- Task details will show up here. I just have to make them first. -->
-        </div>
+        <div id="singleTaskContainer" class="mt-5"></div>
 
         <div class="dropdown mx-auto mt-5">
           <button
+            id="exportBtn"
             class="btn btn-outline-dark px-4 dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"
