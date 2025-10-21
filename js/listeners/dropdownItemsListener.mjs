@@ -18,7 +18,7 @@ export function dropdownItemsListener(dropdownMenu) {
       const action = item.dataset.action;
 
       if (action === "edit") {
-        // Handle edit action
+        window.location.href = `/singleTask.html?id=${taskId}`;
       } else if (action === "delete") {
         handleDeleteTask(taskId);
       }
