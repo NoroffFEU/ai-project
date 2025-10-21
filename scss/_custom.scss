@@ -418,7 +418,7 @@
 // Logo styling
 .profile-logo {
   display: block;
-  max-width: 7.5rem;
+  max-width: 15rem;
   height: auto;
   margin: 0 auto $spacingLg;
 }
@@ -428,15 +428,15 @@
   flex-direction: column;
   max-width: 50rem;
   margin: 0 auto;
+  padding-bottom: 15rem;
   gap: $spacingLg;
 }
 
 .profile-card {
-  
-  padding: $spacingLg;
+  padding: $spacingXl;
   border: $borderWidth solid $tertiaryColor;
   border-radius: $borderRadius;
-   background: $whiteColor;
+  background-color: $whiteColor;
 
 }
 
