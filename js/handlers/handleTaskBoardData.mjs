@@ -2,10 +2,7 @@ import { fetchTasks } from "../api/fetchTasks.mjs";
 import { isLoggedIn } from "../auth/isLoggedIn.mjs";
 import { dropdownButtonListener } from "../listeners/dropdownButtonListener.mjs";
 import { createTaskBoardItem } from "../ui/createTaskBoardItem.mjs";
-import {
-  addToLocalStorage,
-  getFromLocalStorage,
-} from "../utils/localStorage.mjs";
+import { addToLocalStorage } from "../utils/localStorage.mjs";
 import { taskCheckboxListener } from "../listeners/taskCheckboxListener.mjs";
 
 /**
@@ -32,7 +29,7 @@ export async function handleTaskBoardData() {
     }
   } else {
     try {
-      const fetchDemoData = await fetch("/src/data/mockData.json");
+      const fetchDemoData = await fetch("/data/mockData.json");
       if (!fetchDemoData.ok) {
         taskBoardContainer.innerText = "No tasks available.";
         return;
