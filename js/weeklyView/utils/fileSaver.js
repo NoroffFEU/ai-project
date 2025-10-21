@@ -1,9 +1,22 @@
 /*global html2canvas */
 // See cdnjs in weekly.html header
+import { isLoggedIn } from "../../auth/isLoggedIn.mjs";
+
+function getModalById(id) {
+  const el = document.getElementById(id);
+  if (!el) return null;
+  const B = window.bootstrap;
+  return B ? B.Modal.getOrCreateInstance(el) : null;
+}
+
+function showAuthRequired() {
+  const m = getModalById("authRequiredModal");
+  if (m) m.show();
+}
+
 const button = document.getElementById("exportBtn");
-button.addEventListener("click", () => {
-  console.log("Export button clicked");
-});
+
+button.addEventListener("click", () => {});
 function fileSaver(extension) {
   const now = new Date().toISOString().replace(/[:.]/g, "-");
   return `cards-${now}.${extension}`;
@@ -12,6 +25,10 @@ function fileSaver(extension) {
 async function exportAsPng(e) {
   e?.preventDefault();
   try {
+    if (!isLoggedIn()) {
+      showAuthRequired();
+      return;
+    }
     const container =
       document.getElementById("cardsContainer") ||
       document.getElementById("singleTaskContainer");
@@ -40,6 +57,10 @@ async function exportAsPng(e) {
 async function exportAsPdf(e) {
   e?.preventDefault();
   try {
+    if (!isLoggedIn()) {
+      showAuthRequired();
+      return;
+    }
     const container = document.getElementById("cardsContainer");
     if (!container) {
       console.error("Container element not found");
@@ -74,6 +95,10 @@ async function exportAsPdf(e) {
 
 function exportAsCsv(e) {
   e?.preventDefault();
+  if (!isLoggedIn()) {
+    showAuthRequired();
+    return;
+  }
 
   const items = Array.from(
     document.querySelectorAll("#cardsContainer > .card"),
@@ -91,9 +116,7 @@ function exportAsCsv(e) {
     const description = (
       card.querySelector(".card-text")?.textContent || ""
     ).trim();
-    /*  const completed = card.querySelector('input[type="checkbox"]')?.checked
-      ? "true"
-      : "false"; */
+
     const createdEl = [...card.querySelectorAll(".card-text small")].find(
       (el) => /created\s*at/i.test(el.textContent),
     );

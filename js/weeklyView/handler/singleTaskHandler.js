@@ -1,7 +1,8 @@
 // js/weeklyView/handler/singleTaskHandler.js
 import { getTaskById } from "../data/tasks.js";
 import { getISOWeek } from "../utils/getISOWeek.js";
-
+import { deleteTask } from "../data/tasks.js";
+import { confirmModal, showFeedback } from "../helper/deleteConfirm.js";
 export function singleTaskHandler() {
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -48,11 +49,36 @@ export function singleTaskHandler() {
           <a class="btn btn-outline-secondary" href="weekly.html?week=${backWeek}&year=${backYear}">
             ← Back to week ${backWeek}
           </a>
-          <!-- (valgfritt) legg til edit/delete her senere -->
+
+          <button class="btn btn-danger" id="deleteTaskBtn">Delete Task</button>
+
         </div>
+
       </div>
     </div>
   `;
+  const deleteBtn = document.getElementById("deleteTaskBtn");
+  deleteBtn.addEventListener(
+    "click",
+    async () => {
+      const ok = await confirmModal({
+        title: "Delete task",
+        body: "This action cannot be undone. Are you sure you want to delete this task?",
+        confirmText: "Delete",
+        cancelText: "Cancel",
+      });
+
+      if (!ok) return;
+
+      deleteTask(id);
+      showFeedback("Task deleted");
+
+      setTimeout(() => {
+        window.location.href = `weekly.html?week=${backWeek}&year=${backYear}`;
+      }, 300);
+    },
+    { once: true },
+  );
 }
 
 function mapColor(color) {
