@@ -1,4 +1,5 @@
 import { handleTaskBoardData } from "./handlers/handleTaskBoardData.mjs";
+import { handleTaskBoardSkeleton } from "./handlers/handleSkeletonLoader.mjs";
 import { loginHandler } from "./handlers/loginHandler.mjs";
 import { toggleSidebar } from "./utils/toggleSidebar.mjs";
 import { renderSidebar } from "./ui/renderSidebar.mjs";
@@ -13,6 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     toggleSidebar();
   }, 100);
+
+  // Call router after DOM is ready
+  router();
 });
 
 const router = () => {
@@ -21,7 +25,7 @@ const router = () => {
   switch (pathname) {
     case "/":
     case "/index.html":
-      handleTaskBoardData();
+      handleTaskBoardSkeleton(handleTaskBoardData);
       break;
 
     case "/login.html":
@@ -51,5 +55,3 @@ const router = () => {
       console.warn(`Route not found: ${pathname}`);
   }
 };
-
-router();
