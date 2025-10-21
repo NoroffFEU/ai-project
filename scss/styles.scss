@@ -3,6 +3,7 @@
 // @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "sidebar";
+@import "theme";
 // Reset & Base
 *,
 *::before,
@@ -21,8 +22,9 @@ body {
   font-family: $paragraph-font;
   font-size: $paragraph-size-mobile;
   line-height: 1.6;
-  background-color: $pageBackgroundColor;
-  color: $textDarkColor;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   @media (min-width: $breakpoint-md) {
     font-size: $paragraph-size-desktop;
@@ -40,7 +42,7 @@ h6 {
   font-family: $headings-font;
   font-weight: 600;
   line-height: 1.2;
-  color: $textDarkColor;
+  color: var(--text-primary);
 }
 header {
   float: left;

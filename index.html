@@ -11,6 +11,13 @@
       href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="./dist/css/styles.css" />
+    <!-- Initialize theme immediately to prevent flash -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme-preference') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      })();
+    </script>
     <script type="module" src="./js/index.js"></script>
     <script
       src="https://kit.fontawesome.com/6fb668811a.js"

@@ -2,6 +2,10 @@ import { handleTaskBoardData } from "./handlers/handleTaskBoardData.mjs";
 import { loginHandler } from "./handlers/loginHandler.mjs";
 import { toggleSidebar } from "./utils/toggleSidebar.mjs";
 import { renderSidebar } from "./ui/renderSidebar.mjs";
+import { initializeTheme, setupThemeToggleListeners } from "./theme/themeToggle.mjs";
+
+// Initialize theme before DOM loads
+initializeTheme();
 
 // Wait for DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -9,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize toggle after sidebar is rendered
   setTimeout(() => {
     toggleSidebar();
+    setupThemeToggleListeners();
   }, 100);
 });
 
