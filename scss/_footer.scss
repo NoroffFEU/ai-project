@@ -1,19 +1,19 @@
 @use "_variables";
 
 .footer {
-  padding: $spacing-lg $spacing-md;
-  margin-top: $spacing-xl;
-  background-color: $footer-background-color;
-  color: $text-white-color;
+  padding: $spacingLg $spacingMd;
+  margin-top: $spacingXl;
+  background-color: $footerBackgroundColor;
+  color: $textWhiteColor;
 }
 
 .footer__grid {
   display: grid;
-  gap: $spacing-lg;
+  gap: $spacingLg;
   max-width: 90rem;
-  margin: 0 auto $spacing-lg;
+  margin: 0 auto $spacingLg;
 
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $breakpointMd) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -24,43 +24,43 @@
   img {
     max-width: 7.5rem;
     height: auto;
-    margin-bottom: $spacing-md;
+    margin-bottom: $spacingMd;
   }
 
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $breakpointMd) {
     text-align: left;
   }
 }
 
 .footer__heading {
   position: relative;
-  padding-bottom: $spacing-sm;
-  margin-bottom: $spacing-md;
-  font-family: $headings-font;
-  font-size: $paragraph-size-mobile;
+  padding-bottom: $spacingSm;
+  margin-bottom: $spacingMd;
+  font-family: $headingsFont;
+  font-size: $paragraphSizeMobile;
   font-weight: 600;
-  color: $text-white-color;
+  color: $textWhiteColor;
 
-  @media (min-width: $breakpoint-md) {
-    font-size: $paragraph-size-desktop;
+  @media (min-width: $breakpointMd) {
+    font-size: $paragraphSizeDesktop;
   }
 }
 
 .footer__subheading {
-  font-family: $secondary-heading-size-mobile;
+  font-family: $secondaryHeadingSizeMobile;
   font-size: 1.25rem;
   font-weight: 500;
-  color: $text-white-color;
-  margin-top: $spacing-sm;
+  color: $textWhiteColor;
+  margin-top: $spacingSm;
 }
 
 .footer__text {
-  font-size: $paragraph-size-mobile;
+  font-size: $paragraphSizeMobile;
   line-height: 1.6;
-  color: $text-white-color;
+  color: $textWhiteColor;
 
-  @media (min-width: $breakpoint-md) {
-    font-size: $paragraph-size-desktop;
+  @media (min-width: $breakpointMd) {
+    font-size: $paragraphSizeDesktop;
   }
 }
 
@@ -71,44 +71,44 @@
 }
 
 .footer__link {
-  margin-bottom: $spacing-sm;
+  margin-bottom: $spacingSm;
   list-style: none;
 
   a {
     text-decoration: none;
-    color: $text-white-color;
+    color: $textWhiteColor;
     transition: color 0.3s ease;
-    font-size: $paragraph-size-mobile;
+    font-size: $paragraphSizeMobile;
 
-    @media (min-width: $breakpoint-md) {
-      font-size: $paragraph-size-desktop;
+    @media (min-width: $breakpointMd) {
+      font-size: $paragraphSizeDesktop;
     }
 
     &:hover {
-      color: $button-color;
+      color: $buttonColor;
     }
 
     &:focus {
-      color: $button-color;
-      outline: 0.1875rem solid $button-color;
+      color: $buttonColor;
+      outline: 0.1875rem solid $buttonColor;
       outline-offset: 0.125rem;
     }
   }
 }
 
 .footer__copyright {
-  margin-top: $spacing-lg;
-  padding-top: $spacing-md;
-  border-top: 1px solid rgba($text-white-color, 0.2);
+  margin-top: $spacingLg;
+  padding-top: $spacingMd;
+  border-top: 1px solid rgba($textWhiteColor, 0.2);
   text-align: center;
 
   p {
     margin: 0;
-    font-size: $paragraph-size-mobile;
-    color: $text-white-color;
+    font-size: $paragraphSizeMobile;
+    color: $textWhiteColor;
 
-    @media (min-width: $breakpoint-md) {
-      font-size: $paragraph-size-desktop;
+    @media (min-width: $breakpointMd) {
+      font-size: $paragraphSizeDesktop;
     }
   }
 }
