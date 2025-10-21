@@ -481,3 +481,41 @@
     }
   }
 }
+
+// Login redirect
+
+.login-redirect {
+  padding: $spacingXl;
+  border: $borderWidth solid $tertiaryColor;
+  border-radius: $borderRadius;
+  background-color: $whiteColor;
+  text-align: center;
+  
+  p {
+    margin: 0;
+    font-family: $paragraphFont;
+    font-size: $paragraphSizeMobile;
+    color: $textDarkColor;
+    line-height: 1.6;
+  }
+  
+  a {
+    display: inline-block;
+    margin-top: $spacingSm;
+    font-weight: 600;
+    color: $buttonColor;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: $buttonColorHover;
+      text-decoration: underline;
+    }
+  }
+  
+  @media (min-width: $breakpointMd) {
+    p {
+      font-size: $paragraphSizeDesktop;
+    }
+  }
+}
