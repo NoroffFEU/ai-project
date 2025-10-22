@@ -2,11 +2,9 @@ import { fetchTasks } from "../api/fetchTasks.mjs";
 import { isLoggedIn } from "../auth/isLoggedIn.mjs";
 import { dropdownButtonListener } from "../listeners/dropdownButtonListener.mjs";
 import { createTaskBoardItem } from "../ui/createTaskBoardItem.mjs";
-import {
-  addToLocalStorage,
-  getFromLocalStorage,
-} from "../utils/localStorage.mjs";
+import { addToLocalStorage } from "../utils/localStorage.mjs";
 import { taskCheckboxListener } from "../listeners/taskCheckboxListener.mjs";
+import { createGuestBanner } from "../ui/createGuestBanner.mjs";
 
 /**
  * Loads and displays tasks on the task board using API (logged in users) or demo data (guests).
@@ -15,11 +13,14 @@ import { taskCheckboxListener } from "../listeners/taskCheckboxListener.mjs";
  * @returns {Promise<void>}
  */
 export async function handleTaskBoardData() {
+  const taskBoardModule = document.querySelector("#task-board-module");
   const taskBoardContainer = document.querySelector("#task-board-container");
+  const exportListButton = document.querySelector("#export-list-button");
 
   taskBoardContainer.innerHTML = "";
 
   if (isLoggedIn()) {
+    exportListButton.setAttribute("disabled", "false");
     try {
       const taskData = await fetchTasks();
       if (taskData) {
@@ -31,8 +32,11 @@ export async function handleTaskBoardData() {
       taskBoardContainer.innerText = "No tasks available.";
     }
   } else {
+    taskBoardModule.prepend(createGuestBanner());
+    exportListButton.setAttribute("disabled", "true");
+
     try {
-      const fetchDemoData = await fetch("/src/data/mockData.json");
+      const fetchDemoData = await fetch("/data/mockData.json");
       if (!fetchDemoData.ok) {
         taskBoardContainer.innerText = "No tasks available.";
         return;
