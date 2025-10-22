@@ -46,12 +46,12 @@ const router = () => {
     case "/faq.html":
       break;
 
-    case "/profile.html":
-      if (!isLoggedIn()) {
-        navigateTo("/login.html");
-        return;
-      }
-      break;
+    // case "/profile.html":
+    //   if (!isLoggedIn()) {
+    //     navigateTo("/login.html");
+    //     return;
+    //   }
+    //   break;
 
     default:
       console.warn(`Route not found: ${pathname}`);

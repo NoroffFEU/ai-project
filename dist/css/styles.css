@@ -372,38 +372,6 @@
   color: #ffffff;
 }
 
-.login-redirect {
-  padding: 3rem;
-  border: 0.125rem solid #d9dadf;
-  border-radius: 0.5rem;
-  background-color: #ffffff;
-  text-align: center;
-}
-.login-redirect p {
-  margin: 0;
-  font-family: Roboto, Arial, Helvetica;
-  font-size: 1rem;
-  color: #1f2421;
-  line-height: 1.6;
-}
-.login-redirect a {
-  display: inline-block;
-  margin-top: 1rem;
-  font-weight: 600;
-  color: #dd700b;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-.login-redirect a:hover {
-  color: rgb(172.4181034483, 87.3793103448, 8.5818965517);
-  text-decoration: underline;
-}
-@media (min-width: 48rem) {
-  .login-redirect p {
-    font-size: 1.125rem;
-  }
-}
-
 /*!
  * Bootstrap  v5.3.8 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -12645,41 +12613,6 @@ textarea.form-control-lg {
   color: #ffffff;
 }
 
-.login-redirect {
-  padding: 3rem;
-  border: 0.125rem solid #d9dadf;
-  border-radius: 0.5rem;
-  background-color: #ffffff;
-  text-align: center;
-}
-
-.login-redirect p {
-  margin: 0;
-  font-family: Roboto, Arial, Helvetica;
-  font-size: 1rem;
-  color: #1f2421;
-  line-height: 1.6;
-}
-
-.login-redirect a {
-  display: inline-block;
-  margin-top: 1rem;
-  font-weight: 600;
-  color: #dd700b;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.login-redirect a:hover {
-  color: rgb(172.4181034483, 87.3793103448, 8.5818965517);
-  text-decoration: underline;
-}
-
-@media (min-width: 48rem) {
-  .login-redirect p {
-    font-size: 1.125rem;
-  }
-}
 .sidebarNav {
   position: fixed;
   top: 0;
