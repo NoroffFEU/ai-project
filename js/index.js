@@ -4,6 +4,8 @@ import { toggleSidebar } from "./utils/toggleSidebar.mjs";
 import { renderSidebar } from "./ui/renderSidebar.mjs";
 import { registerHandler } from "./handlers/registerHandler.mjs";
 import { renderFooter } from "./ui/renderFooter.mjs";
+import { isLoggedIn } from "./auth/isLoggedIn.mjs";
+import { navigateTo } from "./helpers/navigateTo.mjs"
 
 // Wait for DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -45,6 +47,10 @@ const router = () => {
       break;
 
     case "/profile.html":
+      if (!isLoggedIn()) {
+        navigateTo("/login.html");
+        return;
+      }
       break;
 
     default:
