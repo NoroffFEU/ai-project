@@ -17,8 +17,6 @@ export async function handleTaskBoardData() {
   const taskBoardContainer = document.querySelector("#task-board-container");
   const exportListButton = document.querySelector("#export-list-button");
 
-  taskBoardContainer.innerHTML = "";
-
   if (isLoggedIn()) {
     exportListButton.setAttribute("disabled", "false");
     try {
