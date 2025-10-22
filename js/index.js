@@ -1,10 +1,14 @@
 import { handleTaskBoardData } from "./handlers/handleTaskBoardData.mjs";
-import { handleTaskBoardSkeleton } from "./handlers/handleSkeletonLoader.mjs";
+import {
+  handleTaskBoardSkeleton,
+  handleWeeklySkeleton,
+} from "./handlers/handleSkeletonLoader.mjs";
 import { loginHandler } from "./handlers/loginHandler.mjs";
 import { toggleSidebar } from "./utils/toggleSidebar.mjs";
 import { renderSidebar } from "./ui/renderSidebar.mjs";
 import { registerHandler } from "./handlers/registerHandler.mjs";
 import { renderFooter } from "./ui/renderFooter.mjs";
+// import { initWeeklyView } from "./weeklyView/main.js"; Put this in after isLoggedIn() in weeklyView/main.js
 
 // Wait for DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -19,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   router();
 });
 
-const router = () => {
+const router = async () => {
   const pathname = window.location.pathname;
 
   switch (pathname) {
@@ -36,10 +40,13 @@ const router = () => {
       registerHandler();
       break;
 
-    case "/singletask.html":
+    case "/weekly.html": {
+      // Import and run the weekly view with skeleton loader
+      const { initWeeklyView } = await import("./weeklyView/main.js");
+      handleWeeklySkeleton(initWeeklyView);
       break;
-
-    case "/weekly.html":
+    }
+    case "/singletask.html":
       break;
 
     case "/about.html":

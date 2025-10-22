@@ -82,7 +82,7 @@ export async function handleTaskBoardSkeleton(loadFunction) {
  * @returns {Promise<void>}
  */
 export async function handleWeeklySkeleton(loadFunction) {
-  const container = document.querySelector("#weekly-task-container");
+  const container = document.querySelector("#taskList");
 
   await handleSkeletonLoader({
     container,

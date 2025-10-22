@@ -311,67 +311,36 @@
   color: var(--ai-glow-green);
 }
 
-.skeleton-loader-container {
-  pointer-events: none;
-  user-select: none;
+.skeleton-item .placeholder {
+  color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #d9dadf;
+  border-color: #d9dadf;
+}
+.skeleton-item .placeholder::placeholder {
+  color: transparent;
 }
 
+@keyframes loading-skeleton {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .skeleton-item {
-  animation: skeletonPulse 1.5s ease-in-out infinite;
+  pointer-events: none;
+  animation: loading-skeleton 1s infinite alternate;
 }
 .skeleton-item .placeholder {
-  background-color: #e0e0e0;
-  opacity: 0.7;
+  border-radius: 0.375rem;
 }
 .skeleton-item .placeholder.rounded {
-  border-radius: 0.25rem;
-}
-.skeleton-item .placeholder-glow .placeholder {
-  animation: placeholderGlow 2s ease-in-out infinite;
+  border-radius: 0.375rem;
 }
 
-@keyframes placeholderGlow {
-  0% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
-@keyframes skeletonPulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.8;
-  }
-}
-.skeleton-item .placeholder {
-  position: relative;
-  overflow: hidden;
-}
-.skeleton-item .placeholder::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
-}
 /*!
  * Bootstrap  v5.3.8 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -12548,71 +12517,39 @@ textarea.form-control-lg {
   color: var(--ai-glow-green);
 }
 
-.skeleton-loader-container {
-  pointer-events: none;
-  user-select: none;
+.skeleton-item .placeholder {
+  color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #d9dadf;
+  border-color: #d9dadf;
 }
 
+.skeleton-item .placeholder::placeholder {
+  color: transparent;
+}
+
+@keyframes loading-skeleton {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .skeleton-item {
-  animation: skeletonPulse 1.5s ease-in-out infinite;
+  pointer-events: none;
+  animation: loading-skeleton 1s infinite alternate;
 }
 
 .skeleton-item .placeholder {
-  background-color: #e0e0e0;
-  opacity: 0.7;
+  border-radius: 0.375rem;
 }
 
 .skeleton-item .placeholder.rounded {
-  border-radius: 0.25rem;
+  border-radius: 0.375rem;
 }
 
-.skeleton-item .placeholder-glow .placeholder {
-  animation: placeholderGlow 2s ease-in-out infinite;
-}
-
-@keyframes placeholderGlow {
-  0% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
-@keyframes skeletonPulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.8;
-  }
-}
-.skeleton-item .placeholder {
-  position: relative;
-  overflow: hidden;
-}
-
-.skeleton-item .placeholder::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
-}
 .sidebarNav {
   position: fixed;
   top: 0;
