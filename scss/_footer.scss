@@ -1,94 +1,114 @@
 @use "_variables";
+
 .footer {
-padding: $spacingLg $spacingMd;
-margin-top: $spacingXl;
-background-color: $footerBackgroundColor;
-color: $textWhiteColor;
+  padding: $spacingLg $spacingMd;
+  margin-top: $spacingXl;
+  background-color: $footerBackgroundColor;
+  color: $textWhiteColor;
 }
+
 .footer__grid {
-display: grid;
-gap: $spacingLg;
-max-width: 90rem;
-margin: 0 auto $spacingLg;
-@media (min-width: $breakpointMd) {
-grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  gap: $spacingLg;
+  max-width: 90rem;
+  margin: 0 auto $spacingLg;
+
+  @media (min-width: $breakpointMd) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
-}
+
 .footer__column {
-text-align: center;
-img {
-max-width: 7.5rem;
-height: auto;
-margin-bottom: $spacingMd;
+  text-align: center;
+
+  img {
+    max-width: 7.5rem;
+    height: auto;
+    margin-bottom: $spacingMd;
+  }
+
+  @media (min-width: $breakpointMd) {
+    text-align: left;
+  }
 }
-@media (min-width: $breakpointMd) {
-text-align: left;
-}
-}
+
 .footer__heading {
-position: relative;
-padding-bottom: $spacingSm;
-margin-bottom: $spacingMd;
-font-family: $headingsFont;
-font-size: $paragraphSizeMobile;
-font-weight: 600;
-color: $textWhiteColor;
-@media (min-width: $breakpointMd) {
-font-size: $paragraphSizeDesktop;
+  position: relative;
+  padding-bottom: $spacingSm;
+  margin-bottom: $spacingMd;
+  font-family: $headingsFont;
+  font-size: $paragraphSizeMobile;
+  font-weight: 600;
+  color: $textWhiteColor;
+
+  @media (min-width: $breakpointMd) {
+    font-size: $paragraphSizeDesktop;
+  }
 }
-}
+
 .footer__subheading {
-font-family: $secondaryHeadingSizeMobile;
-font-size: 1.25rem;
-font-weight: 500;
-color: $textWhiteColor;
-margin-top: $spacingSm;
+  font-family: $secondaryHeadingSizeMobile;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: $textWhiteColor;
+  margin-top: $spacingSm;
 }
+
 .footer__text {
-font-size: $paragraphSizeMobile;
-line-height: 1.6;
-color: $textWhiteColor;
-@media (min-width: $breakpointMd) {
-font-size: $paragraphSizeDesktop;
+  font-size: $paragraphSizeMobile;
+  line-height: 1.6;
+  color: $textWhiteColor;
+
+  @media (min-width: $breakpointMd) {
+    font-size: $paragraphSizeDesktop;
+  }
 }
-}
+
 .footer__links {
-padding: 0;
-margin: 0;
-list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
+
 .footer__link {
-margin-bottom: $spacingSm;
-list-style: none;
-a {
-text-decoration: none;
-color: $textWhiteColor;
-transition: color 0.3s ease;
-font-size: $paragraphSizeMobile;
-@media (min-width: $breakpointMd) {
-font-size: $paragraphSizeDesktop;
+  margin-bottom: $spacingSm;
+  list-style: none;
+
+  a {
+    text-decoration: none;
+    color: $textWhiteColor;
+    transition: color 0.3s ease;
+    font-size: $paragraphSizeMobile;
+
+    @media (min-width: $breakpointMd) {
+      font-size: $paragraphSizeDesktop;
+    }
+
+    &:hover {
+      color: $buttonColor;
+    }
+
+    &:focus {
+      color: $buttonColor;
+      outline: 0.1875rem solid $buttonColor;
+      outline-offset: 0.125rem;
+    }
+  }
 }
-&:hover {
-color: $buttonColor;
-}
-&:focus {
-color: $buttonColor;
-outline: 0.1875rem solid $buttonColor;
-outline-offset: 0.125rem;
-}
-}
-}
+
 .footer__copyright {
-margin-top: $spacingLg;
-padding-top: $spacingMd;
-border-top: 1px solid rgba($textWhiteColor, 0.2);
-text-align: center;
-p {
-margin: 0;
-font-size: $paragraphSizeMobile;
-color: $textWhiteColor;
-@media (min-width: $breakpointMd) {
-font-size: $paragraphSizeDesktop;
-}
-}
+  margin-top: $spacingLg;
+  padding-top: $spacingMd;
+  border-top: 1px solid rgba($textWhiteColor, 0.2);
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: $paragraphSizeMobile;
+    color: $textWhiteColor;
+
+    @media (min-width: $breakpointMd) {
+      font-size: $paragraphSizeDesktop;
+    }
+  }
 }
