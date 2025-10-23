@@ -609,29 +609,75 @@ footer a {
 // Chat bot
 
 .bot-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: $whiteColor;
   border-radius: 2rem;
-  box-shadow: 0 2px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 5rem;
   max-width: 50rem;
   width: 90%;
   text-align: center;
-  align-items: center;
+  z-index: 0;
+
+  @media (max-width: 1050px) {
+    padding: 2rem;
+    max-width: 75%;
+    width: 95%;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+    max-width: 95%;
+    width: 95%;
+    border-radius: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.5rem;
+    max-width: 98%;
+    width: 98%;
+    border-radius: 0.75rem;
+  }
 
   input {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 12rem;
     padding: 10px;
     border-radius: 1rem;
     border: 1px solid $tertiaryColor;
     font-size: 16px;
+
+    @media (max-width: 1050px) {
+      margin-top: 3rem;
+      padding: 12px;
+      font-size: 16px;
+    }
+
+    @media (max-width: 480px) {
+      margin-top: 2rem;
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+
+  h2 {
+    position: relative;
+    bottom: 2rem;
+    font-size: $secondaryHeadingSizeMobile;
+
+    @media (min-width: $breakpointMd) {
+      font-size: $secondaryHeadingSizeDesktop;
+    }
   }
 
   .motivate-bot {
-    position: relative;
-    bottom: -1rem;
-    left: -6rem;
-    padding: 1rem 1.5rem;
+    position: static;
+    display: block;
+    margin: 1rem 0 0 0;
+    padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.375rem;
     background-color: $buttonColor;
@@ -641,6 +687,21 @@ footer a {
     cursor: pointer;
     box-shadow: 0 0.125rem 0.5rem rgba(31, 36, 33, 0.2);
     transition: background-color 0.3s ease;
+    max-width: 50%;
+    width: auto;
+
+    @media (max-width: 768px) {
+      padding: 0.75rem 1rem;
+      font-size: 14px;
+      margin: 0.75rem 0 0 0;
+    }
+
+    @media (max-width: 480px) {
+      padding: 0.65rem 1rem;
+      font-size: 13px;
+      margin: 0.5rem 0 0 0;
+      width: 100%;
+    }
 
     &:hover {
       background-color: $buttonColorHover;
@@ -656,6 +717,129 @@ footer a {
     }
   }
 }
+
+.motivation-form {
+  width: 100%;
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+
+    .form-input {
+      width: 100%;
+      border-radius: 0.75rem;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      @media (max-width: 480px) {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+    }
+
+    .motivate-bot {
+      flex: 1;
+      border-radius: 0.75rem;
+      margin: 0;
+
+      @media (max-width: 480px) {
+        width: 100%;
+      }
+    }
+
+    .btn-submit {
+      flex: 1;
+      display: block;
+      padding: 0.5rem 1.5rem;
+      border: none;
+      border-radius: 0.75rem;
+      background-color: $buttonColor;
+      color: $whiteColor;
+      font-size: $paragraphSizeMobile;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 0.125rem 0.5rem rgba(31, 36, 33, 0.2);
+      transition: all 0.3s ease;
+      white-space: nowrap;
+
+      @media (min-width: $breakpointMd) {
+        font-size: $paragraphSizeDesktop;
+      }
+
+      @media (max-width: 480px) {
+        width: 100%;
+      }
+
+      &:hover {
+        background-color: darken($buttonColorHover, 10%);
+        transform: translateY(-1px);
+      }
+
+      &:focus {
+        outline: 0.1875rem solid $buttonColor;
+        outline-offset: 0.125rem;
+      }
+
+      &:disabled {
+        background-color: lighten($buttonColor, 20%);
+        cursor: not-allowed;
+        transform: none;
+        opacity: 0.6;
+      }
+    }
+
+    .login-btn {
+      display: block;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid $buttonColor;
+      border-radius: 0.75rem;
+      background-color: transparent;
+      color: $buttonColor;
+      font-size: $paragraphSizeMobile;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 0.5rem;
+
+      @media (min-width: $breakpointMd) {
+        font-size: $paragraphSizeDesktop;
+      }
+
+      &:hover {
+        background-color: $buttonColor;
+        color: $whiteColor !important;
+        transform: translateY(-1px);
+        box-shadow: 0 0.25rem 0.75rem rgba(31, 36, 33, 0.2);
+        text-decoration: none;
+      }
+
+      &:focus {
+        outline: 0.1875rem solid $buttonColor;
+        outline-offset: 0.125rem;
+        background-color: $buttonColor;
+        color: $whiteColor !important;
+        text-decoration: none;
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+
+      &:visited {
+        color: $buttonColor;
+      }
+    }
+  }
+}
+
 .motivation-text {
   margin-top: 15px;
   font-size: 1rem;

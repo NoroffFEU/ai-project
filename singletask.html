@@ -12,29 +12,57 @@
     />
     <link rel="stylesheet" href="./dist/css/styles.css" />
     <script type="module" src="./js/index.js"></script>
+
     <script
       src="https://kit.fontawesome.com/6fb668811a.js"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="js/chatBot/movtiateService.mjs"></script>
   </head>
   <body>
     <header id="sidebarNav" class="sidebarNav"></header>
 
     <main class="container mt-5">
-      <div id="bot-container" class="bot-container">
+      <div id="bot-container" class="bot-container" data-task-id="task-1">
         <h2>Need a Boost?</h2>
-        <input
-          id="motivateInput"
-          type="text"
-          placeholder="Ask for motivation..."
-        />
-        <button id="motivateBot" class="motivate-bot" disabled>
-          Motivate me
-        </button>
+        <form class="motivation-form">
+          <div class="input-group">
+            <input
+              id="motivateInput"
+              type="text"
+              placeholder="Ask for motivation..."
+              class="form-input"
+            />
+            <div class="button-row">
+              <button
+                id="motivateBot"
+                type="submit"
+                class="motivate-bot"
+                disabled
+                aria-disabled="true"
+              >
+                Motivate me
+              </button>
+              <button
+                id="submitButton"
+                type="submit"
+                class="btn-submit"
+                disabled
+                aria-disabled="true"
+              >
+                Submit
+              </button>
+            </div>
+            <a href="./login.html" id="auth-sim-login" class="login-btn">
+              Log in to use chatBot
+            </a>
+          </div>
+        </form>
         <div
           id="movtivationOutput"
           class="motivation-text"
           style="display: none"
+          aria-live="polite"
         ></div>
       </div>
     </main>

@@ -13250,28 +13250,79 @@ footer a {
 }
 
 .bot-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #ffffff;
   border-radius: 2rem;
-  box-shadow: 0 2px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 5rem;
   max-width: 50rem;
   width: 90%;
   text-align: center;
-  align-items: center;
+  z-index: 0;
+}
+@media (max-width: 1050px) {
+  .bot-container {
+    padding: 2rem;
+    max-width: 75%;
+    width: 95%;
+  }
+}
+@media (max-width: 768px) {
+  .bot-container {
+    padding: 2rem;
+    max-width: 95%;
+    width: 95%;
+    border-radius: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .bot-container {
+    padding: 1.5rem;
+    max-width: 98%;
+    width: 98%;
+    border-radius: 0.75rem;
+  }
 }
 .bot-container input {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 12rem;
   padding: 10px;
   border-radius: 1rem;
   border: 1px solid #d9dadf;
   font-size: 16px;
 }
-.bot-container .motivate-bot {
+@media (max-width: 1050px) {
+  .bot-container input {
+    margin-top: 3rem;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .bot-container input {
+    margin-top: 2rem;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+.bot-container h2, .bot-container .h2 {
   position: relative;
-  bottom: -1rem;
-  left: -2rem;
-  padding: 1rem 1.5rem;
+  bottom: 2rem;
+  font-size: 1.75rem;
+}
+@media (min-width: 48rem) {
+  .bot-container h2, .bot-container .h2 {
+    font-size: 2rem;
+  }
+}
+.bot-container .motivate-bot {
+  position: static;
+  display: block;
+  margin: 1rem 0 0 0;
+  padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.375rem;
   background-color: #dd700b;
@@ -13281,6 +13332,23 @@ footer a {
   cursor: pointer;
   box-shadow: 0 0.125rem 0.5rem rgba(31, 36, 33, 0.2);
   transition: background-color 0.3s ease;
+  max-width: 50%;
+  width: auto;
+}
+@media (max-width: 768px) {
+  .bot-container .motivate-bot {
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+    margin: 0.75rem 0 0 0;
+  }
+}
+@media (max-width: 480px) {
+  .bot-container .motivate-bot {
+    padding: 0.65rem 1rem;
+    font-size: 13px;
+    margin: 0.5rem 0 0 0;
+    width: 100%;
+  }
 }
 .bot-container .motivate-bot:hover {
   background-color: #ac5709;
@@ -13293,6 +13361,120 @@ footer a {
   .bot-container .motivate-bot {
     font-size: 1.125rem;
   }
+}
+
+.motivation-form {
+  width: 100%;
+}
+.motivation-form .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
+}
+.motivation-form .input-group .form-input {
+  width: 100%;
+  border-radius: 0.75rem;
+}
+.motivation-form .input-group .button-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  .motivation-form .input-group .button-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+.motivation-form .input-group .motivate-bot {
+  flex: 1;
+  border-radius: 0.75rem;
+  margin: 0;
+}
+@media (max-width: 480px) {
+  .motivation-form .input-group .motivate-bot {
+    width: 100%;
+  }
+}
+.motivation-form .input-group .btn-submit {
+  flex: 1;
+  display: block;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  background-color: #dd700b;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0.125rem 0.5rem rgba(31, 36, 33, 0.2);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+@media (min-width: 48rem) {
+  .motivation-form .input-group .btn-submit {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 480px) {
+  .motivation-form .input-group .btn-submit {
+    width: 100%;
+  }
+}
+.motivation-form .input-group .btn-submit:hover {
+  background-color: #7c3f06;
+  transform: translateY(-1px);
+}
+.motivation-form .input-group .btn-submit:focus {
+  outline: 0.1875rem solid #dd700b;
+  outline-offset: 0.125rem;
+}
+.motivation-form .input-group .btn-submit:disabled {
+  background-color: #f7a457;
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.6;
+}
+.motivation-form .input-group .login-btn {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #dd700b;
+  border-radius: 0.75rem;
+  background-color: transparent;
+  color: #dd700b;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+@media (min-width: 48rem) {
+  .motivation-form .input-group .login-btn {
+    font-size: 1.125rem;
+  }
+}
+.motivation-form .input-group .login-btn:hover {
+  background-color: #dd700b;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 0.25rem 0.75rem rgba(31, 36, 33, 0.2);
+  text-decoration: none;
+}
+.motivation-form .input-group .login-btn:focus {
+  outline: 0.1875rem solid #dd700b;
+  outline-offset: 0.125rem;
+  background-color: #dd700b;
+  color: #ffffff !important;
+  text-decoration: none;
+}
+.motivation-form .input-group .login-btn:active {
+  transform: translateY(0);
+}
+.motivation-form .input-group .login-btn:visited {
+  color: #dd700b;
 }
 
 .motivation-text {
