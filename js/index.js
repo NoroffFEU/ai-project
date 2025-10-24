@@ -8,6 +8,8 @@ import { toggleSidebar } from "./utils/toggleSidebar.mjs";
 import { renderSidebar } from "./ui/renderSidebar.mjs";
 import { registerHandler } from "./handlers/registerHandler.mjs";
 import { renderFooter } from "./ui/renderFooter.mjs";
+import { isLoggedIn } from "./auth/isLoggedIn.mjs";
+import { navigateTo } from "./helpers/navigateTo.mjs"
 // import { initWeeklyView } from "./weeklyView/main.js"; Put this in after isLoggedIn() in weeklyView/main.js
 
 // Wait for DOM to be fully loaded
@@ -56,6 +58,10 @@ const router = async () => {
       break;
 
     case "/profile.html":
+      if (!isLoggedIn()) {
+        navigateTo("/login.html");
+        return;
+      }
       break;
 
     default:
