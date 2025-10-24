@@ -1,0 +1,41 @@
+// Color Variables
+$primaryColor: #7c7d75;
+$secondaryColor: #adaca7;
+$tertiaryColor: #d9dadf;
+$pageBackgroundColor: #ffffff;
+$buttonColor: #dd700b;
+$buttonColorHover: darken(#dd700b, 10%);
+$textDarkColor: #1f2421;
+$textWhiteColor: #d9e1e1;
+$whiteColor: #ffffff;
+$footerBackgroundColor: #1f2421;
+$textDarkColor: #1f2421;
+$textWhiteColor: #d9e1e1;
+$headingsFont: Roboto, Helvetica, Arial;
+$paragraphFont: Roboto, Arial, Helvetica;
+$mainHeadingSizeDesktop: 3rem;
+$secondaryHeadingSizeDesktop: 2rem;
+$paragraphSizeDesktop: 1.125rem;
+$mainHeadingSizeMobile: 2.25rem;
+$secondaryHeadingSizeMobile: 1.75rem;
+$paragraphSizeMobile: 1rem;
+$darkModeButtonColor: #000000;
+$lightModeButtonColor: #ffffff;
+
+// Spacing
+$spacingXs: 0.5rem;
+$spacingSm: 1rem;
+$spacingMd: 1.5rem;
+$spacingLg: 2rem;
+$spacingXl: 3rem;
+
+// Layout
+$borderWidth: 0.125rem;
+$borderRadius: 0.5rem;
+
+// Breakpoints
+
+$breakpointSm: 36rem; //576px
+$breakpointMd: 48rem; //769px
+$breakpointLg: 62rem; //992px
+$breakpointXl: 75rem; //1200px
