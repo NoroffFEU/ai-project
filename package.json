@@ -1,25 +1,26 @@
 {
+  "type": "module",
   "name": "ai-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass src/scss:dist/css",
-    "watch": "sass --watch src/scss:dist/css & live-server",
-    "format": "prettier -w src/js/*.js",
-    "lint": "eslint src/js/*.js",
-    "lint-fix": "eslint src/js/*.js --cache --fix"
+    "build": "sass ./scss:dist/css",
+    "watch": "sass --watch ./scss:dist/css & live-server",
+    "format": "prettier -w ./js/*.js",
+    "lint": "eslint ./js/*.js",
+    "lint-fix": "eslint ./js/*.js --cache --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.8",
+    "braces": "^3.0.3",
     "file-saver": "^2.0.5",
     "html2canvas": "^1.4.1",
-    "jspdf": "^3.0.3",
-    "braces": "^3.0.3"
+    "jspdf": "^3.0.3"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
