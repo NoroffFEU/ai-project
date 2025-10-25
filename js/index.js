@@ -10,6 +10,8 @@ import { weeklyTaskHandler } from "./weeklyView/handler/weeklyTaskHandler.js";
 import { singleTaskHandler } from "./weeklyView/handler/singleTaskHandler.js";
 import { registerHandler } from "./handlers/registerHandler.mjs";
 import { renderFooter } from "./ui/renderFooter.mjs";
+import { setFavicon } from "./utils/favicons.js";
+
 import { isLoggedIn } from "./auth/isLoggedIn.mjs";
 import { navigateTo } from "./helpers/navigateTo.mjs"
 // import { initWeeklyView } from "./weeklyView/main.js"; Put this in after isLoggedIn() in weeklyView/main.js
@@ -31,6 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const router = async () => {
   const pathname = window.location.pathname;
+
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  setFavicon(prefersDark ? "dark" : "light");
 
   switch (pathname) {
     case "/":

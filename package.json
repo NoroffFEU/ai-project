@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "ai-project",
   "version": "1.0.0",
   "description": "",
