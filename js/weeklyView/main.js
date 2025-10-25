@@ -1,15 +1,6 @@
 import { initWeekPagination } from "./components/weekPagination.js";
-import { isLoggedIn } from "./utils/auth/isLoggedIn.js";
-import { getISOWeek, isoWeeksInYear } from "./utils/getISOWeek.js";
-import { showStatus } from "./utils/showStatusMessage.js";
 
-if (isLoggedIn()) {
-  console.log("User is logged in");
-  showStatus("Welcome back!", "success");
-} else {
-  console.log("User is not logged in");
-  showStatus("You are not logged in. Displaying dummy data", "warning");
-}
+import { getISOWeek, isoWeeksInYear } from "./utils/getISOWeek.js";
 
 let tasks = [];
 const uid = () => Math.random().toString(36).slice(2, 10);
