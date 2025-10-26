@@ -11,8 +11,6 @@ import { singleTaskHandler } from "./weeklyView/handler/singleTaskHandler.js";
 import { registerHandler } from "./handlers/registerHandler.mjs";
 import { renderFooter } from "./ui/renderFooter.mjs";
 // import { initWeeklyView } from "./weeklyView/main.js"; Put this in after isLoggedIn() in weeklyView/main.js
-import { weeklyTaskHandler } from "./weeklyView/handler/weeklyTaskHandler.js";
-import { singleTaskHandler } from "./weeklyView/handler/singleTaskHandler.js";
 
 // Wait for DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -46,6 +44,8 @@ const router = async () => {
 
     case "/weekly.html":
       weeklyTaskHandler();
+      handleWeeklySkeleton();
+      break;
 
     case "/register.html":
       registerHandler();
