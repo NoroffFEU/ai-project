@@ -1,0 +1,55 @@
+name: Deploy Vanilla.js to GitHub Pages
+
+on:
+  push:
+    branches: ["dev"]
+  # Optional: Allow manual triggers
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Create .nojekyll file
+        run: touch .nojekyll
+      
+      - name: Validate HTML (Optional)
+        run: |
+          # Install html5validator if needed
+          # pip install html5validator
+          # html5validator --root . --ignore "*.min.js"
+          echo "HTML validation skipped"
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          # Upload entire repository (excluding .git, node_modules, etc.)
+          path: '.'
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
