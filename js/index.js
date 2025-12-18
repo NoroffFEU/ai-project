@@ -13,7 +13,7 @@ import { renderFooter } from "./ui/renderFooter.mjs";
 import { setFavicon } from "./utils/favicons.js";
 
 import { isLoggedIn } from "./auth/isLoggedIn.mjs";
-import { navigateTo } from "./helpers/navigateTo.mjs"
+import { navigateTo } from "./helpers/navigateTo.mjs";
 // import { initWeeklyView } from "./weeklyView/main.js"; Put this in after isLoggedIn() in weeklyView/main.js
 
 // Wait for DOM to be fully loaded
@@ -51,9 +51,7 @@ const router = async () => {
 
     case "/weekly.html":
       weeklyTaskHandler();
-      handleWeeklySkeleton();
       break;
-
     case "/register.html":
       registerHandler();
       break;
