@@ -332,7 +332,6 @@
   height: auto;
 }
 
-
 .logo-gradient {
   // Visual
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -449,3 +448,10 @@
   }
 }
 
+#app-logo {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
