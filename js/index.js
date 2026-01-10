@@ -1,8 +1,5 @@
 import { handleTaskBoardData } from "./handlers/handleTaskBoardData.mjs";
-import {
-  handleTaskBoardSkeleton,
-  handleWeeklySkeleton,
-} from "./handlers/handleSkeletonLoader.mjs";
+import { handleTaskBoardSkeleton } from "./handlers/handleSkeletonLoader.mjs";
 import { loginHandler } from "./handlers/loginHandler.mjs";
 import { toggleSidebar } from "./utils/toggleSidebar.mjs";
 import { renderSidebar } from "./ui/renderSidebar.mjs";
