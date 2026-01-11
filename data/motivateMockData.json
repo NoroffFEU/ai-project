@@ -1,0 +1,83 @@
+{
+  "title": "AIMOT Mock Data - Motivational Responses",
+  "type": "botMotivation",
+  "description": "This dataset contains motivational responses for the AIMOT bot.",
+  "responses": [
+    {
+      "id": "mot-001",
+      "message": "You are making progress, even if it feels slow."
+    },
+    {
+      "id": "mot-002",
+      "message": "One small step forward is still a step forward."
+    },
+    {
+      "id": "mot-003",
+      "message": "You do not have to be perfect to move ahead."
+    },
+    { "id": "mot-004", "message": "Focus on what you can control right now." },
+    { "id": "mot-005", "message": "It is okay to take breaks and keep going." },
+    { "id": "mot-006", "message": "Consistency matters more than motivation." },
+    { "id": "mot-007", "message": "You are learning every time you try." },
+    { "id": "mot-008", "message": "Hard things become easier with practice." },
+    { "id": "mot-009", "message": "You are capable of more than you think." },
+    { "id": "mot-010", "message": "Start where you are and build from there." },
+    { "id": "mot-011", "message": "Progress comes from showing up again." },
+    { "id": "mot-012", "message": "You are allowed to grow at your own pace." },
+    { "id": "mot-013", "message": "Small wins add up over time." },
+    {
+      "id": "mot-014",
+      "message": "Doing something is better than doing nothing."
+    },
+    { "id": "mot-015", "message": "You are closer than you were yesterday." },
+    {
+      "id": "mot-016",
+      "message": "Mistakes are part of learning, not failure."
+    },
+    {
+      "id": "mot-017",
+      "message": "Keep going, even if it feels uncomfortable."
+    },
+    {
+      "id": "mot-018",
+      "message": "You do not need all the answers right now."
+    },
+    { "id": "mot-019", "message": "Effort today helps future you." },
+    { "id": "mot-020", "message": "One task at a time is enough." },
+    { "id": "mot-021", "message": "You are building momentum by continuing." },
+    {
+      "id": "mot-022",
+      "message": "It is okay to feel stuck and still move forward."
+    },
+    {
+      "id": "mot-023",
+      "message": "Progress is not always visible, but it is happening."
+    },
+    { "id": "mot-024", "message": "Trust the process and keep working." },
+    {
+      "id": "mot-025",
+      "message": "You are improving every time you practice."
+    },
+    { "id": "mot-026", "message": "Take a breath and try again." },
+    { "id": "mot-027", "message": "Focus on progress, not perfection." },
+    { "id": "mot-028", "message": "You are doing better than you think." },
+    { "id": "mot-029", "message": "Learning takes time, and that is normal." },
+    { "id": "mot-030", "message": "You can handle this step by step." },
+    { "id": "mot-031", "message": "Every attempt teaches you something." },
+    { "id": "mot-032", "message": "You do not need to rush to succeed." },
+    { "id": "mot-033", "message": "Showing up is already an achievement." },
+    { "id": "mot-034", "message": "You are allowed to learn slowly." },
+    { "id": "mot-035", "message": "Keep building, even on hard days." },
+    {
+      "id": "mot-036",
+      "message": "Your effort matters, even when it is quiet."
+    },
+    {
+      "id": "mot-037",
+      "message": "One good decision can change your direction."
+    },
+    { "id": "mot-038", "message": "You are moving forward by not giving up." },
+    { "id": "mot-039", "message": "Growth happens outside your comfort zone." },
+    { "id": "mot-040", "message": "You are on the right path, keep going." }
+  ]
+}
