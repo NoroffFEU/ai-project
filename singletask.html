@@ -44,7 +44,8 @@
       <div id="singleTaskContainer" class="mt-5"></div>
 
       <div class="dropdown mx-auto mt-5">
-        <button id="exportBtn" class="btn btn-outline-dark px-4 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <button id="exportBtn" class="btn btn-outline-dark px-4 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
           <i class="fa-solid fa-download"></i> Export list as
         </button>
         <ul class="dropdown-menu">
@@ -81,6 +82,28 @@
         <div class="modal-content">
           <div class="modal-body text-center" id="feedbackBody">Utført</div>
         </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div id="bot-container" class="bot-container" data-task-id="task-1">
+        <h2>Need a Boost?</h2>
+        <form class="motivation-form">
+          <div class="input-group">
+            <input id="motivateInput" type="text" placeholder="Ask for motivation..." class="form-input" />
+            <div class="button-row">
+              <button id="motivateBot" type="submit" class="motivate-bot" disabled aria-disabled="true">
+                Motivate me
+              </button>
+              <button id="submitButton" type="submit" class="btn-submit" disabled aria-disabled="true">
+                Submit
+              </button>
+            </div>
+            <a href="./login.html" id="auth-sim-login" class="login-btn">
+              Log in to use chatBot
+            </a>
+          </div>
+        </form>
+        <div id="movtivationOutput" class="motivation-text" style="display: none" aria-live="polite"></div>
       </div>
     </div>
   </main>
