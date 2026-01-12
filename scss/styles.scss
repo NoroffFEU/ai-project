@@ -3,7 +3,8 @@
 // @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "sidebar";
-// Reset & Base
+@import "footer"; // Reset & Base
+
 *,
 *::before,
 *::after {
