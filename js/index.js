@@ -29,6 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
 const router = async () => {
   const pathname = window.location.pathname;
 
+  const basePath = "/ai-project"; // Or dynamically get it if it can change
+  if (pathname.startsWith(basePath)) {
+    pathname = pathname.substring(basePath.length);
+    if (pathname === "") {
+      // If it was just "/ai-project", treat it as "/"
+      pathname = "/";
+    }
+  }
+
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   setFavicon(prefersDark ? "dark" : "light");
 
