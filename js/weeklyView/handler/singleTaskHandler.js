@@ -3,10 +3,14 @@ import { getTaskById } from "../data/tasks.js";
 import { getISOWeek } from "../utils/getISOWeek.js";
 import { deleteTask } from "../data/tasks.js";
 import { confirmModal, showFeedback } from "../helper/deleteConfirm.js";
+import { isLoggedIn } from "../../auth/isLoggedIn.mjs";
+
 export function singleTaskHandler() {
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
   const container = document.getElementById("singleTaskContainer");
+
+  initializeBotContainer();
 
   if (!container) return;
 
@@ -106,4 +110,36 @@ function escapeHtml(str) {
         m
       ],
   );
+}
+
+/**
+ * Initializes the bot container by checking login state and enabling/disabling controls
+ */
+function initializeBotContainer() {
+  const motivateBot = document.getElementById("motivateBot");
+  const submitButton = document.getElementById("submitButton");
+  const authLoginLink = document.getElementById("auth-sim-login");
+
+  setActive(motivateBot, isLoggedIn());
+  setActive(submitButton, isLoggedIn());
+  if (authLoginLink) {
+    authLoginLink.style.display = isLoggedIn() ? "none" : "block";
+  }
+}
+
+/**
+ * Sets the active state of an element based on login status
+ * @param {HTMLElement} element - The element to update
+ * @param {boolean} isLoggedIn - Whether the user is logged in
+ */
+function setActive(element, isLoggedIn) {
+  if (!element) return;
+
+  element.disabled = !isLoggedIn;
+
+  if (isLoggedIn) {
+    element.removeAttribute("aria-disabled");
+  } else {
+    element.setAttribute("aria-disabled", "true");
+  }
 }

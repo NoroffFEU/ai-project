@@ -1,4 +1,4 @@
-import { getFromLocalStorage } from "../utils/localStorage.mjs";
+import { getFromStorage } from "../utils/localStorage.mjs";
 
 /**
  * Fetches all tasks from the API.
@@ -17,7 +17,7 @@ export async function fetchTasks() {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${getFromLocalStorage("accessToken")}`,
+      Authorization: `Bearer ${getFromStorage("accessToken")}`,
       "X-Noroff-API-Key": "YOUR API KEY HERE", // Replace with your actual API key
     },
   };

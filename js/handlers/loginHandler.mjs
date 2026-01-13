@@ -48,13 +48,23 @@ async function submitForm(event) {
   const form = event.target;
   const loginButton = document.getElementById("login-button");
   const alertContainer = document.getElementById("alert-container");
-  const staySignedIn = document.getElementById("login-checkbox").checked;
+  const staySignedInCheckbox = document.getElementById("login-checkbox");
+  const staySignedIn = staySignedInCheckbox
+    ? staySignedInCheckbox.checked
+    : false;
 
   try {
     loginButton.disabled = true;
     loginButton.textContent = "Logging in...";
-    const { data: userData } = await loginUser(data);
+    const response = await loginUser(data);
+    const userData = response.data;
+
+    if (!userData || !userData.accessToken) {
+      throw new Error("Invalid response from server - missing access token");
+    }
+
     form.reset();
+
     // Choose storage based on "Stay signed in" checkbox
     const storage = staySignedIn ? localStorage : sessionStorage;
     storage.setItem("accessToken", userData.accessToken);
