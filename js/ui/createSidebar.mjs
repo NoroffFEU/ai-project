@@ -1,4 +1,5 @@
 import { isLoggedIn } from "./../auth/isLoggedIn.mjs";
+import { getFromStorage } from "./../utils/localStorage.mjs";
 
 export function createSidebar(
   homeLink,
@@ -32,7 +33,7 @@ export function createSidebar(
   profile.setAttribute("aria-label", "Go to your profile");
 
   profile.href = profileLink;
-  profile.textContent = "Username";
+  profile.textContent = getFromStorage("userName") || "Username";
 
   const logoutBtn = document.createElement("button");
   logoutBtn.type = "button";
