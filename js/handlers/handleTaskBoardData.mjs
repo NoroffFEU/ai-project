@@ -20,7 +20,9 @@ export async function handleTaskBoardData() {
   taskBoardContainer.innerHTML = "";
 
   if (isLoggedIn()) {
-    exportListButton.setAttribute("disabled", "false");
+    if (exportListButton) {
+      exportListButton.setAttribute("disabled", "false");
+    }
     try {
       const taskData = await fetchTasks();
       if (taskData) {
@@ -33,7 +35,9 @@ export async function handleTaskBoardData() {
     }
   } else {
     taskBoardModule.prepend(createGuestBanner());
-    exportListButton.setAttribute("disabled", "true");
+    if (exportListButton) {
+      exportListButton.setAttribute("disabled", "true");
+    }
 
     try {
       const fetchDemoData = await fetch("/data/mockData.json");
