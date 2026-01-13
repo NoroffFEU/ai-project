@@ -29,7 +29,7 @@
 <body>
   <header id="sidebarNav" class="sidebarNav"></header>
 
-  <main>
+  <main class="page-container">
     <img id="app-logo" class="my-2" src="./assets/logo/LogoBlack.svg" alt="logo" />
     <div id="login-prompt" class="text-center my-4">
       <p>Login to use all features of the app</p>
@@ -50,8 +50,7 @@
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel">
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -138,9 +137,8 @@
 
         <h2 class="h5 text-center mb-5 mt-5">Your tasks</h2>
         <ul id="taskList" class="list-group mb-0">
-          <li
-            class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2"
-            data-created-at="2025-10-03" data-due-date="2025-10-04">
+          <li class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2" data-created-at="2025-10-03"
+            data-due-date="2025-10-04">
             <div class="d-flex align-items-center">
               <input class="form-check-input me-2" type="checkbox" aria-label="..." />
               <span class="task-title">Do dishes</span>
@@ -149,9 +147,7 @@
               <i class="fas fa-times text-primary"></i>
             </button>
           </li>
-          <li
-            class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2"
-            data-created-at="2025-10-03">
+          <li class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2" data-created-at="2025-10-03">
             <div class="d-flex align-items-center">
               <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked />
               <span class="task-title">Wash the car</span>
@@ -160,9 +156,7 @@
               <i class="fas fa-times text-primary"></i>
             </a>
           </li>
-          <li
-            class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2"
-            data-created-at="2025-10-14">
+          <li class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2" data-created-at="2025-10-14">
             <div class="d-flex align-items-center">
               <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
               <span class="task-title">Shopping</span>
@@ -171,9 +165,7 @@
               <i class="fas fa-times text-primary"></i>
             </a>
           </li>
-          <li
-            class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2"
-            data-created-at="2025-10-03">
+          <li class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2" data-created-at="2025-10-03">
             <div class="d-flex align-items-center">
               <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
               <span class="task-title">Pay bills</span>
@@ -182,9 +174,7 @@
               <i class="fas fa-times text-primary"></i>
             </a>
           </li>
-          <li
-            class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-0"
-            data-created-at="2025-10-05">
+          <li class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-0" data-created-at="2025-10-05">
             <div class="d-flex align-items-center">
               <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked />
               <span class="task-title">Doctors appointment</span>
@@ -193,9 +183,7 @@
               <i class="fas fa-times text-primary"></i>
             </a>
           </li>
-          <li
-            class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2"
-            data-created-at="2025-10-15">
+          <li class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2" data-created-at="2025-10-15">
             <div class="d-flex align-items-center">
               <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
               <span class="task-title">Montly budget</span>
@@ -204,8 +192,7 @@
               <i class="fas fa-times text-primary"></i>
             </a>
           </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center rounded-0 mb-2"
-            data-created-at="2025-10-06">
+          <li class="list-group-item d-flex justify-content-between align-items-center rounded-0 mb-2" data-created-at="2025-10-06">
             <div class="d-flex align-items-center">
               <input class="form-check-input me-2" type="checkbox" />
               <span class="task-title">Study</span>
@@ -218,8 +205,7 @@
       </div>
 
       <div class="dropdown mx-auto mt-5">
-        <button id="exportBtn" class="btn btn-outline-dark px-4 dropdown-toggle" type="button" data-bs-toggle="dropdown"
-          aria-expanded="false">
+        <button id="exportBtn" class="btn btn-outline-dark px-4 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fa-solid fa-download"></i> Export list as
         </button>
         <ul class="dropdown-menu">
