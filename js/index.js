@@ -29,13 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
 const router = async () => {
   let pathname = window.location.pathname;
 
-  const basePath = "/ai-project"; // Or dynamically get it if it can change
+  const basePath = "/ai-project";
   if (pathname.startsWith(basePath)) {
-    pathname = pathname.substring(basePath.length);
-    if (pathname === "") {
-      // If it was just "/ai-project", treat it as "/"
-      pathname = "/";
-    }
+    pathname = pathname.substring(basePath.length) || "/";
   }
 
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
