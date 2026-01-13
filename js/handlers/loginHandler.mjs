@@ -5,9 +5,9 @@ import { gatherFormData } from "../utils/gatherFormData.mjs";
 /**
  * Initializes the login form handler by attaching a submit event listener.
  * This function should be called when the login page loads to set up form handling.
- * 
+ *
  * @returns {void}
- * 
+ *
  * @example
  * // Call on page load
  * loginHandler();
@@ -24,11 +24,11 @@ export function loginHandler() {
  * Handles the login form submission process.
  * Authenticates the user, stores credentials based on "Stay signed in" preference,
  * displays feedback messages, and redirects on success.
- * 
+ *
  * @async
  * @param {Event} event - The form submit event
  * @returns {Promise<void>}
- * 
+ *
  * @description
  * This function:
  * - Prevents default form submission
@@ -39,7 +39,7 @@ export function loginHandler() {
  * - Displays success message and redirects to home page after 1.5 seconds
  * - Shows error message if authentication fails
  * - Re-enables the login button in the finally block
- * 
+ *
  * @throws {Error} Displays error message to user if login fails
  */
 async function submitForm(event) {
@@ -49,7 +49,7 @@ async function submitForm(event) {
   const loginButton = document.getElementById("login-button");
   const alertContainer = document.getElementById("alert-container");
   const staySignedIn = document.getElementById("login-checkbox").checked;
-  
+
   try {
     loginButton.disabled = true;
     loginButton.textContent = "Logging in...";
@@ -64,7 +64,7 @@ async function submitForm(event) {
     displaySuccess("Login successful! Redirecting...", alertContainer);
 
     setTimeout(() => {
-      window.location.href = "/index.html";
+      window.location.href = "./index.html";
     }, 1500);
   } catch (error) {
     console.error(error);
