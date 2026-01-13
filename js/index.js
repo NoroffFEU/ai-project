@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const router = async () => {
-  const pathname = window.location.pathname;
+  let pathname = window.location.pathname;
 
   const basePath = "/ai-project"; // Or dynamically get it if it can change
   if (pathname.startsWith(basePath)) {
