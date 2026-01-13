@@ -13,5 +13,7 @@
  * }
  */
 export function isLoggedIn() {
-  return !!(localStorage.getItem("accessToken") || sessionStorage.getItem("accessToken"));
+  return !!(
+    localStorage.getItem("accessToken") || sessionStorage.getItem("accessToken")
+  );
 }

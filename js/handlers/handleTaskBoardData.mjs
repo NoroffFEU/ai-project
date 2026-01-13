@@ -16,10 +16,15 @@ export async function handleTaskBoardData() {
   const taskBoardModule = document.querySelector("#task-board-module");
   const taskBoardContainer = document.querySelector("#task-board-container");
   const exportListButton = document.querySelector("#export-list-button");
+  const loginPrompt = document.querySelector("#login-prompt");
 
   taskBoardContainer.innerHTML = "";
 
   if (isLoggedIn()) {
+    // Hide login prompt for logged-in users
+    if (loginPrompt) {
+      loginPrompt.style.setProperty("display", "none", "important");
+    }
     if (exportListButton) {
       exportListButton.setAttribute("disabled", "false");
     }
