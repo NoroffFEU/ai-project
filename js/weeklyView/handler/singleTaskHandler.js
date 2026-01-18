@@ -5,6 +5,21 @@ import { deleteTask } from "../data/tasks.js";
 import { confirmModal, showFeedback } from "../helper/deleteConfirm.js";
 import { isLoggedIn } from "../../auth/isLoggedIn.mjs";
 
+/**
+ * Initialize chatbot if the service is available
+ */
+async function initializeChatbotIfAvailable() {
+  try {
+    const chatbotService = await import("../../chatBot/chatService.mjs");
+    if (chatbotService && chatbotService.initializeChatbot) {
+      console.log("Initializing chatbot from singleTaskHandler");
+      await chatbotService.initializeChatbot();
+    }
+  } catch (e) {
+    console.log("Chatbot service not available:", e.message);
+  }
+}
+
 export function singleTaskHandler() {
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -116,15 +131,24 @@ function escapeHtml(str) {
  * Initializes the bot container by checking login state and enabling/disabling controls
  */
 function initializeBotContainer() {
+  // Updated IDs to match new chatbot interface
+  const motivateBtn = document.getElementById("motivateBtn");
+  const submitBtn = document.getElementById("submitBtn");
+  const authLoginLink = document.getElementById("auth-sim-login");
+  
+  // Also try old IDs for backwards compatibility
   const motivateBot = document.getElementById("motivateBot");
   const submitButton = document.getElementById("submitButton");
-  const authLoginLink = document.getElementById("auth-sim-login");
 
-  setActive(motivateBot, isLoggedIn());
-  setActive(submitButton, isLoggedIn());
+  setActive(motivateBtn || motivateBot, isLoggedIn());
+  setActive(submitBtn || submitButton, isLoggedIn());
+  
   if (authLoginLink) {
     authLoginLink.style.display = isLoggedIn() ? "none" : "block";
   }
+  
+  // Initialize the new chatbot service
+  initializeChatbotIfAvailable();
 }
 
 /**
