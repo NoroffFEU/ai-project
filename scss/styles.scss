@@ -850,3 +850,196 @@ footer a {
     font-size: 1.125rem;
   }
 }
+
+// Chat Interface Styles
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+  
+  @media (max-width: 768px) {
+    gap: 0.875rem;
+  }
+}
+
+.chat-message {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.3s ease-in;
+  
+  &.bot-message {
+    flex-direction: row;
+  }
+  
+  &.user-message {
+    flex-direction: row-reverse;
+  }
+  
+  .message-icon {
+    flex-shrink: 0;
+  }
+  
+  .message-sender {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.chat-bubble {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  word-wrap: break-word;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  
+  @media (max-width: 768px) {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.9rem;
+  }
+  
+  &.bg-light {
+    background-color: #e9ecef !important;
+    color: #212529;
+    border: 1px solid #dee2e6;
+  }
+  
+  &.bg-primary {
+    background-color: $buttonColor !important;
+    color: $whiteColor;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#bot-container {
+  .card-body {
+    padding: 1.5rem;
+    
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
+  }
+  
+  #taskHeader {
+    background-color: #f8f9fa;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    
+    #taskTitle {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: $textDarkColor;
+      margin-bottom: 0.5rem;
+    }
+    
+    #taskDescription {
+      font-size: 1rem;
+      color: #6c757d;
+      margin-bottom: 0.75rem;
+    }
+    
+    .text-muted {
+      font-size: 0.875rem;
+      
+      i {
+        margin-right: 0.25rem;
+      }
+    }
+    
+    #colorBadge {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      text-transform: capitalize;
+    }
+  }
+  
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  #userInput {
+    &:disabled {
+      background-color: #e9ecef;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+  
+  #chat-buttons {
+    .btn {
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+    }
+  }
+  
+  #loginPrompt {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+    
+    p {
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+#loginModal {
+  .modal-header {
+    border-bottom: 2px solid #0d6efd;
+    
+    .modal-title {
+      font-weight: 600;
+      
+      i {
+        font-size: 1.25rem;
+      }
+    }
+  }
+  
+  .modal-body {
+    .lead {
+      font-weight: 600;
+      color: $textDarkColor;
+    }
+    
+    .btn {
+      font-weight: 500;
+      padding: 0.75rem 1.5rem;
+      
+      i {
+        margin-right: 0.5rem;
+      }
+      
+      @media (max-width: 768px) {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.95rem;
+      }
+    }
+  }
+}

@@ -7,9 +7,7 @@
   <meta name="description" content="" />
   <link rel="icon" href="" />
   <title>Open A.I | Daily Planner</title>
-  <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" /> -->
   <link rel="stylesheet" href="./scss/styles.css" />
-  <!-- <link rel="stylesheet" href="/dist/css/weekView.css" /> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 
@@ -23,6 +21,7 @@
   <script src="https://kit.fontawesome.com/6fb668811a.js" crossorigin="anonymous"></script>
   <script src="./js/ui/renderSidebar.mjs" defer type="module"></script>
   <script src="./js/utils/toggleSidebar.mjs" defer type="module"></script>
+  <script src="./js/chatBot/chatService.mjs" defer type="module"></script>
 </head>
 
 <body>
@@ -56,7 +55,6 @@
       </div>
     </div>
 
-    <!-- Delete confirm modal -->
     <div class="modal fade" id="confirmModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -84,6 +82,34 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <i class="fa-solid fa-lightbulb text-primary"></i> Unlock Full Motivation Features
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center py-4">
+            <p class="lead mb-3">You just experienced a preview!</p>
+            <p class="text-muted mb-4">
+              Log in to unlock unlimited AI-powered motivational messages tailored to your tasks and goals.
+            </p>
+            <div class="d-grid gap-2">
+              <a href="./login.html" class="btn btn-primary btn-lg">
+                <i class="fa-solid fa-right-to-bracket"></i> Log In
+              </a>
+              <a href="./register.html" class="btn btn-outline-primary">
+                <i class="fa-solid fa-user-plus"></i> Create Account
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class="container mt-5">
       <div id="bot-container" class="card-body card mt-5" data-task-id="task-1">
         <h2>Need a Boost?</h2>
@@ -98,12 +124,50 @@
                 Submit
               </button>
             </div>
-            <a href="./login.html" id="auth-sim-login" class="login-btn">
-              Log in to use chatBot
+          </div>
+
+          <h3 class="h5 mb-3">
+            <i class="fa-solid fa-robot"></i> AI Assistant
+          </h3>
+          
+          <div id="chatMessages" class="chat-messages mb-4">
+          </div>
+
+
+          <div class="input-group mb-3">
+            <input 
+              id="userInput" 
+              type="text" 
+              class="form-control" 
+              placeholder="...type your message here" 
+              disabled 
+              aria-label="Chat input"
+              aria-describedby="chat-buttons"
+            />
+          </div>
+
+          <div id="chat-buttons" class="d-flex gap-2 justify-content-end">
+            <button 
+              id="motivateBtn" 
+              type="button" 
+              class="btn btn-primary" 
+              data-bs-toggle="tooltip" 
+              data-bs-placement="top"
+              title="Log in to unlock unlimited AI-powered motivation">
+              <i class="fa-solid fa-lightbulb"></i> Motivate me
+            </button>
+            <button id="submitBtn" type="button" class="btn btn-success" disabled>
+              <i class="fa-solid fa-paper-plane"></i> Submit
+            </button>
+          </div>
+
+          <div id="loginPrompt" class="mt-3 text-center">
+            <p class="text-muted">Log in to interact with the AI assistant</p>
+            <a href="./login.html" class="btn btn-outline-primary">
+              <i class="fa-solid fa-right-to-bracket"></i> Log in to use chatbot
             </a>
           </div>
-        </form>
-        <div id="movtivationOutput" class="motivation-text" style="display: none" aria-live="polite"></div>
+        </div>
       </div>
     </div>
   </main>
