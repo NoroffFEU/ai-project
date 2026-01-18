@@ -43,8 +43,7 @@
       <div id="singleTaskContainer" class="mt-5"></div>
 
       <div class="dropdown mx-auto mt-5">
-        <button id="exportBtn" class="btn btn-outline-dark px-4 dropdown-toggle" type="button" data-bs-toggle="dropdown"
-          aria-expanded="false">
+        <button id="exportBtn" class="btn btn-outline-dark px-4 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fa-solid fa-download"></i> Export list as
         </button>
         <ul class="dropdown-menu">
@@ -109,51 +108,41 @@
         </div>
       </div>
     </div>
-    
+
     <div class="container mt-5">
-      <div id="bot-container" class="card-body card mt-5" data-task-id="task-1">
-        <h2>Need a Boost?</h2>
-        <form class="motivation-form bot-container">
-          <div class="input-group">
-            <input id="motivateInput" type="text" placeholder="Ask for motivation..." class="form-input" />
-            <div class="button-row">
-              <button id="motivateBot" type="submit" class="btn-submit" disabled aria-disabled="true">
-                Motivate me
-              </button>
-              <button id="submitButton" type="submit" class="btn-submit" disabled aria-disabled="true">
-                Submit
-              </button>
+      <div id="bot-container" class="card mt-5">
+        <div class="card-body">
+          <div id="taskHeader" class="mb-4 pb-3 border-bottom">
+            <h2 id="taskTitle" class="mb-2">Workout</h2>
+            <p id="taskDescription" class="text-muted mb-2">I want to workout as a novice, plan me a simple routine to start</p>
+            <div class="d-flex gap-3 flex-wrap">
+              <small class="text-muted">
+                <i class="fa-solid fa-calendar"></i>
+                <span id="taskDueDate">Due: Oct 2, 2025</span>
+              </small>
+              <small class="text-muted">
+                <i class="fa-solid fa-palette"></i>
+                <span id="taskColor">
+                  <span id="colorBadge" class="badge" style="background-color: #4a6fa5;">Fitness</span>
+                </span>
+              </small>
             </div>
           </div>
 
           <h3 class="h5 mb-3">
             <i class="fa-solid fa-robot"></i> AI Assistant
           </h3>
-          
+
           <div id="chatMessages" class="chat-messages mb-4">
           </div>
 
 
           <div class="input-group mb-3">
-            <input 
-              id="userInput" 
-              type="text" 
-              class="form-control" 
-              placeholder="...type your message here" 
-              disabled 
-              aria-label="Chat input"
-              aria-describedby="chat-buttons"
-            />
+            <input id="userInput" type="text" class="form-control" placeholder="...type your message here" disabled aria-label="Chat input" aria-describedby="chat-buttons" />
           </div>
 
           <div id="chat-buttons" class="d-flex gap-2 justify-content-end">
-            <button 
-              id="motivateBtn" 
-              type="button" 
-              class="btn btn-primary" 
-              data-bs-toggle="tooltip" 
-              data-bs-placement="top"
-              title="Log in to unlock unlimited AI-powered motivation">
+            <button id="motivateBtn" type="button" class="btn btn-primary" disabled>
               <i class="fa-solid fa-lightbulb"></i> Motivate me
             </button>
             <button id="submitBtn" type="button" class="btn btn-success" disabled>
@@ -170,6 +159,7 @@
         </div>
       </div>
     </div>
+
   </main>
 
   <footer id="footer-container" class="footer"></footer>
