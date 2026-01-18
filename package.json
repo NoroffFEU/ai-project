@@ -22,7 +22,7 @@
     "braces": "^3.0.3",
     "file-saver": "^2.0.5",
     "html2canvas": "^1.4.1",
-    "jspdf": "^3.0.3"
+    "jspdf": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "^8.57.0",

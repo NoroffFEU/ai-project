@@ -1,4 +1,4 @@
-import { getFromLocalStorage } from "../utils/localStorage.mjs";
+import { getFromStorage } from "../utils/localStorage.mjs";
 
 /**
  * Deletes an existing task via API.
@@ -19,7 +19,7 @@ export async function deleteTask(taskId) {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${getFromLocalStorage("accessToken")}`,
+      Authorization: `Bearer ${getFromStorage("accessToken")}`,
       "X-Noroff-API-Key": "YOUR API KEY HERE", // Replace with your actual API key
     },
   };

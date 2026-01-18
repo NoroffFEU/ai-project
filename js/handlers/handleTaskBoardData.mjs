@@ -16,11 +16,18 @@ export async function handleTaskBoardData() {
   const taskBoardModule = document.querySelector("#task-board-module");
   const taskBoardContainer = document.querySelector("#task-board-container");
   const exportListButton = document.querySelector("#export-list-button");
+  const loginPrompt = document.querySelector("#login-prompt");
 
   taskBoardContainer.innerHTML = "";
 
   if (isLoggedIn()) {
-    exportListButton.setAttribute("disabled", "false");
+    // Hide login prompt for logged-in users
+    if (loginPrompt) {
+      loginPrompt.style.setProperty("display", "none", "important");
+    }
+    if (exportListButton) {
+      exportListButton.setAttribute("disabled", "false");
+    }
     try {
       const taskData = await fetchTasks();
       if (taskData) {
@@ -33,7 +40,9 @@ export async function handleTaskBoardData() {
     }
   } else {
     taskBoardModule.prepend(createGuestBanner());
-    exportListButton.setAttribute("disabled", "true");
+    if (exportListButton) {
+      exportListButton.setAttribute("disabled", "true");
+    }
 
     try {
       const fetchDemoData = await fetch("/data/mockData.json");

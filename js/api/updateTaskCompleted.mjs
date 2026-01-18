@@ -1,4 +1,4 @@
-import { getFromLocalStorage } from "../utils/localStorage.mjs";
+import { getFromStorage } from "../utils/localStorage.mjs";
 
 /**
  * Updates the completion status of a task via API.
@@ -22,7 +22,7 @@ export async function updateTaskCompleted(taskId, completed) {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${getFromLocalStorage("accessToken")}`,
+      Authorization: `Bearer ${getFromStorage("accessToken")}`,
       "X-Noroff-API-Key": "YOUR API KEY HERE", // Replace with your actual API key
     },
     body: JSON.stringify({

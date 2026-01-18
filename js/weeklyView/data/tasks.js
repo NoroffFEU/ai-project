@@ -1,7 +1,7 @@
 import {
   addToLocalStorage,
   getFromLocalStorage,
-} from "/js/utils/localStorage.mjs";
+} from "../../utils/localStorage.mjs";
 
 const KEY = "tasks";
 
