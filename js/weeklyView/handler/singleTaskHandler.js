@@ -25,8 +25,6 @@ export function singleTaskHandler() {
   const id = params.get("id");
   const container = document.getElementById("singleTaskContainer");
 
-  initializeBotContainer();
-
   if (!container) return;
 
   if (!id) {
@@ -98,6 +96,9 @@ export function singleTaskHandler() {
     },
     { once: true },
   );
+  
+  // Initialize bot container after task is rendered
+  initializeBotContainer();
 }
 
 function mapColor(color) {
@@ -130,8 +131,11 @@ function escapeHtml(str) {
 /**
  * Initializes the bot container by checking login state and enabling/disabling controls
  */
-function initializeBotContainer() {
-  // Updated IDs to match new chatbot interface
+async function initializeBotContainer() {
+  // First initialize the chatbot service
+  await initializeChatbotIfAvailable();
+  
+  // Then set button states (but chatService.mjs will override these anyway)
   const motivateBtn = document.getElementById("motivateBtn");
   const submitBtn = document.getElementById("submitBtn");
   const authLoginLink = document.getElementById("auth-sim-login");
@@ -146,9 +150,6 @@ function initializeBotContainer() {
   if (authLoginLink) {
     authLoginLink.style.display = isLoggedIn() ? "none" : "block";
   }
-  
-  // Initialize the new chatbot service
-  initializeChatbotIfAvailable();
 }
 
 /**

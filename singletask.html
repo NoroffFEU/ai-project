@@ -82,6 +82,33 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <i class="fa-solid fa-lightbulb text-primary"></i> Unlock Full Motivation Features
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center py-4">
+            <p class="lead mb-3">You just experienced a preview!</p>
+            <p class="text-muted mb-4">
+              Log in to unlock unlimited AI-powered motivational messages tailored to your tasks and goals.
+            </p>
+            <div class="d-grid gap-2">
+              <a href="./login.html" class="btn btn-primary btn-lg">
+                <i class="fa-solid fa-right-to-bracket"></i> Log In
+              </a>
+              <a href="./register.html" class="btn btn-outline-primary">
+                <i class="fa-solid fa-user-plus"></i> Create Account
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <div class="container mt-5">
       <div id="bot-container" class="card mt-5">
@@ -124,7 +151,13 @@
           </div>
 
           <div id="chat-buttons" class="d-flex gap-2 justify-content-end">
-            <button id="motivateBtn" type="button" class="btn btn-primary" disabled>
+            <button 
+              id="motivateBtn" 
+              type="button" 
+              class="btn btn-primary" 
+              data-bs-toggle="tooltip" 
+              data-bs-placement="top"
+              title="Log in to unlock unlimited AI-powered motivation">
               <i class="fa-solid fa-lightbulb"></i> Motivate me
             </button>
             <button id="submitBtn" type="button" class="btn btn-success" disabled>

@@ -1,4 +1,5 @@
 import { getFromLocalStorage } from '../utils/localStorage.mjs';
+import { isLoggedIn as checkIsLoggedIn } from '../auth/isLoggedIn.mjs';
 
 const BOT_NAME = 'AI Bot Name';
 
@@ -66,11 +67,6 @@ async function loadMotivationData() {
     console.error('Error loading motivation data:', error);
     return null;
   }
-}
-
-function isUserLoggedIn() {
-  const token = getFromLocalStorage('token') || getFromLocalStorage('accessToken');
-  return !!token;
 }
 
 function getTaskIdFromUrl() {
@@ -272,7 +268,7 @@ async function initializeChatInterface() {
     updateTaskHeader(taskData);
   }
   
-  const isLoggedIn = isUserLoggedIn();
+  const isLoggedIn = checkIsLoggedIn();
   console.log('User logged in:', isLoggedIn);
   
   const userInput = document.getElementById('userInput');
@@ -318,7 +314,11 @@ async function initializeChatInterface() {
       userInput.disabled = true;
       userInput.placeholder = '...';
     }
-    if (motivateBtn) motivateBtn.disabled = true;
+    if (motivateBtn) {
+      motivateBtn.disabled = false;
+      motivateBtn.style.opacity = '0.65';
+      motivateBtn.style.cursor = 'pointer';
+    }
     if (loginPrompt) loginPrompt.style.display = 'block';
     
   } else {
@@ -327,7 +327,14 @@ async function initializeChatInterface() {
       userInput.disabled = false;
       userInput.placeholder = 'Type your message...';
     }
-    if (motivateBtn) motivateBtn.disabled = false;
+    if (motivateBtn) {
+      motivateBtn.disabled = false;
+      motivateBtn.style.opacity = '1';
+      motivateBtn.style.cursor = 'pointer';
+      motivateBtn.removeAttribute('data-bs-toggle');
+      motivateBtn.removeAttribute('data-bs-original-title');
+      motivateBtn.removeAttribute('title');
+    }
     if (submitBtn) submitBtn.disabled = false;
     if (loginPrompt) loginPrompt.style.display = 'none';
     
@@ -340,18 +347,37 @@ async function initializeChatInterface() {
 }
 
 async function handleMotivateClick() {
-  const isLoggedIn = isUserLoggedIn();
-  
-  if (!isLoggedIn) {
-    window.location.href = './login.html';
-    return;
-  }
-  
+  console.log('handleMotivateClick called - user is logged in');
   const motivationData = await loadMotivationData();
+  console.log('Motivation data loaded:', motivationData);
   if (motivationData && motivationData.responses) {
     const randomIndex = Math.floor(Math.random() * motivationData.responses.length);
     const motivation = motivationData.responses[randomIndex];
+    console.log('Adding motivation message:', motivation.message);
     addMessageToChat(motivation.message, 'bot');
+  }
+}
+
+function showLoginModal() {
+  console.log('showLoginModal called');
+  const modal = document.getElementById('loginModal');
+  console.log('Modal element found:', modal);
+  
+  if (modal) {
+    if (typeof bootstrap !== 'undefined') {
+      let bsModal = bootstrap.Modal.getInstance(modal);
+      if (!bsModal) {
+        bsModal = new bootstrap.Modal(modal);
+      }
+      bsModal.show();
+      console.log('Modal shown');
+    } else {
+      console.error('Bootstrap is not defined');
+      window.location.href = './login.html';
+    }
+  } else {
+    console.error('Modal element not found, redirecting to login.html');
+    window.location.href = './login.html';
   }
 }
 
@@ -380,12 +406,26 @@ function handleKeyPress(event) {
 }
 
 function initializeEventListeners() {
+  console.log('initializeEventListeners called');
   const motivateBtn = document.getElementById('motivateBtn');
   const submitBtn = document.getElementById('submitBtn');
   const userInput = document.getElementById('userInput');
   
+  console.log('motivateBtn found:', motivateBtn);
+  
   if (motivateBtn) {
-    motivateBtn.addEventListener('click', handleMotivateClick);
+    motivateBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      console.log('Motivate button clicked');
+      console.log('User logged in:', checkIsLoggedIn());
+      
+      if (!checkIsLoggedIn()) {
+        showLoginModal();
+      } else {
+        handleMotivateClick();
+      }
+    });
+    console.log('Event listener added to motivateBtn');
   }
   
   if (submitBtn) {
@@ -400,6 +440,9 @@ function initializeEventListeners() {
 export async function initializeChatbot() {
   await initializeChatInterface();
   initializeEventListeners();
+  
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 }
 
 document.addEventListener('DOMContentLoaded', () => {
