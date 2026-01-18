@@ -11,7 +11,7 @@ export const renderSidebar = () => {
   headerNav.append(
     createSidebar(
       "./index.html",
-      "./singletask.html",
+      // "./singletask.html",
       "./weekly.html",
       "./about.html",
       "./faq.html",
@@ -20,7 +20,7 @@ export const renderSidebar = () => {
       "./profile.html",
     ),
   );
-  
+
   // Initialize logout functionality
   logOut("./index.html");
 };
