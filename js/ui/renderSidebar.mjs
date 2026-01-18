@@ -11,7 +11,7 @@ export const renderSidebar = () => {
   headerNav.append(
     createSidebar(
       "./index.html",
-      // "./singletask.html",
+      "./singletask.html",
       "./weekly.html",
       "./about.html",
       "./faq.html",
