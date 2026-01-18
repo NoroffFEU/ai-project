@@ -68,7 +68,7 @@ export function createSidebar(
 
   const links = [
     { href: homeLink, text: "Home" },
-    { href: singleTaskLink, text: "Task" },
+    // { href: singleTaskLink, text: "Task" },
     { href: weekLink, text: "Your Week" },
     { href: aboutLink, text: "About" },
     { href: faqLink, text: "FAQ" },
