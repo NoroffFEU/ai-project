@@ -111,22 +111,18 @@
     </div>
     
     <div class="container mt-5">
-      <div id="bot-container" class="card mt-5">
-        <div class="card-body">
-          <div id="taskHeader" class="mb-4 pb-3 border-bottom">
-            <h2 id="taskTitle" class="mb-2">Workout</h2>
-            <p id="taskDescription" class="text-muted mb-2">I want to workout as a novice, plan me a simple routine to start</p>
-            <div class="d-flex gap-3 flex-wrap">
-              <small class="text-muted">
-                <i class="fa-solid fa-calendar"></i> 
-                <span id="taskDueDate">Due: Oct 2, 2025</span>
-              </small>
-              <small class="text-muted">
-                <i class="fa-solid fa-palette"></i> 
-                <span id="taskColor">
-                  <span id="colorBadge" class="badge" style="background-color: #4a6fa5;">Fitness</span>
-                </span>
-              </small>
+      <div id="bot-container" class="card-body card mt-5" data-task-id="task-1">
+        <h2>Need a Boost?</h2>
+        <form class="motivation-form bot-container">
+          <div class="input-group">
+            <input id="motivateInput" type="text" placeholder="Ask for motivation..." class="form-input" />
+            <div class="button-row">
+              <button id="motivateBot" type="submit" class="btn-submit" disabled aria-disabled="true">
+                Motivate me
+              </button>
+              <button id="submitButton" type="submit" class="btn-submit" disabled aria-disabled="true">
+                Submit
+              </button>
             </div>
           </div>
 
