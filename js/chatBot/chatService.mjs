@@ -21,10 +21,8 @@ async function loadTaskData(taskId) {
       return normalizedTitle === taskId || normalizedTitleNoThe === taskId;
     });
     
-    console.log('Task data loaded:', task);
     return task;
   } catch (error) {
-    console.error('Error loading task data:', error);
     return null;
   }
 }
@@ -33,21 +31,16 @@ async function loadChatMockData(taskId = 'workout') {
   try {
     const response = await fetch('./data/chatMockData.json');
     if (!response.ok) {
-      console.error('Failed to load chat mock data. Status:', response.status);
       throw new Error(`Failed to load chat mock data: ${response.status}`);
     }
     const data = await response.json();
-    console.log('Chat mock data loaded successfully');
     
     if (data.tasks && data.tasks[taskId]) {
-      console.log(`Found conversation for task: ${taskId}`);
       return data.tasks[taskId];
     } else {
-      console.log(`No conversation found for ${taskId}, using workout as fallback`);
       return data.tasks.workout || { conversation: [] };
     }
   } catch (error) {
-    console.error('Error loading chat mock data:', error);
     return null;
   }
 }
@@ -57,14 +50,11 @@ async function loadMotivationData() {
   try {
     const response = await fetch('./data/motivateMockData.json');
     if (!response.ok) {
-      console.error('Failed to load motivation data. Status:', response.status);
       throw new Error(`Failed to load motivation data: ${response.status}`);
     }
     const data = await response.json();
-    console.log('Motivation data loaded successfully');
     return data;
   } catch (error) {
-    console.error('Error loading motivation data:', error);
     return null;
   }
 }
@@ -130,24 +120,17 @@ function createChatMessage(message, sender) {
 }
 
 function displayChatMessages(messages) {
-  console.log('displayChatMessages called with', messages?.length, 'messages');
-  
   const chatContainer = document.getElementById('chatMessages');
   if (!chatContainer) {
-    console.error('Chat container not found!');
     return;
   }
   
-  console.log('Chat container found, clearing and adding messages...');
   chatContainer.innerHTML = '';
   
   messages.forEach((msg, index) => {
-    console.log(`Adding message ${index + 1}:`, msg.sender, msg.message.substring(0, 50) + '...');
     const messageElement = createChatMessage(msg.message, msg.sender);
     chatContainer.appendChild(messageElement);
   });
-  
-  console.log('All messages added. Total children:', chatContainer.children.length);
   
   chatContainer.scrollTop = chatContainer.scrollHeight;
 }
@@ -195,8 +178,6 @@ function showNextMockMessage() {
   const submitBtn = document.getElementById('submitBtn');
   
   if (!isInteractiveMockMode || currentMessageIndex >= mockConversation.length) {
-    console.log('End of mock conversation');
-    
     if (userInput) {
       userInput.value = 'End of demo';
       userInput.disabled = true;
@@ -259,17 +240,13 @@ function handleMockSubmit() {
 }
 
 async function initializeChatInterface() {
-  console.log('Initializing chat interface...');
-  
   const taskId = getTaskIdFromUrl();
-  console.log('Loading task data for:', taskId);
   const taskData = await loadTaskData(taskId);
   if (taskData) {
     updateTaskHeader(taskData);
   }
   
   const isLoggedIn = checkIsLoggedIn();
-  console.log('User logged in:', isLoggedIn);
   
   const userInput = document.getElementById('userInput');
   const motivateBtn = document.getElementById('motivateBtn');
@@ -277,22 +254,10 @@ async function initializeChatInterface() {
   const loginPrompt = document.getElementById('loginPrompt');
   const chatContainer = document.getElementById('chatMessages');
   
-  console.log('Elements found:', {
-    userInput: !!userInput,
-    motivateBtn: !!motivateBtn,
-    submitBtn: !!submitBtn,
-    loginPrompt: !!loginPrompt,
-    chatContainer: !!chatContainer
-  });
-  
   if (!isLoggedIn) {
-    console.log('Loading mock data for unauthenticated user...');
     const mockData = await loadChatMockData(taskId);
-    console.log('Mock data received:', mockData);
     
     if (mockData && mockData.conversation) {
-      console.log('Starting interactive mock mode with', mockData.conversation.length, 'messages');
-      
       isInteractiveMockMode = true;
       mockConversation = mockData.conversation;
       currentMessageIndex = 0;
@@ -304,7 +269,6 @@ async function initializeChatInterface() {
       showNextMockMessage();
       
     } else {
-      console.error('No conversation data found in mock data');
       if (chatContainer) {
         chatContainer.innerHTML = '<p class="text-danger text-center">Error loading chat data. Please refresh the page.</p>';
       }
@@ -322,7 +286,6 @@ async function initializeChatInterface() {
     if (loginPrompt) loginPrompt.style.display = 'block';
     
   } else {
-    console.log('User is logged in - enabling interactive mode');
     if (userInput) {
       userInput.disabled = false;
       userInput.placeholder = 'Type your message...';
@@ -342,26 +305,19 @@ async function initializeChatInterface() {
       chatContainer.innerHTML = '<p class="text-muted text-center">Start a conversation with the AI assistant</p>';
     }
   }
-  
-  console.log('Chat interface initialized');
 }
 
 async function handleMotivateClick() {
-  console.log('handleMotivateClick called - user is logged in');
   const motivationData = await loadMotivationData();
-  console.log('Motivation data loaded:', motivationData);
   if (motivationData && motivationData.responses) {
     const randomIndex = Math.floor(Math.random() * motivationData.responses.length);
     const motivation = motivationData.responses[randomIndex];
-    console.log('Adding motivation message:', motivation.message);
     addMessageToChat(motivation.message, 'bot');
   }
 }
 
 function showLoginModal() {
-  console.log('showLoginModal called');
   const modal = document.getElementById('loginModal');
-  console.log('Modal element found:', modal);
   
   if (modal) {
     if (typeof bootstrap !== 'undefined') {
@@ -370,13 +326,10 @@ function showLoginModal() {
         bsModal = new bootstrap.Modal(modal);
       }
       bsModal.show();
-      console.log('Modal shown');
     } else {
-      console.error('Bootstrap is not defined');
       window.location.href = './login.html';
     }
   } else {
-    console.error('Modal element not found, redirecting to login.html');
     window.location.href = './login.html';
   }
 }
@@ -406,18 +359,13 @@ function handleKeyPress(event) {
 }
 
 function initializeEventListeners() {
-  console.log('initializeEventListeners called');
   const motivateBtn = document.getElementById('motivateBtn');
   const submitBtn = document.getElementById('submitBtn');
   const userInput = document.getElementById('userInput');
   
-  console.log('motivateBtn found:', motivateBtn);
-  
   if (motivateBtn) {
     motivateBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      console.log('Motivate button clicked');
-      console.log('User logged in:', checkIsLoggedIn());
       
       if (!checkIsLoggedIn()) {
         showLoginModal();
@@ -425,7 +373,6 @@ function initializeEventListeners() {
         handleMotivateClick();
       }
     });
-    console.log('Event listener added to motivateBtn');
   }
   
   if (submitBtn) {
@@ -446,8 +393,5 @@ export async function initializeChatbot() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOMContentLoaded - Starting chatbot initialization');
   initializeChatbot();
 });
-
-console.log('chatService.mjs loaded');
