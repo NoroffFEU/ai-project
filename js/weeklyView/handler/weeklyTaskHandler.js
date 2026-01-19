@@ -4,6 +4,7 @@ import { getAllTasks, saveTask } from "../data/tasks.js";
 import { renderTaskByWeek } from "../ui/renderTaskByWeek.js";
 import { getISOWeek, isoWeeksInYear } from "../utils/getISOWeek.js";
 import { initWeekPagination } from "../components/weekPagination.js";
+import { isLoggedIn } from "../../auth/isLoggedIn.mjs";
 
 const state = { week: null, year: null };
 
@@ -48,6 +49,12 @@ function bootstrapDummyTasksFromDOMOnce() {
 }
 
 export function weeklyTaskHandler() {
+  // Hide login prompt if user is logged in
+  const loginPrompt = document.querySelector("#login-prompt");
+  if (isLoggedIn() && loginPrompt) {
+    loginPrompt.style.setProperty("display", "none", "important");
+  }
+
   const { week, year } = getISOWeek(new Date());
   state.week = week;
   state.year = year;

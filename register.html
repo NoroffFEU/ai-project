@@ -1,33 +1,25 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--  generic favicon -->
-    <link rel="icon" href="/assets/favicon/iconBlack.svg" />
-    <!--  script to swap light/dark -->
-    <script src="/src/js/utils/favicons.js" defer></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="/scss/styles.css" />
-    <script
-      src="https://kit.fontawesome.com/40355c2075.js"
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" src="/js/index.js"></script>
-  </head>
-  <body>
-    <img
-      id="app-logo"
-      class="my-2"
-      src="/assets/logo/LogoBlack.svg"
-      alt="logo"
-    />
+  <!--  generic favicon -->
+  <link rel="icon" href="./assets/favicon/iconBlack.svg" />
+  <!--  script to swap light/dark -->
+  <!--  <script src="./src/js/utils/favicons.js" defer></script> -->
+
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./scss/styles.css" />
+  <script src="https://kit.fontawesome.com/40355c2075.js" crossorigin="anonymous"></script>
+  <script type="module" src="./js/index.js"></script>
+</head>
+
+<body>
+  <main class="page-container">
+    <img id="app-logo" class="my-2" src="./assets/logo/LogoBlack.svg" alt="logo" />
     <header id="sidebarNav" class="sidebarNav"></header>
 
     <!-- Register form -->
@@ -37,57 +29,21 @@
 
         <!-- Username -->
         <label for="reg-name" class="form-label d-flex">Username</label>
-        <input
-          name="name"
-          type="text"
-          id="reg-name"
-          class="form-control bg-light"
-          placeholder="Username"
-          pattern="[A-Za-z0-9_]+"
-          title="Name must not contain punctuation symbols apart from underscore (_)"
-          required
-        />
+        <input name="name" type="text" id="reg-name" class="form-control bg-light" placeholder="Username" pattern="[A-Za-z0-9_]+"
+          title="Name must not contain punctuation symbols apart from underscore (_)" required />
 
         <!-- Email -->
         <label for="reg-email" class="form-label d-flex mt-2">Email</label>
-        <input
-          name="email"
-          type="email"
-          id="reg-email"
-          class="form-control bg-light"
-          placeholder="Email"
-          pattern="^[\w\-.]+@(stud.)?noroff.no$"
-          title="The email value must be a valid stud.noroff.no email address."
-          required
-        />
+        <input name="email" type="email" id="reg-email" class="form-control bg-light" placeholder="Email" pattern="^[\w\-.]+@(stud.)?noroff.no$"
+          title="The email value must be a valid stud.noroff.no email address." required />
 
         <!-- Password -->
-        <label for="reg-password" class="form-label d-flex mt-2"
-          >Password</label
-        >
-        <input
-          name="password"
-          type="password"
-          id="reg-password"
-          class="form-control bg-light"
-          placeholder="Password"
-          minlength="8"
-          required
-        />
+        <label for="reg-password" class="form-label d-flex mt-2">Password</label>
+        <input name="password" type="password" id="reg-password" class="form-control bg-light" placeholder="Password" minlength="8" required />
 
         <!-- Confirm Password -->
-        <label for="conf-password" class="form-label d-flex mt-2"
-          >Confirm Password</label
-        >
-        <input
-          name="password"
-          type="password"
-          id="conf-password"
-          class="form-control bg-light"
-          placeholder="Confirm Password"
-          minlength="8"
-          required
-        />
+        <label for="conf-password" class="form-label d-flex mt-2">Confirm Password</label>
+        <input name="password" type="password" id="conf-password" class="form-control bg-light" placeholder="Confirm Password" minlength="8" required />
         <div id="alert-container" class="my-3"></div>
 
         <!-- Sign up button -->
@@ -98,11 +54,13 @@
         <!-- Sign in -->
         <p>
           Already have an account? <br />
-          <a class="text-dark" href="/login.html">Please log in!</a>
+          <a class="text-dark" href="./login.html">Please log in!</a>
         </p>
       </form>
     </div>
-    <!-- Register Form -->
-    <footer id="footer-container" class="footer"></footer>
-  </body>
+  </main>
+  <!-- Register Form -->
+  <footer id="footer-container" class="footer"></footer>
+</body>
+
 </html>

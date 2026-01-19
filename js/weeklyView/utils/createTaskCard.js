@@ -1,4 +1,4 @@
-import { isLoggedIn } from "/js/auth/isLoggedIn.mjs";
+import { isLoggedIn } from "../../auth/isLoggedIn.mjs";
 
 function getModalById(id) {
   const el = document.getElementById(id);

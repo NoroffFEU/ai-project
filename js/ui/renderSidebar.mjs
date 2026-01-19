@@ -1,4 +1,5 @@
 import { createSidebar } from "./createSidebar.mjs";
+import { logOut } from "../utils/logOut.mjs";
 
 export const renderSidebar = () => {
   const headerNav = document.querySelector("#sidebarNav");
@@ -19,4 +20,7 @@ export const renderSidebar = () => {
       "./profile.html",
     ),
   );
+
+  // Initialize logout functionality
+  logOut("./index.html");
 };

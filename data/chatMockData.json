@@ -1,0 +1,231 @@
+{
+  "title": "AI Chat Mock Data - All Tasks Conversations",
+  "type": "chatConversation",
+  "description": "Mock conversation data for demonstrating AI chatbot functionality to unauthenticated users",
+  "tasks": {
+    "workout": {
+      "taskId": "workout",
+      "conversation": [
+        {
+          "id": "msg-001",
+          "sender": "bot",
+          "message": "Hi! I see you're ready to start your workout. As a beginner, it's important to build a solid foundation with proper form and consistency. Let me create a beginner-friendly routine for you!",
+          "timestamp": "2026-01-18T10:00:00Z"
+        },
+        {
+          "id": "msg-002",
+          "sender": "bot",
+          "message": "First, let's start with a proper warm-up (5-7 minutes):\n\n• Jumping jacks: 30 seconds\n• Arm circles: 10 forward, 10 backward\n• Leg swings: 10 each leg\n• Bodyweight squats: 10 reps\n• High knees: 30 seconds\n\nThis prepares your muscles and reduces injury risk!",
+          "timestamp": "2026-01-18T10:00:05Z"
+        },
+        {
+          "id": "msg-003",
+          "sender": "user",
+          "message": "I'm done warming up, what's next?",
+          "timestamp": "2026-01-18T10:05:00Z"
+        },
+        {
+          "id": "msg-004",
+          "sender": "bot",
+          "message": "Great! Now let's move to the main workout. We'll focus on three fundamental exercises:\n\n**1. Bodyweight Squats**\n• Sets: 3 sets of 10-12 reps\n• Rest: 60 seconds between sets\n• Form tip: Keep your chest up, push through your heels, and don't let your knees go past your toes",
+          "timestamp": "2026-01-18T10:05:10Z"
+        },
+        {
+          "id": "msg-005",
+          "sender": "bot",
+          "message": "**2. Push-ups** (or knee push-ups if needed)\n• Sets: 3 sets of 8-12 reps\n• Rest: 60 seconds between sets\n• Form tip: Keep your body in a straight line, hands shoulder-width apart, lower until chest nearly touches the floor\n\nModification: Start on your knees if regular push-ups are too challenging!",
+          "timestamp": "2026-01-18T10:05:15Z"
+        },
+        {
+          "id": "msg-006",
+          "sender": "bot",
+          "message": "**3. Plank Hold**\n• Sets: 3 sets of 20-30 seconds\n• Rest: 45 seconds between sets\n• Form tip: Keep your core tight, body straight from head to heels, don't let your hips sag or rise too high\n\nThis builds essential core strength!",
+          "timestamp": "2026-01-18T10:05:20Z"
+        },
+        {
+          "id": "msg-007",
+          "sender": "user",
+          "message": "Should I do anything else?",
+          "timestamp": "2026-01-18T10:15:00Z"
+        },
+        {
+          "id": "msg-008",
+          "sender": "bot",
+          "message": "Yes! Don't skip the cooldown - it's crucial for recovery:\n\n• Light walking in place: 2 minutes\n• Static stretches: Hold each for 20-30 seconds\n  - Quad stretch\n  - Hamstring stretch\n  - Chest stretch\n  - Shoulder stretch\n  - Tricep stretch",
+          "timestamp": "2026-01-18T10:15:05Z"
+        },
+        {
+          "id": "msg-009",
+          "sender": "bot",
+          "message": "Remember to:\n✓ Stay hydrated throughout your workout\n✓ Listen to your body - rest if you need to\n✓ Aim to do this routine 3 times per week\n✓ Gradually increase reps as you get stronger\n\nYou've got this! 💪",
+          "timestamp": "2026-01-18T10:15:10Z"
+        }
+       
+      ]
+    },
+    "wash-dishes": {
+      "taskId": "wash-dishes",
+      "conversation": [
+        {
+          "id": "msg-001",
+          "sender": "bot",
+          "message": "Hey there! I see you need to wash the dishes. Let me help you make this chore more efficient and less of a hassle.",
+          "timestamp": "2026-01-18T14:00:00Z"
+        },
+        {
+          "id": "msg-002",
+          "sender": "bot",
+          "message": "Here's a quick system to get through dishes faster:\n\n1. Scrape & Stack: Remove food scraps first, then stack similar items together\n2. Pre-soak: Fill sink with hot soapy water for stuck-on food\n3. Work Order: Glasses → utensils → plates → pots (cleanest to dirtiest)\n4. Two-basin method: One for washing, one for rinsing\n5. Air dry on rack to save time",
+          "timestamp": "2026-01-18T14:00:05Z"
+        },
+        {
+          "id": "msg-003",
+          "sender": "user",
+          "message": "What about tough stains on pots?",
+          "timestamp": "2026-01-18T14:02:00Z"
+        },
+        {
+          "id": "msg-004",
+          "sender": "bot",
+          "message": "Great question! For tough stains:\n\n• Baking soda paste: Mix with water, scrub gently\n• Vinegar soak: Let sit for 15-20 minutes\n• Boil water in the pot: Loosens burnt food\n• Bar Keeper's Friend: Works wonders on stainless steel\n\nPro tip: Don't let pots sit overnight - clean right after cooking when possible!",
+          "timestamp": "2026-01-18T14:02:10Z"
+        },
+        {
+          "id": "msg-005",
+          "sender": "user",
+          "message": "Thanks! Any way to make it less boring?",
+          "timestamp": "2026-01-18T14:03:30Z"
+        },
+        {
+          "id": "msg-006",
+          "sender": "bot",
+          "message": "Absolutely! Try these:\n\n• Listen to podcasts or audiobooks\n• Play your favorite music playlist\n• Call a friend (use speakerphone or earbuds)\n• Set a timer and make it a speed challenge\n• Reward yourself after - maybe a nice cup of tea or coffee\n\nEnd of preview. Log in to continue the conversation!",
+          "timestamp": "2026-01-18T14:03:40Z"
+        }
+      ]
+    },
+    "mow-grass": {
+      "taskId": "mow-grass",
+      "conversation": [
+        {
+          "id": "msg-001",
+          "sender": "bot",
+          "message": "Time to mow the grass! Let me help you get the best results with your lawn care.",
+          "timestamp": "2026-01-18T15:00:00Z"
+        },
+        {
+          "id": "msg-002",
+          "sender": "bot",
+          "message": "Lawn Mowing Best Practices:\n\n✓ Mow when grass is dry (morning or late afternoon)\n✓ Never cut more than 1/3 of grass height at once\n✓ Keep mower blades sharp for clean cuts\n✓ Alternate mowing patterns each time\n✓ Leave grass clippings as natural fertilizer\n\nIdeal grass height: 2.5-3 inches for most lawns",
+          "timestamp": "2026-01-18T15:00:05Z"
+        },
+        {
+          "id": "msg-003",
+          "sender": "user",
+          "message": "How often should I mow?",
+          "timestamp": "2026-01-18T15:02:00Z"
+        },
+        {
+          "id": "msg-004",
+          "sender": "bot",
+          "message": "Mowing frequency depends on the season:\n\n• Spring: Weekly (rapid growth)\n• Summer: Every 5-7 days\n• Fall: Every 1-2 weeks\n• Winter: Minimal to none (depending on climate)\n\nGeneral rule: Mow when grass reaches about 4 inches tall. During hot, dry weather, you can mow less frequently.",
+          "timestamp": "2026-01-18T15:02:10Z"
+        },
+        {
+          "id": "msg-005",
+          "sender": "user",
+          "message": "Any tips for striping patterns?",
+          "timestamp": "2026-01-18T15:04:00Z"
+        },
+        {
+          "id": "msg-006",
+          "sender": "bot",
+          "message": "Love the ambition! Here's how to get those pro stripes:\n\n1. Mow perimeter first (2-3 passes)\n2. Choose direction (north-south or east-west)\n3. Mow in straight lines, slightly overlap each pass\n4. Use a striping kit or roller attachment for best results\n5. Alternate direction each mow\n\nPro tip: Taller grass (3+ inches) shows stripes better. A well-maintained lawn with proper watering will give the best stripe definition.\n\nWant more advanced techniques? Log in to continue!",
+          "timestamp": "2026-01-18T15:04:15Z"
+        }
+      ]
+    },
+    "auction-site": {
+      "taskId": "auction-site",
+      "conversation": [
+        {
+          "id": "msg-001",
+          "sender": "bot",
+          "message": "Building an auction site! That's an exciting project. Let me help you plan this out properly.",
+          "timestamp": "2026-01-18T16:00:00Z"
+        },
+        {
+          "id": "msg-002",
+          "sender": "bot",
+          "message": "Key Features for Your Auction Site:\n\n1. User Authentication & Profiles\n   • Registration/Login system\n   • User dashboards\n   • Credit system\n\n2. Auction Listings\n   • Create/Edit/Delete listings\n   • Image uploads\n   • Bidding system with real-time updates\n   • Countdown timers\n\n3. Search & Filters\n   • Category browsing\n   • Search functionality\n   • Sort by price, time ending, etc.\n\n4. Bidding System\n   • Place bids\n   • Bid history\n   • Automatic outbid notifications\n   • Winner determination",
+          "timestamp": "2026-01-18T16:00:05Z"
+        },
+        {
+          "id": "msg-003",
+          "sender": "user",
+          "message": "What tech stack should I use?",
+          "timestamp": "2026-01-18T16:02:00Z"
+        },
+        {
+          "id": "msg-004",
+          "sender": "bot",
+          "message": "Great question! Here's a solid tech stack:\n\nFrontend:\n• HTML/CSS/JavaScript (vanilla or framework)\n• Bootstrap or Tailwind CSS for styling\n• Optional: React, Vue, or Svelte for interactivity\n\nBackend:\n• Node.js with Express OR Python with Django/Flask\n• RESTful API design\n• WebSockets for real-time bid updates\n\nDatabase:\n• PostgreSQL or MongoDB\n• Consider Redis for caching\n\nHosting:\n• Netlify/Vercel (frontend)\n• Heroku/Railway/Render (backend)\n• AWS S3 for image storage",
+          "timestamp": "2026-01-18T16:02:15Z"
+        },
+        {
+          "id": "msg-005",
+          "sender": "user",
+          "message": "How do I handle the real-time bidding?",
+          "timestamp": "2026-01-18T16:04:00Z"
+        },
+        {
+          "id": "msg-006",
+          "sender": "bot",
+          "message": "Real-time bidding is crucial! Here's the approach:\n\n1. WebSocket Connection:\n   • Use Socket.io (Node.js) or Django Channels (Python)\n   • Maintain persistent connection between client/server\n\n2. Event Broadcasting:\n   • When bid placed → broadcast to all watchers\n   • Update UI instantly for all connected users\n   • Show bid history in real-time\n\n3. Database Updates:\n   • Optimistic locking to prevent race conditions\n   • Transaction handling for bid placement\n   • Validate bid amount server-side\n\n4. Countdown Timers:\n   • Sync server time with client\n   • Auto-refresh when auction ends\n   • Consider \"bid sniping\" prevention\n\nWant detailed implementation code and best practices? Log in to get the full development guide!",
+          "timestamp": "2026-01-18T16:04:20Z"
+        }
+      ]
+    },
+    "call-mom": {
+      "taskId": "call-mom",
+      "conversation": [
+        {
+          "id": "msg-001",
+          "sender": "bot",
+          "message": "That's lovely that you're planning to call your mom! Let me help you make it a meaningful conversation.",
+          "timestamp": "2026-01-18T17:00:00Z"
+        },
+        {
+          "id": "msg-002",
+          "sender": "bot",
+          "message": "Conversation Topics to Keep in Mind:\n\n📞 Great Questions to Ask:\n• How has your week been?\n• What have you been up to lately?\n• Any new hobbies or interests?\n• How's your health? Anything you need?\n• Any upcoming plans or events?\n\n💬 Share About Your Life:\n• Recent accomplishments or challenges\n• Funny stories or interesting moments\n• Plans for the future\n• Things that made you think of her\n\n⏰ Best Times to Call:\n• Avoid early morning or late evening\n• Consider her daily routine\n• Weekends often work well for longer chats",
+          "timestamp": "2026-01-18T17:00:05Z"
+        },
+        {
+          "id": "msg-003",
+          "sender": "user",
+          "message": "I always run out of things to say. Help?",
+          "timestamp": "2026-01-18T17:02:00Z"
+        },
+        {
+          "id": "msg-004",
+          "sender": "bot",
+          "message": "Totally normal! Here are conversation starters:\n\n🗣️ Open-Ended Questions:\n• \"What's the best thing that happened this week?\"\n• \"Tell me about your day today\"\n• \"What are you looking forward to?\"\n• \"Remember when we...\" (share a memory)\n• \"I was thinking about [childhood memory], do you remember?\"\n\n🎯 Specific Topics:\n• Ask about other family members\n• Discuss current events (but avoid controversial topics)\n• Ask for advice on something\n• Share a recipe or cooking question\n• Talk about photos or memories\n• Ask about her childhood or family history",
+          "timestamp": "2026-01-18T17:02:15Z"
+        },
+        {
+          "id": "msg-005",
+          "sender": "user",
+          "message": "What if the call is awkward or she's busy?",
+          "timestamp": "2026-01-18T17:04:00Z"
+        },
+        {
+          "id": "msg-006",
+          "sender": "bot",
+          "message": "Great awareness! Here's how to handle it:\n\n✅ If She's Busy:\n• \"Is this a good time to talk?\"\n• \"Should I call back later?\"\n• Offer to schedule a better time\n• Even a short call shows you care\n\n😊 Managing Awkward Moments:\n• Silence is okay - don't rush to fill it\n• Ask follow-up questions about what she mentions\n• Share something vulnerable to deepen connection\n• It's okay to say \"I just wanted to hear your voice\"\n• End on a positive note: \"Love you, talk soon!\"\n\n💝 After the Call:\n• Send a follow-up text thanking her\n• Share a photo or something you talked about\n• Set a reminder for your next call\n\nRemember: The fact that you're calling is what matters most. Moms appreciate the effort and thought!\n\nWant tips for video calls or gift ideas? Log in to continue!",
+          "timestamp": "2026-01-18T17:04:20Z"
+        }
+      ]
+    }
+  }
+}

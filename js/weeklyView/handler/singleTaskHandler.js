@@ -3,6 +3,23 @@ import { getTaskById } from "../data/tasks.js";
 import { getISOWeek } from "../utils/getISOWeek.js";
 import { deleteTask } from "../data/tasks.js";
 import { confirmModal, showFeedback } from "../helper/deleteConfirm.js";
+import { isLoggedIn } from "../../auth/isLoggedIn.mjs";
+
+/**
+ * Initialize chatbot if the service is available
+ */
+async function initializeChatbotIfAvailable() {
+  try {
+    const chatbotService = await import("../../chatBot/chatService.mjs");
+    if (chatbotService && chatbotService.initializeChatbot) {
+      console.log("Initializing chatbot from singleTaskHandler");
+      await chatbotService.initializeChatbot();
+    }
+  } catch (e) {
+    console.log("Chatbot service not available:", e.message);
+  }
+}
+
 export function singleTaskHandler() {
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -79,6 +96,9 @@ export function singleTaskHandler() {
     },
     { once: true },
   );
+  
+  // Initialize bot container after task is rendered
+  initializeBotContainer();
 }
 
 function mapColor(color) {
@@ -106,4 +126,45 @@ function escapeHtml(str) {
         m
       ],
   );
+}
+
+/**
+ * Initializes the bot container by checking login state and enabling/disabling controls
+ */
+async function initializeBotContainer() {
+  // First initialize the chatbot service
+  await initializeChatbotIfAvailable();
+  
+  // Then set button states (but chatService.mjs will override these anyway)
+  const motivateBtn = document.getElementById("motivateBtn");
+  const submitBtn = document.getElementById("submitBtn");
+  const authLoginLink = document.getElementById("auth-sim-login");
+  
+  // Also try old IDs for backwards compatibility
+  const motivateBot = document.getElementById("motivateBot");
+  const submitButton = document.getElementById("submitButton");
+
+  setActive(motivateBtn || motivateBot, isLoggedIn());
+  setActive(submitBtn || submitButton, isLoggedIn());
+  
+  if (authLoginLink) {
+    authLoginLink.style.display = isLoggedIn() ? "none" : "block";
+  }
+}
+
+/**
+ * Sets the active state of an element based on login status
+ * @param {HTMLElement} element - The element to update
+ * @param {boolean} isLoggedIn - Whether the user is logged in
+ */
+function setActive(element, isLoggedIn) {
+  if (!element) return;
+
+  element.disabled = !isLoggedIn;
+
+  if (isLoggedIn) {
+    element.removeAttribute("aria-disabled");
+  } else {
+    element.setAttribute("aria-disabled", "true");
+  }
 }

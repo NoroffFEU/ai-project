@@ -31,18 +31,30 @@
     },
     {
       "id": 3,
-      "title": "Complete project presentation",
-      "description": "Finish slides and prepare for tomorrow's team meeting",
-      "color": "#9b59b6",
-      "dueDate": "2025-10-03T09:00:00",
-      "formattedDate": "09:00 Fri",
+      "title": "Mow the grass",
+      "description": "Cut the lawn and maintain yard appearance",
+      "color": "#27ae60",
+      "dueDate": "2025-10-06T10:00:00",
+      "formattedDate": "10:00 Sat",
       "completed": false,
-      "priority": 5,
-      "priorityScore": "+6.2",
-      "category": "work"
+      "priority": 2,
+      "priorityScore": "+3.5",
+      "category": "yard work"
     },
     {
       "id": 4,
+      "title": "Make Auction site",
+      "description": "Build a functional auction website with bidding system",
+      "color": "#9b59b6",
+      "dueDate": "2025-10-15T23:59:00",
+      "formattedDate": "23:59 Fri",
+      "completed": false,
+      "priority": 5,
+      "priorityScore": "+6.2",
+      "category": "web development"
+    },
+    {
+      "id": 5,
       "title": "Call Mom",
       "description": "Weekly check-in call with Mom",
       "color": "#f39c12",

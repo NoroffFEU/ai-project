@@ -7,7 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sass ./scss:dist/css",
-    "watch": "sass --watch ./scss:dist/css & live-server",
+    "watch": "npm-run-all --parallel watch:sass watch:serve",
+    "watch:sass": "sass --watch ./scss:dist/css",
+    "watch:serve": "live-server .",
     "format": "prettier -w ./js/*.js",
     "lint": "eslint ./js/*.js",
     "lint-fix": "eslint ./js/*.js --cache --fix"
@@ -20,7 +22,7 @@
     "braces": "^3.0.3",
     "file-saver": "^2.0.5",
     "html2canvas": "^1.4.1",
-    "jspdf": "^3.0.3"
+    "jspdf": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "^8.57.0",

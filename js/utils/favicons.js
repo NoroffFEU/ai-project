@@ -14,8 +14,8 @@
 export function setFavicon(theme) {
   const base =
     theme === "dark"
-      ? "/assets/favicon/iconWhite.svg"
-      : "/assets/favicon/iconBlack.svg";
+      ? "./assets/favicon/iconWhite.svg"
+      : "./assets/favicon/iconBlack.svg";
 
   const href = `${base}?v=${Date.now()}`;
 

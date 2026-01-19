@@ -15,8 +15,12 @@ export function getFromStorage(key) {
   return localStorage.getItem(key) || sessionStorage.getItem(key);
 }
 
-export function removeFromLocalStorage() {
-  // Clear from both localStorage and sessionStorage
+/**
+ * Removes user credentials from both localStorage and sessionStorage.
+ * Clears accessToken, userEmail, and userName from both storage locations.
+ * @returns {void} No return value
+ */
+export function removeUserCredentials() {
   localStorage.removeItem("accessToken");
   localStorage.removeItem("userEmail");
   localStorage.removeItem("userName");

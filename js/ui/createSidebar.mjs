@@ -1,4 +1,5 @@
 import { isLoggedIn } from "./../auth/isLoggedIn.mjs";
+import { getFromStorage } from "./../utils/localStorage.mjs";
 import { createThemeToggle } from "../theme/themeToggle.mjs";
 
 export function createSidebar(
@@ -15,8 +16,7 @@ export function createSidebar(
   const aside = document.createElement("aside");
   aside.id = "sideBar";
   aside.setAttribute("aria-label", "Sidebar nav menu");
-  aside.className =
-    "d-flex flex-column align-items-center vh-100 sidebar";
+  aside.className = "d-flex flex-column align-items-center vh-100 sidebar";
 
   // nav
   const nav = document.createElement("nav");
@@ -36,7 +36,7 @@ export function createSidebar(
   profile.setAttribute("aria-label", "Go to your profile");
 
   profile.href = profileLink;
-  profile.textContent = "Username";
+  profile.textContent = getFromStorage("userName") || "Username";
 
   const logoutBtn = document.createElement("button");
   logoutBtn.type = "button";
@@ -71,7 +71,7 @@ export function createSidebar(
 
   const links = [
     { href: homeLink, text: "Home" },
-    { href: singleTaskLink, text: "Task" },
+    // { href: singleTaskLink, text: "Task" },
     { href: weekLink, text: "Your Week" },
     { href: aboutLink, text: "About" },
     { href: faqLink, text: "FAQ" },

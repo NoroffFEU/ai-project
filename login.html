@@ -1,86 +1,54 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--  generic favicon -->
-    <link rel="icon" href="/assets/favicon/iconBlack.svg" />
-    <!--  script to swap light/dark -->
-    <script src="/src/js/utils/favicons.js" defer></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    />
-    <<<<<<< HEAD
-    <link rel="stylesheet" href="./dist/css/styles.css" />
-    <!-- Initialize theme immediately to prevent flash -->
-    <script>
-      (function () {
-        const savedTheme = localStorage.getItem("theme-preference") || "light";
-        document.documentElement.setAttribute("data-theme", savedTheme);
-      })();
-    </script>
-    =======
-    <link rel="stylesheet" href="/scss/styles.css" />
-    >>>>>>> origin/dev
-    <script
-      src="https://kit.fontawesome.com/40355c2075.js"
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" src="/js/index.js"></script>
-  </head>
-  <body>
-    <img
-      id="app-logo"
-      class="my-2"
-      src="/assets/logo/LogoBlack.svg"
-      alt="logo"
-    />
+  <!--  generic favicon -->
+  <link rel="icon" href="./assets/favicon/iconBlack.svg" />
+  <!--  script to swap light/dark -->
+  <!--   <script src="./js/utils/favicons.js" defer></script> -->
+
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./scss/styles.css" />
+  <!-- Initialize theme immediately to prevent flash -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme-preference") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    })();
+  </script>
+  <script src="https://kit.fontawesome.com/40355c2075.js" crossorigin="anonymous"></script>
+  <script type="module" src="./js/index.js"></script>
+</head>
+
+<body>
+  <main class="page-container">
+    <img id="app-logo" class="my-2" src="./assets/logo/LogoBlack.svg" alt="logo" />
     <header id="sidebarNav" class="sidebarNav"></header>
 
     <!-- Login Form -->
     <div class="col-xl-5 col-lg-6 col-md-7 col-sm-8 col-10 my-5 m-auto">
-      <form
-        class="text-center border border-dark rounded p-5 shadow"
-        id="login-form"
-      >
+      <form class="text-center border border-dark rounded p-5 shadow" id="login-form">
         <p class="h4 mb-4">Log in</p>
 
         <!-- Email -->
         <label for="login-email" class="form-label d-flex">Email</label>
-        <input
-          name="email"
-          type="email"
-          id="email"
-          class="form-control bg-light"
-          placeholder="Email"
-          required
-        />
+        <input name="email" type="email" id="email" class="form-control bg-light" placeholder="Email" required />
 
         <!-- Password -->
         <label for="password" class="form-label d-flex mt-2">Password</label>
-        <input
-          name="password"
-          type="password"
-          id="password"
-          class="form-control mb-3 bg-light"
-          placeholder="Password"
-          required
-        />
+        <input name="password" type="password" id="password" class="form-control mb-3 bg-light" placeholder="Password"
+          required />
 
         <div id="alert-container"></div>
 
         <div class="d-flex justify-content-start">
           <!-- Stay signed in -->
           <div class="custom-control custom-checkbox">
-            <input
-              type="checkbox"
-              class="custom-control-input"
-              id="login-checkbox"
-            />
+            <input type="checkbox" class="custom-control-input" id="login-checkbox" />
             <label class="custom-control-label" for="login-checkbox">
               Stay signed in
             </label>
@@ -88,11 +56,7 @@
         </div>
 
         <!-- Login button -->
-        <button
-          class="btn border-dark btn-block my-4 px-5"
-          id="login-button"
-          type="submit"
-        >
+        <button class="btn border-dark btn-block my-4 px-5" id="login-button" type="submit">
           Login
         </button>
 
@@ -109,11 +73,13 @@
         <!-- Register -->
         <p>
           Don't have an account yet? <br />
-          <a class="text-dark" href="/register.html">Please sign up!</a>
+          <a class="text-dark" href="./register.html">Please sign up!</a>
         </p>
       </form>
     </div>
-    <!-- Login Form -->
-    <footer id="footer-container" class="footer"></footer>
-  </body>
+  </main>
+  <!-- Login Form -->
+  <footer id="footer-container" class="footer"></footer>
+</body>
+
 </html>
