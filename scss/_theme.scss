@@ -7,7 +7,7 @@
   --bg-tertiary: #d9dadf;
   --bg-white: #ffffff;
   --text-primary: #1f2421;
-  --text-secondary: #d9e1e1;
+  --text-secondary: #6c757d;
   --footer-bg: #1f2421;
   --primary-color: #7c7d75;
   --button-color: #dd700b;
@@ -53,6 +53,11 @@ h6 {
   color: var(--text-primary) !important;
 }
 
+// Bootstrap container
+.container {
+  background-color: transparent;
+}
+
 .sidebarNav {
   background-color: var(--bg-secondary);
 }
@@ -96,6 +101,96 @@ h6 {
 
 [data-theme="dark"] .bg-warning-subtle {
   background-color: rgba(255, 140, 66, 0.15) !important;
+}
+
+// Chat bot container
+.bot-container {
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+// Single task container
+#singleTaskContainer {
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+
+  .card-body {
+    background-color: var(--bg-white);
+    color: var(--text-primary);
+  }
+}
+
+#bot-container {
+  .card-body {
+    background-color: var(--bg-white);
+    color: var(--text-primary);
+  }
+
+  #taskHeader {
+    background-color: var(--bg-tertiary) !important;
+    transition: background-color 0.3s ease;
+
+    #taskTitle {
+      color: var(--text-primary) !important;
+    }
+
+    #taskDescription {
+      color: var(--text-secondary);
+    }
+
+    .text-muted {
+      color: var(--text-secondary) !important;
+    }
+
+    #taskDueDate {
+      color: var(--text-primary);
+    }
+
+    i {
+      color: var(--text-primary);
+    }
+  }
+
+  .text-muted {
+    color: var(--text-secondary) !important;
+  }
+
+  #userInput {
+    background-color: var(--bg-white);
+    color: var(--text-primary);
+    border: 1px solid #555 !important;
+
+    &::placeholder {
+      color: var(--text-secondary);
+    }
+
+    &:focus {
+      border-color: var(--button-color) !important;
+      box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
+    }
+
+    &:disabled {
+      background-color: var(--bg-tertiary) !important;
+      color: var(--text-secondary);
+    }
+  }
+
+  #loginPrompt {
+    background-color: var(--bg-tertiary);
+    border-color: var(--bg-tertiary);
+    color: var(--text-primary);
+
+    p {
+      color: var(--text-primary);
+    }
+
+    a {
+      color: var(--button-color);
+    }
+  }
 }
 
 // Bootstrap pagination component
