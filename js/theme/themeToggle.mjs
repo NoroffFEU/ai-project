@@ -2,11 +2,34 @@
  * Theme toggle functionality for light/dark mode
  */
 
-const THEME_KEY = 'theme-preference';
+const THEME_KEY = "theme-preference";
 const THEMES = {
-  LIGHT: 'light',
-  DARK: 'dark'
+  LIGHT: "light",
+  DARK: "dark",
 };
+
+/**
+ * Update logo and icon based on current theme
+ */
+function updateBranding() {
+  const currentTheme = getThemePreference();
+  const logoSrc =
+    currentTheme === THEMES.DARK
+      ? "./assets/logo/LogoWhite.svg"
+      : "./assets/logo/LogoBlack.svg";
+  const iconSrc =
+    currentTheme === THEMES.DARK
+      ? "./assets/logo/IconWhite.svg"
+      : "./assets/logo/IconBlack.svg";
+
+  const logoMain = document.getElementById("app-logo");
+  const logoFooter = document.getElementById("app-logo-footer");
+  const icon = document.getElementById("app-icon");
+
+  if (logoMain) logoMain.src = logoSrc;
+  if (logoFooter) logoFooter.src = logoSrc;
+  if (icon) icon.src = iconSrc;
+}
 
 /**
  * Get the saved theme preference from localStorage or default to light
@@ -29,7 +52,7 @@ export function saveThemePreference(theme) {
  * @param {string} theme - The theme to apply
  */
 export function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
+  document.documentElement.setAttribute("data-theme", theme);
 }
 
 /**
@@ -39,10 +62,13 @@ export function applyTheme(theme) {
 export function toggleTheme() {
   const currentTheme = getThemePreference();
   const newTheme = currentTheme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
-  
+
   saveThemePreference(newTheme);
   applyTheme(newTheme);
-  
+
+  // Update logo and icons
+  updateBranding();
+
   return newTheme;
 }
 
@@ -52,6 +78,7 @@ export function toggleTheme() {
 export function initializeTheme() {
   const savedTheme = getThemePreference();
   applyTheme(savedTheme);
+  updateBranding();
 }
 
 /**
@@ -59,40 +86,40 @@ export function initializeTheme() {
  * @returns {HTMLElement} The theme toggle button
  */
 export function createThemeToggle() {
-  const toggleContainer = document.createElement('div');
-  toggleContainer.className = 'theme-toggle-container';
-  
-  const toggleLabel = document.createElement('label');
-  toggleLabel.className = 'theme-toggle-label';
-  toggleLabel.setAttribute('aria-label', 'Toggle between light and dark theme');
-  
-  const toggleInput = document.createElement('input');
-  toggleInput.type = 'checkbox';
-  toggleInput.className = 'theme-toggle-input';
-  toggleInput.id = 'theme-toggle';
-  
+  const toggleContainer = document.createElement("div");
+  toggleContainer.className = "theme-toggle-container";
+
+  const toggleLabel = document.createElement("label");
+  toggleLabel.className = "theme-toggle-label";
+  toggleLabel.setAttribute("aria-label", "Toggle between light and dark theme");
+
+  const toggleInput = document.createElement("input");
+  toggleInput.type = "checkbox";
+  toggleInput.className = "theme-toggle-input";
+  toggleInput.id = "theme-toggle";
+
   // Set initial state based on current theme
   const currentTheme = getThemePreference();
   toggleInput.checked = currentTheme === THEMES.DARK;
-  
-  const toggleSlider = document.createElement('span');
-  toggleSlider.className = 'theme-toggle-slider';
-  
-  const lightLabel = document.createElement('span');
-  lightLabel.className = 'theme-label theme-label--light';
-  lightLabel.textContent = 'Light';
-  
-  const darkLabel = document.createElement('span');
-  darkLabel.className = 'theme-label theme-label--dark';
-  darkLabel.textContent = 'Dark';
-  
+
+  const toggleSlider = document.createElement("span");
+  toggleSlider.className = "theme-toggle-slider";
+
+  const lightLabel = document.createElement("span");
+  lightLabel.className = "theme-label theme-label--light";
+  lightLabel.textContent = "Light";
+
+  const darkLabel = document.createElement("span");
+  darkLabel.className = "theme-label theme-label--dark";
+  darkLabel.textContent = "Dark";
+
   toggleSlider.appendChild(lightLabel);
   toggleSlider.appendChild(darkLabel);
-  
+
   toggleLabel.appendChild(toggleInput);
   toggleLabel.appendChild(toggleSlider);
   toggleContainer.appendChild(toggleLabel);
-  
+
   return toggleContainer;
 }
 
@@ -100,17 +127,17 @@ export function createThemeToggle() {
  * Add event listeners for theme toggle
  */
 export function setupThemeToggleListeners() {
-  const toggleInput = document.getElementById('theme-toggle');
-  
+  const toggleInput = document.getElementById("theme-toggle");
+
   if (toggleInput) {
     // Mouse click event
-    toggleInput.addEventListener('change', () => {
+    toggleInput.addEventListener("change", () => {
       toggleTheme();
     });
-    
+
     // Keyboard support
-    toggleInput.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter' || event.key === ' ') {
+    toggleInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
         toggleInput.checked = !toggleInput.checked;
         toggleTheme();

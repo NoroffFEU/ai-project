@@ -32,11 +32,25 @@
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--text-primary);
+}
+
+// Ensure Bootstrap text utilities respect theme
+.text-center,
+.text-dark,
+.lead {
+  color: var(--text-primary) !important;
 }
 
 .sidebarNav {
@@ -54,13 +68,99 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--bg-tertiary);
 }
 
-.btn-outline-dark {
+// Bootstrap card component
+.card {
+  background-color: var(--bg-white);
   color: var(--text-primary);
-  border-color: var(--text-primary);
-  
+  border-color: var(--bg-tertiary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+// Bootstrap modal component
+.modal-content {
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+  border-color: var(--bg-tertiary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+// Bootstrap warning subtle background
+.bg-warning-subtle {
+  background-color: rgba(221, 112, 11, 0.1) !important;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .bg-warning-subtle {
+  background-color: rgba(255, 140, 66, 0.15) !important;
+}
+
+// Bootstrap pagination component
+.pagination {
+  .page-item {
+    .page-link {
+      background-color: var(--bg-white);
+      color: var(--text-primary);
+      border-color: var(--bg-tertiary);
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+      &:hover {
+        background-color: var(--bg-tertiary);
+        color: var(--text-primary);
+        border-color: var(--bg-tertiary);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(221, 112, 11, 0.25);
+      }
+    }
+
+    &.active .page-link {
+      background-color: var(--button-color);
+      border-color: var(--button-color);
+      color: #ffffff;
+    }
+
+    &.disabled .page-link {
+      background-color: var(--bg-tertiary);
+      color: var(--text-secondary);
+      border-color: var(--bg-tertiary);
+    }
+  }
+
+  .page-nav {
+    background-color: var(--bg-white);
+    color: var(--text-primary);
+    border: 1px solid var(--bg-tertiary);
+    border-radius: 0.375rem;
+    padding: 0.375rem 0.75rem;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+
+    &:hover {
+      background-color: var(--bg-tertiary);
+      color: var(--text-primary);
+    }
+  }
+}
+
+.btn-outline-dark {
+  color: var(--text-primary) !important;
+  border-color: var(--text-primary) !important;
+
   &:hover {
-    background-color: var(--text-primary);
-    color: var(--bg-primary);
+    background-color: var(--text-primary) !important;
+    color: var(--bg-primary) !important;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(127, 125, 117, 0.5);
   }
 }
 
@@ -68,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--bg-tertiary);
   border-color: var(--bg-tertiary);
   color: var(--text-primary);
-  
+
   &:hover {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
@@ -86,18 +186,33 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--bg-white);
   border-color: var(--bg-tertiary);
   color: var(--text-primary);
-  
+
   &:focus {
     background-color: var(--bg-white);
     border-color: var(--button-color);
     color: var(--text-primary);
     box-shadow: 0 0 0 0.2rem rgba(221, 112, 11, 0.25);
   }
-  
+
   &::placeholder {
     color: var(--text-secondary);
     opacity: 0.7;
   }
+
+  &:disabled,
+  &[disabled] {
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border-color: var(--bg-tertiary);
+    opacity: 0.8;
+    cursor: not-allowed;
+  }
+}
+
+// Override Bootstrap's bg-light class for form controls
+.form-control.bg-light {
+  background-color: var(--bg-white) !important;
+  color: var(--text-primary);
 }
 
 // Form containers
@@ -120,7 +235,7 @@ h1, h2, h3, h4, h5, h6 {
   &.border-dark {
     border-color: var(--text-primary);
     color: var(--text-primary);
-    
+
     &:hover {
       background-color: var(--text-primary);
       color: var(--bg-primary);
@@ -160,34 +275,38 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  background: #e2e8f0;
+  background: var(--bg-tertiary);
   border-radius: 16px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 3px;
-  border: 1px solid #cbd5e0;
-  
+  border: 1px solid var(--text-secondary);
+
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     height: 26px;
     width: calc(50% - 3px);
     left: 3px;
-    background: #ffffff;
+    background: var(--bg-white);
     border-radius: 13px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.15),
+      0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     z-index: 2;
   }
 }
 
 // Dark mode styles for slider
 .theme-toggle-input:checked + .theme-toggle-slider {
-  background: #2d3748;
-  border-color: #4a5568;
-  
+  background: var(--bg-secondary);
+  border-color: var(--text-secondary);
+
   &:before {
     transform: translateX(calc(100% + 3px));
-    background: #2d3748;
+    background: #b0b0b0;
+    border-color: rgba(255, 255, 255, 0.2);
   }
 }
 
@@ -199,8 +318,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .theme-label {
   position: relative;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
   z-index: 1;
   transition: all 0.3s ease;
   display: flex;
@@ -221,12 +340,12 @@ h1, h2, h3, h4, h5, h6 {
 
 // Active state styling
 .theme-toggle-input:not(:checked) + .theme-toggle-slider .theme-label--light {
-  color: #1e293b;
+  color: var(--text-primary);
   font-weight: 700;
 }
 
 .theme-toggle-input:checked + .theme-toggle-slider .theme-label--dark {
-  color: #e2e8f0;
+  color: var(--text-primary);
   font-weight: 700;
 }
 
@@ -237,7 +356,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .theme-toggle-input:not(:checked) + .theme-toggle-slider .theme-label--dark {
-  color: #94a3b8;
+  color: #64748b;
   font-weight: 500;
 }
 
@@ -254,20 +373,20 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0.75rem;
     margin-bottom: 1rem;
   }
-  
+
   .theme-toggle-label {
     height: 28px;
   }
-  
+
   .theme-toggle-slider {
     border-radius: 14px;
-    
+
     &:before {
       height: 22px;
       border-radius: 11px;
     }
   }
-  
+
   .theme-label {
     font-size: 10px;
   }

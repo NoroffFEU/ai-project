@@ -6,9 +6,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass ./scss:dist/css",
+    "build": "sass ./scss/styles.scss:./scss/styles.css",
     "watch": "npm-run-all --parallel watch:sass watch:serve",
-    "watch:sass": "sass --watch ./scss:dist/css",
+    "watch:sass": "sass --watch ./scss/styles.scss:./scss/styles.css",
     "watch:serve": "live-server .",
     "format": "prettier -w ./js/*.js",
     "lint": "eslint ./js/*.js",

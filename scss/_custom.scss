@@ -86,7 +86,7 @@
   font-weight: bold;
 
   // Visual with subtle AI glow
-  background: linear-gradient(135deg, $textDarkColor 0%);
+  background: linear-gradient(135deg, var(--text-primary) 0%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -100,15 +100,18 @@
 
 .hero-card {
   // Visual
-  background: rgb(219, 216, 216);
-  color: $textDarkColor;
+  background: var(--bg-white);
+  color: var(--text-primary);
   box-shadow: 0 4px 20px var(--ai-soft-glow);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 
-  // Ensure all text inside uses dark color
+  // Ensure all text inside uses theme color
   *:not(.hero-title),
   .lead,
   p {
-    color: $textDarkColor;
+    color: var(--text-primary);
   }
 }
 
@@ -119,7 +122,7 @@
   font-size: $secondaryHeadingSizeMobile;
 
   // Visual
-  color: $textDarkColor;
+  color: var(--text-primary);
 
   @media (min-width: 48rem) {
     font-size: $secondaryHeadingSizeDesktop;
@@ -141,8 +144,8 @@
 
 .ai-powered-box {
   // Visual with AI-themed styling
-  background: rgb(219, 216, 216);
-  color: $textDarkColor;
+  background: var(--bg-white);
+  color: var(--text-primary);
   border-radius: 0.9375rem;
   border: 1px solid var(--ai-soft-glow);
   box-shadow: 0 2px 15px var(--ai-soft-glow);
@@ -206,7 +209,7 @@
 
 .login-info-alert {
   // Visual with subtle AI accent
-  background: rgb(219, 216, 216);
+  background: var(--bg-white);
   border: 1px solid var(--ai-soft-glow);
   border-radius: 0.9375rem;
   box-shadow: 0 2px 10px var(--ai-soft-glow);
@@ -222,7 +225,7 @@
   font-family: $headingsFont;
 
   // Visual
-  color: $textDarkColor;
+  color: var(--text-primary);
 }
 
 .alert-text {
@@ -230,7 +233,7 @@
   font-family: $paragraphFont;
 
   // Visual
-  color: darken($textDarkColor, 10%);
+  color: var(--text-primary);
 }
 
 .community-heading {
@@ -240,7 +243,7 @@
   font-weight: bold;
 
   // Visual
-  background: $textDarkColor;
+  background: var(--text-primary);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
