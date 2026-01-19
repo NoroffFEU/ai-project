@@ -1,5 +1,6 @@
 import { isLoggedIn } from "./../auth/isLoggedIn.mjs";
 import { getFromStorage } from "./../utils/localStorage.mjs";
+import { createThemeToggle } from "../theme/themeToggle.mjs";
 
 export function createSidebar(
   homeLink,
@@ -15,12 +16,14 @@ export function createSidebar(
   const aside = document.createElement("aside");
   aside.id = "sideBar";
   aside.setAttribute("aria-label", "Sidebar nav menu");
-  aside.className =
-    "d-flex flex-column align-items-center vh-100 sidebar secondaryColor-bg";
+  aside.className = "d-flex flex-column align-items-center vh-100 sidebar";
 
   // nav
   const nav = document.createElement("nav");
   nav.className = "w-100 d-flex flex-column align-items-center px-3";
+
+  // theme toggle (at the top)
+  const themeToggle = createThemeToggle();
 
   // auth wrapper
   const authWrapper = document.createElement("div");
@@ -96,7 +99,7 @@ export function createSidebar(
     ul.append(loginBtn, registerBtn);
   }
 
-  nav.append(authWrapper, ul);
+  nav.append(themeToggle, authWrapper, ul);
 
   // toggle wrapper
   const toggleWrap = document.createElement("div");

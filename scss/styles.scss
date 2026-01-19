@@ -3,8 +3,8 @@
 // @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "sidebar";
-@import "footer"; // Reset & Base
-
+@import "theme";
+// Reset & Base
 *,
 *::before,
 *::after {
@@ -22,8 +22,11 @@ body {
   font-family: $paragraphFont;
   font-size: $paragraphSizeMobile;
   line-height: 1.6;
-  background-color: $pageBackgroundColor;
-  color: $textDarkColor;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 
   @media (min-width: $breakpointMd) {
     font-size: $paragraphSizeDesktop;
@@ -41,7 +44,7 @@ h6 {
   font-family: $headingsFont;
   font-weight: 600;
   line-height: 1.2;
-  color: $textDarkColor;
+  color: var(--text-primary);
 }
 header {
   float: left;
@@ -128,7 +131,8 @@ p {
   max-width: 90rem;
   margin: 0 auto;
   padding: $spacingMd;
-  background-color: $pageBackgroundColor;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
 
   @media (min-width: $breakpointMd) {
     padding: $spacingXl;
@@ -153,8 +157,9 @@ p {
   padding: $spacingLg;
   border: $borderWidth solid $tertiaryColor;
   border-radius: $borderRadius;
-  background-color: $whiteColor;
+  background-color: var(--bg-white);
   box-shadow: 0 0.125rem 0.75rem rgba(31, 36, 33, 0.15);
+  transition: background-color 0.3s ease;
 
   h2 {
     font-size: 1.375rem;
@@ -171,7 +176,8 @@ p {
 }
 
 .bento-item--quicklinks {
-  background-color: $tertiaryColor;
+  background-color: var(--bg-tertiary);
+  transition: background-color 0.3s ease;
 
   @media (min-width: $breakpointLg) {
     grid-column: span 2;
@@ -230,12 +236,16 @@ p {
 }
 
 .bento-item--highlight {
-  border-color: $buttonColor;
-  background-color: $pageBackgroundColor;
+  border-color: var(--button-color);
+  background-color: var(--bg-primary);
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .bento-item--info {
-  background-color: $secondaryColor;
+  background-color: var(--bg-secondary);
+  transition: background-color 0.3s ease;
 }
 
 .bento-header {
@@ -274,15 +284,15 @@ p {
   align-items: center;
   gap: $spacingXs;
   padding: $spacingLg;
-  border: $borderWidth solid $tertiaryColor;
+  border: $borderWidth solid var(--bg-tertiary);
   border-radius: $borderRadius;
-  background-color: $whiteColor;
+  background-color: var(--bg-white);
   text-decoration: none;
   transition: all 0.3s ease;
 
   &:hover {
-    border-color: $buttonColor;
-    background-color: $pageBackgroundColor;
+    border-color: var(--button-color);
+    background-color: var(--bg-primary);
     transform: translateY(-2px);
     box-shadow: 0 0.125rem 0.75rem rgba(31, 36, 33, 0.15);
   }
@@ -302,7 +312,7 @@ p {
   font-family: $paragraphFont;
   font-size: $paragraphSizeMobile;
   font-weight: 500;
-  color: $textDarkColor;
+  color: var(--text-primary);
   text-align: center;
 
   @media (min-width: $breakpointMd) {
@@ -315,12 +325,15 @@ p {
   display: inline-block;
   padding: 0.375rem 0.75rem;
   margin-right: $spacingXs;
-  border: 0.025rem solid $tertiaryColor;
+  border: 0.025rem solid var(--bg-tertiary);
   border-radius: 0.375rem;
   font-size: $paragraphSizeMobile;
   font-weight: 600;
-  background-color: $whiteColor;
-  color: $textDarkColor;
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 
   @media (min-width: $breakpointMd) {
     font-size: $paragraphSizeDesktop;
@@ -857,7 +870,7 @@ footer a {
   flex-direction: column;
   gap: 1rem;
   padding: 0;
-  
+
   @media (max-width: 768px) {
     gap: 0.875rem;
   }
@@ -868,19 +881,19 @@ footer a {
   gap: 0.75rem;
   margin-bottom: 1rem;
   animation: fadeIn 0.3s ease-in;
-  
+
   &.bot-message {
     flex-direction: row;
   }
-  
+
   &.user-message {
     flex-direction: row-reverse;
   }
-  
+
   .message-icon {
     flex-shrink: 0;
   }
-  
+
   .message-sender {
     font-size: 0.85rem;
     font-weight: 600;
@@ -893,18 +906,18 @@ footer a {
   border-radius: 1rem;
   word-wrap: break-word;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  
+
   @media (max-width: 768px) {
     padding: 0.65rem 0.85rem;
     font-size: 0.9rem;
   }
-  
+
   &.bg-light {
     background-color: #e9ecef !important;
     color: #212529;
     border: 1px solid #dee2e6;
   }
-  
+
   &.bg-primary {
     background-color: $buttonColor !important;
     color: $whiteColor;
@@ -925,60 +938,60 @@ footer a {
 #bot-container {
   .card-body {
     padding: 1.5rem;
-    
+
     @media (max-width: 768px) {
       padding: 1rem;
     }
   }
-  
+
   #taskHeader {
     background-color: #f8f9fa;
     padding: 1.25rem;
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
-    
+
     #taskTitle {
       font-size: 1.75rem;
       font-weight: 700;
       color: $textDarkColor;
       margin-bottom: 0.5rem;
     }
-    
+
     #taskDescription {
       font-size: 1rem;
       color: #6c757d;
       margin-bottom: 0.75rem;
     }
-    
+
     .text-muted {
       font-size: 0.875rem;
-      
+
       i {
         margin-right: 0.25rem;
       }
     }
-    
+
     #colorBadge {
       font-size: 0.75rem;
       padding: 0.25rem 0.5rem;
       text-transform: capitalize;
     }
   }
-  
+
   h2 {
     margin-bottom: 1.5rem;
     font-size: 1.75rem;
-    
+
     @media (max-width: 768px) {
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
   }
-  
+
   .input-group {
     margin-bottom: 1rem;
   }
-  
+
   #userInput {
     &:disabled {
       background-color: #e9ecef;
@@ -986,7 +999,7 @@ footer a {
       opacity: 0.6;
     }
   }
-  
+
   #chat-buttons {
     .btn {
       &:disabled {
@@ -995,13 +1008,13 @@ footer a {
       }
     }
   }
-  
+
   #loginPrompt {
     padding: 1rem;
     background-color: #f8f9fa;
     border-radius: 0.5rem;
     border: 1px solid #dee2e6;
-    
+
     p {
       margin-bottom: 0.75rem;
       font-size: 0.95rem;
@@ -1012,30 +1025,30 @@ footer a {
 #loginModal {
   .modal-header {
     border-bottom: 2px solid #0d6efd;
-    
+
     .modal-title {
       font-weight: 600;
-      
+
       i {
         font-size: 1.25rem;
       }
     }
   }
-  
+
   .modal-body {
     .lead {
       font-weight: 600;
       color: $textDarkColor;
     }
-    
+
     .btn {
       font-weight: 500;
       padding: 0.75rem 1.5rem;
-      
+
       i {
         margin-right: 0.5rem;
       }
-      
+
       @media (max-width: 768px) {
         padding: 0.65rem 1.25rem;
         font-size: 0.95rem;

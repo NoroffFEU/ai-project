@@ -3,6 +3,13 @@ import { handleTaskBoardSkeleton } from "./handlers/handleSkeletonLoader.mjs";
 import { loginHandler } from "./handlers/loginHandler.mjs";
 import { toggleSidebar } from "./utils/toggleSidebar.mjs";
 import { renderSidebar } from "./ui/renderSidebar.mjs";
+import {
+  initializeTheme,
+  setupThemeToggleListeners,
+} from "./theme/themeToggle.mjs";
+
+// Initialize theme before DOM loads
+initializeTheme();
 import { weeklyTaskHandler } from "./weeklyView/handler/weeklyTaskHandler.js";
 import { singleTaskHandler } from "./weeklyView/handler/singleTaskHandler.js";
 import { registerHandler } from "./handlers/registerHandler.mjs";
@@ -20,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize toggle after sidebar is rendered
   setTimeout(() => {
     toggleSidebar();
+    setupThemeToggleListeners();
   }, 100);
 
   // Call router after DOM is ready
