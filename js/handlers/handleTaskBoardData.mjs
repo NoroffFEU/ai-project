@@ -17,20 +17,45 @@ export async function handleTaskBoardData() {
   const taskBoardContainer = document.querySelector("#task-board-container");
   const exportListButton = document.querySelector("#export-list-button");
   const loginPrompt = document.querySelector("#login-prompt");
+  const staticTaskList = document.querySelector("#static-task-list");
 
   taskBoardContainer.innerHTML = "";
+
+  // TODO: TEMPORARY - Remove this when API is connected
+  // Currently showing static task list for all users (logged in and guests)
+  // When API is ready, uncomment the API fetch code below and remove the static list display for logged-in users
 
   if (isLoggedIn()) {
     // Hide login prompt for logged-in users
     if (loginPrompt) {
       loginPrompt.style.setProperty("display", "none", "important");
     }
+
+    // TODO: Show static list temporarily until API is connected
+    // Remove these lines when API is ready:
+    if (staticTaskList) {
+      staticTaskList.style.setProperty("display", "block", "important");
+    }
+    if (taskBoardContainer) {
+      taskBoardContainer.style.setProperty("display", "none", "important");
+    }
+
     if (exportListButton) {
       exportListButton.setAttribute("disabled", "false");
     }
+
+    /* TODO: Uncomment when API is connected
     try {
       const taskData = await fetchTasks();
       if (taskData) {
+        // Show dynamic container and hide static list
+        if (staticTaskList) {
+          staticTaskList.style.setProperty("display", "none", "important");
+        }
+        if (taskBoardContainer) {
+          taskBoardContainer.style.setProperty("display", "block", "important");
+        }
+        
         taskData.tasks.forEach((task) => {
           taskBoardContainer.appendChild(createTaskBoardItem(task));
         });
@@ -38,46 +63,20 @@ export async function handleTaskBoardData() {
     } catch (error) {
       taskBoardContainer.innerText = "No tasks available.";
     }
+    */
   } else {
+    // Show static task list for non-logged-in users
+    if (staticTaskList) {
+      staticTaskList.style.setProperty("display", "block", "important");
+    }
+    // Hide the dynamic task board container for guests
+    if (taskBoardContainer) {
+      taskBoardContainer.style.setProperty("display", "none", "important");
+    }
+
     taskBoardModule.prepend(createGuestBanner());
     if (exportListButton) {
       exportListButton.setAttribute("disabled", "true");
-    }
-
-    try {
-      const fetchDemoData = await fetch("/data/mockData.json");
-      if (!fetchDemoData.ok) {
-        taskBoardContainer.innerText = "No tasks available.";
-        return;
-      }
-      const demoData = await fetchDemoData.json();
-      let tasks;
-
-      if (demoData.tasks.length > 0) {
-        const taskLimit = window.innerWidth >= 768 ? 8 : 4;
-        const limitedTasks = demoData.tasks.slice(0, taskLimit);
-
-        addToLocalStorage("tasks", JSON.stringify(limitedTasks));
-        tasks = limitedTasks;
-      } else {
-        taskBoardContainer.innerText = "No tasks available.";
-        return;
-      }
-
-      if (tasks && tasks.length > 0) {
-        tasks.forEach((task) => {
-          taskBoardContainer.appendChild(createTaskBoardItem(task));
-        });
-
-        const completedTasks = tasks.filter((task) => task.completed);
-        document.querySelector("#completed-tasks").innerText =
-          completedTasks.length;
-        document.querySelector("#total-tasks").innerText = tasks.length;
-      } else {
-        taskBoardContainer.innerText = "No tasks available.";
-      }
-    } catch (error) {
-      taskBoardContainer.innerText = "No tasks available.";
     }
   }
   dropdownButtonListener();
