@@ -12632,12 +12632,13 @@ body.sidebar-open {
   color: var(--text-primary);
   font-weight: 600;
   border: 0;
+  transition: all 0.2s ease;
 }
 #logout-btn:hover,
 #register-btn:hover,
 #login-btn:hover {
-  background-color: var(--primary-color) !important;
-  color: var(--text-secondary);
+  background-color: var(--button-hover) !important;
+  color: #ffffff !important;
 }
 
 .linkList {
@@ -12645,19 +12646,25 @@ body.sidebar-open {
   width: 100%;
 }
 
+.nav.sidebar-nav {
+  --bs-nav-pills-link-active-bg: var(--primary-color);
+  --bs-nav-link-hover-color: var(--text-primary);
+}
+
 .sidebar-link {
   display: block;
   width: 100%;
   border-radius: 0.5rem;
   font-size: 1rem;
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
   text-decoration: none;
   font-weight: 600;
   padding: 0.5rem 2rem;
+  transition: all 0.2s ease;
 }
 .sidebar-link:hover {
   background-color: var(--primary-color) !important;
-  color: var(--text-secondary);
+  color: var(--text-primary) !important;
 }
 
 .sidebar-toggle button {
@@ -12767,6 +12774,10 @@ h6,
   color: var(--text-primary);
   border-color: var(--bg-tertiary);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme=dark] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
 }
 
 .bg-warning-subtle {

@@ -93,6 +93,11 @@ h6 {
     color 0.3s ease;
 }
 
+// Bootstrap close button for dark mode
+[data-theme="dark"] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
 // Bootstrap warning subtle background
 .bg-warning-subtle {
   background-color: rgba(221, 112, 11, 0.1) !important;
