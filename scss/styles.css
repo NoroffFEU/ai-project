@@ -12632,12 +12632,13 @@ body.sidebar-open {
   color: var(--text-primary);
   font-weight: 600;
   border: 0;
+  transition: all 0.2s ease;
 }
 #logout-btn:hover,
 #register-btn:hover,
 #login-btn:hover {
-  background-color: var(--primary-color) !important;
-  color: var(--text-secondary);
+  background-color: var(--button-hover) !important;
+  color: #ffffff !important;
 }
 
 .linkList {
@@ -12645,19 +12646,25 @@ body.sidebar-open {
   width: 100%;
 }
 
+.nav.sidebar-nav {
+  --bs-nav-pills-link-active-bg: var(--primary-color);
+  --bs-nav-link-hover-color: var(--text-primary);
+}
+
 .sidebar-link {
   display: block;
   width: 100%;
   border-radius: 0.5rem;
   font-size: 1rem;
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
   text-decoration: none;
   font-weight: 600;
   padding: 0.5rem 2rem;
+  transition: all 0.2s ease;
 }
 .sidebar-link:hover {
   background-color: var(--primary-color) !important;
-  color: var(--text-secondary);
+  color: var(--text-primary) !important;
 }
 
 .sidebar-toggle button {
@@ -12690,7 +12697,7 @@ body.sidebar-open {
   --bg-tertiary: #d9dadf;
   --bg-white: #ffffff;
   --text-primary: #1f2421;
-  --text-secondary: #d9e1e1;
+  --text-secondary: #6c757d;
   --footer-bg: #1f2421;
   --primary-color: #7c7d75;
   --button-color: #dd700b;
@@ -12736,6 +12743,10 @@ h6,
   color: var(--text-primary) !important;
 }
 
+.container {
+  background-color: transparent;
+}
+
 .sidebarNav {
   background-color: var(--bg-secondary);
 }
@@ -12765,6 +12776,10 @@ h6,
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+[data-theme=dark] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
 .bg-warning-subtle {
   background-color: rgba(221, 112, 11, 0.1) !important;
   transition: background-color 0.3s ease;
@@ -12772,6 +12787,75 @@ h6,
 
 [data-theme=dark] .bg-warning-subtle {
   background-color: rgba(255, 140, 66, 0.15) !important;
+}
+
+.bot-container {
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#singleTaskContainer {
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+}
+#singleTaskContainer .card-body {
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+}
+
+#bot-container .card-body {
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+}
+#bot-container #taskHeader {
+  background-color: var(--bg-tertiary) !important;
+  transition: background-color 0.3s ease;
+}
+#bot-container #taskHeader #taskTitle {
+  color: var(--text-primary) !important;
+}
+#bot-container #taskHeader #taskDescription {
+  color: var(--text-secondary);
+}
+#bot-container #taskHeader .text-muted {
+  color: var(--text-secondary) !important;
+}
+#bot-container #taskHeader #taskDueDate {
+  color: var(--text-primary);
+}
+#bot-container #taskHeader i {
+  color: var(--text-primary);
+}
+#bot-container .text-muted {
+  color: var(--text-secondary) !important;
+}
+#bot-container #userInput {
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+  border: 1px solid #555 !important;
+}
+#bot-container #userInput::placeholder {
+  color: var(--text-secondary);
+}
+#bot-container #userInput:focus {
+  border-color: var(--button-color) !important;
+  box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
+}
+#bot-container #userInput:disabled {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-secondary);
+}
+#bot-container #loginPrompt {
+  background-color: var(--bg-tertiary);
+  border-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+#bot-container #loginPrompt p {
+  color: var(--text-primary);
+}
+#bot-container #loginPrompt a {
+  color: var(--button-color);
 }
 
 .pagination .page-item .page-link {
@@ -13029,6 +13113,8 @@ h6,
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
 }
 
 body {
@@ -13955,7 +14041,7 @@ footer a {
 }
 #bot-container #taskHeader #taskDescription {
   font-size: 1rem;
-  color: #6c757d;
+  color: var(--text-secondary);
   margin-bottom: 0.75rem;
 }
 #bot-container #taskHeader .text-muted {

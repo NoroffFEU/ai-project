@@ -69,10 +69,11 @@ body.sidebar-open {
   color: var(--text-primary);
   font-weight: 600;
   border: 0;
+  transition: all 0.2s ease;
 
   &:hover {
-    background-color: var(--primary-color) !important;
-    color: var(--text-secondary);
+    background-color: var(--button-hover) !important;
+    color: #ffffff !important;
   }
 }
 
@@ -81,19 +82,26 @@ body.sidebar-open {
   width: 100%;
 }
 
+// Override Bootstrap's nav-pills styles for sidebar
+.nav.sidebar-nav {
+  --bs-nav-pills-link-active-bg: var(--primary-color);
+  --bs-nav-link-hover-color: var(--text-primary);
+}
+
 .sidebar-link {
   display: block;
   width: 100%;
   border-radius: 0.5rem;
   font-size: 1rem;
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
   text-decoration: none;
   font-weight: 600;
   padding: 0.5rem 2rem;
+  transition: all 0.2s ease;
 
   &:hover {
     background-color: var(--primary-color) !important;
-    color: var(--text-secondary);
+    color: var(--text-primary) !important;
   }
 }
 
