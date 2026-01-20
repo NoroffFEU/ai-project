@@ -8,9 +8,14 @@
   max-width: 15rem;
   min-width: 15rem;
   height: 100vh;
-  background-color: variables.$secondaryColor;
+  background-color: var(--bg-secondary);
   transition: all 0.3s ease-out;
   z-index: 100;
+}
+
+.sidebar {
+  background-color: var(--bg-secondary) !important;
+  transition: background-color 0.3s ease;
 }
 
 .sidebarNav.collapsed {
@@ -38,7 +43,7 @@ body.sidebar-open {
 
 .authWrapper a {
   text-decoration: none;
-  color: variables.$textDarkColor;
+  color: var(--text-primary);
   font-size: 1.25rem;
   font-weight: 600;
   margin: 4rem 0 0.5rem 0;
@@ -47,12 +52,12 @@ body.sidebar-open {
   text-overflow: ellipsis;
 
   &:hover {
-    color: variables.$primaryColor;
+    color: var(--primary-color);
   }
 }
 
 #login-btn {
-  background-color: variables.$buttonColor !important;
+  background-color: var(--button-color) !important;
   margin: 4rem 0 0 0;
 }
 
@@ -60,14 +65,15 @@ body.sidebar-open {
 #register-btn,
 #login-btn {
   border-radius: 0.5rem;
-  background-color: variables.$tertiaryColor;
-  color: variables.$textDarkColor;
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
   font-weight: 600;
   border: 0;
+  transition: all 0.2s ease;
 
   &:hover {
-    background-color: variables.$primaryColor !important;
-    color: variables.$textWhiteColor;
+    background-color: var(--button-hover) !important;
+    color: #ffffff !important;
   }
 }
 
@@ -76,36 +82,43 @@ body.sidebar-open {
   width: 100%;
 }
 
+// Override Bootstrap's nav-pills styles for sidebar
+.nav.sidebar-nav {
+  --bs-nav-pills-link-active-bg: var(--primary-color);
+  --bs-nav-link-hover-color: var(--text-primary);
+}
+
 .sidebar-link {
   display: block;
   width: 100%;
   border-radius: 0.5rem;
   font-size: 1rem;
-  color: variables.$textDarkColor;
+  color: var(--text-primary) !important;
   text-decoration: none;
   font-weight: 600;
   padding: 0.5rem 2rem;
+  transition: all 0.2s ease;
 
   &:hover {
-    background-color: variables.$primaryColor !important;
-    color: variables.$textWhiteColor;
+    background-color: var(--primary-color) !important;
+    color: var(--text-primary) !important;
   }
 }
 
 .sidebar-toggle button {
   border: 0;
   background-color: transparent;
-  color: variables.$primaryColor;
+  color: var(--primary-color);
 }
 
 .sidebar-icon {
   position: absolute;
-  color: variables.$textDarkColor;
+  color: var(--text-primary);
   top: 0.5rem;
   left: 15.5rem;
 
   &:hover {
-    color: variables.$primaryColor;
+    color: var(--primary-color);
   }
 }
 
